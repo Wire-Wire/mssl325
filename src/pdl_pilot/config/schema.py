@@ -71,6 +71,70 @@ class EncounterSpec(BaseModel):
     notes: str = ""
 
 
+class LiveDataConfig(BaseModel):
+    """Configuration for live THEMIS/OMNI data retrieval.
+
+    Phase 1.5 addition.  All choices here are PROVISIONAL — they
+    configure the real-data bridge but do not represent frozen science
+    decisions.
+    """
+    backend: Literal["cdasws"] = Field(
+        default="cdasws",
+        description="PROVISIONAL: live data backend.  Only cdasws supported in Phase 1.5.",
+    )
+    # THEMIS dataset identifiers (CDAWeb naming)
+    fgm_dataset: str = Field(
+        default="TH{probe}_L2_FGM",
+        description="CDAWeb dataset ID template for THEMIS FGM L2.  {probe} is replaced at runtime.",
+    )
+    mom_dataset: str = Field(
+        default="TH{probe}_L2_MOM",
+        description="CDAWeb dataset ID template for THEMIS MOM L2 ion moments.",
+    )
+    state_dataset: str = Field(
+        default="TH{probe}_L1_STATE",
+        description="CDAWeb dataset ID template for THEMIS STATE/ephemeris (L1 product).",
+    )
+    omni_dataset: str = Field(
+        default="OMNI_HRO_1MIN",
+        description="CDAWeb dataset ID for OMNI high-res 1-min data.",
+    )
+
+    # OMNI pre-encounter context window
+    omni_pre_window_minutes: float = Field(
+        default=30.0,
+        description="PROVISIONAL: minutes of OMNI data to load before encounter start for upstream context.",
+    )
+    omni_post_window_minutes: float = Field(
+        default=10.0,
+        description="PROVISIONAL: minutes of OMNI data to load after encounter end.",
+    )
+
+    # Interpolation / resampling
+    resample_cadence_seconds: float = Field(
+        default=3.0,
+        description="PROVISIONAL: target cadence for resampled analysis timeline (seconds).",
+    )
+    interpolation_method: Literal["linear", "nearest"] = Field(
+        default="linear",
+        description="PROVISIONAL: interpolation method for resampling onto analysis timeline.",
+    )
+    max_gap_seconds: float = Field(
+        default=30.0,
+        description="PROVISIONAL: gaps larger than this are filled with NaN, not interpolated.",
+    )
+
+    # Cache policy
+    cache_dir: str = Field(
+        default="data_cache",
+        description="Local cache directory for downloaded CDF files and normalized intermediates.",
+    )
+    cache_policy: Literal["use", "refresh", "skip"] = Field(
+        default="use",
+        description="'use': reuse cached files; 'refresh': re-download; 'skip': no caching.",
+    )
+
+
 class PipelineConfig(BaseModel):
     """Top-level configuration for a PDL pilot run."""
 
@@ -83,6 +147,7 @@ class PipelineConfig(BaseModel):
     output_dir: str = "runs"
     data_source: Literal["synthetic", "fixture", "live"] = "fixture"
     random_seed: int = 42
+    live: LiveDataConfig = LiveDataConfig()
 
     def config_hash(self) -> str:
         blob = self.model_dump_json(indent=None).encode()

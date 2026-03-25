@@ -17,7 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0", "pytest-cov"]
-live = ["pyspedas>=1.4", "pytplot>=2.0"]
+live = ["cdasws>=1.7", "cdflib>=1.0"]
 
 [project.scripts]
 pdl-pilot = "pdl_pilot.cli.run_pilot:main"

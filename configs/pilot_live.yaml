@@ -1,0 +1,93 @@
+# PDL Pilot — Phase 1.5 live THEMIS/OMNI configuration
+#
+# This config drives 1–2 real encounters through the same pipeline
+# as the synthetic pilot.  The encounter windows below are manually
+# specified — Phase 1.5 does NOT auto-discover crossings.
+#
+# PROVISIONAL: these pilot windows are chosen for data availability
+# and known dayside magnetosheath presence.  They are NOT the final
+# development or validation set.
+
+run_label: "pilot_live_v0"
+
+data_source: "live"
+random_seed: 42
+
+# Boundary models (frozen for Phase 1)
+boundary_models:
+  magnetopause: "shue1998"
+  bow_shock: "merka2005"
+  distance_direction: "sun_earth_line"
+
+# Normalized s-bins (blueprint §5.3)
+bins:
+  very_near: [0.0, 0.2]
+  near: [0.2, 0.4]
+  background: [0.6, 1.0]
+
+# Filters
+filters:
+  trend_window_seconds: 120.0
+  min_sheath_duration_seconds: 300.0
+
+# Uncertainty envelope
+uncertainty:
+  mp_standoff_delta_re: 0.5
+  bs_standoff_delta_re: 1.0
+
+# Output
+output_dir: "runs"
+
+# Live data settings (PROVISIONAL)
+live:
+  backend: "cdasws"
+  fgm_dataset: "TH{probe}_L2_FGM"
+  mom_dataset: "TH{probe}_L2_MOM"
+  state_dataset: "TH{probe}_L1_STATE"
+  omni_dataset: "OMNI_HRO_1MIN"
+  omni_pre_window_minutes: 30.0
+  omni_post_window_minutes: 10.0
+  resample_cadence_seconds: 3.0
+  interpolation_method: "linear"
+  max_gap_seconds: 30.0
+  cache_dir: "data_cache"
+  cache_policy: "use"
+
+# Pilot encounters — manually specified real THEMIS windows
+#
+# These windows were selected for:
+#   - known dayside magnetosheath presence (THEMIS-D near subsolar MP)
+#   - likely PDL-like signatures (steady southward IMF, moderate Dp)
+#   - good data availability in CDAWeb
+#
+# Window 1: THEMIS-D, 2012-11-03 ~15:00-15:20 UT
+#   THD was on the dayside near the subsolar magnetopause.
+#   OMNI shows moderately steady Dp ~ 2-3 nPa, Bz ~ -2 to +1 nT.
+#
+# Window 2: THEMIS-E, 2008-11-12 ~06:00-06:15 UT
+#   THE was in the dayside magnetosheath.
+#   Moderate solar wind conditions (Dp ~ 2 nPa).
+#
+# NOTE: these are provisional pilot windows for pipeline validation.
+# They have NOT been vetted as confirmed PDL events.
+
+encounters:
+  - encounter_id: "live_pilot_001"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2012-11-03T15:00:00"
+    time_end: "2012-11-03T15:20:00"
+    crossing_count: 1
+    notes: >
+      Provisional pilot window. THD near subsolar MP, dayside magnetosheath.
+      Selected for data availability, not confirmed as PDL event.
+
+  - encounter_id: "live_pilot_002"
+    spacecraft: "themis"
+    probe: "the"
+    time_start: "2008-11-12T06:00:00"
+    time_end: "2008-11-12T06:15:00"
+    crossing_count: 1
+    notes: >
+      Provisional pilot window. THE in dayside magnetosheath.
+      Selected for data availability, not confirmed as PDL event.
