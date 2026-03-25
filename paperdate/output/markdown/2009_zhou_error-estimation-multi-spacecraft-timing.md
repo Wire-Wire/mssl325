@@ -1,0 +1,187 @@
+Ann. Geophys., 27, 3949-3955, 2009 www.ann-geophys.net/27/3949/2009/ © Author(s) 2009. This work is distributed under the Creative Commons Attribution 3.0 License.
+
+<!-- image -->
+
+## On the error estimation of multi-spacecraft timing method
+
+X.-Z. Zhou 1,2 , Z. Y. Pu 2 , Q.-G. Zong 2,3 , P. Song 3 , S. Y. Fu 2 , J. Wang 2 , and H. Zhang 1
+
+1 Institute of Geophysics and Planetary Physics, University of California, Los Angeles, CA, USA
+
+2 Institute of Space Physics and Applied Technology, Peking University, Beijing, China
+
+3 Center for Atmospheric Research, University of Massachusetts, Lowell, MA, USA
+
+Received: 27 June 2009 - Revised: 13 October 2009 - Accepted: 14 October 2009 - Published: 20 October 2009
+
+Abstract. The multi-spacecraft timing method, a data analysis technique based on four-point measurements to obtain the normal vector and velocity of an observed boundary, has been widely applied to various discontinuities in the solar wind and the magnetosphere studies. In this paper, we perform simulations to analyze the errors of the timing method by specifying the error sources to the uncertainties in the determination of the time delays between each spacecraft pair. It is shown that the timing method may have large errors if either the spacecraft tetrahedron is largely elongated and/or flattened, or the discontinuity moves much slower than the constellation itself. The results, therefore, suggest that some of the applications of the timing method require reexamination with special caution, in particular for the studies of the slow-moving discontinuities associated with, for example, the plasmaspheric plumes.
+
+Keywords. Interplanetary physics (Instruments and techniques) - Magnetospheric physics (Plasmasphere; Instruments and techniques)
+
+## 1 Introduction
+
+Multi-spacecraft missions, such as the Cluster (Escoubet et al., 1997), THEMIS (Angelopoulos, 2008), and the future MMS mission, were designed with the potential to unambiguously separate the spatial and temporal variabilities. Since the idea of the Cluster mission with four identical satellites making simultaneous measurements at different locations was proposed in the 1980s, many data analysis techniques have been developed, based on time series of fourpoint observations, to enable the three-dimensional examination of the observed structures in space plasma. Among these techniques, the one most widely used is probably the
+
+<!-- image -->
+
+Correspondence to: X.-Z. Zhou (xzhou@igpp.ucla.edu)
+
+multi-spacecraft timing method, sometimes referred to as the triangulation method and/or the time-delay method, in the studies of the orientation and motion of planar discontinuities (Russell et al., 1983; Harvey, 1998; Sonnerup et al., 2008).
+
+Assuming that a one-dimensional discontinuity moves with a constant velocity (which registers a pure spatial variation as a set of time-series variations), the multi-spacecraft timing method (hereinafter referred to as the timing method) makes use of the measured time differences between the passage of the discontinuity over satellites, along with the relative positions between the crossing locations, to calculate the normal unit vector N and the normal velocity V . Taking the four-spacecraft Cluster mission as the example, if the discontinuity can be identified unambiguously, i.e., all of the discontinuity passage times t α are well determined, we have:
+
+<!-- formula-not-decoded -->
+
+where spacecraft 1 is arbitrarily taken as the reference, and R α 1 represents the relative position between the discontinuity crossing locations observed by spacecraft α and spacecraft 1. As long as the four satellites are not coplanar, the equation yields a unique solution of the normal vector and the normal velocity.
+
+It should be kept in mind that the position vectors of different satellites are not simultaneous as the crossings occur at different times. Therefore, the instantaneous interspacecraft distances D α 1, which can be directly obtained (from the European Space Operations Centre for the Cluster mission), cannot simply be used to replace the relative position vectors R α 1 in Eq. (1). Instead, the position changes of the spacecraft during these time intervals have to be taken into account, with the terms of ( t α -t 1 ) V C being added to D α 1 to obtain the corresponding R α 1 vectors, where V C represents the velocity of the Cluster constellation.
+
+In practice, however, the observed discontinuity can hardly be unambiguously time-stamped on each spacecraft, either because there are generally other local structures superposed on the discontinuity, the discontinuity may not be a perfect
+
+one-dimensional structure, or the discontinuity itself may evolve in time. One way to improve the results is to determine the optimal relative time delay for each spacecraft pair, which can be calculated either by maximizing the value of the cross-correlation (e.g., Song and Russell, 1999) between these data streams, or by the application of the Local Wavelet Correlation (LWC) technique (Soucek et al., 2004). A total of six time delays t αβ (1 &lt;α ≤ 4 , 1 ≤ β&lt;α ) can be calculated, and the six corresponding relative position vectors R αβ are also obtained, by adding the t αβ V C term to the interspacecraft distances D αβ . Thus we can obtain an over-determined equation set containing three unknowns and six independent equations. By minimizing the function
+
+<!-- formula-not-decoded -->
+
+a least-squares approach can be used to determine the optimal solution, i.e., the normal vector and the normal velocity of the observed discontinuity (Harvey, 1998).
+
+Equation (2) further highlights the different roles R αβ and D αβ play in the application of the timing method, namely, if one select the instantaneous interspacecraft distances D αβ instead of using the relative position vectors R αβ in the timing method, the resulting velocity would be in the frame moving with the Cluster constellation. As we know that in most cases the velocity of the discontinuity should be cast in the Earth's frame for physical significance and usefulness, it is important to make sure that the relative position vectors R αβ are used (instead of D αβ ) when performing the timing analysis.
+
+Since the launch of the Cluster constellation, the timing method has been applied to various types of discontinuities in the near-Earth space, e.g., the interplanetary discontinuities (Knetter et al., 2003, 2004), the terrestrial bow shock (Bale et al., 2003; Maksimovic et al., 2003), the magnetopause (Haaland et al., 2004; Owen et al., 2004), the plasma sheet (Dewhurst et al., 2004; Runov et al., 2005), the cusp region (Taylor et al., 2004; Zong et al., 2004), and the plasmapause/plume (Darrouzet et al., 2004, 2006). The timing method has also been modified (Zhou et al., 2006a; Zhou et al., 2006b) to determine the orientations and the velocities of 2-D structures, such as flux ropes. Furthermore, it should be noted that there are modified versions of the timing method to consider the acceleration term and/or the curvature term (Chanteur, 1998; Dunlop et al., 2002; Haaland et al., 2004), although in this paper, we will focus only on the classical version (with a planar discontinuity moving at a constant speed) of the method described above.
+
+In order to avoid the improper usage of the timing method, the estimation of the errors both in the normal direction and in the velocity becomes very important. However, only a few attempts have been made on this issue (Chanteur, 1998;
+
+Cornilleau-Wehrlin et al., 2003; Vogt et al., 2008). One of the most extensive studies was made by Knetter (2005), who applied the timing method on fast solar wind discontinuities and analyzed the parameters affecting the error of the timing method. As was noted in their works, the detected instantaneous satellite distances D αβ contain very minor uncertainties, and the error of the timing method mostly arises from the uncertainties in the determination of the six time delays t αβ .
+
+In this paper, we examine the error introduced in the time delay determination, which is assumed to be normally distributed with zero mean and a standard deviation of 1 s (in comparison with the typical time-resolution of 4 s which is the Cluster spin period). This random error, being treated as the only error source, is embedded in the performance of the timing method on a set of simulated Cluster crossings over a discontinuity moving at a constant velocity, to compare the resulting normal directions and velocities with the modeled ones. We find that the error depends not only on the shape of the Cluster tetrahedron, but also on the speed of the discontinuity compared with that of the Cluster constellation. For those cases in which the discontinuity moves at a lower speed, the error would be significantly enlarged, which requires the application of timing method with special caution, to the slow-moving discontinuities such as the plasmaspheric plumes.
+
+## 2 Accuracy of the timing method
+
+For the Cluster mission, the tetrahedron composed by the four spacecraft has the configurations varying continuously along its orbit around the Earth. Typically, the tetrahedron appears to be fairly regular at the apogee of the Cluster constellation, but it is significantly stretched at the perigee, which can be also seen in Fig. 16.1 of Robert et al. (1998a).
+
+The best way to describe the geometry of the Cluster tetrahedron is to use a 2-D geometric factor, as the combination of the elongation parameter E and the planarity parameter P (Robert et al., 1998b). Both of the parameters are derived from the eigenvalues of the tetrahedron volumetric tensor, which can be also determined by the six interspacecraft distance vectors D αβ (for more detail, see Robert et al. (1998b) and Harvey (1998)). The values of E and P vary from 0 to 1: for a regular tetrahedron, E and P are both zero; if the tetrahedron is stretched, the value of E will increase, until E = 1 when the satellites are on a straight line; if the tetrahedron is squashed, the value of P will increase, and the satellites will lie in a plane if P equals 1.
+
+To study the relationship between the tetrahedron geometry and the accuracy of the timing method, we first construct a 'homogeneous tetrahedron reservoir,' which contains 1600 tetrahedra with a wide variety of configurations. In generating the reservoir, the procedures described in Robert et al.
+
+(1998b) are applied to ensure that the E and P values of these tetrahedra cover the whole E -P plane homogeneously.
+
+As the second step, we simulate a planar discontinuity moving along its normal direction (the -x-direction) with the speed of 50 km/s, and we have all of the tetrahedra moving in the +x-direction, with a relatively smaller speed of 5 km/s. The time delays between each spacecraft pair when they observe the discontinuity, along with their relative position vectors, can thus be unambiguously determined. Here we further normalize the size of each modeled tetrahedron to have the averaged absolute value of the six corresponding time delays equal to 30 s, which is the typical value and of practical interest in the timing method application to the real Cluster data: in those cases with much longer time delays, any real discontinuities would evolve significantly which might invalidate the timing method, while those cases with much shorter delays would suffer from the quantization effects owing to the limited time resolution of the data (typically 4 s which is the spin period of the Cluster satellites).
+
+As we discussed before, there are further error sources in the determination of the six time delays, e.g., the nonplanar properties of the discontinuity as well as the superposed structures and/or fluctuations. In fact, the classical way to obtain the time delays requires a process of maximizing the cross-correlation function, and the uncertainties in the resulting time delays, according to Eq. (1.7) of Sonnerup et al. (2008), depend on several factors: the number of data points, the obtained maximum correlation coefficient, the average slope square of the signal, and the average magnitude square of the signal deviation from its average value. Furthermore, the cross-correlation process is somewhat arbitrary: the data window selection and the interpolation method selection may both produce errors (Song and Russell, 1999). To reduce these errors, a more sophisticated technique, called the Local Wavelet Correlation (Soucek et al., 2004), was also presented. However, as was admitted by Soucek et al. (2004), the error cannot be fully eliminated unless the signals are identical up to a shift in time.
+
+Here, as an example, we assume a normally distributed random error with zero mean and a standard deviation of 1 s, for each spacecraft pair, to adjust the six 'theoretical' time delays. As the interspacecraft distance vectors D αβ remain unchanged, the relative position vectors R αβ between each two satellites can be accordingly adjusted based on the resulting time delays and the modeled D αβ values, which is important as the uncertainties in the determination of the time delay would also produce uncertainties in the relative positions of the corresponding spacecraft pair. The timing analysis can thus be performed through Eq. (2) to calculate the normal direction and the normal velocity of the certain discontinuity.
+
+The last step is to compare the results obtained by the timing method with the modeled ones (50 km/s in the -xdirection), to estimate the reliability of the timing method. For each of the 1600 tetrahedra, the second step is performed 1000 times with the time delays adjusted with random errors, and the averaged relative error of the normal velocity component can be expressed as
+
+<!-- formula-not-decoded -->
+
+where V T and V M represent the calculated normal component of the velocity and the modeled one (50 km/s), respectively.
+
+The relation between the relative error of the normal velocity and the tetrahedron geometry is shown in the left panel of Fig. 1. The sizes and the colors of the circles indicate the values of the relative errors: for those cases with the error less than 10%, the circles are very small, while the largest circles correspond to a relative error of greater than 100%. Note that the circles are sorted by size before being plotted, so there are no small circles hidden behind larger ones.
+
+The uncertainty in the determination of the normal direction, on the other hand, is shown in the right panel of Fig. 1. The uncertainty is inferred by the 90-percent confidence interval (CI) of the angle between the calculated normal direction and the modeled one (along the -x-axis). The smallest circles correspond to the CIs of less than 10 ◦ , which means that we are 90% confident that the angular error is less than 10 ◦ , while the largest ones suggest the uncertainties of greater than 90 ◦ .
+
+It is clear that the errors are generally small except for the cases when the four spacecraft lie approximately along a straight line or within a plane. In these two extreme cases, the component equations in Eq. (1) degenerate to one and two component equations, respectively, leaving some unknowns undetermined. The result, therefore, is not surprising: for the cases of E close to 1, the separation vectors between each pair of satellites are in very similar directions, and therefore can hardly provide the information in the perpendicular directions; for the cases of high P , the separation vectors are generally coplanar, and the speed normal to the plane cannot be determined.
+
+Note that here we use the discontinuity speed of 50 km/s which is ten times greater than the speed of the Cluster constellation (5 km/s). However, if the discontinuity moves much slower, say, 0.5 km/s (still in the -x-direction), the uncertainties of the timing method can be calculated to be quite different, as shown in Fig. 2.
+
+The relative errors on the normal velocities shown in the left panel of Fig. 2, although not solely dependent on the values of E and P because of the differences in the orientations of these tetrahedra, are always greater than 20% even in the cases of regular tetrahedra. For E or P values greater than 0.8, the errors are generally greater than 100%, and even as large as 1000% for E or P close to 1. Similarly, the uncertainties in the normal directions (right panel of Fig. 2) are also much greater than those in the previous case.
+
+The resulting much greater relative errors can be understood as an error amplification effect produced in the
+
+Fig. 1. Influence of the tetrahedron configuration, parameter P and E , on the error of the timing method, denoted by the size and color of the circles, when the modeled discontinuity moves ten times faster than the Cluster constellation. Left and right panels correspond to the relative error in the determination of the normal velocity component and the 90-percent confidence interval of the angle between the normal direction and the modeled one, respectively.
+
+<!-- image -->
+
+Fig. 2. Same format as in Fig. 1, but the modeled discontinuity speed is 1/10 of the Cluster speed.
+
+<!-- image -->
+
+transformation process between two reference systems. If we are in the frame moving along with the Cluster constellation, as was suggested before, the relative position vectors R αβ in Eq. (2) could be replaced by the interspacecraft distance vectors D αβ . Therefore, if the previous two test runs are performed in the Cluster's frame, it is not necessary to adjust the D αβ values to obtain R αβ , and the latter run differs from the former one by having a discontinuity velocity of 5.5 km/s ten times smaller than that in the former run. Note that the D αβ values in the latter run are also ten times smaller, which is produced in the normalization process to have the averaged absolute value of the six time delays equal to 30 s.
+
+The factors of ten, however, can be eliminated by substituting the V and D αβ values to Eq. (2), which suggests the relative errors ε 0 in the determination of the discontinuity velocity be the same for the two test runs if both performed in the Cluster's frame. As we know that the transformation to another frame of reference would not change the value of the absolute error, we have
+
+<!-- formula-not-decoded -->
+
+where V D 0, V D 1, and V C 1 represent the discontinuity velocity in the frame moving with the Cluster constellation, the discontinuity velocity in the Earth's frame of reference, and the Cluster velocity in the Earth's frame, respectively. Therefore, if the discontinuity moves much slower than the Cluster constellation in the Earth's frame, the satisfaction of Eq. (4) results in significant amplification of the relative error ε 1 in the Earth's frame. In other words, since the velocity of the discontinuity should be cast in the Earth's frame for any physical usefulness, a small error in the velocity derived in the satellite frame can be translated into a very large relative error if the velocity of the discontinuity is small.
+
+Fig. 3. The plasmapause/plume crossings of the Cluster constellation, adapted from Darrouzet et al. (2004). The densities for an inbound and an outbound are shown with a factor-of-10 shift in the upper traces. The labeled speeds of the moving structures were derived from the timing method.
+
+<!-- image -->
+
+The error amplification effect, therefore, suggests that the uncertainties of the timing method may be large not only in the cases when the Cluster tetrahedron is greatly elongated or flattened, but also when the discontinuity moves much more slowly than the Cluster constellation. One example of the appearance of possible greater uncertainties occurs when the Cluster satellites move relatively faster with elongated configurations near their perigees and encounter slow moving plasmaspheric structures, and the applications of the timing method under these conditions should be carried out with special caution.
+
+## 3 Example of applications
+
+On 11 April 2002, between 04:15 and 06:30 UT, the Cluster satellites experienced a plasmasphere crossing and observed a plasmaspheric plume outside the plasmasphere (Darrouzet et al., 2004). Darrouzet et al. used the EFW (Gustafsson et al., 1997) and WHISPER (D´ ecr´ eau et al., 1997) measurements to obtain the electron densities and applied the timing method to determining the normal velocity of the plume.
+
+However, it can be clearly seen in Fig. 3 that there are fluctuations superposed on the discontinuity, and the time differences between the observations of different satellites continuously evolve in time, especially during the Cluster inbound pass. Therefore, it might be relatively hard to determine the time delays accurately.
+
+The small error in the determination of the time delays, on the other hand, can be significantly enlarged in the application of the timing method. As is shown in Fig. 3, the estimated velocity of the discontinuity is typically one order smaller than that of the Cluster constellation (4.6 km/s), and the averaged absolute value of the time delays between each spacecraft pair is around 30 s (see Fig. 5 of Darrouzet et al., 2004). Therefore, Fig. 2 can be used to estimate the error in the application of the timing method. During this time period, the Cluster tetrahedron elongation parameter E was 0.8, and the planarity parameter P was 0.2, which suggests that the uncertainties in the velocity determination could be as large as 100%, as the direction determination might be more reliable.
+
+The uncertainty levels of ∼ 100%, therefore, suggest that one should avoid directly comparing two resulting velocities during different time intervals, although it is safe to claim that the plume moves very slowly. In other words, it is quite possible that some of the conclusions drawn by Darrouzet et al. (2004), e.g., the velocities measured along the inbound pass being larger than those along the outbound pass, are within the error bar of the data analysis if the obtained time delays have the uncertainties of ∼ 1 s or more. Therefore, it may be necessary to carefully reexamine the case, for example, by using the Eq. (1.7) of Sonnerup et al. (2008), to make sure that all of the time delays are accurately determined with the errors much smaller than 1 s despite the effect of the irregularities and the fluctuations shown in Fig. 3.
+
+Besides estimating the time delay errors based on Eq. (1.7) of Sonnerup et al. (2008), another way to assess the reliability of the timing method is to calculate all of the four time delay residuals
+
+<!-- formula-not-decoded -->
+
+which suggest the delay time departures from linear independency, and smaller residual values are believed to correspond
+
+Fig. 4. Same format as in Fig. 2, but only those cases with all of the four residuals smaller than 1 s are selected in the simulation.
+
+<!-- image -->
+
+to higher reliabilities of the timing method. Here we perform the same simulation steps, again with the modeled discontinuity moving at 0.5 km/s in the -x-direction and the time delay standard deviation of 1 s, but select only those cases with all of the four residuals smaller than 1 s, to calculate the uncertainties of the timing method. The results are shown in Fig. 4, which may be directly compared with the uncertainties shown in Fig. 2.
+
+It is shown that the uncertainties in Fig. 4 are reduced, especially those in the velocity determination. Given the E and P values of 0.8 and 0.2, respectively, the uncertainties in the velocity determination would be ∼ 30 -40%, which are much smaller than the ∼ 100% ones suggested in Fig. 2. In other words, to ensure the appropriate usage of the timing method in this particular Darrouzet et al. (2004) event, one has to make sure that either the time delays are accurately determined (with uncertainties much smaller than 1 s), or all of the time delay residuals are adequately small (less than 1 s). Without these reexaminations, as we suggested before, some of the Darrouzet et al. (2004) conclusions, e.g., the plume velocities during the inbound pass being larger than those along the outbound pass, may be less convincing as they are likely to be within the error bar of the timing method.
+
+## 4 Summary
+
+In this study, we have performed simulations to estimate the uncertainty of the multi-spacecraft timing method, to investigate its dependence on the configuration of the spacecraft tetrahedron and the speed of the observed discontinuity in comparison with the constellation speed. By limiting the error sources of the timing method to the random errors produced in the determination of the time delays between each spacecraft pair, we have found that the uncertainty of the timing method could be very significant if the tetrahedron is largely elongated or flattened. Furthermore, if the discontinuity moves much more slowly than the constellation, a small error in the determination of the speed in the satellite frame of reference can be translated to a large relative error. The error estimation, therefore, provides a way for the users of the timing method to evaluate their result based on the estimated uncertainty levels in the determination of the time delays. For instance, in the study of slow-moving discontinuities, such as the plasmaspheric plumes (Darrouzet et al., 2004), even a minor error in the determination of the time delays may result in huge errors, a result that suggests that the timing method should be used with caution and the predictions from an analysis should be made with due attention to the uncertainties in the method.
+
+Acknowledgements. The authors thank V. Angelopoulos at UCLA for helpful discussions and suggestions. We would like to acknowledge NASA (grant NAS5-02099) for the support of our work at UCLA, and the work at Peking University was supported by NSFC grants 40390152, 40425004 and 40528005.
+
+Topical Editor I. A. Daglis thanks two anonymous referees for their help in evaluating this paper.
+
+## References
+
+Angelopoulos, V.: The THEMIS Mission, Space Sci. Rev., 141, 534, doi:10.1007/s11214-008-9336-1, 2008.
+
+Bale, S. D., Mozer, F. S., and Horbury, T. S.: Density-Transition Scale at Quasiperpendicular Collisionless Shocks, Phys. Rev. Lett., 91, 265004, doi:10.1103/PhysRevLett.91.265004, 2003.
+
+Chanteur, G.: Spatial interpolation for four spacecraft: Theory, in: Analysis Methods for Multi Spacecraft Data, edited by: Paschmann, G. and Daly, P. W., p. 349, ESA, Bern, Switzerland, 1998.
+
+Cornilleau-Wehrlin, N., Chanteur, G., Perraut, S., Rezeau, L., Robert, P., Roux, A., de Villedary, C., Canu, P., Maksimovic, M., de Conchy, Y., Hubert, D., Lacombe, C., Lefeuvre, F., Parrot, M., Pinon, J. L., Dcrau, P. M. E., Harvey, C. C., Louarn, Ph., Santolik, O., Alleyne, H. St. C., Roth, M., Chust, T., Le Contel, O., and STAFF team: First results obtained by the Cluster STAFF experiment, Ann. Geophys., 21, 437-456, 2003, http://www.ann-geophys.net/21/437/2003/.
+
+- Darrouzet, F., D´ ecr´ eau, P. M. E., De Keyser, J., Masson, A., Gallagher, D. L., Santolik, O., Sandel, B. R., Trotignon, J. G., Rauch, J. L., Le Guirriec, E., Canu, P., Sedgemore, F., Andr´ e, M., and Lemaire, J. F.: Density structures inside the plasmasphere: Cluster observations, Ann. Geophys., 22, 2577-2585, 2004, http://www.ann-geophys.net/22/2577/2004/.
+- Darrouzet, F., De Keyser, J., D´ ecr´ eau, P. M. E., Gallagher, D. L., Pierrard, V., Lemaire, J. F., Sandel, B. R., Dandouras, I., Matsui, H., Dunlop, M., Cabrera, J., Masson, A., Canu, P., Trotignon, J. G., Rauch, J. L., and Andr´ e, M.: Analysis of plasmaspheric plumes: CLUSTER and IMAGE observations, Ann. Geophys., 24, 1737-1758, 2006,
+
+http://www.ann-geophys.net/24/1737/2006/.
+
+- D´ ecr´ eau, P. M. E., Fergeau, P., Krannosels'kikh, V., Leveque, M., Martin, P., Randriamboarison, O., Sene, F. X., Trotignon, J. G., Canu, P., and Mogensen, P. B.: Whisper, a Resonance Sounder and Wave Analyser: Performances and Perspectives for the Cluster Mission, Space Sci. Rev., 79, 157-193, 1997.
+- Dewhurst, J. P., Owen, C. J., Fazakerley, A. N., and Balogh, A.: Thinning and expansion of the substorm plasma sheet: Cluster PEACE timing analysis, Ann. Geophys., 22, 4165-4184, 2004, http://www.ann-geophys.net/22/4165/2004/.
+- Dunlop, M. W., Balogh, A., and Glassmeier, K.-H.: Four-point Cluster application of magnetic field analysis tools: The discontinuity analyzer, J. Geophys. Res., 107, 1385, doi:10.1029/ 2001JA005089, 2002.
+- Escoubet, C. P., Schmidt, R., and Goldstein, M. L.: Cluster - Science and Mission Overview, Space Sci. Rev., 79, 11-32, 1997.
+- Gustafsson, G., Bostrom, R., Holback, B., Holmgren, G., Lundgren, A., Stasiewicz, K., Ahlen, L., Mozer, F. S., Pankow, D., Harvey, P., Berg, P., Ulrich, R., Pedersen, A., Schmidt, R., Butler, A., Fransen, A. W. C., Klinge, D., Thomsen, M., Falthammar, C.G., Lindqvist, P.-A., Christenson, S., Holtet, J., Lybekk, B., Sten, T. A., Tanskanen, P., Lappalainen, K., and Wygant, J.: The Electric Field and Wave Experiment for the Cluster Mission, Space Sci. Rev., 79, 137-156, 1997.
+- Haaland, S. E., Sonnerup, B. U. ¨ O., Dunlop, M. W., Balogh, A., Georgescu, E., Hasegawa, H., Klecker, B., Paschmann, G., PuhlQuinn, P., R` eme, H., Vaith, H., and Vaivads, A.: Four-spacecraft determination of magnetopause orientation, motion and thickness: comparison with results from single-spacecraft methods, Ann. Geophys., 22, 1347-1365, 2004, http://www.ann-geophys.net/22/1347/2004/.
+- Harvey, C. C.: Spatial Gradients and the Volumetric Tensor, in: Analysis Methods for Multi-spacecraft Data, edited by: Paschmann, G. and Daly, P., pp. 307-322, ISSI/ESA, Netherlands, 1998.
+- Knetter, T.: A new Perspective of the Solar Wind Micro-Structure due to Multi-Point Observations of Discontinuities, PhD Thesis, Universit¨ at zu K¨ oln, Germany, 2005.
+- Knetter, T., Neubauer, F. M., Horbury, T., and Balogh, A.: Discontinuity observations with cluster, Adv. Space Res., 32, 543-548, doi:10.1016/S0273-1177(03)00335-1, 2003.
+- Knetter, T., Neubauer, F. M., Horbury, T., and Balogh, A.: Fourpoint discontinuity observations using Cluster magnetic field data: A statistical survey, J. Geophys. Res., 109, 6102, doi: 10.1029/2003JA010099, 2004.
+- Maksimovic, M., Bale, S. D., Horbury, T. S., and Andr´ e, M.: Bow shock motions observed with CLUSTER, Geophys. Res. Lett.,
+- 30, 070000-1, doi:10.1029/2002GL016761, 2003.
+- Owen, C. J., Taylor, M. G. G. T., Krauklis, I. C., Fazakerley, A. N., Dunlop, M. W., and Bosqued, J. M.: Cluster observations of surface waves on the dawn flank magnetopause, Ann. Geophys., 22, 971-983, 2004, http://www.ann-geophys.net/22/971/2004/.
+- Robert, P., Dunlop, M. W., Roux, A., and Chanteur, G.: Accuracy of Current Determination, in: Analysis Methods for Multi Spacecraft Data, edited by: Paschmann, G. and Daly, P. W., pp. 395418, ESA, Bern, Switzerland, 1998a.
+- Robert, P., Roux, A., Harvey, C. C., Dunlop, M. W., Daly, W. P., and Glassmeier, K.-H.: Tetrahedron Geometric Factors, in: Analysis Methods for Multi Spacecraft Data, edited by: Paschmann, G. and Daly, P. W., pp. 323-348, ESA, Bern, Switzerland, 1998b.
+- Runov, A., Sergeev, V. A., Baumjohann, W., Nakamura, R., Apatenkov, S., Asano, Y., Volwerk, M., V¨ or¨ os, Z., Zhang, T. L., Petrukovich, A., Balogh, A., Sauvaud, J.-A., Klecker, B., and R` eme, H.: Electric current and magnetic field geometry in flapping magnetotail current sheets, Ann. Geophys., 23, 1391-1403, 2005, http://www.ann-geophys.net/23/1391/2005/.
+- Russell, C. T., Mellott, M. M., Smith, E. J., and King, J. H.: Multiple Spacecraft Observations of Interplanetary Shocks: Four Spacecraft Determination of Shock Normals, J. Geophys. Res., 88, 4739-4748, 1983.
+- Song, P. and Russell, C. T.: Time Series Data Analyses in Space Physics, Space Sci. Rev., 87, 387-463, doi:10.1023/A: 1005035800454, 1999.
+- Sonnerup, B. U. O., Haaland, S. E., and Paschmann, G.: Discontinuity Orientation, Motion, and Thickness, in: Multi-Spacecraft Analysis Methods Revisited, edited by: Paschmann, G. and Daly, P., pp. 1-15, ISSI/ESA, Netherlands, 2008.
+- Soucek, J., Dudok de Wit, T., Dunlop, M., and D´ ecr´ eau, P.: Local wavelet correlation: applicationto timing analysis of multisatellite CLUSTER data, Ann. Geophys., 22, 4185-4196, 2004, http://www.ann-geophys.net/22/4185/2004/.
+- Taylor, M. G. G. T., Dunlop, M. W., Lavraud, B., Vontrat-Reberac, A., Owen, C. J., D´ ecr´ eau, P., Tr´ avncek, P., Elphic, R. C., Friedel, R. H. W., Dewhurst, J. P., Wang, Y., Fazakerley, A., Balogh, A., R` eme, H., and Daly, P. W.: Cluster observations of a complex high-altitude cusp passage during highly variable IMF, Ann. Geophys., 22, 3707-3719, 2004,
+
+http://www.ann-geophys.net/22/3707/2004/.
+
+- Vogt, J., Paschmann, G., and Chanteur, G.: Reciprocal Vectors, in: Multi-Spacecraft Analysis Methods Revisited, edited by: Paschmann, G. and Daly, P., pp. 33-46, ISSI/ESA, Netherlands, 2008.
+- Zhou, X.-Z., Zong, Q.-G., Pu, Z. Y., Fritz, T. A., Dunlop, M. W., Shi, Q. Q., Wang, J., and Wei, Y.: Multiple Triangulation Analysis: another approach to determine the orientation of magnetic flux ropes, Ann. Geophys., 24, 1759-1765, 2006a, http://www.ann-geophys.net/24/1759/2006/.
+- Zhou, X.-Z., Zong, Q.-G., Wang, J., Pu, Z. Y., Zhang, X. G., Shi, Q. Q., and Cao, J. B.: Multiple triangulation analysis: application to determine the velocity of 2-D structures, Ann. Geophys., 24, 3173-3177, 2006b, http://www.ann-geophys.net/24/3173/2006/.
+- Zong, Q.-G., Fritz, T. A., Zhang, H., Korth, A., Daly, P. W., Dunlop, M. W., Glassmeier, K.-H., Reme, H., and Balogh, A.: Triple cusps observed by Cluster - Temporal or spatial effect?, Geophys. Res. Lett., 31, L09810, doi:10.1029/2003GL019128, 2004.

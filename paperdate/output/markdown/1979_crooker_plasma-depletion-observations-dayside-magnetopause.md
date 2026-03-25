@@ -1,0 +1,185 @@
+## Observations  of  Plasma Depletion  in  the  Magnetosheath at  the  Dayside Magnetopause
+
+N.  U.  CROOKER
+
+Department  of  Atmospheric Sciences, University of  California, Los  Angeles, California 90024
+
+## T.  E.  EASTMAN
+
+EG&amp;G, Inc., and University of  California, Los Alamos  Scientific Laboratory,  Los Alamos, New  Mexico 87544
+
+## G.  S. STILES
+
+Center for  Research  in  Aeronomy, Utah  State  University, Logan, Utah  84322
+
+In a set  of 17  low-  to  mid-latitude crossings of  the  dayside  and near-dayside magnetopause, Imp  6 plasma  measurements  show 11  cases of  decreases in  magnetosheath density just outside the  boundary which  are  consistent with  plasma  depletion owing  to  magnetic  flux tube  compression as  the  field becomes draped  against the  magnetopause. Pressure anisotropies in  the  sense p· &gt; p·  are a  predicted result of  the plasma  depletion and field compression, and such  anisotropies are  observed. Application of  the  mirror instability criterion, which  predicts growth of  slow  mode  magnetoacoustic waves  for  values of  p·/p· greater than  a  critical value, suggests that dayside magnetosheath plasma  is usually unstable. One of  the seventeen cases shows long-period waveforms in  the  100-s density data  that are  180 ø  out  of  phase  with simultaneous waveforms in  the  magnetic  field strength. We  interpret these dat, a  as  the  signature of  slow mode  magnetoacoustic waves.
+
+## INTRODUCTION
+
+The variation of  density  with distance  from the  magneto. pause in  the  dayside  magnetosheath has been predicted  by several models.  The  hydrodynamic  treatment  predicts an increase  in  density  from the  bow  shock to the  magnetopause along the stagnation  streamline  [Spreiter et  al., 1966].  The magnetohydrodynamic  treatment predicts a  decrease along  the same path for  a magnetic  field oriented perpendicular to  the earth-sun  line [Midgley  and Davis,  1963; Lees,  1964;  Zwan  and Wolf  1976]. At distances greater  than about 5  Rs  from the earth-sun  line, both models predict decreases  upon  approach to  the  magnetopause,  but  the  magnetohydrodynamic  decrease is  more  pronounced  near  the  boundary.
+
+Orbits of the Imp  6 spacecraft  for  which high-resolution plasma data  are  available give  coverage  of  the  low-  to  midlatitude dayside  magnetosheath from the  flanks up to  about  5 Rs from the  earth-sun line. Figure  1  shows the  positions of  the magnetopause  crossings  for  the 17 cases  analyzed for  this study.  Density  measurements  there  are  shown  to  be in  good agreement  with  the  magnetohydrodynamic  model.
+
+criterion, a Pi &gt; P· anisotropy  leads  to  the  growth of  slow mode  magnetoacoustic  waves,  which act  to  diminish  the  anisotropy  [Chandrasekhar  et  at., 1958]. Evidence  of  these  waves (or  plasma  clouds) with  periods up  to  ·,2 min was found  in  the Explorer  12  magnetic  field and total energy  energetic electron measurements  in  the  inner  dayside  magnetosheath  [Kaufmann et  at., 1970; Kaufmann  and  Horng, 1971]. Slow mode waves are positively identified by  a  180 ø  phase  difference between  density and field magnitude. Imp  6 density  and field measurements identify the presence  of long-period  (·,7  min)  slow mode waves on the  single orbit  in  the  set of  17  that  comes closest to the  earth-sun  line (·,7  Rs).  The time  resolution of  the  density data  limits detection  to  the  longer  periods.
+
+Imp  6 observations  are presented  and discussed  in  three sections following a section on the  data  reduction  procedure. The  three  sections cover the categories of density, pressure anisotropy, and waves.  In  a  final section, the  observations and theory  are  summarized  in  a discussion of  data  from a single orbit  which illustrates all  aspects of the  flux  tube squeezing process.
+
+The plasma depletion in  the  magnetohydrodynamic  model is  understood  physically as  the  result of  flux tube  squeezing  as the  magnetic  field becomes draped around the nose of the magnetosphere.  Both field compression  and plasma depletion contribute to  the  development of  greater pressure perpendicular to  the  field direction than  parallel to  it (p·  &gt; p·), according to the physical  argument given by Midgtey and Davis [1963] and also  by  application of  the  Chew-GoldbergerLow  double adiabatic  formalism [Crooker  and Siscoe,  1977]. Such anisotropy  was  found to  be a common feature  in  Explorer  33 dayside  magnetosheath measurements  [Crooker  et at., 1976], and this finding is confirmed  by the  Imp 6  measurements presented  here.
+
+Under certain conditions specified by the  mirror  instability
+
+Copyright  ¸  1979  by the  American Geophysical  Union.
+
+## DATA REDUCTION
+
+The Imp 6  data  used  in  this study  are  15-s averages from the NASA/Goddard magnetometer,  kindly supplied  to us by D. H. Fairfield, and 100-s  averages  of  measurements from the Los  Alamos Scientific Laboratory  plasma  analyzer.  The plasma  analyzer measures  the  velocity space  distribution in  the ecliptic plane. The plasma density, velocity, and temperature are determined by calculating the  moment of  the  measured distribution under the  assumption that  the  distribution does not  vary  with  latitudinal angle  out  of  the  ecliptic plane, in  the third dimension.  This  assumption  is not  valid for  plasma with a pressure anisotropy. For a distribution with  pi &gt; p·,  as  is commonly  observed  in  the  dayside magnetosheath,  the  error in the  derived  parameters  increases with increasing anisotropy and with  increasing latitudinal angle  0  of  the  magnetic  field out
+
+<!-- image -->
+
+or 13% larger. For 0 =  60  ø,  the  true  anisotropy  is twice  the measured value.
+
+Measured anisotropies were used  quantitatively in  this study only  to  calculate the  mirror  instability criterion in  Table  1. The anisotropies listed in  column three of  the  table and used  in  the calculation are  the  two-dimensional  values. Although simulations were performed for  each  case, it is  difficult to  determine the accuracy of the simulated values owing  to unexpected asymmetries  in  the  observed  distributions. These asymmetries may  be the  result of a heat  flux and are  being  analyzed  in  a separate study.  For the  present study  we believe that  the  most secure  values  to  use  are  the  two-dimensional  ones,  keeping  in mind that  they  represent lower  limits. As an  indication of  how large the  true  anisotropies may be,  the  angle 0  listed in  the  last column  of  Table 1  may  be used in  conjunction  with  the  estimates in  the  preceding  paragraph.
+
+## DENSITY OBSERVATIONS AND COMPARISONS TO  MODELS
+
+Fig. 1.  Positions  of Imp  6 magnetopause  crossings  in (x,  D) coordinates,  where  x is  directed  from  the  earth  to the sun and  D  is distance from the  x axis. Eleven  of  the  17  cases  show density depletion in  the  magnetosheath adjacent  to  the  magnetopause. These cases  are indicated by the  encircled points.
+
+of  the  ecliptic plane. This  error is  less than  a  few  percent  for the calculated  densities, however,  and  we  conclude  that the density decreases of '-·40% near  the  boundary, as  discussed in the following  section, are real  and not instrumental  effects. Consistent with  this conclusion  is that  we find no ordering  of the magnitude of the density  effect with the  magnetic field angle  0.
+
+The  derived  pressure  anisotropy  ratios represent  the  anisotropy  in  the  ecliptic plane  [see Stiles et  at., 1978, for  details]. The  orientation of  the  axis  of  maximum pressure was compared  to  the  orientation of  the  projection of  the  magnetic  field in the ecliptic plane,  and  in each case the axis  was  either aligned  with or  perpendicular to  the  field, as  expected. Thus the  sense of  the  anisotropy p· &gt; pi  or  pi &gt; pt· was determined. The  magnitudes of the  anisotropies in  the  ecliptic plane  are lower limits on the  true, three-dimensional  values. In  order  to estimate  the true  magnitudes, three-dimensional  simulations were performed with assumed  distribution functions aligned according  to  the  measured field orientation. As an example of the results, for a case with average plasma conditions, the simulation shows that  for  a two-dimensional measured anisotropy  ratio P·/Pll = 1.5 and for  0  = 45  ø, the  true  anisotropy is 2.0, or  33% larger. If  0  = 30  ø, then  the  true anisotropy is  1.7,
+
+Logarithmic  plots of  the  density variations along  eight orbit segments near the  magnetopause  are  shown  in  Figure  2.  The magnetopause positions were determined  by a  change  in  field orientation  in all  but the first and  last  cases,  where  no field change was apparent.  For these  two cases  the  magnetopause was  identified by the characteristic rise in temperature.  The plots illustrate a  density decrease  pattern found in  11  of  the  17 crossings studied. These 11  crossings are  indicated by  encircled points  in  Figure  1. The density  decrease  pattern  consists of  a drop of  about 40%  from the  ambient value  over  a period  of about 20 min  before the magnetopause  crossing. This time period is  shaded  in Figure 2,  and  sloping  lines  have been drawn  through the  density  decreases. The effect is  not  large compared  to  other  time  variations of  density  in  the  magnetosheath. What  makes the  pattern apparent  is its repetition from orbit  to orbit.
+
+Two  models of  density variations from the  bow  shock  to  the magnetopause  are  illustrated in  Figure  3. They are  normalized to the  value  just  inside  the  bow  shock.  The  solid  lines were obtained  graphically from the  density  contours  of  the  hydrodynamic model of  Spreiter et  at. [1966] for  a  solar wind Mach number of  8. The dashed lines were calculated from values read from  graphs of the magnetohydrodynamic model  of Zwan  and Wotf[1976] for  an  Alfven  Mach  number  of  8.  Both models use a polytropic  index of 5/3.  Figure 3a shows the model  variations along the stagnation  streamline. Here  the difference between the two models is  the  greatest. With  no magnetic field, the density  increases to a maximum at the stagnation  point  on the  magnetopause.  Inclusion  of a mag-
+
+TABLE 1.  Evaluation  of Mirror Instability Criterion
+
+| Date          | Time (UT)   |   Pi/Pl, |   1 + 1/fii |   (3/2)kT,eV |   n,cm | -a     |   B + s.d., 3' | 0,deg   |
+|---------------|-------------|----------|-------------|--------------|--------|--------|----------------|---------|
+| July 7, 1971  | 1301-1310   |      1.3 |         1.6 |          460 |     17 | 37 + 2 |            1.7 | 50      |
+| Feb. 28, 1972 | 2147-2155   |      1.4 |         1.9 |          590 |      5 | 28 + 3 |            1.1 | 0       |
+| March 8, 1972 | 0600-0615   |      2   |         1.8 |          540 |      9 | 35 + 2 |            1.3 | 2½      |
+| May 13,1972   | 1745-1755   |      2.1 |         2.1 |          600 |      5 | 33 + 3 |            0.9 | -25     |
+| June 20, 1972 | 0154-0210   |      1.2 |         1.2 |         1100 |      9 | 23 + 4 |            5.3 | -60     |
+| Feb. 11,1973  | 1333-1342   |      1.5 |         1.2 |          750 |     15 | 28 + 5 |            4.3 | -15     |
+| Feb. 16, 1973 | 0700-0715   |      1.1 |         1.2 |          470 |     26 | 23 + 5 |            6.4 | -15     |
+| March 8, 1973 | 1252-1308   |      1.3 |         1.2 |          960 |     14 | 27 + 6 |            5.3 | -50     |
+| May 1,1973    | 1234-1249   |      1.3 |         1.4 |         1400 |      5 | 29 + 6 |            2.4 | -30     |
+| June 16, 1973 | 0345-0400   |      1.3 |         1.2 |          880 |     13 | 25 + 6 |            5.3 | 40      |
+
+21562202a, 1979, A3, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JA084iA03p00869 by University College London, Wiley Online Library on [25/03/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+netic field perpendicular to  the  earth-sun line allows plasma  to escape  from the  stagnation point  along  field lines as  the  field becomes  compressed  against the  magnetopause. Thus the  density decreases to  a  minimum at  the  stagnation point, as  was predicted by  Midgley  and  Davis  [1963] and  Lees  [1964]. Away from the  stagnation streamline, in  the  region  of  the  Imp  6 boundary crossings, the  density decreases toward the  magnetopause in  both  models. The  density variation in  each model  at a  distance y of  about  10 RE along  a  magnetic flux tube  from  the stagnation streamline is  shown  in Figure  3b.  The  hydrodynamic  model  of  Spreiter et al. decreases almost linearly from the  bow shock  to  the magnetopause,  whereas  the magnetic  flux tube  compression in  the  Zwan-Wolf model is still effective in causing rapid depletion near  the boundary.  Between  the  point where  the  two curves  diverge and the  boundary,  a  distance of less than 1 RE, the hydrodynamic  curve  decreases by 8%. Along  the magnetohydrodynamic  curve a decrease  corresponding  to  the  observed  amount of  40%  occurs  from the point  where  the  two curves diverge to  where  the  normalized density reaches a value  of  0.5, very  near  the  boundary.
+
+In  Figure 4 the  density data  from two orbits are  compared with  the  model of  Spreiter et  al. The curve  in  each  graph  was obtained  by reading  values  from the  model density contour map  along  the  spacecraft trajectory, which was plotted to scale. The curves  are  normalized  to  give  a  good qualitative fit to  the  data  points away from the  magnetopause.  At the  magnetopause, the  curves drop  to  zero, corresponding to  a  vacuum inside. Upon  approach  to  the  magnetopause, the  data  points drop  below  the  curves in  the  same  manner as  the  Zwan-Wolf curve  drops  below  the  Spreiter et  al. curve  in  Figure 3b.  The average  decrease of  40% observed in  eleven cases is  in  good agreement  with  the  Zwan-Wolf  model.
+
+<!-- image -->
+
+3-8-73
+
+Fig. 2.  Logarithmic plots of  density along  eight Imp 6  orbit segments  crossing the  magnetopause.  The date  of  each  orbit is indicated on the  right. All  cros.sings were  inbound  except for the  one  on  February  16,  1973, for which  the data  are  plotted backwards  in  time. The sloping construction lines for each  orbit emphasize the  consistency of the  density gradient in  the  shaded  region  adjacent to  the  magnetopause.
+
+The two orbits represented in  Figure 4  are  well separated in distance D from the  earth-sun line x.  The (x, D) coordinates in earth  radii for  the  June 16,  1973, crossing are  (6.5, 9.3); for  the December 28,  1971, crossing they  are  (-6.8,  23.0). The spacecraft speeds normal  to  the boundary  for each  case are approximately  1  RE/h and  0.5 RE/h,  respectively. In  the June  16, 1973, case  the density  increase becomes apparent  about 15 min before the  boundary crossing; in  the  December 28,  1971, case it becomes  apparent about  25  min before the  crossing. Therefore  if  we  assume that  the  magnetopause  is  stationary, the thickness of  the  region  in  which the  decrease is  apparent  is about 1/4  RE in  both  cases. This  thickness is  about  a  factor of 3 smaller  than that  predicted by the  Zwan-Wolf  model in Figure 3b. However,  the model  was  calculated for an  optimum field orientation. Furthermore, time  variations in  the  magnetosheath  density make  detection of  the  very  gradual  predicted beginning of  the  decrease difficult. Also,  boundary motion, which  may be  important, can  result in  reduced apparent thicknesses.  We thus conclude  that the observations  are consistent with  the model.
+
+dashed curves  in  Figure  3.  Although the  Zwan-Wolf  calculations are  limited to  the  region within  11  RE of  the  stagnation streamline, and about half of  the  cases studied fall outside the region covered  by the  model,  depletion should  be relatively uniform  well  beyond this limit because  compression  is  relatively uniform  across the  dayside and  even  somewhat beyond the dawn-dusk  meridian plane for  a field orientation perpendicular to  the earth-sun line (see Figure 15  of  Stahara et al.
+
+In  the  11  cases with  observed  density decreases, there is no ordering  of  apparent  thicknesses or  percentage decreases according to  distance from  the  stagnation streamline. The range of apparent  thicknesses is  0.2-0.4 RE (based  on spacecraft motion only), and the  range  of  percentage decreases is  2258%. Also there  is  no  spatial ordering  of whether or not density depletion is  observed, either with  respect to  distance from the  earth-sun line or  with  respect to  dawn and dusk.  Nor was there  any bias  with  respect to  inbound and outbound orbits. It  is reasonable to  expect  little spatial variation of  the depletion effect, consistent with  the  observations, because  the depletion effect is relatively uniform, as  illustrated by the  two
+
+Fig. 3. Model  density variations between the bow shock  and  the magnetopause, normalized to  the value just inside the bow shock. The solid curves  are  taken  from density contour  maps of  Spreiter et  al. [1966]. The  dashed  curves are  calculated from  model  parameters of Zwan and  Wolf[1976]. Variations are (a) along the stagnation streamline and (b) at  a  distance y · l0  RE measured  from  the  stagnation streamline along  magnetic  flux tubes.
+
+<!-- image -->
+
+21562202a, 1979, A3, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JA084iA03p00869 by University College London, Wiley Online Library on [25/03/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Fig. 4.  Comparisons between density data  (points) and the  model of  Spreiter et  al. [1966] (solid curves) for  two  inbound  orbit segments. The model curves  drop to  zero  at  the  magnetopause.
+
+<!-- image -->
+
+[1977], which is  an extension of  the  work of  Spreiter et  al. [1966]).
+
+The Dst  index  was  checked  for the  six nondepletion cases to see  if a  rise in  solar wind pressure as  indicated by  a  rise in  Dst may have  been  masking any  depletion effect; but  no  consistent pattern  in  Dst was found.
+
+period  of  time  on  the  dayside  than  was previously predicted, in which case  one would expect  to  see  the  effects of  a  transfer of plasma along open field lines from the  magnetosheath to  the boundary  layer, consistent with  a  density depletion  signature. , However, no quantitative model of  this possible merging  effect exists, and thus  no comparisons can  be  made  to  the  data  or  the Zwan-Wolf  and Spreiter et  al. models.
+
+## PRESSURE ANISOTROPY AND THE  MIRROR INSTABILITY CRITERION
+
+In 14  of  the  17  cases  of  magnetosheath data  analyzed,  the sense  of  the  measured pressure  anisotropies is p· &gt; p·.  Two cases  show p· &gt; p·,  and in  one case  the  sense  could  not be determined  because  of  fluctuations. For the  14  cases where  p· &gt; p·,  the  two-dimensional  ratio p·/p· is  most often  in  the range 1.2-1.6. In  three  cases, the  ratio reaches  values  greater than 2 in  the  vicinity of  the  magnetopause. The largest measured  value  is an isolated point  at  3.1 (0  · - 45  ø). For the  two cases  where  p· &gt; p·,  the  ratio p·/p· is small, in  the  range  1.31.4. These two cases are  the  furthest of  the  17  from the  stagnation  streamline.
+
+The dominant factor causing  the  observed  range  of  effects may be  the  orientation of  the  interplanetary magnetic  field and the  pattern in  which it drapes  and compresses  relative to  the point  of  observation at  the  boundary.  An attempt was made to find  a  correlation between  the  IMF  orientation and the  presence  or  absence  of  depletion by using  available hourly  averages  of  the  angle  between the  IMF and the  earth-sun  line, but no  pattern  emerged. The  more  accurate  method  of using higher  time  resolution IMF  data  and mapping the  three-dimensional  draping  pattern is beyond the  scope  of  this project. One way to  test for  local field compression  is to  note  the  trend in  the  field magnitude  outside the  boundary.  Although  in  five of  the  depletion cases  and four  of  the  nondepletion cases  no trend  is detectable, usually owing to  large field fluctuations, in the remaining  six  depletion cases  the  field tends  to  increase toward  the  boundary,  and in  the  remaining  two nondepletion cases  the  field tends  to  decrease toward the  boundary,  consistent with  the  flux tube  squeezing  process.
+
+As mentioned in  the  introduction, pressure anisotropy in  the sense p· &gt; p· was predicted by Crooker and Siscoe  [1977] as  a result  of the Zwan-Wolf model. Thus  the observed predominance of  such  anisotropy in  the  dayside  magnetosheath is consistent with  the  flux tube  squeezing  process.
+
+Concerning the  relationship between density depletion and magnetic merging,  Zwan  and Wolf [1976] mention that  these two processes  are  in  competition,  since  the  flux  tubes  which would  be the most  depleted  spend enough  time near the boundary  to become  merged  with earth's field. In order to check  for  the  presence of  the  steep density gradients predicted in  the  absence  of merging,  such as  the  one shown  by the dashed line  in  Figure  3b immediately  outside the  magnetopause,  the  available electron density data  at  3.1-s time  resolution were used.  No  steep density gradients were  apparent  in this high  time  resolution data, consistent with  the  presence of merging.  On  the  other  hand,  no correlation was found between the  percentage  decrease  and the  angle  between the  fields on either side  of  the  boundary, 180 ø  being  the  most favorable for local merging. The presence or  absence of  depletion also appears  to  be independent  of  this field angle  difference. If  local merging  is occurring, its density signature outside the  magnetopause  must be  confined  to  a  thinner layer than  that  affected by local field compression.
+
+A  final note  concerning  magnetic  merging is  included  for completeness. It  is  possible that  the  density decreases are  a signature of  merging  itself, since Crooker  [1979] predicts that freshly merged field lines may  spend a considerably longer
+
+Short intervals of time in  which the  pressure  anisotropy ratio p·/p·  was relatively constant were  selected from 10  cases for  application of the  mirror  instability criterion given,  for example,  by  Hasegawa  [1975] as  fi·/fill &gt; 1  + (1/fi·), where  fi· and fi· are  the  ratios of the  gas pressures p· and p· to the magnetic pressure  B·/8·r. Proton pressures  are  used here  as total gas  pressures, since electron pressure is negligible. Dates and times  of  the  10  intervals are  given  in  the  first wo columns of Table 1.  All occur within  a half  hour  of the boundary crossing. The third  column  contains  the  two-dimensional anisotropy  ratios for  each  case. Two  of  the  cases where  p·/p· is greater than  or  equal  to  2  were chosen  in  order  to  provide  as wide a  range  of  ratios as  possible. Since  fi,/fi·, reduces to  p·/ p,,, column  three  in Table  1 represents the left side  of the mirror  instability inequality. The right side of  the  inequality is listed in the fourth column.  The  single  variable  B· which determines the  right side of  the  inequality is listed separately in the  eighth  column, and estimated  averages  of  the  measured variables which were used to  calculate B·  are  listed in  columns five, six, and seven. These variables are  the  thermal  energy  (3/ 2)kT, the  number  density n,  and the  magnitude of  the  magnetic  field B. To  calculate values  of  p·,  the  thermal  energy density was assumed to  be  the  simple  mean  of  2  p· and  p·,.
+
+The main conclusion to  be  drawn from Table 1 is that magnetosheath plasma in the  vicinity of the magnetopause appears to be at least marginally  unstable  to wave  growth triggered by the mirror instability. The  small  difference between the  two sides of  the  instability inequality are  most likely well  within  the  uncertainty limits of  the  two numbers in  each case. That the  two-dimensional  anisotropies are  lower  limits to the true  anisotropies implies  that  the plasma may  well  be clearly unstable  most of  the  time.
+
+Concerning the  maximum size of  the  anisotropy, since  all but  one  value  of  B·  are  greater than  one,  the  range  of  the  righthand side  of  the  criterion is generally limited to  be  between 1 and 2.  Thus pressure  anisotropies should  be allowed  to  grow to  values  considerably greater  than 2 only  when  B·  is, significantly  less than 1.  The  only place  where this  might occur is
+
+21562202a, 1979, A3, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JA084iA03p00869 by University College London, Wiley Online Library on [25/03/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+directly adjacent, to the magnetopause  in the region  of the steepest density gradient predicted by  the  Zwan-Wolf  model in Figure  3. However, as  discussed in  the  previous section, such  a region  is  not  predicted in  the  presence  of  magnetic merging, nor  has  such  a  region  been  observed. (See  Hill and  Reiff[1977] for  a related discussion on pressure  anisotropies and dayside merging.)
+
+## WAVES
+
+Since  the  mirror  instability is expected  to  trigger slow  mode magnetoacoustic  waves,  in  which the  density and field magnitude  are  180 ø  out  of  phase  with  each  other, a  search  was made for  such a wave  pattern  in  the  density  and field data.  The search  was confined  to  wave periods  longer  than  the  longest periods  (·2 min) observed  by Kaufmann  et  al. [1970] because of the 100-s  time resolution of the averaged density  data. However,  we  note there  that  there  is  a scarcity of clear, shorter-period waves,  which would be apparent  in  the  magnetic  field data (D. H.  Fairfield, private  communication, 1977). The scarcity is  curious in  light of  our finding that  the plasma is usually  unstable.
+
+In one of  the 17  cases  studied, a signature of  long-period, slow mode waves was found. This case  is the  orbit  which passed  closest to  the  stagnation streamline. The averaged  density data,  1-min  averages of  the  field magnitude,  and the  pressure anisotropy ratio are  shown  in,Figure 5  for more  than  1 hour prior  to  the  magnetopause  crossing. During the  last  15 min of  this interval, approximately  two complete waveforms are seen  in  the  density  and field variations. Vertical  dashed lines marking the  peaks  and troughs  emphasize  the  180 ø  phase difference between the  two parameters. The amplitude  of  the density  variation is  about 1.2  cm -8, and the  amplitude of  the field magnitude variation  is  about 3.5  %  The  gas and field pressure  changes are  approximately  the  same.
+
+Slow mode  magnetoacoustic  waves are  considered  physically as  a series of  plasma clouds  with  weakened  fields. The clouds are carried  past  a spacecraft by the magnetosheath flow. Kaufmann and  Horny [1971] use  Explorer  12  magnetometer  data to  describe such clouds  at  higher  frequencies in  the dayside  magnetosheath.  They note  that the  clouds  are  usually not  of  uniform  size, nor  are  they  uniformly  spaced. The waves observed  in  the  present  study  most likely represent the  lowfrequency end of the spectrum observed by Kaufmann  et  al. [1970] and Kaufmann  and  Horny [1971]. Kaufmann and Horng also  note  that  amplitudes  are  larger and periods  are  longer nearer  to  the  stagnation streamline. This  finding is  consistent with  having  found only  one  case  of  long-period wave observations  in  the  present  study,  since  the  study was confined  to orbits well  off the  stagnation streamline, and that  single case being  the  one nearest the  stagnation streamline.
+
+Because  the  slow  mode  magnetoacoustic  waves are  expected to  develop near  the  magnetopause  and then  be  carried downstream  by magnetosheath  flow  adjacent to  the  magnetopause, there is no  way to  distinguish the signature of  these waves  from a signature of boundary  motion, which would  also  put the spacecraft in  regions of  alternatively high  and low  density and small  and large field magnitude upon approach to  the  magnetopause.  Although we favor  the  wave interpretation because  it fits into  the larger pattern  of phenomena discussed  in  this paper,  the  alternate boundary motion interpretation must be included  as  a  possibility.
+
+## DISCUSSION AND SUMMARY
+
+The results of  this study  are  best  summarized  in  a  discussion of  the  magnetosheath data  in  Figure  5.  The density  variation
+
+TOPAUSE
+
+Fig.  5. Average  density n,  magnetic  field magnitude lB  I,  and pressure anisotropy ratio pi/p· variations al6ng the orbit  hat crossed the  magnetopause  nearest to  the  stagnation streamline (D ·7 Rs).  The vertical dashed  lines mark the  180 ø  phase  difference between  the  peaks and troughs  of  the  density  and field waveforms.
+
+<!-- image -->
+
+shows a drop from about 11  cm -8  to  5  cm -·  beginning  about 45 min prior  to  the  magnetopause  crossing and ending in  20 min. The  density  then levels  off,  and  waveforms  are seen before  the  boundary  is  crossed. The  field intensity increases steadily for 1  hour prior  to  the  crossing. During the  last  15 min,  waveforms  appear which are  180 ø  out  of  phase with  the density  waveforms. The  pressure  anisotropy  ratio p·/p· increases  as the density  decreases, remains at a high level of about 2,  and then decreases  sharply  about 7 min before  the magnetopause  crossing.
+
+The patterns in  Figure  5  may  be described in  terms  of  the model of  Zwan  and Wolf[1976] and some of  its consequences [Crooker and Siscoe,  1977].  As  the  magnetic field becomes compressed against  the dayside  magnetopause, its  intensity increases, and  the density  decreases,  owing  to outflow of plasma along  the  flux tubes  away from the  high-pressure stagnation  region. Both of  these  factors contribute to  growth of  a p· &gt; p· pressure  anisotropy. These changes  occur  in  Figure  5 from about 1730 to 1750 UT.  When the  anisotropy  reaches  a critical value, the  mirror  instability triggers the  growth of  slow mode  magnetoacoustic  waves,  as  indicated in  the  density and field magnitude variations in  Figure  5  from  1800  to  1817  UT, near the  boundary. These waves act  to  limit the  anisotropy, which begins  to  drop at  1810  UT  in  Figure  5.
+
+The  other cases  of observed density  decreases  presented earlier are different from the case in  Figure 5 because the decreases occurred  immediately  adjacent to  the  magnetopause, and no large  waves were observed.  Since  these  cases  are  all further  from  the stagnation  streamline, it  may  be that the plasma was not in residence  long enough  for  the  waves to develop.
+
+In  summary,  observed  decreases in  density in  the  magnetosheath  adjacent  to  the  magnetopause  are  consistent with the depletion model of  Zwan  and Wolf[1976].  Some  consequences of this  model  are  the  growth  of  pressure  anisotropy  in  the sense  p·  &gt;  p·  and  the growth  of magnetoacoustic waves [Crooker  and Siscoe,  1977]. Evidence of  these  consequences is also  observed.
+
+Note added in  proof A. H asegawa has pointed  out that careful  analysis shows  that  the mirror instability does not lead  to  the  growth of  slow  mode  magnetoacoustic  waves but waves of  a purely  growing mode  with  no wave motion or  fre-
+
+21562202a, 1979, A3, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JA084iA03p00869 by University College London, Wiley Online Library on [25/03/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+- Hasegawa,  A., Plasma  Instabilities and  Nonlinear Effects, p. 95, Springer, New  York, 1975.
+- Hill, T.  W.,  and P.  H.  Reiff, Evidence  of  magnetospheric  cusp  proton acceleration by magnetic merging at  the  dayside  magnetopause, J. Geophy. Res.,  82(25),  3623-3628, 1977.
+
+quency. In the presence  of a density  gradient  the  growing mode  wave couples  to  the  drift wave,  and the  resulting spatially periodic structure is observed  at  the  drift wave frequency  [see Hasegawa,  1969].
+
+Acknowledgments. The authors  thank D. H. Fairfield for  his  interest  and cooperation  in  this project and G. L.  Siscoe and R.  A.  Wolf for helpful  comments.  The  authors  also  thank S.  J.  Bame  for  the  use  of data  from the  Los Alamos Scientific Laboratory  (LASL)  plasma  analyzer on Imp 6.  This  research was supported  in  part  by the  National Aeronautics  and Space Administration  under grant  NSG 7180.  Contributions by one of the  authors  (T.E.E.)  and analysis of  the  LASL data  were performed under the  auspices of  the  U.S.  Department  of Energy.
+
+Associate Editor  T. E.  Holzer thanks R.  L.  Kaufmann and  R.  A. Wolf for  their assistance in  evaluating this paper.
+
+## REFERENCES
+
+- Crooker, N. U., Dayside merging and cusp geometry,  J.  Geophys. Res.,  84, this  issue,  1979.
+- Crooker, N. U., and  G.  L. Siscoe,  A  mechanism for  pressure  anisotropy and  mirror instability in the dayside magnetosheath, J. Geophys.  Res.,  82(1),  185-186,  1977.
+- Crooker, N. U.,  G. L. Siscoe, and R. B. Geller, Persistent pressure anisotropy  in the subsonic  magnetosheath  region,  Geophys. Res. Lett., 3,  65-68,  1976.
+- Chandrasekhar, S. A., A.  N.  Kaufman, and  K.  M.  Watson,  The stability of the  pinch,  Proc.  Roy. Soc. London, Ser.  ,4, 245,  435, 1958.
+- Hasegawa, A., Drift  mirror instability in  the  magnetosphere,  Phys. Fluids, 12(12),  2642-2650, 1969.
+- Kaufmann, R. L.,  and  J.  T. Horng,  Physical  structure of hydromagnetic  disturbances in  the  inner  magnetosheath,  J.  Geophys.  Res., 76,  8189-8198,  1971.
+- Kaufmann,  R. L., J.  T.  Horng, and A.  Wolfe,  Large-amplitude  hydromagnetic waves in  the  inner  magnetosphere,  J.  Geophys.  Res.,  75, 4666-4676,  1970.
+- Lees,  L.,  Interaction between the  solar plasma wind and the  geomagnetic  cavity, AIAA J., 2, 1576-1582, 1964.
+- Midgley,  J.  E.,  and L.  Davis,  Calculation by a moment technique  of the perturbation  of the geomagnetic field by the solar  wind, J. Geophys. Res.,  68,  5111-5123, 1963.
+- Spreiter, J.  R.,  A. L.  Summers,  and A. Y. Alksne,  Hydromagnetic flow around  the magnetosphere, Plant.  Space Sci., 14,  223-253, 1966.
+- Stahara,  S.S.,  D. S.  Chaussee, B.C.  Trudinger,  and J.  R. Spreiter, Computational techniques for  solar wind flows  past  terrestrial p anets-Theory  and computer programs, Rep.  NEAR TR 140,  Nielsen Eng. and Res.,  Inc., Mountain  View,  Calif., July  1977.
+- Stiles, G. S., E.  W. Hones, Jr., S.  J. Bame, and J.  R.  Asbridge,  Plasma sheet  pressure  anisotropies, J. Geophys. Res.,  83(A7), 3166-3172, 1978.
+- Zwan,  B.  J., and R. A. Wolf, Depletion  of  solar wind plasma near  a planetary  boundary, J.  Geophys.  Res., 81,  1636-1648,  1976.
+
+(Received  July  21,  1978; revised  September  26,  1978; accepted  October 3,  1978.)
+
+21562202a, 1979, A3, Downloaded from https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JA084iA03p00869 by University College London, Wiley Online Library on [25/03/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

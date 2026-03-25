@@ -1,0 +1,52 @@
+# PDL Pilot — Phase-1 THEMIS pilot configuration
+# This config drives 2 synthetic encounters to validate the pipeline end-to-end.
+# Switch data_source to "live" once pyspedas is available and real event times are known.
+
+run_label: "pilot_v0"
+
+data_source: "synthetic"     # synthetic | fixture | live
+random_seed: 42
+
+# Boundary models (frozen for Phase 1)
+boundary_models:
+  magnetopause: "shue1998"   # Ref: 1998_shue_magnetopause-location-extreme-solar-wind
+  bow_shock: "merka2005"     # Ref: 2005_merka_bow-shock-3d-position-shape-mach-number
+  distance_direction: "sun_earth_line"  # PROVISIONAL — local-normal deferred
+
+# Normalized s-bins (blueprint §5.3)
+bins:
+  very_near: [0.0, 0.2]     # physics-rich but fragile
+  near: [0.2, 0.4]          # primary robust science bin
+  background: [0.6, 1.0]    # normalization baseline
+
+# Filters
+filters:
+  trend_window_seconds: 120.0
+  min_sheath_duration_seconds: 300.0
+
+# Uncertainty envelope (simple perturbation, Phase 1)
+# Ref: 2019_walsh_solar-wind-measurement-uncertainty-geospace
+uncertainty:
+  mp_standoff_delta_re: 0.5
+  bs_standoff_delta_re: 1.0
+
+# Output
+output_dir: "runs"
+
+# Pilot encounters — synthetic for now
+encounters:
+  - encounter_id: "pilot_001"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2012-07-15T08:00:00"
+    time_end: "2012-07-15T08:10:00"
+    crossing_count: 1
+    notes: "Synthetic subsolar encounter with embedded PDL-like signature."
+
+  - encounter_id: "pilot_002"
+    spacecraft: "themis"
+    probe: "the"
+    time_start: "2013-02-20T14:00:00"
+    time_end: "2013-02-20T14:10:00"
+    crossing_count: 3
+    notes: "Synthetic encounter with multiple crossings — tests motion flag."

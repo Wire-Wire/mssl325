@@ -1,0 +1,369 @@
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+## RESEARCH ARTICLE
+
+10.1002/2017JA024526
+
+## Special Section:
+
+Magnetospheric Multiscale (MMS) mission results throughout the first primary mission phase
+
+## Key Points:
+
+- The internal structure of the magnetopause is investigated, using new analysis tools allowed by the high-performance MMS instruments
+- In a case study, the observed boundary is shown to be nonplanar and nonstationary
+- Quasi 1-D thin sub layers are identified separated by regions that are mainly 2-D
+
+## Correspondence to:
+
+L. Rezeau, laurence.rezeau@upmc.fr
+
+## Citation:
+
+Rezeau, L., Belmont, G., Manuzzo, R., Aunai, N., &amp; Dargent, J. (2018). Analyzing the magnetopause internal structure: New possibilities offered by MMS tested in a case study. Journal of Geophysical Research: Space Physics , 123 , 227-241. https://doi.org/10.1002/2017JA024526
+
+Received 28 JUN 2017 Accepted 8 DEC 2017 Accepted article online 15 DEC 2017 Published online 9 JAN 2018
+
+©2017. American Geophysical Union. All Rights Reserved.
+
+## Analyzing the Magnetopause Internal Structure: New Possibilities Offered by MMS Tested in a Case Study
+
+L. Rezeau 1
+
+, G. Belmont 1 , R. Manuzzo 1
+
+, N. Aunai 1
+
+, and J. Dargent 1,2
+
+<!-- image -->
+
+1 LPP , CNRS, Ecole polytechnique, UPMC Univ Paris 06, Univ. Paris-Sud, Observatoire de Paris, Université Paris-Saclay, Sorbonne Universités, PSL Research University, Paris, France, 2 IRAP , CNRS, Université de Toulouse, Toulouse, France
+
+Abstract We explore the structure of the magnetopause using a crossing observed by the Magnetospheric Multiscale (MMS) spacecraft on 16 October 2015. Several methods (minimum variance analysis, BV method, and constant velocity analysis) are first applied to compute the normal to the magnetopause considered as a whole. The different results obtained are not identical, and we show that the whole boundary is not stationary and not planar, so that basic assumptions of these methods are not well satisfied. We then analyze more finely the internal structure for investigating the departures from planarity. Using the basic mathematical definition of what is a one-dimensional physical problem, we introduce a new single spacecraft method, called LNA (local normal analysis) for determining the varying normal, and we compare the results so obtained with those coming from the multispacecraft minimum directional derivative (MDD) tool developed by Shi et al. (2005). This last method gives the dimensionality of the magnetic variations from multipoint measurements and also allows estimating the direction of the local normal when the variations are locally 1-D. This study shows that the magnetopause does include approximate one-dimensional substructures but also two- and three-dimensional structures. It also shows that the dimensionality of the magnetic variations can differ from the variations of other fields so that, at some places, the magnetic field can have a 1-D structure although all the plasma variations do not verify the properties of a global one-dimensional problem. A generalization of the MDD tool is proposed.
+
+## 1. Introduction
+
+The magnetopause boundary separates two magnetized plasmas of different origins: the solar wind and the magnetosphere. Its existence is due to the frozen-in property that prevails at large scale and which would fully prevent the two plasmas to reconnect if it was valid always and everywhere. As the magnetopause is accessible to in situ spacecraft measurements, it provides a unique occasion to study the internal structure of such a boundary and understand how the two plasmas interpenetrate each other via the kinetic effects. However, this study is made difficult by the fact that the boundary is always perturbed by nonstationary effects, due to the nonstationary incident solar wind and/or to surface wave instabilities such as tearing and Kelvin-Helmholtz instabilities (Chen et al., 1997; Faganello et al., 2008). It is worth noticing that if purely planar and stationary, the magnetopause layer should obey the classical theory of discontinuities (Belmont et al., 2013), that is, be purely tangential ( B N = 0) or, if not, either purely rotational or purely compressional. This is in contradiction with observations since compressional and rotational variations are always observed in a close vicinity of each other in the magnetopause layer, often mixed but with sometimes a clear separation between both (Dorville et al., 2014). Thanks to its unprecedented high quality and high time resolution experiments, the Magnetospheric Multiscale (MMS) spacecraft (Pollock et al., 2016; Russell et al., 2016) nowadays allow significant advances in the study of the internal structure of the magnetopause layer. This paper shows the new methods that can be used for that purpose.
+
+The date 16 October 2015 was a day with multiple magnetopause crossings by MMS. Figure 1 shows that it is due to the fact that the orbit of the spacecraft grazes the magnetopause for about 4 h between 09:00 and 13:00 UTC. The expected position of the magnetopause is calculated with the Shue et al. (1997) model using ACE data (Stone et al., 1998). The figure evidences that many crossings are expected to happen. This is what is observed, and these multiple crossings can be expected to be complex, with possible back and forth motions and partial penetration in the current layer. We choose to study the crossing around 13:06
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+Figure 1. Radial distance from the Earth as a function of time: comparison between MMS orbit (blue line) and Shue magnetopause position computed with ACE data.
+
+<!-- image -->
+
+(which is shown by a red arrow) because this period has already been studied by Burch et al. (2016), Torbert et al. (2016), and Le Contel et al. (2016), with a main emphasis put on its relationship with the reconnection event identified at 13:07.
+
+Figure2displaysthemagneticfieldmeasuredbytheMMSmagnetometers (Russell et al., 2016) during a 1 min interval around the crossing investigated. In this figure as in all the others unless specified, the times are counted for convenience from t 0 = 13 ∶ 05 ∶ 30. The magnetic field is smoothedusingaGaussianfilter,withastandarddeviationoftheGaussian kernel equal to 70 points, which makes an effective smoothing window of about 1.6 s. All the data used in the study are resampled to the magnetic field sampling time and then smoothed in the same way as the magnetic field.
+
+One can see that the crossing is complex. The spacecraft come from a clear magnetospheric field at the beginning of the interval ( B z ≈ 35 nT); a reversal is seen around t ≈ 15 s, showing the crossing of the main magnetopause current layer; the magnetic field is not completely stationary afterward, which can be interpreted, as done by Torbert et al., by the fact that the spacecraft do not progress further in the normal direction with respect to the magnetopause, so remaining inside it ('stagnation'), with even a backward motion around t = 28 s.
+
+Figure 3 summarizes the evolution of the main physical parameters during the interval under study, where it can be seen that the region where the plasma properties change is not identical to the magnetic field reversal region but is close to the first part of it, and slightly before.
+
+## 2. The Magnetopause is Nonstationary and Nonplanar
+
+## 2.1. Comparison of Normals
+
+The most common method to analyze a magnetopause crossing is the minimum variance analysis (MVA), which has been introduced with the first measurements of the magnetic field in space (Sonnerup &amp; Cahill, 1967; Sonnerup &amp; Scheible, 1998). It is based on the assumption that the boundary is perfectly 1-D, that is, that all isosurfaces are parallel planes, and it provides a single boundary normal based on the magnetic field measurementsacrossthe'wholecrossing.'Yearsofstudyofexperimentalresultshaveshownthatthisassumption is acceptable as long as sufficiently large scales are considered and ultimately amount to finding out the normal of the magnetopause boundary itself and compare it to a model (e.g., Shue et al. (1997)). But they have also shown that the magnetopause itself has an internal structure which can be complex (Burch et al., 2016; Dorville et al., 2014).
+
+MVA relies on the Maxwell equation ∇ ⋅ B = 0, and on the constancy of the normal component that follows from it for a strictly 1-D geometry. This property is sufficient to determine the normal direction as long as this component is the only that does not vary, that is, when the B T tangential hodogram has a certain curvature: otherwise, two components are constant and B N = const is not a sufficient condition to identify the normal direction (this excludes the coplanar case of shocks). If the magnetopause conformed to the simple classical image of a boundary made of a monotonous ramp connecting two homogeneous regions, the strict B N conservation would be valid on any interval, whatever the number of points. The existence of different
+
+Figure 2. GSE magnetic field components observed on MMS1, 16 October 2015, beginning time at 13:05:30.
+
+<!-- image -->
+
+sublayers that can move with respect to each other would not invalidate this property, at the condition that these sublayers are all planar and strictly parallel to each other. The existence of nonstationarity should not bring difficulties either, at the condition that the boundary remains strictly planar everywhere and that its normal direction does not vary in time. The main difficulties therefore come from the departures from planarity and from the absence of time stationarity of the normal direction. Such departures are likely to occur often at the magnetopause, even if only due to the small scales waves and turbulence that are always present. To fix this difficulty, MVA is usually used on a statistical basis and applied over a sufficiently long interval between two points around the crossing, one considered as assuredly in the magnetosphere and one as assuredly
+
+<!-- image -->
+
+Bulk Vel(km/s)
+
+<!-- image -->
+
+2015-10-16
+
+Figure 3. From top to bottom: magnetic field, electron velocity, density, and spectrograms of ions and electrons for the global period studied in the paper. The blue boxes select the regions where the geometry is 1-D and the yellow ones the regions where it is 2-D (see the discussion at the end of the paper).
+
+in the magnetosheath. This actually transforms the condition that B N is constant into the condition that its variance is less than the variance of the other components. A necessary condition for applying safely this condition is that the ratio between the minimum and intermediate variances is sufficiently small. Another condition that should be checked is that these two variances are really characteristic of the large-scale variation related with the current layer under study and not mainly due to the parasitic small-scale turbulence. Whentheseconditions are not fulfilled, the result actually depends on the position and the size of the 'global' interval chosen. The stability of the result is sometimes tested a posteriori, by checking the variations of the observed B N and by using nested intervals (see, for instance, Zhang et al., 2005). When contradictions occur in one of these two tests, the results are rejected, under the assumption that the real local normal should not depend on time inside the crossing. Beyond this constraint of a strictly constant normal direction, MVA also suffers from another limitation that prevents people from using it on short intervals and therefore analyzing the substructure of the layer: the interval used must be long enough to evidence the curvature of the B T tangential hodogram. Any variation obviously tends toward a straight line when the interval duration decreases, so increasing the inaccuracy of the result in the M -N plane.
+
+These limitations encouraged scientists to develop more elaborate methods (a review can be found in Haaland et al., 2004). They are not all used nowadays, probably because they require more high time resolution data and are more difficult to apply than MVA. Let us cite in particular the different GRA methods (generic residue analysis; Sonnerup et al., 2006). These are generalizations of MVA to other parameters other than just B . Although generally more efficient than MVA, these methods rely on conservation laws (fields and plasma) that require also planarity (1-D variations) to be valid. They therefore suffer from most of the limitations of MVA for investigating sublayers. In addition, they require stationarity ( /u1D715 t = 0). The BV method (Dorville et al., 2014) mixes magnetic field ( B ) and velocity ( V ) data and is based on different grounds but still in the same
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+Figure 4. Hodogram of the magnetic field in the plane tangential to the magnetopause obtained by BV, and its fit. The tangential directions BT1 and BT2 chosen for the plot are those of intermediate and largest variances, but any rotation would not change the interpretation. The axis scales are in nanoteslas.
+
+<!-- image -->
+
+angle between the two normals is 11 ∘ indicating that in this case the global magnetopause is probably not far from the standard paraboloid shape assumed by Shue et al. As MVA, as we use it, is a single-spacecraft technique, one can compare the MVA normals derived from the data on each of the four spacecraft. As they are actually very near, they measure very similar magnetic fields and the angle between each normal and the average normal is indeed less than 1 ∘ .
+
+'global layer' spirit. It has been shown to give accurate normal determinations in a statistical study (Dorville et al., 2015). Nevertheless, it is not either perfectly suited for analyzing intervals much shorter than the global width of the current layer (in spite of the excellent time resolution of the MMS data). In any case, all the methods mentioned here assume that the boundary is locally a plane. This assumption may be questionable due to local deformations of the surface, such as surface waves. Confirmation is givenbyallthenumericalsimulationsofreconnectionorKelvin-Helmholtz instability (Aunai et al., 2016; Chen et al., 1997; Dargent et al., 2017; Miura and Pritchett, 1982) and also by some experimental observations (Blagau et al., 2010).
+
+For the crossing investigated in the present paper, MVA has been first applied on the global interval. It shows that the three eigenvalues are not well separated, the maximum variance being clearly larger than the two others, but these two others being rather similar (ratio 1.9). This means that the normal might not be precisely determined. Nevertheless, we obtain N MVA = [ 0 . 811 , 0 . 536 , -0 . 234 ] which is close to the normal obtained with the (Shue et al., 1997) model which is N Shue = [ 0 . 854 , 0 . 519 , -0 . 043 ] . The
+
+Looking at the magnetic data in Figure 2, the global crossing can be guessed to consist of a first current layer between, typically, t = 10 s and 20 s, followed by a backward motion later, with only a partial entrance in the magnetopause between t = 25 s and 30 s. For confirming or disproving such a guess, one has to investigate the internal structure of the magnetopause layer in more details and look for possible substructures. For this purpose, let us first compute MVA on shorter intervals. Between t = 10 s and 20 s, we obtain (on MMS1) N MVA = [ 0 . 591 , -0 . 591 , -0 . 548 ] , which is very different from the previous normal, the angle between both being73 ∘ . Let us note that changing slightly the choice of the beginning and ending times of this MVA interval does not change much this conclusion. As the ratio between minimum and intermediate eigenvalues is again not much larger than 1 (2.6), MVA is quite questionable and one can wonder whether this determination is just erroneous or if such a large difference can actually exist between the local and the global normals. Taking advantage that, beyond B , all the other physical parameters are measured at the same time, it is possible to use the particle data (Pollock et al., 2016) to analyze the crossing with the BV technique (Dorville et al., 2014). The hodogram (Figure 4) is almost a straight line, without a clear curvature, but this does not prevent the BV method from working, the fit of this hodogram by a very elongated ellipse remaining quite acceptable. The BV program automatically determines the optimum interval for its fitting procedure, which is between, unsurprisingly, t = 14 s and 18 s. The normal obtained is then (on MMS1) N BV = [ 0 . 838 , 0 . 506 , -0 . 205 ] , which is only 9 ∘ from the Shue et al. normal. This result is much more likely than the MVA one.
+
+## 2.2. Thickness of the Magnetopause
+
+A possible byproduct of the BV method is an estimation of the thickness of the current layer of the magnetopause and of its normal velocity, but it is worth noticing that these estimations have to be taken with caution. The BV program provides in its present version an estimated thickness of 30 km on MMS1 and MMS2 and 40 km on MMS3 and MMS4, which is smaller than the thermal ion Larmor radii (which vary from ≈ 140 km in the magnetosphere to ≈ 110 km in the magnetosheath). It also provides an estimated normal velocity of 8 km s -1 for MMS1 and MMS2 and 10 km s -1 for MMS3 and MMS4, which is much smaller than the normal Alfvén velocity (36 to 170 km s -1 ). These results being noticeably smaller than the values commonly observed, we have used other methods to check them. These methods provide more likely results of about 200 km for the thickness and 50 km s -1 for the normal velocity.
+
+The first calculation is the same as done in the BV method, and also similar to those used in Paschmann et al. (1990) and De Keyser et al. (2002), which consists in integrating the normal ion velocity V in over time to obtain the abscissa x ( t ) , but using a different normal which is likely to be more precise (see in further sections how we
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+Figure 5. Abscissas x ( t ) along the magnetopause normal, as determined by two different methods (see text). The origin is arbitrary.
+
+<!-- image -->
+
+have obtained this normal). The second calculation makes use of the four-spacecraft gradient determination. The abscissa along the normal is obtained by integrating the quantity /u1D6FF x = Y ∕ Y ′ , where Y is a scalar variable and where Y ′ represents the projection of /u1D6C1 Y onthe normal direction (the normal direction being determined in the same way as above). The spatial derivatives in the different directions are estimated by linear interpolations from the multipoint measurements (here four spacecraft). This can be done by methods similar to the well-known 'curlometer,' which is very often used to calculate the electric current density (Chanteur, 1998). We have taken here Y = B L , which is the component of B that varies most during the crossing. Figure 5 shows the comparison between the two results. Both results look quite compatible during the crossing of the main current layer and lead to the same value of ≈ 200 km for its thickness. This similarity validates the hypothesis which is done in the BV method that the flow through the boundary is negligible. Nevertheless, the two results clearly depart at later times. This is due to a very strong dependence of the result, with the BV method, on the quality of the normal determination (Dorville et al., 2014). A small uncertainty in the normal direction determination can draw a large variation of the V n component because the tangential component of the velocity is much larger than the normal one (see Figure 3). With a magnitude of the velocity of about ≈ 300 km s -1 , an uncertainty of 10 ∘ on the normal direction corresponds to an uncertainty of ≈ 50 km s -1 for the normal velocity, and an uncertainty of about ≈ 200 km for the thickness. It is so quite understandable that with a normal valid in the 14-18 s interval, the inaccuracy increases very fast at later times where this normal is no more valid. The method based on gradients does not present this difficulty: it is much less sensitive to the accuracy of the normal determination. Nevertheless, we had also to add a caution to make it work correctly: because of various small accuracy issues, the denominator Y ′ maycancel at a time slightly different from the numerator, which results in short divergences in the result and jumps in the x ( t ) curve. This has to be corrected by adding adequate small shifts in the denominator. In addition, Figure 5 clearly gives the confirmation that the spacecraft is going backward inside the magnetopause around t = 27s, as was guessed before. Due to its importance, this technique is under review for further improvements and will be applied to other cases in next studies.
+
+In Figure 6, we have plotted the projection of the ion velocity along the normal obtained by BV, together with the density profile. This evidences an internal structure inside the magnetopause. Two main parts can be
+
+<!-- image -->
+
+time(s)
+
+Figure 6. Comparison of the normal component of the velocity and the density variation (MMS1). The thick lines correspond to the t = 14-18 s interval. The vertical thin lines indicate the limits of the two periods described in the text.
+
+observed in the interval t = 14-18 s, where the main plasma gradients are located and which is emphasized by a thick line: in interval (a) a sharp density gradient, with an almost constant V n , followed in interval (b) by a smoother gradient with a normal velocity close to zero. This is in agreement with the sketch drawn in Figure 3 of (Burch et al., 2016) which is a possible interpretation of this crossing (although assuming a stationary boundary): a rather straight crossing, followed by a stagnation of the spacecraft inside the boundary. This is confirmed by the observation of energetic ions continuously after 13:05:42 (Le Contel et al., 2016). Out of the central interval t = 14-18 s, the curve V n ( t ) is plotted with a dashed line, to warn the reader that the projection of the velocity is obtained using the BV normal based on this interval and that the validity of this projection, even if correct in the magnetic ramp itself, remains questionable outside of it.
+
+## 2.3. Nonstationarity
+
+Using timing methods is another classical way for getting information on the boundary properties from multispacecraft measurements. We tested CVA(constant velocity analysis), which assumes that the boundary is a planar structure encountered by the four spacecraft with a constant velocity (Sonnerup, Teh, &amp; Hasegawa, 2008; Sonnerup, Haaland, &amp; Paschmann, 2008). As in any other timing method, the analysis is based on the knowledge of the positions of the spacecraft and the measurements of the delays between the signatures of the crossing seen by the four spacecraft.
+
+Figure 7. Comparison of the main component ( B z ) of the (left) magnetic field and (right) computation of the delay between points having the same B z value. The green vertical line is the average delay.
+
+<!-- image -->
+
+<!-- image -->
+
+As shown in Figure 7, these delays are very short with respect to the parasitic variations due to the intrinsic nonstationarities, in particular waves and turbulence. If the boundary was stationary, we should find a constant delay between the fields observed by MMS1 and MMS4. On the contrary, it is obvious that the dispersion of the points is not negligible at all with respect to the delay itself. It is worth noticing that we have plotted here the B z component, which is the component that varies most, and for the MMS1-MMS4 pair, for which the delay is maximum. The situation is worst when using the other components and the other spacecraft pairs. This results in a very inaccurate determination of the delays and therefore in a bad determination of the normaldirection. The first conclusion is therefore that in this case, the CVA method cannot be used without much caution.
+
+Looking at Figure 7, we can also derive some hints on the nonstationarity of the boundary at different scales. In the beginning of the crossing there are oscillations, evoking the presence of waves, superimposed to the magnetopause variation. This induces variations of the delay on the top of the figure. But there is also a large-scale variation of the delay: on the top of the figure (beginning of the crossing) its mean value is about -0 . 07sandafterwarditgoesto -0 . 15s: the delay is not constant through the crossing. Similar conclusions are obtained with the two other spacecraft. Using an averaging of the delays, one could interpret the large-scale variation as a constant acceleration of the boundary, which would help improving this result (Dunlop et al., 2002). Results of other timing methods, such as CTA (constant thickness analysis) are not presented here, but the same difficulty (small delays with respect to the intrinsic fluctuations) would lead, on this example, to the same difficulties.
+
+The conclusion of these observations is that the magnetic field is not stationary during the crossing by the four MMS spacecraft, and therefore, the boundary is not the planar stationary discontinuity which is the most simple model for the magnetopause. It is necessary to investigate in more details the geometry and behavior of the magnetopause.
+
+## 3. Internal Structure: Departures From Planarity
+
+Whenanalyzingaboundarycrossing,onemostoftenassumesthatthisboundaryis1-D,thatis,thatallparameters vary only in one direction, which is its normal. When this hypothesis of planarity is fully verified, the normal component B n of the magnetic field is strictly constant and this property is used in MVA method to determine a single global normal direction (if no other B componentis constant in the interval). Nevertheless, when the boundary is shaken by some nonstationary effect (either due to varying incident conditions or due to surface instability such as tearing mode or Kelvin Helmholtz), it generally does not remain fully 1-D. Such departures to planarity can easily be observed in numerical simulations of reconnection (see, for instance, Dargent et al., 2017, which will be used afterward in the paper) or, less easily, it can be guessed from data (see the magnetopause reconstructions in De Keyser, 2008; Hasegawa et al., 2005). These departures result
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+in the fact that MVA is not suitable to this case, and the meaning a global normal direction becomes unclear. One way for dealing with these cases is to try to determine, when possible, a 'local normal,' possibly varying along the crossing, instead of a single global one.
+
+## 3.1. Local Normal Analysis
+
+Weintroduce here a new method, which we call LNA (local normal analysis), based on the independent measurements of B (from field data) and j (from particle data), and which allows determining a normal that can vary along the crossing. Mathematically speaking, a local normal direction can be defined wherever all plasma parameters depend on space only through a single scalar function s ( x , y , z ) of the three coordinates. This ensures that the gradients of all parameters are parallel to each other at any point, this common 'normal' direction possibly depending on the point considered. The direction N is given by
+
+<!-- formula-not-decoded -->
+
+In a cylindrical geometry for instance, all quantities depend on space only through the radius r , so that all gradients are everywhere parallel to the radial direction. Of course, this direction is variable from one point to another in the azimuthal direction.
+
+For any vectorial field U verifying this property, one can write the curl as
+
+<!-- formula-not-decoded -->
+
+where d s U stands for the derivative of U with respect to s . Therefore, when it is applied to the magnetic field it shows that the current density is perpendicular to the normal (neglecting the displacement current). When applied to the electric field, it shows that /u1D715 t B is perpendicular to the normal, using Maxwell-Faraday equation. A simple cross product between these two vectors is then a priori sufficient to provide the normal direction
+
+<!-- formula-not-decoded -->
+
+When both parameters j and B are independently determined with a sufficient accuracy, this expression can provide a simple and efficient way for determining the local normal N at each time and for a single spacecraft. It is worth noticing that this method does not rely on ∇ ⋅ B = 0 and thus on the fact that one component (and only one) is constant: it is therefore not limited to sufficiently rotational cases. For the first time in space history, MMSprovides independent-and generally reliable-measurements for j and B (Torbert et al., 2016), since we can compute a high-resolution current density from the particle data (Pollock et al., 2016). On previous space observations we used to work only with current density obtained from the magnetic field, with the well-known curlometer technique, because the particle instruments had neither the necessary accuracy nor the necessary time resolution to do it. On MMS it has been shown that both calculations of the current show a global fairly good agreement (see Le Contel et al., 2016 who computed the currents for the same time period).
+
+It is worth noticing that this new method has to be scale dependent: in the present program, this dependence is crudely controlled by the way the variables are smoothed before use. Since the method relies on time derivatives, this smoothing has an important role in the result. Here the components of the magnetic field are smoothed with a local cubic fit, which is convenient for getting the time derivatives analytically (The smoothing is performed on the same time scale as the previous Gaussian filtering). Going to large-scale smoothing should allow retrieving the classical notion of global normal. On the contrary, going to very short scale smoothing would provide the wave vectors of the different waves encountered (which can be considered as 'parasitic' for the present kind of study). This step could be improved in the future (by using for instance a Fourier filtering instead of a smoothing).
+
+Figure 8 shows what the results look like when running the 'local normal analysis' (LNA) method on the case presented in Figure 2 without further precaution. The data have been smoothed over 1.6 s (the global interval being of 1 min). This time scale is a good compromise for this case: it is significantly shorter than the global crossing time (so giving access to the internal structure), and long enough to get rid of most high frequency turbulence. One can see that this figure appears almost unintelligible in these conditions: apart from a short period about t = 15 s where the normal appears relatively stable (and where its direction will be confirmed by another method hereafter), it appears highly fluctuating and apparently random. The reason can easily be understood: the method provides the local normal under the hypothesis that this normal exists, that is,
+
+<!-- image -->
+
+Figure 8. The three components of the vector N LNA as determined by LNA without 1-D selection in GSE frame, with no test of the significance of the result.
+
+<!-- image -->
+
+that the variations are locally 1-D. As, at this stage, there is no test of this hypothesis, one gets a result everywhere, even where it is not verified and where the result is thus meaningless. An additional test of locally 1-D variations is therefore necessary to make the LNA method complete. It will be the subject of the next sections.
+
+## 3.2. Test of the Local Planarity
+
+The best test for determining the dimensionality of observed variations demands multipoint measurements. It has been proposed by Shi et al. (2005) for Cluster data. This method, called MDD (minimum directional derivative), analysis makes use of magnetic field data, although it is not based on specific properties of this field. It actually has been little used with Cluster, most of the authors preferring to stay in the purely 1-D hypothesis and the simple notion of a global normal supposed to be determined by MVA. But it is nowadays attracting increasing interest for analyzing the MMS data (see, for instance, Chen et al., 2017) because of the short separation between spacecraft that allows a better determination of the local gradients. In a recent paper, Denton et al. (2016) have even applied this MDD method on a magnetopause crossing in the same global interval shown in Figure 1 as the crossing analyzed here, but a bit later.
+
+The MDD method consists in diagonalizing the matrix L = G ⋅ G T , where G = ∇ B and the superscript T indicates matrix transposition and where the spatial derivatives are computed as explained before. The largest eigenvalue /u1D706 1 corresponds to the largest derivative for the ensemble of the B components. When this eigenvalue is much larger than the two other eigenvalues, it means that all B components vary in one single direction, which is given by the corresponding eigenvector /u1D736 1 , that is, that it is 1-D, with the normal direction N = /u1D736 1 . When the two largest values /u1D706 1 and /u1D706 2 have the same order of magnitude, while the third one /u1D706 3 is muchsmaller, it means that the problem is 2-D, the variations occurring in the plane ( /u1D736 1 , /u1D736 2 ) , /u1D736 3 so being the direction of invariance. When the three eigenvalues have the same order of magnitude, it means that the B variations are fully 3-D. A modified MDD method has been proposed by Denton et al. (2010) (see also a test in simulation in Denton et al., 2012) to avoid the effects of possible offsets and calibration errors in the data. These errors might have a noticeable impact when the method is used to compute the velocity of a structure, (Denton et al., 2010) but, as it is not what we do here, we use only the original version of MDD in the present paper. Nevertheless, this point of view may have to be reconsidered for the generalized MDD method that we propose hereafter because such errors have certainly a much larger effect when using the electric field data than with the only magnetic field ones.
+
+In order to visualize more easily the effective dimensionality of the variations, we have introduced three parameters, which can be used as proxies:
+
+<!-- formula-not-decoded -->
+
+<!-- formula-not-decoded -->
+
+<!-- formula-not-decoded -->
+
+Thesethreeparametersvarybetween0and1andtheirsumisequalto1.For D 1 = 1and D 2 = D 3 = 0, variation happens only in one direction: the geometry can be told 'purely 1-D variation.' For D 2 = 1 and D 1 = D 3 = 0,
+
+<!-- image -->
+
+Figure 9. The three dimensions resulting of the MDD analysis as functions of time for the same interval as Figure 8.
+
+<!-- image -->
+
+the amplitudes of the variations are equal in two directions: it is what we call the case 'purely 2-D.' For D 3 = 1 and D 1 = D 2 = 0, the amplitudes of the variations are equal in the three directions: it is what we call it 'purely 3-D.' Of course, all intermediate situations are possible. Let us consider, for instance, a flux rope with /u1D706 1 = 5, /u1D706 2 = 1, and /u1D706 1 = 0 . 1, which gives the dimensions D 1 = 0 . 8, D 2 = 0 . 18, and D 3 = 0 . 02. The structure has a slightly 2-D character since D 2 is not negligible, but D 1 &gt; D 2 indicates that the tube is strongly flattened in one direction: this makes the transition between 2-D (circular tube) and 1-D (tube infinitely flattened). Such structures have been observed and studied by Shi et al. (2009) and Shi et al. (2013) on Cluster and Yao et al. (2017) on MMS.
+
+When applying the MDD Analysis to the interval under study, the three eigenvalues obtained are quite similar to those of the Figure 1 of Denton et al. (2016). These results are plotted in Figure 9 using the three Di parameters. It must be kept in mind that the Di coefficients deriving from MDD give a local measurement of the dimensionality at the scale which has been selected by the smoothing. Our data have been smoothed on 1.6 s; therefore, the wave structures superimposed on the magnetopause crossing are mostly removed. It can be observed that the 1-D variations are generally dominant but that 2-D and 3-D variations are also present in the interval. It is worth noticing that in the regions of 2-D variations, the direction of invariance /u1D736 3 is determined by the MDD method, which may be an important information for numerical modeling purposes.
+
+In the regions where D 1 ≈ 1, the normal can be determined by N MDD = /u1D736 1 . In Figure 10, the angular distance of this MDD normal with the reference N Shue normalisplotted, for the regions where D 1 &gt; 0 . 9(thin line) and for D 1 &gt; 0 . 98(thick line). An additional caution has been taken in this figure: we have discarded the regions where there are no significant magnetic field variations ( | | /u1D715 t ( B ) | | 2 less than one tenth of its maximum value) because we are not interested in the direction of the gradients for these small variations: they are more likely related to wave and turbulence rather than to the large-scale current layers. In the remaining regions, the results of our LNA have been overplotted for comparison (in blue). One can observe that, as expected, the results obtained by the two methods are generally close to each other when D 1 ≈ 1 and that they diverge from each other for smaller values of D 1 . For the sake of clarity, we have isolated the two intervals, limited by dashed lines in the figure, where D 1 &gt; 0 . 98 and which are long enough: interval 1 from 13.8 to 16.8 and interval 2 from 27.4 to 28.4. If we compute the averaged normals on these intervals, we find that the two normals make a 4 ∘ angle in interval 1 and 7 ∘ angle in interval 2. Considering, for instance, the normal determined with MDD, it is N 1 = [ 0 . 925 , 0 . 124 , -0 . 355 ] for interval 1 and N 2 = [ 0 . 872 , 0 . 473 , -0 . 121 ] for interval 2. Therefore, during the small incursion into the magnetopause which is observed around t = 28 s, the normal is different from the normal observed during the large crossing. The two normals are separated by 25 ∘ , and the interval 2 normal is closer to the nominal Shue model (which assumes the magnetopause is a paraboloid) than the interval 1 normal.
+
+Nevertheless, one can also observe that at some points (see t ≈ 22 or t ≈ 29), the results can be significantly different (with fast variations for LNA), while D 1 is not much smaller than unity. A possible reason for these differences may be the use of different current densities: LNA uses the particle current density, whereas MDD is based on the magnetic field. These departures may also indicate that sometimes, the layer is 1-D in the sense of MDD, but not in the sense of LNA. The physical reasons for these discrepancies will be investigated in the next subsection, where the two analysis methods have been tested in a numerical simulation.
+
+<!-- image -->
+
+Figure 10. On top, the D 1 parameter. Below the angle between the normal determined by MDD (in blue) and the reference normal given by the Shue model. The thin lines correspond to D 1 &gt; 0 . 9. The thick lines correspond to D 1 &gt; 0 . 98. In black, the results of the LNA method have been overplotted for comparison, with the same convention. The intervals selected by dotted lines refer to the text.
+
+<!-- image -->
+
+## 3.3. Tests of the MDD and LNA Methods on a Numerical Simulation and Generalization of MDD
+
+For testing the MDD and LNA methods, we use a 2-D numerical particle-in-cell simulation published in Dargent et al. (2017). Note that this simulation of reconnection has no relation with the above experimental case. In this simulation, we have mimicked various spacecraft crossings of the magnetopause layer and treated the data by both the MDD and LNA methods. The crossing used in this paper is shown in Figure 11 where a mapof the magnetic field in the simulation is plotted. The only difference with the real spacecraft data is that the spatial derivatives have been estimated directly from the simulation grid instead of being estimated from the 4-point measurements of the MMS irregular tetrahedron.
+
+Figure 12 shows the results for the crossing shown in Figure 11, in the same format as Figure 10, with the same criterion on | | /u1D715 t ( B ) | | 2 . It can be seen that MDD determines a normal which is, as expected, close to the y direction, with a clear regular variation which finely fits the shape of the exhaust region in the simulation. It is worth noticing that the B variations are shown to be almost 1-D everywhere in the layer, even in the region relatively close to the X point where the field lines are clearly not straight lines. Our LNA result is quite consistent, in general, with this one. Nevertheless, one can once again observe that the two results are not perfectly identical: at some points (see t = 41-43) where D 1 is very close to unity, the difference between the two results is significant. The LNA result can even include a nonnegligible z component (not shown),
+
+Figure 11. B z component in the numerical simulation superimposed to the magnetic field lines in the simulation plane. The ( x , y ) components are those of the 2-D simulation box. The straight line indicates the simulated crossing trajectory, with the period of time which is studied below overlined in green, beginning at the bottom of the simulation box and going in the direction of the increasing y . The small arrows are the MDD local normals determined along the trajectory.
+
+<!-- image -->
+
+<!-- image -->
+
+Figure 12. Same as Figure 10 for the crossing in the simulation box shown in Figure 11. The time is counted from the entrance of the spacecraft in the simulation box which is crossed at constant velocity. The angle is measured with respect to the reference direction, which is here the y direction of the simulation box. The thin lines correspond to D 1 &gt; 0 . 9. The thick lines correspond to D 1 &gt; 0 . 98.
+
+<!-- image -->
+
+which is inconsistent with the 2-D simulation. Although the discrepancies remain generally small, they are to be understood because, for a fully 1-D variation, it is clear that j and /u1D715 t ( B ) should be strictly tangential and the LNA method should work perfectly. The MDD local normals are plotted also in Figure 11, where it is clear that the local normal varies along the crossing.
+
+These discrepancies point out a weak point in the basic MDD method, which is based on the magnetic field only: when D 1 ≈ 1, it indeed guarantees that the B variations are 1-D, so that j is tangential, but it does not guarantee that the other plasma variations are also 1-D. In particular, if E variations are not 1-D, there is no reason why /u1D715 t B should be strictly tangential, which is necessary for LNA to work. In low beta regions, one can guess that the magnetic field controls all the other plasma parameters, so that everything is likely to be 1-D when the magnetic field is 1-D. It is probably the reason why the discrepancies remain quite limited. But in the regions where pressure effects are important (in the central part of the exhaust, for instance, in reconnection geometries), it is not certain that the 1-D variations of B actually ensure the planarity for all the plasma parameters. The fluid equations of momentum, for ions and electrons, clearly show in particular that the variations of the parallel components of the fluid velocities u i and u e are determined by the pressure forces. When these pressure effects are not negligible, the parallel velocities are therefore not constrained by the geometry of the magnetic field variations.
+
+Fortunately, the MDD can easily be generalized. Instead of considering the 3*3 matrix G = ∇ B , one can introduce variations of all the needed parameters G ′ = ∇ S , where S is a vector of dimension N , including not only the three components of B butalso any of the other available parameters: the components of the electric field, those of the ion and electron velocities, those of the pressure tensors, and the scalars as the density, etc. In these conditions, G ′ is a 3 by N tensor, but L remains 3 ∗ 3 and the rest of the method can remain unchanged. A normalization has to be introduced in the computation so that the weight of the different physical quantities is equivalent: the Frobenius norm of ∇ B is computed as a function of time, and the magnetic field is normalized by the maximum of the norm over all the interval. And the same is done for the electric field.
+
+In the simulation data, such a generalization has been done by just introducing the electric field vector in addition to the magnetic one. The result, which can be compared with the result of Figure 12, is presented in Figure 13. One can see that the generalized MDD method allows evidencing a 2-D character of the plasma
+
+<!-- image -->
+
+Figure 13. Same as Figure 12 for the crossing in the simulation box shown in Figure 11 when MDD is replaced by MDD generalized to E fi eld. The three components of the electric field are plotted in the bottom panel for reference.
+
+<!-- image -->
+
+in a small region in the current layer, close to the X point, that was not evidenced by the only B variations. D 1 hasmorecontrastedvariations than with the nongeneralized method, so that the same threshold is now more demanding. This leads to reject some normal determinations in the regions where the discrepancy between the LNA and MDD normals was the most important (with a noticeable z component for the LNA normal in particular) and where D 1 has now smaller values.
+
+Concerning the magnetopause crossing presented in this paper, preliminary tests have been done of the generalization of MDD. They are not presented here because they have not proved yet to be efficient. When applying the same generalization as in the simulation (addition of the E data), the result is not conclusive. The reason seems to be purely experimental: as the calibration of electric antennas is a difficult issue, the precision on the different components of E (Ergun et al., 2016) is not sufficient to calculate safely the tensor /u1D6C1 E from the four spacecraft measurements: even the basic Maxwell-Faraday law cannot be verified from the data because the differences between spacecraft are dominated by the differences between offsets rather than by the physical differences. The problem is still complicated by the presence, on the magnetospheric side, of very strong electrostatic bursts of short period, which can hardly be eliminated by the smoothing process and which make difficult obtaining the small transverse field induced by the current layers we are interested in. TheattemptstousetheMDDmethodmodifiedbyDentonetal.(2010)havenotallowedhithertotoovercome this difficulty.
+
+Generalizing with the ion velocity V i does not pose similar problems. This has been done, but this test did not lead to conclusive results either: introducing the V i variations does not change significantly the result
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+Table 1 Comparison of the Normals Obtained by MDD and LNA on the Periods Given on the Left (the Duration is Indicated in Parentheses)
+
+| Date              | /u1D703 LNA ∕ MVAB   | /u1D703 MDD ∕ MVAB   | /u1D703 LNA ∕ MDD   |
+|-------------------|----------------------|----------------------|---------------------|
+| 2015-10-16        | 20 ± 3               | 17 ± 8               | 9 ± 6               |
+| 10:20:00 ( + 120) |                      |                      |                     |
+| 2015-10-16        | 56 ± 0 . 5           | 44 ± 3               | 12 ± 4              |
+| 10:29:30 ( + 120) |                      |                      |                     |
+| 2015-10-16        | 33 ± 0 . 8           | 21 ± 0 . 9           | 12 ± 0 . 4          |
+| 10:36:30 ( + 120) |                      |                      |                     |
+| 2015-10-16        | 12 ± 1               | 11 ± 4               | 3 ± 1               |
+| 10:55:00 ( + 60)  |                      |                      |                     |
+| 2015-10-16        | 24 ± 2               | 20 ± 3               | 7 ± 3               |
+| 13:05:30 ( + 60)  |                      |                      |                     |
+| 2017-01-27        | 35 ± 19              | 39 ± 14              | 9 ± 6               |
+| 12:05:23 ( + 70)  |                      |                      |                     |
+
+Note. The table provides the angles (in degrees) of the two types of normals with respect to MVAB and the angle between them. The statistics are done over all the local normals that satisfy D 1 &gt; 0 . 99 and /u1D715 t ( B ) 2 &gt; 0 . 5 of its maximumvalue. The first number corresponds to the mean value, and the second one (after ± ) corresponds to the standard deviation.
+
+obtained with B alone. Improving the generalized MDD method to make it efficient with the experimental observations is still a work in progress.
+
+## 4. Conclusion and Perspectives
+
+For investigating the magnetopause internal structure, one cannot be satisfied with the simplest hypothesis of a perfectly stationary and monodimensional layer. We give here evidence of departures from these two simple hypotheses on a magnetopause crossing by MMS. The departure from planarity is particularly investigated, introducing a new single spacecraft method, called LNA, used together with an existing multispacecraft method called MDD (Shi et al., 2006). As LNA can give a reliable result only when the variations are locally 1-D, it can indeed be usefully combined with MDD, which allows selecting the intervals where this local 1-D hypothesis is verified. We have shown that the basic MDD method, which is based on the B variations only, is not always sufficient for that: even when it indicates variations close to perfectly 1-D, the normal provided by LNA can show small but significant differences with the corresponding normal coming from MDD itself. We therefore propose a generalization of MDD using more data. The idea has been tested by adding the E variations to the B ones, with data coming from a numerical simulation: the test has shown that this addition is sufficient for solving, at least partly, the problem. It remains to be investigated more thoroughly with spacecraft data. It is worth emphasizing once again that this paper presents the different methods accessible by MMS
+
+for investigating the internal structure of the magnetopause only from a case study: benchmarking these methods and comparing their performances on a statistical basis remain to be done in future studies.
+
+Pending these studies, Table 1 shows that the case presented here is not exceptional and seems rather typical. Weanalyze six cases in the same way as above, six of them being in the same day as the example of this paper. Andweshowthatthe two determinations, LNA and MDD, when restricted to strong criteria for D 1 and for the amplitude of the B variation, are globally consistent, even though they both vary with respect to the global MVAB normal (determined in a short interval including the main magnetic gradient). They both show to be often clearly different from this global MVAB determination. The choice of severe criteria has been done here in order to limit as much as possible the effects of nonplanarity and the role of the superposed turbulence and therefore make the different cases more comparable. However, the results are not perfect in the sense that the distance between the LNA and MDD determinations, which could be expected to be negligible, are generally not smaller than the local variations of each determination, as estimated by the standard deviation of their direction with respect the global MVAB result. This imperfection is likely to be due to the same reason as explained above: using MDD only on the magnetic field does not guarantee the real monodimensionality of the physics. Generalizing the method to the electric field should solve this problem if the electric field measurement was accurate enough to allow such a generalization.
+
+The MDD method, contrary to LNA, does not make use of Maxwell equations. In return, it loses the single-spacecraft character of LNA and so part of its locality. There is a priori no method that would be strictly single spacecraft and which would allow to test the local 1-D hypothesis with a comparable reliability. Nevertheless, some simplifying hypotheses could be used, in the future, to discard the non-1-D regions with some confidence. If one assumes, for instance, that the observed B variations can be approximated locally as stationary in some frame, we must have, in the observation frame,
+
+<!-- formula-not-decoded -->
+
+where V is the local propagation velocity of the structure. The same property has already been assumed in Shi et al. (2006), where the propagation velocity of the structures could so be determined. It can be noticed that the red curve plotted in Figure 5 is an integration of the velocity obtained by this method. The change of slope in the curve around t = 27 indicates a change of the velocity of the boundary and therefore gives a confirmation of the relative back and forth motion of the boundary that was guessed at the beginning of the paper. It seems to also confirm the hypothesis that the flow across the structure is negligible. If true, this may justify equation (7), the propagation velocity simply being the normal flow velocity.
+
+<!-- image -->
+
+## Acknowledgments
+
+The authors thank Olivier Le Contel and Laurent Mirioni for their help in dealing with the MMS data and for fruitful discussions. The French involvement on MMS is supported by CNES and CNRS. All the data used are available on the MMS data server: https://lasp.colorado.edu/mms/sdc/ public/about/browse-wrapper/.
+
+## Journal of Geophysical Research: Space Physics
+
+As soon as the property of equation (7) is valid, it can easily be shown that the two vectors /u1D715 t ( B ) and j are perpendiculartoeachotherwhenthelocalvariationis1-D,since j = n × /u1D715 N ( B ) and /u1D715 t ( B ) = -V N /u1D715 N ( B ) . Checking where the two vectors are perpendicular may provide a test of planarity. This is left for further studies.
+
+As discussed before, the MDD method gives the normal to a one-dimensional boundary, but it can also give information when the problem is 2-D. In this case, the eigenvector associated with the largest eigenvalue /u1D736 1 does not give much information, but the eigenvector associated with the smallest eigenvalue, /u1D736 3 , indicates the direction in which the problem is quasi-invariant. This direction will have to be compared with the direction obtained by other methods such as De Keyser et al. (2005). Knowing experimentally the invariant direction may be important for comparing the data with 2-D numerical simulations. Of course, /u1D736 3 is approximately in the plane perpendicular to N Shue , since the effective normal, given by /u1D736 1 , is not much different from N Shue . In this plane, investigating the actual direction of /u1D736 3 deserves to be explored further. It may provide information, for instance, on the local fluctuations at different scales, whatever their cause: reconnection (Aunai et al., 2016), Kelvin-Helmholtz (Belmont &amp; Chanteur, 1989; Miura &amp; Pritchett, 1982), or any other phenomenon.
+
+Finally, we have reported in Figure 3 the intervals where the B variations are mainly 1-D ( D 1 &gt; 0 . 98) or 2-D ( D 3 &lt; 0 . 05 D 2 ) with a color code. Of course these criteria leave many intervals where the dimension of the problemis not determined, either because the variations are too weak and the concept of dimension is meaningless or because the dimension of the problem is not close to 1-D or 2-D. The 2-D intervals are concentrated in the region where the spacecraft go back into the magnetopause layer which is reached only in the very small interval around t = 28s. It seems that this incursion is made in a region which is much more complex than the 'clean' magnetopause crossing observed at the beginning of the period. The 'oscillations' that are seen in the dimension may correspond to the oscillations that are observed on the density. The reason remains to be investigated.
+
+## References
+
+- Aunai, N., Hesse, M., Lavraud, B., Dargent, J., &amp; Smets, R. (2016). Orientation of the X-line in asymmetric magnetic reconnection. Journal of Plasma Physics , 82 (4), 535820401. https://doi.org/10.1017/S0022377816000647
+- Belmont, G., &amp; Chanteur, G. (1989). Advances in magnetopause Kelvin-Helmholtz instability studies. Physica Scripta , 40 (1), 124-128.
+- Belmont, G., Grappin, R., Mottez, F., Pantellini, F., &amp; Pelletier, G. (2013). Collisionless plasmas in astrophysics . Hoboken, NJ: Wiley.
+- Blagau, A., Klecker, B., Paschmann, G., Haaland, S., Marghitu, O., &amp; Scholer, M. (2010). A new technique for determining orientation and motion of a 2-D, non-planar magnetopause. Annales Geophysicae , 753-778. https://doi.org/10.5194/angeo-28-753-2010
+- Burch, J. L., Torbert, R. B., Phan, T. D., Chen, L.-J., Moore, T. E., Ergun, R. E., &amp; Chandler, M. (2016). Electron-scale measurements of magnetic reconnection in space. Science , 352 , AAF2939. https://doi.org/10.1126/science.aaf2939
+- Chanteur, G. (1998). Spatial interpolation for four spacecraft: Theory. ISSI Scientific Reports Series , 1 , 349-370.
+- Chen, L.-J., Hesse, M., Wang, S., Gershman, D., Ergun, R. E., Burch, J., … Avanov, L. (2017). Electron diffusion region during magnetopause reconnection with an intermediate guide field: Magnetospheric multiscale observations. Journal of Geophysical Research: Space Physics , 122 , 5235-5246. https://doi.org/10.1002/2017JA024004
+- Chen, Q., Otto, A., &amp; Lee, L. C. (1997). Tearing instability, Kelvin-Helmholtz instability, and magnetic reconnection. Journal of Geophysical Research , 102 (A1), 151-161. https://doi.org/10.1029/96JA03144
+- Dargent, J., Aunai, N., Lavraud, B., Toledo-Redondo, S., Shay, M. A., Cassak, P . A., &amp; Malakit, K. (2017). Kinetic simulation of asymmetric magnetic reconnection with cold ions. Journal of Geophysical Research: Space Physics , 122 , 5290-5306. https://doi.org/2016JA023831
+- De Keyser, J., Darrouzet, F., &amp; Roth, M. (2002). Trying to bring the magnetopause to a standstill. Geophysical Research Letters , 29 , 1453. https://doi.org/10.1029/2002GL015001
+- De Keyser, J., Roth, M., Dunlop, M. W., Rème, H., Owen, C. J., &amp; Paschmann, G. (2005). Empirical reconstruction and long-duration tracking of the magnetospheric boundary in single- and multi-spacecraft contexts. Annales Geophysicae , 23 , 1355-1369. https://doi.org/10.5194/angeo-23-1355-2005
+- De Keyser, J. (2008). Empirical reconstruction. ISSI Scientific Reports Series , 8 , 91-98.
+- Denton, R. E., Sonnerup, B. U. Ã., Birn, J., Teh, W.-L., Drake, J. F., Swisdak, M., … Baumjohann, W. (2010). Test of methods to infer the magnetic reconnection geometry from spacecraft data. Journal of Geophysical Research , 115 , A10242. https://doi.org/10.1029/2010JA015420
+- Denton, R. E., Sonnerup, B. U. O., Hasegawa, H., Phan, T. D., Russell, C. T., Strangeway, R. J., … Torbert, R. B. (2016). Motion of the MMS spacecraft relative to the magnetic reconnection structure observed on 16 October 2015 at 1307 UT. Geophysical Research Letters , 43 , 5589-5596. https://doi.org/2016GL069214
+- Denton, R. E., Sonnerup, B. U. Ö., Swisdak, M., Birn, J., Drake, J. F., &amp; Hesse, M. (2012). Test of Shi et al. method to infer the magnetic reconnection geometry from spacecraft data: MHD simulation with guide field and antiparallel kinetic simulation. Journal of Geophysical Research , 117 , A09201. https://doi.org/10.1029/2012JA017877
+- Dorville, N., Belmont, G., Rezeau, L., Aunai, N., &amp; Retinò, A. (2014). BV technique for investigating 1-D interfaces. Journal of Geophysical Research: Space Physics , 119 , 1709-1720. https://doi.org/10.1002/2013JA018926
+- Dorville, N., Belmont, G., Rezeau, L., Grappin, R., &amp; Retinò, A. (2014). Rotational/compressional nature of the magnetopause: Application of the BV technique on a magnetopause case study. Journal of Geophysical Research: Space Physics , 119 , 1898-1908. https://doi.org/10.1002/2013JA018927
+- Dorville, N., Haaland, S., Anekallu, C., Belmont, G., &amp; Rezeau, L. (2015). Magnetopause orientation: Comparison between generic residue analysis and BV method. Journal of Geophysical Research: Space Physics , 120 , 3366-3379. https://doi.org/2014JA020806
+
+<!-- image -->
+
+## Journal of Geophysical Research: Space Physics
+
+- Dunlop, M. W., Balogh, A., &amp; Glassmeier, K.-H. (2002). Four-point Cluster application of magnetic field analysis tools: The discontinuity analyzer. Journal of Geophysical Research , 107 , 1385. https://doi.org/10.1029/2001JA005089
+- Ergun, R. E., Tucker, S., Westfall, J., Goodrich, K. A., Malaspina, D. M., Summers, D., … Cully, C. M. (2016). The axial double probe and fields signal processing for the MMS mission. Space Science Reviews , 199 (1), 167-188. https://doi.org/10.1007/s11214-014-0115-x
+- Faganello, M., Califano, F., &amp; Pegoraro, F. (2008). Competing mechanisms of plasma transport in inhomogeneous configurations with velocity shear: The solar-wind interaction with Earth's magnetosphere. Physical Review Letters , 100 , 015001. https://doi.org/10.1103/PhysRevLett.100.015001
+- Haaland, S., Sonnerup, B., Dunlop, M., Balogh, A., Georgescu, E., Hasegawa, H., … Vaivads, A. (2004). Four-spacecraft determination of magnetopause orientation, motion and thickness: Comparison with results from single-spacecraft methods. Annales Geophysicae , 22 , 1347-1365. https://doi.org/10.5194/angeo-22-1347-2004
+- Hasegawa, H., Sonnerup, B. U. O., Klecker, B., Paschmann, G., Dunlop, M. W., &amp; Rème, H. (2005). Optimal reconstruction of magnetopause structures from Cluster data. Annales Geophysicae , 23 , 973-982. https://doi.org/10.5194/angeo-23-973-2005
+- Le Contel, O., Retinò, A., Breuillard, H., Mirioni, L., Robert, P ., Chasapis, A., … Saito, Y. (2016). Whistler mode waves and Hall fields detected by MMSduring a dayside magnetopause crossing. Geophysical Research Letters , 43 , 5943-5952. https://doi.org/10.1002/2016GL068968
+- Miura, A., &amp; Pritchett, P . L. (1982). Nonlocal stability analysis of the MHD Kelvin-Helmholtz instability in a compressible plasma. Journal of Geophysical Research , 87 (A9), 7431-7444. https://doi.org/10.1029/JA087iA09p07431
+- Paschmann, G., Baumjohann, W., Sckopke, N., Sonnerup, B., &amp; Papamastorakis, I. (1990). The magnetopause and boundary layer for small magnetic shear-Convection electric fields and reconnection. Geophysical Research Letters , 17 , 1829-1832.
+- https://doi.org/10.1029/GL017i011p01829
+- Pollock, C., Moore, T., Jacques, A., Burch, J., Gliese, U., Saito, Y., … Zeuch, M. (2016). Fast Plasma Investigation for Magnetospheric Multiscale. Space Science Reviews , 199 (1), 331-406. https://doi.org/10.1007/s11214-016-0245-4
+- Russell, C. T., Anderson, B. J., Baumjohann, W., Bromund, K. R., Dearborn, D., Fischer, D., … Richter, I. (2016). The Magnetospheric Multiscale Magnetometers. Space Science Reviews , 199 (1), 189-256. https://doi.org/10.1007/s11214-014-0057-3
+- Shi, Q. Q., Pu, Z. Y., Soucek, J., Zong, Q.-G., Fu, S. Y., Xie, L., … Reme, H. (2009). Spatial structures of magnetic depression in the Earth's high-altitude cusp: Cluster multipoint observations. Journal of Geophysical Research , 114 , A10202. https://doi.org/10.1029/2009JA014283
+- Shi, Q. Q., Shen, C., Dunlop, M. W., Pu, Z. Y., Zong, Q.-G., Liu, Z. X., … Balogh, A. (2006). Motion of observed structures calculated from multi-point magnetic field measurements: Application to Cluster. Geophysical Research Letters , 33 , L08109. https://doi.org/10.1029/2005GL025073
+- Shi, Q. Q., Shen, C., Pu, Z. Y., Dunlop, M. W., Zong, Q.-G., Zhang, H., … Balogh, A. (2005). Dimensional analysis of observed structures using multipoint magnetic field measurements: Application to Cluster. Geophysical Research Letters , 32 , L12105. https://doi.org/10.1029/2005GL022454
+- Shi, Q. Q., Zong, Q.-G., Fu, S. Y., Dunlop, M. W., Pu, Z. Y., Parks, G. K., … Lucek, E. (2013). Solar wind entry into the high-latitude terrestrial magnetosphere during geomagnetically quiet times. Nature Communications , 4 , 1466.
+- Shue, J.-H., Chao, J. K., Fu, H. C., Russell, C. T., Song, P ., Khurana, K. K., &amp; Singer, H. J. (1997). A new functional form to study the solar wind control of the magnetopause size and shape. Journal of Geophysical Research , 102 (A5), 9497-9511. https://doi.org/10.1029/97JA00196
+- Sonnerup, B. U. O., &amp; Cahill, L. J. (1967). Magnetopause structure and attitude from Explorer 12 observations. Journal of Geophysical Research , 72 , 171-183. https://doi.org/10.1029/JZ072i001p00171
+- Sonnerup, B. U. O., Haaland, S. E., &amp; Paschmann, G. (2008). Discontinuity orientation, motion, and thickness. ISSI Scientific Reports Series , 8 , 1-16.
+- Sonnerup, B. U. O., Haaland, S., Paschmann, G., Dunlop, M. W., Rème, H., &amp; Balogh, A. (2006). Orientation and motion of a plasma discontinuity from single-spacecraft measurements: Generic residue analysis of Cluster data. Journal of Geophysical Research , 111 , A05203. https://doi.org/10.1029/2005JA011538
+- Sonnerup, B. U. Ö, &amp; Scheible, M. (1998). Minimum and maximum variance analysis. ISSI Scientific Reports Series , 1 , 185-220.
+- Sonnerup, B. U. O., Teh, W.-L., &amp; Hasegawa, H. (2008). Grad-Shafranov and MHD reconstructions. ISSI Scientific Reports Series , 8 , 81-90.
+- Stone, E. C., Frandsen, A. M., Mewaldt, R. A., Christian, E. R., Margolies, D., Ormes, J. F., &amp; Snow, F. (1998). The Advanced Composition Explorer. Space Science Reviews , 86 , 1-22. https://doi.org/10.1023/A:1005082526237
+- Torbert, R. B., Burch, J. L., Giles, B. L., Gershman, D., Pollock, C. J., Dorelli, J., … Bounds, S. (2016). Estimates of terms in Ohm's law during an encounter with an electron diffusion region. Geophysical Research Letters , 43 , 5918-5925. https://doi.org/2016GL069553
+- Yao, S. T., Wang, X. G., Shi, Q. Q., Pitnen, T., Hamrin, M., &amp; Yao, Z. H. (2017). Observations of kinetic-size magnetic holes in the magnetosheath. Journal of Geophysical Research: Space Physics , 122 , 1990-2000. https://doi.org/2016JA023858
+- Zhang, T. L., Baumjohann, W., Nakamura, R., Volwerk, M., Runov, A., Vörös, Z., … Balogh, A. (2005). Neutral sheet normal direction determination. Advances in Space Research , 36 (10), 1940-1945. https://doi.org/10.1016/j.asr.2004.08.010

@@ -1,0 +1,2968 @@
+{
+  "schema_version": "1.0",
+  "normalized_name": "file",
+  "original_filename": "file.pdf",
+  "extraction_method": "docling",
+  "extracted_at": "2026-03-25T19:32:56.094952",
+  "content": {
+    "schema_name": "DoclingDocument",
+    "version": "1.10.0",
+    "name": "file",
+    "origin": {
+      "mimetype": "application/pdf",
+      "binary_hash": 4059663040232128987,
+      "filename": "file.pdf"
+    },
+    "furniture": {
+      "self_ref": "#/furniture",
+      "children": [],
+      "content_layer": "furniture",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "body": {
+      "self_ref": "#/body",
+      "children": [
+        {
+          "$ref": "#/pictures/0"
+        },
+        {
+          "$ref": "#/texts/0"
+        },
+        {
+          "$ref": "#/texts/1"
+        },
+        {
+          "$ref": "#/texts/2"
+        },
+        {
+          "$ref": "#/texts/3"
+        },
+        {
+          "$ref": "#/texts/4"
+        },
+        {
+          "$ref": "#/texts/5"
+        },
+        {
+          "$ref": "#/texts/6"
+        },
+        {
+          "$ref": "#/texts/7"
+        },
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        },
+        {
+          "$ref": "#/groups/0"
+        },
+        {
+          "$ref": "#/texts/15"
+        },
+        {
+          "$ref": "#/texts/16"
+        },
+        {
+          "$ref": "#/texts/17"
+        },
+        {
+          "$ref": "#/texts/18"
+        },
+        {
+          "$ref": "#/pictures/1"
+        },
+        {
+          "$ref": "#/texts/19"
+        },
+        {
+          "$ref": "#/texts/20"
+        },
+        {
+          "$ref": "#/texts/21"
+        },
+        {
+          "$ref": "#/texts/22"
+        },
+        {
+          "$ref": "#/texts/23"
+        },
+        {
+          "$ref": "#/texts/24"
+        },
+        {
+          "$ref": "#/texts/25"
+        },
+        {
+          "$ref": "#/texts/26"
+        },
+        {
+          "$ref": "#/texts/27"
+        },
+        {
+          "$ref": "#/texts/28"
+        },
+        {
+          "$ref": "#/texts/29"
+        },
+        {
+          "$ref": "#/texts/30"
+        },
+        {
+          "$ref": "#/texts/31"
+        },
+        {
+          "$ref": "#/texts/32"
+        },
+        {
+          "$ref": "#/texts/33"
+        },
+        {
+          "$ref": "#/texts/34"
+        },
+        {
+          "$ref": "#/texts/35"
+        },
+        {
+          "$ref": "#/texts/36"
+        },
+        {
+          "$ref": "#/texts/37"
+        },
+        {
+          "$ref": "#/texts/38"
+        },
+        {
+          "$ref": "#/texts/39"
+        },
+        {
+          "$ref": "#/texts/40"
+        },
+        {
+          "$ref": "#/texts/41"
+        },
+        {
+          "$ref": "#/texts/42"
+        },
+        {
+          "$ref": "#/texts/43"
+        },
+        {
+          "$ref": "#/texts/44"
+        },
+        {
+          "$ref": "#/texts/45"
+        },
+        {
+          "$ref": "#/texts/46"
+        },
+        {
+          "$ref": "#/texts/47"
+        },
+        {
+          "$ref": "#/texts/48"
+        },
+        {
+          "$ref": "#/texts/49"
+        },
+        {
+          "$ref": "#/texts/50"
+        },
+        {
+          "$ref": "#/texts/51"
+        },
+        {
+          "$ref": "#/texts/52"
+        },
+        {
+          "$ref": "#/texts/53"
+        },
+        {
+          "$ref": "#/texts/54"
+        },
+        {
+          "$ref": "#/texts/55"
+        },
+        {
+          "$ref": "#/texts/56"
+        },
+        {
+          "$ref": "#/texts/57"
+        },
+        {
+          "$ref": "#/texts/58"
+        },
+        {
+          "$ref": "#/texts/59"
+        },
+        {
+          "$ref": "#/groups/1"
+        },
+        {
+          "$ref": "#/texts/86"
+        },
+        {
+          "$ref": "#/texts/87"
+        },
+        {
+          "$ref": "#/texts/88"
+        }
+      ],
+      "content_layer": "body",
+      "name": "_root_",
+      "label": "unspecified"
+    },
+    "groups": [
+      {
+        "self_ref": "#/groups/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/11"
+          },
+          {
+            "$ref": "#/texts/12"
+          },
+          {
+            "$ref": "#/texts/13"
+          },
+          {
+            "$ref": "#/texts/14"
+          }
+        ],
+        "content_layer": "body",
+        "name": "group",
+        "label": "key_value_area"
+      },
+      {
+        "self_ref": "#/groups/1",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [
+          {
+            "$ref": "#/texts/60"
+          },
+          {
+            "$ref": "#/texts/61"
+          },
+          {
+            "$ref": "#/texts/62"
+          },
+          {
+            "$ref": "#/texts/63"
+          },
+          {
+            "$ref": "#/texts/64"
+          },
+          {
+            "$ref": "#/texts/65"
+          },
+          {
+            "$ref": "#/texts/66"
+          },
+          {
+            "$ref": "#/texts/67"
+          },
+          {
+            "$ref": "#/texts/68"
+          },
+          {
+            "$ref": "#/texts/69"
+          },
+          {
+            "$ref": "#/texts/70"
+          },
+          {
+            "$ref": "#/texts/71"
+          },
+          {
+            "$ref": "#/texts/72"
+          },
+          {
+            "$ref": "#/texts/73"
+          },
+          {
+            "$ref": "#/texts/74"
+          },
+          {
+            "$ref": "#/texts/75"
+          },
+          {
+            "$ref": "#/texts/76"
+          },
+          {
+            "$ref": "#/texts/77"
+          },
+          {
+            "$ref": "#/texts/78"
+          },
+          {
+            "$ref": "#/texts/79"
+          },
+          {
+            "$ref": "#/texts/80"
+          },
+          {
+            "$ref": "#/texts/81"
+          },
+          {
+            "$ref": "#/texts/82"
+          },
+          {
+            "$ref": "#/texts/83"
+          },
+          {
+            "$ref": "#/texts/84"
+          },
+          {
+            "$ref": "#/texts/85"
+          }
+        ],
+        "content_layer": "body",
+        "name": "list",
+        "label": "list"
+      }
+    ],
+    "texts": [
+      {
+        "self_ref": "#/texts/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.0535,
+              "t": 737.4685372320312,
+              "r": 101.7254803,
+              "b": 727.0502232416087,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              9
+            ]
+          }
+        ],
+        "orig": "Editorial",
+        "text": "Editorial",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/1",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.0535,
+              "t": 708.1444520320312,
+              "r": 500.73986769000027,
+              "b": 668.8965221975242,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              56
+            ]
+          }
+        ],
+        "orig": "Ten Simple Rules for Reproducible Computational Research",
+        "text": "Ten Simple Rules for Reproducible Computational Research",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/2",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.0535,
+              "t": 657.8050338320312,
+              "r": 420.0764929200001,
+              "b": 646.9280992783999,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              83
+            ]
+          }
+        ],
+        "orig": "Geir Kjetil Sandve 1,2 * , Anton Nekrutenko 3 , James Taylor 4 , Eivind Hovig 1,5,6",
+        "text": "Geir Kjetil Sandve 1,2 * , Anton Nekrutenko 3 , James Taylor 4 , Eivind Hovig 1,5,6"
+      },
+      {
+        "self_ref": "#/texts/3",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.0535,
+              "t": 639.6607410320313,
+              "r": 554.2177512199999,
+              "b": 593.7281314663974,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              729
+            ]
+          }
+        ],
+        "orig": "1 Department of Informatics, University of Oslo, Blindern, Oslo, Norway, 2 Centre for Cancer Biomedicine, University of Oslo, Blindern, Oslo, Norway, 3 Department of Biochemistry and Molecular Biology and The Huck Institutes for the Life Sciences, Penn State University, University Park, Pennsylvania, United States of America, 4 Department of Biology and Department of Mathematics and Computer Science, Emory University, Atlanta, Georgia, United States of America, 5 Department of Tumor Biology, Institute for Cancer Research, The Norwegian Radium Hospital, Oslo University Hospital, Montebello, Oslo, Norway, 6 Institute for Medical Informatics, The Norwegian Radium Hospital, Oslo University Hospital, Montebello, Oslo, Norway",
+        "text": "1 Department of Informatics, University of Oslo, Blindern, Oslo, Norway, 2 Centre for Cancer Biomedicine, University of Oslo, Blindern, Oslo, Norway, 3 Department of Biochemistry and Molecular Biology and The Huck Institutes for the Life Sciences, Penn State University, University Park, Pennsylvania, United States of America, 4 Department of Biology and Department of Mathematics and Computer Science, Emory University, Atlanta, Georgia, United States of America, 5 Department of Tumor Biology, Institute for Cancer Research, The Norwegian Radium Hospital, Oslo University Hospital, Montebello, Oslo, Norway, 6 Institute for Medical Informatics, The Norwegian Radium Hospital, Oslo University Hospital, Montebello, Oslo, Norway"
+      },
+      {
+        "self_ref": "#/texts/4",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 578.9307904320312,
+              "r": 211.49216493999987,
+              "b": 392.98896861744805,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              734
+            ]
+          }
+        ],
+        "orig": "Replication is the cornerstone of a cumulative science [1]. However, new tools and technologies, massive amounts of data, interdisciplinary approaches, and the complexity of the questions being asked are complicating replication efforts, as are increased pressures on scientists to advance their research [2]. As full replication of studies on independently collected data is often not feasible, there has recently been a call for reproducible research as an attainable minimum standard for assessing the value of scientific claims [3]. This requires that papers in experimental science describe the results and provide a sufficiently clear protocol to allow successful repetition and extension of analyses based on original data [4].",
+        "text": "Replication is the cornerstone of a cumulative science [1]. However, new tools and technologies, massive amounts of data, interdisciplinary approaches, and the complexity of the questions being asked are complicating replication efforts, as are increased pressures on scientists to advance their research [2]. As full replication of studies on independently collected data is often not feasible, there has recently been a call for reproducible research as an attainable minimum standard for assessing the value of scientific claims [3]. This requires that papers in experimental science describe the results and provide a sufficiently clear protocol to allow successful repetition and extension of analyses based on original data [4]."
+      },
+      {
+        "self_ref": "#/texts/5",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 390.20362488203136,
+              "r": 211.50292449999998,
+              "b": 193.83040964744805,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              756
+            ]
+          }
+        ],
+        "orig": "The importance of replication and reproducibility has recently been exemplified through studies showing that scientific papers commonly leave out experimental details essential for reproduction [5], studies showing difficulties with replicating published experimental results [6], an increase in retracted papers [7], and through a high number of failing clinical trials [8,9]. This has led to discussions on how individual researchers, institutions, funding bodies, and journals can establish routines that increase transparency and reproducibility. In order to foster such aspects, it has been suggested that the scientific community needs to develop a ''culture of reproducibility'' for computational science, and to require it for published claims [3].",
+        "text": "The importance of replication and reproducibility has recently been exemplified through studies showing that scientific papers commonly leave out experimental details essential for reproduction [5], studies showing difficulties with replicating published experimental results [6], an increase in retracted papers [7], and through a high number of failing clinical trials [8,9]. This has led to discussions on how individual researchers, institutions, funding bodies, and journals can establish routines that increase transparency and reproducibility. In order to foster such aspects, it has been suggested that the scientific community needs to develop a ''culture of reproducibility'' for computational science, and to require it for published claims [3]."
+      },
+      {
+        "self_ref": "#/texts/6",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 191.10155360203134,
+              "r": 211.50651101999992,
+              "b": 57.429674267448036,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              523
+            ]
+          }
+        ],
+        "orig": "We want to emphasize that reproducibility is not only a moral responsibility with respect to the scientific field, but that a lack of reproducibility can also be a burden for you as an individual researcher. As an example, a good practice of reproducibility is necessary in order to allow previously developed methodology to be effectively applied on new data, or to allow reuse of code and results for new projects. In other words, good habits of reproducibility may actually turn out to be a time-saver in the longer run.",
+        "text": "We want to emphasize that reproducibility is not only a moral responsibility with respect to the scientific field, but that a lack of reproducibility can also be a burden for you as an individual researcher. As an example, a good practice of reproducibility is necessary in order to allow previously developed methodology to be effectively applied on new data, or to allow reuse of code and results for new projects. In other words, good habits of reproducibility may actually turn out to be a time-saver in the longer run."
+      },
+      {
+        "self_ref": "#/texts/7",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.43731776,
+              "t": 578.9424466220315,
+              "r": 382.8641602100003,
+              "b": 360.16693083744866,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              867
+            ]
+          }
+        ],
+        "orig": "We further note that reproducibility is just as much about the habits that ensure reproducible research as the technologies that can make these processes efficient and realistic. Each of the following ten rules captures a specific aspect of reproducibility, and discusses what is needed in terms of information handling and tracking of procedures. If you are taking a bare-bones approach to bioinformatics analysis, i.e., running various custom scripts from the command line, you will probably need to handle each rule explicitly. If you are instead performing your analyses through an integrated framework (such as GenePattern [10], Galaxy [11], LONI pipeline [12], or Taverna [13]), the system may already provide full or partial support for most of the rules. What is needed on your part is then merely the knowledge of how to exploit these existing possibilities.",
+        "text": "We further note that reproducibility is just as much about the habits that ensure reproducible research as the technologies that can make these processes efficient and realistic. Each of the following ten rules captures a specific aspect of reproducibility, and discusses what is needed in terms of information handling and tracking of procedures. If you are taking a bare-bones approach to bioinformatics analysis, i.e., running various custom scripts from the command line, you will probably need to handle each rule explicitly. If you are instead performing your analyses through an integrated framework (such as GenePattern [10], Galaxy [11], LONI pipeline [12], or Taverna [13]), the system may already provide full or partial support for most of the rules. What is needed on your part is then merely the knowledge of how to exploit these existing possibilities."
+      },
+      {
+        "self_ref": "#/texts/8",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.43731776,
+              "t": 357.381587102032,
+              "r": 382.85519391000025,
+              "b": 212.36554500744887,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              574
+            ]
+          },
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 400.76358490000007,
+              "t": 578.9361702120322,
+              "r": 554.2155329900004,
+              "b": 518.2248672374488,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              575,
+              788
+            ]
+          }
+        ],
+        "orig": "In a pragmatic setting, with publication pressure and deadlines, one may face the need to make a trade-off between the ideals of reproducibility and the need to get the research out while it is still relevant. This trade-off becomes more important when considering that a large part of the analyses being tried out never end up yielding any results. However, frequently one will, with the wisdom of hindsight, contemplate the missed opportunity to ensure reproducibility, as it may already be too late to take the necessary notes from memory (or at least much more difficult than to do it while underway). We believe that the rewards of reproducibility will compensate for the risk of having spent valuable time developing an annotated catalog of analyses that turned out as blind alleys.",
+        "text": "In a pragmatic setting, with publication pressure and deadlines, one may face the need to make a trade-off between the ideals of reproducibility and the need to get the research out while it is still relevant. This trade-off becomes more important when considering that a large part of the analyses being tried out never end up yielding any results. However, frequently one will, with the wisdom of hindsight, contemplate the missed opportunity to ensure reproducibility, as it may already be too late to take the necessary notes from memory (or at least much more difficult than to do it while underway). We believe that the rewards of reproducibility will compensate for the risk of having spent valuable time developing an annotated catalog of analyses that turned out as blind alleys."
+      },
+      {
+        "self_ref": "#/texts/9",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 400.76358490000007,
+              "t": 515.4395235020322,
+              "r": 554.2164296200004,
+              "b": 349.5051035074492,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              645
+            ]
+          }
+        ],
+        "orig": "As a minimal requirement, you should at least be able to reproduce the results yourself. This would satisfy the most basic requirements of sound research, allowing any substantial future questioning of the research to be met with a precise explanation. Although it may sound like a very weak requirement, even this level of reproducibility will often require a certain level of care in order to be met. There will for a given analysis be an exponential number of possible combinations of software versions, parameter values, preprocessing steps, and so on, meaning that a failure to take notes may make exact reproduction essentially impossible.",
+        "text": "As a minimal requirement, you should at least be able to reproduce the results yourself. This would satisfy the most basic requirements of sound research, allowing any substantial future questioning of the research to be met with a precise explanation. Although it may sound like a very weak requirement, even this level of reproducibility will often require a certain level of care in order to be met. There will for a given analysis be an exponential number of possible combinations of software versions, parameter values, preprocessing steps, and so on, meaning that a failure to take notes may make exact reproduction essentially impossible."
+      },
+      {
+        "self_ref": "#/texts/10",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 400.76358490000007,
+              "t": 346.7197597720325,
+              "r": 554.2289824400004,
+              "b": 212.36375174744921,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              496
+            ]
+          }
+        ],
+        "orig": "With this basic level of reproducibility in place, there is much more that can be wished for. An obvious extension is to go from a level where you can reproduce results in case of a critical situation to a level where you can practically and routinely reuse your previous work and increase your productivity. A second extension is to ensure that peers have a practical possibility of reproducing your results, which can lead to increased trust in, interest for, and citations of your work [6,14].",
+        "text": "With this basic level of reproducibility in place, there is much more that can be wished for. An obvious extension is to go from a level where you can reproduce results in case of a critical situation to a level where you can practically and routinely reuse your previous work and increase your productivity. A second extension is to ensure that peers have a practical possibility of reproducing your results, which can lead to increased trust in, interest for, and citations of your work [6,14]."
+      },
+      {
+        "self_ref": "#/texts/11",
+        "parent": {
+          "$ref": "#/groups/0"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 194.84834103203116,
+              "r": 554.1140118400008,
+              "b": 180.77762890639747,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              184
+            ]
+          }
+        ],
+        "orig": "Citation: Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285. doi:10.1371/journal.pcbi.1003285",
+        "text": "Citation: Sandve GK, Nekrutenko A, Taylor J, Hovig E (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Comput Biol 9(10): e1003285. doi:10.1371/journal.pcbi.1003285"
+      },
+      {
+        "self_ref": "#/texts/12",
+        "parent": {
+          "$ref": "#/groups/0"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 174.3823301720313,
+              "r": 251.78722899999997,
+              "b": 168.2968325569475,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              7
+            ]
+          }
+        ],
+        "orig": "Editor:",
+        "text": "Editor:"
+      },
+      {
+        "self_ref": "#/texts/13",
+        "parent": {
+          "$ref": "#/groups/0"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 254.15413672000003,
+              "t": 174.3823301720313,
+              "r": 482.792959240001,
+              "b": 168.3049876063974,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              78
+            ]
+          }
+        ],
+        "orig": "Philip E. Bourne, University of California San Diego, United States of America",
+        "text": "Philip E. Bourne, University of California San Diego, United States of America"
+      },
+      {
+        "self_ref": "#/texts/14",
+        "parent": {
+          "$ref": "#/groups/0"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 161.96687403203123,
+              "r": 316.4601580600005,
+              "b": 155.88137641694743,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              26
+            ]
+          }
+        ],
+        "orig": "Published October 24, 2013",
+        "text": "Published October 24, 2013"
+      },
+      {
+        "self_ref": "#/texts/15",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 149.78015853203124,
+              "r": 554.1851446000006,
+              "b": 127.48663882639744,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              267
+            ]
+          }
+        ],
+        "orig": "Copyright: ß 2013 Sandve et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+        "text": "Copyright: ß 2013 Sandve et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited."
+      },
+      {
+        "self_ref": "#/texts/16",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 121.09134009203126,
+              "r": 554.2388428600021,
+              "b": 83.15210008639747,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              474
+            ]
+          }
+        ],
+        "orig": "Funding: The authors' laboratories are supported by US National Institutes of Health grants HG005133, HG004909, and HG006620 and US National Science Foundation grant DBI 0850103. Additional funding is provided, in part, by the Huck Institutes for the Life Sciences at Penn State, the Institute for Cyberscience at Penn State, and a grant with the Pennsylvania Department of Health using Tobacco Settlement Funds. The funders had no role in the preparation of the manuscript.",
+        "text": "Funding: The authors' laboratories are supported by US National Institutes of Health grants HG005133, HG004909, and HG006620 and US National Science Foundation grant DBI 0850103. Additional funding is provided, in part, by the Huck Institutes for the Life Sciences at Penn State, the Institute for Cyberscience at Penn State, and a grant with the Pennsylvania Department of Health using Tobacco Settlement Funds. The funders had no role in the preparation of the manuscript."
+      },
+      {
+        "self_ref": "#/texts/17",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.4362,
+              "t": 76.75680135203129,
+              "r": 484.5531463600007,
+              "b": 70.6713037369475,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              81
+            ]
+          }
+        ],
+        "orig": "Competing Interests: The authors have declared that no competing interests exist.",
+        "text": "Competing Interests: The authors have declared that no competing interests exist."
+      },
+      {
+        "self_ref": "#/texts/18",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "footnote",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 229.43620000000004,
+              "t": 64.28416005203132,
+              "r": 307.2442813600003,
+              "b": 58.20681748639754,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              28
+            ]
+          }
+        ],
+        "orig": "* E-mail: geirksa@ifi.uio.no",
+        "text": "* E-mail: geirksa@ifi.uio.no"
+      },
+      {
+        "self_ref": "#/texts/19",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 58.0535,
+              "t": 36.09951463203117,
+              "r": 161.37757876000003,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              28
+            ]
+          }
+        ],
+        "orig": "PLOS Computational Biology |",
+        "text": "PLOS Computational Biology |"
+      },
+      {
+        "self_ref": "#/texts/20",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 165.36905492000002,
+              "t": 36.09951463203117,
+              "r": 243.41405034000013,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              20
+            ]
+          }
+        ],
+        "orig": "www.ploscompbiol.org",
+        "text": "www.ploscompbiol.org"
+      },
+      {
+        "self_ref": "#/texts/21",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 304.09357400000016,
+              "t": 36.09951463203117,
+              "r": 308.15837600000015,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1
+            ]
+          }
+        ],
+        "orig": "1",
+        "text": "1"
+      },
+      {
+        "self_ref": "#/texts/22",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 383.91751806000013,
+              "t": 36.09951463203117,
+              "r": 554.2885132600001,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              45
+            ]
+          }
+        ],
+        "orig": "October 2013 | Volume 9 | Issue 10 | e1003285",
+        "text": "October 2013 | Volume 9 | Issue 10 | e1003285"
+      },
+      {
+        "self_ref": "#/texts/23",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 729.3370904320312,
+              "r": 211.49216493999984,
+              "b": 668.4545311274479,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              216
+            ]
+          }
+        ],
+        "orig": "We here present ten simple rules for reproducibility of computational research. These rules can be at your disposal for whenever you want to make your research more accessible-be it for peers or for your future self.",
+        "text": "We here present ten simple rules for reproducibility of computational research. These rules can be at your disposal for whenever you want to make your research more accessible-be it for peers or for your future self."
+      },
+      {
+        "self_ref": "#/texts/24",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.0535,
+              "t": 654.4878922320312,
+              "r": 205.57270698000002,
+              "b": 633.7754186384,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              59
+            ]
+          }
+        ],
+        "orig": "Rule 1: For Every Result, Keep Track of How It Was Produced",
+        "text": "Rule 1: For Every Result, Keep Track of How It Was Produced",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/25",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 624.8520904320312,
+              "r": 211.4948548299999,
+              "b": 405.5081112274482,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              839
+            ]
+          }
+        ],
+        "orig": "Whenever a result may be of potential interest, keep track of how it was produced. When doing this, one will frequently find that getting from raw data to the final result involves many interrelated steps (single commands, scripts, programs). We refer to such a sequence of steps, whether it is automated or performed manually, as an analysis workflow. While the essential part of an analysis is often represented by only one of the steps, the full sequence of preand post-processing steps are often critical in order to reach the achieved result. For every involved step, you should ensure that every detail that may influence the execution of the step is recorded. If the step is performed by a computer program, the critical details include the name and version of the program, as well as the exact parameters and inputs that were used.",
+        "text": "Whenever a result may be of potential interest, keep track of how it was produced. When doing this, one will frequently find that getting from raw data to the final result involves many interrelated steps (single commands, scripts, programs). We refer to such a sequence of steps, whether it is automated or performed manually, as an analysis workflow. While the essential part of an analysis is often represented by only one of the steps, the full sequence of preand post-processing steps are often critical in order to reach the achieved result. For every involved step, you should ensure that every detail that may influence the execution of the step is recorded. If the step is performed by a computer program, the critical details include the name and version of the program, as well as the exact parameters and inputs that were used."
+      },
+      {
+        "self_ref": "#/texts/26",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 402.7227674920315,
+              "r": 211.50292449999986,
+              "b": 225.61633769744833,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              689
+            ]
+          }
+        ],
+        "orig": "Although manually noting the precise sequence of steps taken allows for an analysis to be reproduced, the documentation can easily get out of sync with how the analysis was really performed in its final version. By instead specifying the full analysis workflow in a form that allows for direct execution, one can ensure that the specification matches the analysis that was (subsequently) performed, and that the analysis can be reproduced by yourself or others in an automated way. Such executable descriptions [10] might come in the form of simple shell scripts or makefiles [15,16] at the command line, or in the form of stored workflows in a workflow management system [10,11,13,17,18].",
+        "text": "Although manually noting the precise sequence of steps taken allows for an analysis to be reproduced, the documentation can easily get out of sync with how the analysis was really performed in its final version. By instead specifying the full analysis workflow in a form that allows for direct execution, one can ensure that the specification matches the analysis that was (subsequently) performed, and that the analysis can be reproduced by yourself or others in an automated way. Such executable descriptions [10] might come in the form of simple shell scripts or makefiles [15,16] at the command line, or in the form of stored workflows in a workflow management system [10,11,13,17,18]."
+      },
+      {
+        "self_ref": "#/texts/27",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 222.88748165203162,
+              "r": 211.49664808999992,
+              "b": 172.49370008744825,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              182
+            ]
+          }
+        ],
+        "orig": "As a minimum, you should at least record sufficient details on programs, parameters, and manual procedures to allow yourself, in a year or so, to approximately reproduce the results.",
+        "text": "As a minimum, you should at least record sufficient details on programs, parameters, and manual procedures to allow yourself, in a year or so, to approximately reproduce the results."
+      },
+      {
+        "self_ref": "#/texts/28",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.0535,
+              "t": 158.59509223203122,
+              "r": 187.97676286,
+              "b": 137.82583181839993,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              44
+            ]
+          }
+        ],
+        "orig": "Rule 2: Avoid Manual Data Manipulation Steps",
+        "text": "Rule 2: Avoid Manual Data Manipulation Steps",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/29",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 128.90259043203127,
+              "r": 211.50471775999992,
+              "b": 57.47476569744788,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              260
+            ]
+          },
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 229.43731776,
+              "t": 729.3371463420312,
+              "r": 382.8641602100003,
+              "b": 563.0584204274483,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              261,
+              888
+            ]
+          }
+        ],
+        "orig": "Whenever possible, rely on the execution of programs instead of manual procedures to modify data. Such manual procedures are not only inefficient and error-prone, they are also difficult to reproduce. If working at the UNIX command line, manual modification of files can usually be replaced by the use of standard UNIX commands or small custom scripts. If working with integrated frameworks, there will typically be a quite rich collection of components for data manipulation. As an example, manual tweaking of data files to attain format compatibility should be replaced by format converters that can be reenacted and included into executable workflows. Other manual operations like the use of copy and paste between documents should also be avoided. If manual operations cannot be avoided, you should as a minimum note down which data files were modified or moved, and for what purpose.",
+        "text": "Whenever possible, rely on the execution of programs instead of manual procedures to modify data. Such manual procedures are not only inefficient and error-prone, they are also difficult to reproduce. If working at the UNIX command line, manual modification of files can usually be replaced by the use of standard UNIX commands or small custom scripts. If working with integrated frameworks, there will typically be a quite rich collection of components for data manipulation. As an example, manual tweaking of data files to attain format compatibility should be replaced by format converters that can be reenacted and included into executable workflows. Other manual operations like the use of copy and paste between documents should also be avoided. If manual operations cannot be avoided, you should as a minimum note down which data files were modified or moved, and for what purpose."
+      },
+      {
+        "self_ref": "#/texts/30",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 229.4362,
+              "t": 549.1524922320311,
+              "r": 350.4489134200003,
+              "b": 516.3643511783999,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              64
+            ]
+          }
+        ],
+        "orig": "Rule 3: Archive the Exact Versions of All External Programs Used",
+        "text": "Rule 3: Archive the Exact Versions of All External Programs Used",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/31",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 229.4363663,
+              "t": 507.4410904320312,
+              "r": 382.86500201000035,
+              "b": 246.25497564744853,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              997
+            ]
+          }
+        ],
+        "orig": "In order to exactly reproduce a given result, it may be necessary to use programs in the exact versions used originally. Also, as both input and output formats may change between versions, a newer version of a program may not even run without modifying its inputs. Even having noted which version was used of a given program, it is not always trivial to get hold of a program in anything but the current version. Archiving the exact versions of programs actually used may thus save a lot of hassle at later stages. In some cases, all that is needed is to store a single executable or source code file. In other cases, a given program may again have specific requirements to other installed programs/packages, or dependencies to specific operating system components. To ensure future availability, the only viable solution may then be to store a full virtual machine image of the operating system and program. As a minimum, you should note the exact names and versions of the main programs you use.",
+        "text": "In order to exactly reproduce a given result, it may be necessary to use programs in the exact versions used originally. Also, as both input and output formats may change between versions, a newer version of a program may not even run without modifying its inputs. Even having noted which version was used of a given program, it is not always trivial to get hold of a program in anything but the current version. Archiving the exact versions of programs actually used may thus save a lot of hassle at later stages. In some cases, all that is needed is to store a single executable or source code file. In other cases, a given program may again have specific requirements to other installed programs/packages, or dependencies to specific operating system components. To ensure future availability, the only viable solution may then be to store a full virtual machine image of the operating system and program. As a minimum, you should note the exact names and versions of the main programs you use."
+      },
+      {
+        "self_ref": "#/texts/32",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 229.4362,
+              "t": 232.2957922320312,
+              "r": 358.26656564000024,
+              "b": 211.5833186384,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              42
+            ]
+          }
+        ],
+        "orig": "Rule 4: Version Control All Custom Scripts",
+        "text": "Rule 4: Version Control All Custom Scripts",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/33",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 229.4363663,
+              "t": 202.6600904320312,
+              "r": 382.85962223000035,
+              "b": 57.471895377447936,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              579
+            ]
+          },
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.76263344000006,
+              "t": 729.3342760220312,
+              "r": 554.2307208700003,
+              "b": 689.7135039074478,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              580,
+              742
+            ]
+          }
+        ],
+        "orig": "Even the slightest change to a computer program can have large intended or unintended consequences. When a continually developed piece of code (typically a small script) has been used to generate a certain result, only that exact state of the script may be able to produce that exact output, even given the same input data and parameters. As also discussed for rules 3 and 6, exact reproduction of results may in certain situations be essential. If computer code is not systematically archived along its evolution, backtracking to a code state that gave a certain result may be a hopeless task. This can cast doubt on previous results, as it may be impossible to know if they were partly the result of a bug or otherwise unfortunate behavior.",
+        "text": "Even the slightest change to a computer program can have large intended or unintended consequences. When a continually developed piece of code (typically a small script) has been used to generate a certain result, only that exact state of the script may be able to produce that exact output, even given the same input data and parameters. As also discussed for rules 3 and 6, exact reproduction of results may in certain situations be essential. If computer code is not systematically archived along its evolution, backtracking to a code state that gave a certain result may be a hopeless task. This can cast doubt on previous results, as it may be impossible to know if they were partly the result of a bug or otherwise unfortunate behavior."
+      },
+      {
+        "self_ref": "#/texts/34",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.76263344000006,
+              "t": 686.9846478620312,
+              "r": 554.2145815300003,
+              "b": 605.3549669874479,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              299
+            ]
+          }
+        ],
+        "orig": "The standard solution to track evolution of code is to use a version control system [15], such as Subversion, Git, or Mercurial. These systems are relatively easy to set up and use, and may be used to systematically store the state of the code throughout development at any desired time granularity.",
+        "text": "The standard solution to track evolution of code is to use a version control system [15], such as Subversion, Git, or Mercurial. These systems are relatively easy to set up and use, and may be used to systematically store the state of the code throughout development at any desired time granularity."
+      },
+      {
+        "self_ref": "#/texts/35",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.76263344000006,
+              "t": 602.5696232520313,
+              "r": 554.2029253400004,
+              "b": 552.460970027448,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              167
+            ]
+          }
+        ],
+        "orig": "As a minimum, you should archive copies of your scripts from time to time, so that you keep a rough record of the various states the code has taken during development.",
+        "text": "As a minimum, you should archive copies of your scripts from time to time, so that you keep a rough record of the various states the code has taken during development."
+      },
+      {
+        "self_ref": "#/texts/36",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.7621,
+              "t": 538.4941922320312,
+              "r": 552.2663469800002,
+              "b": 505.8196248184,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              78
+            ]
+          }
+        ],
+        "orig": "Rule 5: Record All Intermediate Results, When Possible in Standardized Formats",
+        "text": "Rule 5: Record All Intermediate Results, When Possible in Standardized Formats",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/37",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.76247861,
+              "t": 496.89619043203123,
+              "r": 554.2171165900004,
+              "b": 205.1645814374483,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1115
+            ]
+          }
+        ],
+        "orig": "In principle, as long as the full process used to produce a given result is tracked, all intermediate data can also be regenerated. In practice, having easily accessible intermediate results may be of great value. Quickly browsing through intermediate results can reveal discrepancies toward what is assumed, and can in this way uncover bugs or faulty interpretations that are not apparent in the final results. Secondly, it more directly reveals consequences of alternative programs and parameter choices at individual steps. Thirdly, when the full process is not readily executable, it allows parts of the process to be rerun. Fourthly, when reproducing results, it allows any experienced inconsistencies to be tracked to the steps where the problems arise. Fifth, it allows critical examination of the full process behind a result, without the need to have all executables operational. When possible, store such intermediate results in standardized formats. As a minimum, archive any intermediate result files that are produced when running an analysis (as long as the required storage space is not prohibitive).",
+        "text": "In principle, as long as the full process used to produce a given result is tracked, all intermediate data can also be regenerated. In practice, having easily accessible intermediate results may be of great value. Quickly browsing through intermediate results can reveal discrepancies toward what is assumed, and can in this way uncover bugs or faulty interpretations that are not apparent in the final results. Secondly, it more directly reveals consequences of alternative programs and parameter choices at individual steps. Thirdly, when the full process is not readily executable, it allows parts of the process to be rerun. Fourthly, when reproducing results, it allows any experienced inconsistencies to be tracked to the steps where the problems arise. Fifth, it allows critical examination of the full process behind a result, without the need to have all executables operational. When possible, store such intermediate results in standardized formats. As a minimum, archive any intermediate result files that are produced when running an analysis (as long as the required storage space is not prohibitive)."
+      },
+      {
+        "self_ref": "#/texts/38",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.7621,
+              "t": 191.1934922320312,
+              "r": 529.8524895000003,
+              "b": 158.5189248183999,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              74
+            ]
+          }
+        ],
+        "orig": "Rule 6: For Analyses That Include Randomness, Note Underlying Random Seeds",
+        "text": "Rule 6: For Analyses That Include Randomness, Note Underlying Random Seeds",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/39",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 400.76247861,
+              "t": 149.59549043203128,
+              "r": 554.2054604000003,
+              "b": 57.47792844744788,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              368
+            ]
+          }
+        ],
+        "orig": "Many analyses and predictions include some element of randomness, meaning the same program will typically give slightly different results every time it is executed (even when receiving identical inputs and parameters). However, given the same initial seed, all random numbers used in an analysis will be equal, thus giving identical results every time it is run. There",
+        "text": "Many analyses and predictions include some element of randomness, meaning the same program will typically give slightly different results every time it is executed (even when receiving identical inputs and parameters). However, given the same initial seed, all random numbers used in an analysis will be equal, thus giving identical results every time it is run. There"
+      },
+      {
+        "self_ref": "#/texts/40",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 58.0535,
+              "t": 36.09951463203117,
+              "r": 243.41405034000013,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              49
+            ]
+          }
+        ],
+        "orig": "PLOS Computational Biology | www.ploscompbiol.org",
+        "text": "PLOS Computational Biology | www.ploscompbiol.org"
+      },
+      {
+        "self_ref": "#/texts/41",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 304.09357400000016,
+              "t": 36.09951463203117,
+              "r": 308.15837600000015,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1
+            ]
+          }
+        ],
+        "orig": "2",
+        "text": "2"
+      },
+      {
+        "self_ref": "#/texts/42",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 2,
+            "bbox": {
+              "l": 383.91751806000013,
+              "t": 36.09951463203117,
+              "r": 554.2885132600001,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              45
+            ]
+          }
+        ],
+        "orig": "October 2013 | Volume 9 | Issue 10 | e1003285",
+        "text": "October 2013 | Volume 9 | Issue 10 | e1003285"
+      },
+      {
+        "self_ref": "#/texts/43",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.0535,
+              "t": 729.5638904320313,
+              "r": 211.50544808999993,
+              "b": 554.1099497274483,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              662
+            ]
+          }
+        ],
+        "orig": "is a large difference between observing that a result has been reproduced exactly or only approximately. While achieving equal results is a strong indication that a procedure has been reproduced exactly, it is often hard to conclude anything when achieving only approximately equal results. For analyses that involve random numbers, this means that the random seed should be recorded. This allows results to be reproduced exactly by providing the same seed to the random number generator in future runs. As a minimum, you should note which analysis steps involve randomness, so that a certain level of discrepancy can be anticipated when reproducing the results.",
+        "text": "is a large difference between observing that a result has been reproduced exactly or only approximately. While achieving equal results is a strong indication that a procedure has been reproduced exactly, it is often hard to conclude anything when achieving only approximately equal results. For analyses that involve random numbers, this means that the random seed should be recorded. This allows results to be reproduced exactly by providing the same seed to the random number generator in future runs. As a minimum, you should note which analysis steps involve randomness, so that a certain level of discrepancy can be anticipated when reproducing the results."
+      },
+      {
+        "self_ref": "#/texts/44",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.0535,
+              "t": 540.5350922320312,
+              "r": 206.68453313999998,
+              "b": 519.8794054584,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              42
+            ]
+          }
+        ],
+        "orig": "Rule 7: Always Store Raw Data behind Plots",
+        "text": "Rule 7: Always Store Raw Data behind Plots",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/45",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 511.3528904320312,
+              "r": 211.50561438999995,
+              "b": 178.97614690744797,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1323
+            ]
+          }
+        ],
+        "orig": "From the time a figure is first generated to it being part of a published article, it is often modified several times. In some cases, such modifications are merely visual adjustments to improve readability, or to ensure visual consistency between figures. If raw data behind figures are stored in a systematic manner, so as to allow raw data for a given figure to be easily retrieved, one can simply modify the plotting procedure, instead of having to redo the whole analysis. An additional advantage of this is that if one really wants to read fine values in a figure, one can consult the raw numbers. In cases where plotting involves more than a direct visualization of underlying numbers, it can be useful to store both the underlying data and the processed values that are directly visualized. An example of this is the plotting of histograms, where both the values before binning (original data) and the counts per bin (heights of visualized bars) could be stored. When plotting is performed using a command-based system like R, it is convenient to also store the code used to make the plot. One can then apply slight modifications to these commands, instead of having to specify the plot from scratch. As a minimum, one should note which data formed the basis of a given plot and how this data could be reconstructed.",
+        "text": "From the time a figure is first generated to it being part of a published article, it is often modified several times. In some cases, such modifications are merely visual adjustments to improve readability, or to ensure visual consistency between figures. If raw data behind figures are stored in a systematic manner, so as to allow raw data for a given figure to be easily retrieved, one can simply modify the plotting procedure, instead of having to redo the whole analysis. An additional advantage of this is that if one really wants to read fine values in a figure, one can consult the raw numbers. In cases where plotting involves more than a direct visualization of underlying numbers, it can be useful to store both the underlying data and the processed values that are directly visualized. An example of this is the plotting of histograms, where both the values before binning (original data) and the counts per bin (heights of visualized bars) could be stored. When plotting is performed using a command-based system like R, it is convenient to also store the code used to make the plot. One can then apply slight modifications to these commands, instead of having to specify the plot from scratch. As a minimum, one should note which data formed the basis of a given plot and how this data could be reconstructed."
+      },
+      {
+        "self_ref": "#/texts/46",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.0535,
+              "t": 165.45489223203117,
+              "r": 211.46757740000007,
+              "b": 120.8750178183999,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              99
+            ]
+          }
+        ],
+        "orig": "Rule 8: Generate Hierarchical Analysis Output, Allowing Layers of Increasing Detail to Be Inspected",
+        "text": "Rule 8: Generate Hierarchical Analysis Output, Allowing Layers of Increasing Detail to Be Inspected",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/47",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.053666299999996,
+              "t": 112.34829043203126,
+              "r": 211.48319863999984,
+              "b": 93.8171525474479,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              84
+            ]
+          },
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 229.43731776,
+              "t": 729.5668633120314,
+              "r": 382.93858050000074,
+              "b": 439.02866884744867,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              85,
+              1146
+            ]
+          }
+        ],
+        "orig": "The final results that make it to an article, be it plots or tables, often represent highly summarized data. For instance, each value along a curve may in turn represent averages from an underlying distribution. In order to validate and fully understand the main result, it is often useful to inspect the detailed values underlying the summaries. A common but impractical way of doing this is to incorporate various debug outputs in the source code of scripts and programs. When the storage context allows, it is better to simply incorporate permanent output of all underlying data when a main result is generated, using a systematic naming convention to allow the full data underlying a given summarized value to be easily found. We find hypertext (i.e., html file output) to be particularly useful for this purpose. This allows summarized results to be generated along with links that can be very conveniently followed (by simply clicking) to the full data underlying each summarized value. When working with summarized results, you should as a minimum at least once generate, inspect, and validate the detailed values underlying the summaries.",
+        "text": "The final results that make it to an article, be it plots or tables, often represent highly summarized data. For instance, each value along a curve may in turn represent averages from an underlying distribution. In order to validate and fully understand the main result, it is often useful to inspect the detailed values underlying the summaries. A common but impractical way of doing this is to incorporate various debug outputs in the source code of scripts and programs. When the storage context allows, it is better to simply incorporate permanent output of all underlying data when a main result is generated, using a systematic naming convention to allow the full data underlying a given summarized value to be easily found. We find hypertext (i.e., html file output) to be particularly useful for this purpose. This allows summarized results to be generated along with links that can be very conveniently followed (by simply clicking) to the full data underlying each summarized value. When working with summarized results, you should as a minimum at least once generate, inspect, and validate the detailed values underlying the summaries."
+      },
+      {
+        "self_ref": "#/texts/48",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 229.4362,
+              "t": 425.5051922320312,
+              "r": 354.1420492400002,
+              "b": 392.8874116383999,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              56
+            ]
+          }
+        ],
+        "orig": "Rule 9: Connect Textual Statements to Underlying Results",
+        "text": "Rule 9: Connect Textual Statements to Underlying Results",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/49",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 229.43636629999997,
+              "t": 384.3607904320312,
+              "r": 382.90355710000046,
+              "b": 187.98757519744788,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              754
+            ]
+          }
+        ],
+        "orig": "Throughout a typical research project, a range of different analyses are tried and interpretation of the results made. Although the results of analyses and their corresponding textual interpretations are clearly interconnected at the conceptual level, they tend to live quite separate lives in their representations: results usually live on a data area on a server or personal computer, while interpretations live in text documents in the form of personal notes or emails to collaborators. Such textual interpretations are not generally mere shadows of the resultsthey often involve viewing the results in light of other theories and results. As such, they carry extra information, while at the same time having their necessary support in a given result.",
+        "text": "Throughout a typical research project, a range of different analyses are tried and interpretation of the results made. Although the results of analyses and their corresponding textual interpretations are clearly interconnected at the conceptual level, they tend to live quite separate lives in their representations: results usually live on a data area on a server or personal computer, while interpretations live in text documents in the form of personal notes or emails to collaborators. Such textual interpretations are not generally mere shadows of the resultsthey often involve viewing the results in light of other theories and results. As such, they carry extra information, while at the same time having their necessary support in a given result."
+      },
+      {
+        "self_ref": "#/texts/50",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 229.43636629999997,
+              "t": 185.5994385520312,
+              "r": 382.8748649400004,
+              "b": 93.82259596744791,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              353
+            ]
+          },
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.76263344,
+              "t": 729.3454593420314,
+              "r": 554.2549298800001,
+              "b": 689.3274801374479,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              354,
+              501
+            ]
+          }
+        ],
+        "orig": "If you want to reevaluate your previous interpretations, or allow peers to make their own assessment of claims you make in a scientific paper, you will have to connect a given textual statement (interpretation, claim, conclusion) to the precise results underlying the statement. Making this connection when it is needed may be difficult and error-prone, as it may be hard to locate the exact result underlying and supporting the statement from a large pool of different analyses with various versions.",
+        "text": "If you want to reevaluate your previous interpretations, or allow peers to make their own assessment of claims you make in a scientific paper, you will have to connect a given textual statement (interpretation, claim, conclusion) to the precise results underlying the statement. Making this connection when it is needed may be difficult and error-prone, as it may be hard to locate the exact result underlying and supporting the statement from a large pool of different analyses with various versions."
+      },
+      {
+        "self_ref": "#/texts/51",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.76263344,
+              "t": 686.5421364020312,
+              "r": 554.245963580001,
+              "b": 497.42176123744724,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              704
+            ]
+          }
+        ],
+        "orig": "To allow efficient retrieval of details behind textual statements, we suggest that statements are connected to underlying results already from the time the statements are initially formulated (for instance in notes or emails). Such a connection can for instance be a simple file path to detailed results, or the ID of a result in an analysis framework, included within the text itself. For an even tighter integration, there are tools available to help integrate reproducible analyses directly into textual documents, such as Sweave [19], the GenePattern Word add-in [4], and Galaxy Pages [20]. These solutions can also subsequently be used in connection with publications, as discussed in the next rule.",
+        "text": "To allow efficient retrieval of details behind textual statements, we suggest that statements are connected to underlying results already from the time the statements are initially formulated (for instance in notes or emails). Such a connection can for instance be a simple file path to detailed results, or the ID of a result in an analysis framework, included within the text itself. For an even tighter integration, there are tools available to help integrate reproducible analyses directly into textual documents, such as Sweave [19], the GenePattern Word add-in [4], and Galaxy Pages [20]. These solutions can also subsequently be used in connection with publications, as discussed in the next rule."
+      },
+      {
+        "self_ref": "#/texts/52",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.76263344,
+              "t": 494.69290519203054,
+              "r": 554.2621029200005,
+              "b": 433.35844436744725,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              200
+            ]
+          }
+        ],
+        "orig": "As a minimum, you should provide enough details along with your textual interpretations so as to allow the exact underlying results, or at least some related results, to be tracked down in the future.",
+        "text": "As a minimum, you should provide enough details along with your textual interpretations so as to allow the exact underlying results, or at least some related results, to be tracked down in the future."
+      },
+      {
+        "self_ref": "#/texts/53",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.7621,
+              "t": 419.38239223203124,
+              "r": 548.5154280800001,
+              "b": 398.55634499839994,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              60
+            ]
+          }
+        ],
+        "orig": "Rule 10: Provide Public Access to Scripts, Runs, and Results",
+        "text": "Rule 10: Provide Public Access to Scripts, Runs, and Results",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/54",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.76247861,
+              "t": 389.63329043203123,
+              "r": 554.2942267700003,
+              "b": 200.51291526744797,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              682
+            ]
+          }
+        ],
+        "orig": "Last, but not least, all input data, scripts, versions, parameters, and intermediate results should be made publicly and easily accessible. Various solutions have now become available to make data sharing more convenient, standardized, and accessible in particular domains, such as for gene expression data [2123]. Most journals allow articles to be supplemented with online material, and some journals have initiated further efforts for making data and code more integrated with publications [3,24]. As a minimum, you should submit the main data and source code as supplementary material, and be prepared to respond to any requests for further data or methodology details by peers.",
+        "text": "Last, but not least, all input data, scripts, versions, parameters, and intermediate results should be made publicly and easily accessible. Various solutions have now become available to make data sharing more convenient, standardized, and accessible in particular domains, such as for gene expression data [2123]. Most journals allow articles to be supplemented with online material, and some journals have initiated further efforts for making data and code more integrated with publications [3,24]. As a minimum, you should submit the main data and source code as supplementary material, and be prepared to respond to any requests for further data or methodology details by peers."
+      },
+      {
+        "self_ref": "#/texts/55",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "text",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 400.76247861,
+              "t": 197.72757153203133,
+              "r": 554.2709143900003,
+              "b": 93.81663515744799,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              366
+            ]
+          }
+        ],
+        "orig": "Making reproducibility of your work by peers a realistic possibility sends a strong signal of quality, trustworthiness, and transparency. This could increase the quality and speed of the reviewing process on your work, the chances of your work getting published, and the chances of your work being taken further and cited by other researchers after publication [25].",
+        "text": "Making reproducibility of your work by peers a realistic possibility sends a strong signal of quality, trustworthiness, and transparency. This could increase the quality and speed of the reviewing process on your work, the chances of your work getting published, and the chances of your work being taken further and cited by other researchers after publication [25]."
+      },
+      {
+        "self_ref": "#/texts/56",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 58.0535,
+              "t": 36.09951463203117,
+              "r": 243.41405034000013,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              49
+            ]
+          }
+        ],
+        "orig": "PLOS Computational Biology | www.ploscompbiol.org",
+        "text": "PLOS Computational Biology | www.ploscompbiol.org"
+      },
+      {
+        "self_ref": "#/texts/57",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 304.09357400000016,
+              "t": 36.09951463203117,
+              "r": 308.15837600000015,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1
+            ]
+          }
+        ],
+        "orig": "3",
+        "text": "3"
+      },
+      {
+        "self_ref": "#/texts/58",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 3,
+            "bbox": {
+              "l": 383.91751806000013,
+              "t": 36.09951463203117,
+              "r": 554.2885132600001,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              45
+            ]
+          }
+        ],
+        "orig": "October 2013 | Volume 9 | Issue 10 | e1003285",
+        "text": "October 2013 | Volume 9 | Issue 10 | e1003285"
+      },
+      {
+        "self_ref": "#/texts/59",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "section_header",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 58.0535,
+              "t": 718.3807922320312,
+              "r": 110.2973744,
+              "b": 709.6871992784,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              10
+            ]
+          }
+        ],
+        "orig": "References",
+        "text": "References",
+        "level": 1
+      },
+      {
+        "self_ref": "#/texts/60",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.5685,
+              "t": 702.1094554320312,
+              "r": 211.43964627999983,
+              "b": 687.6461138645312,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              78
+            ]
+          }
+        ],
+        "orig": "1. Crocker J, Cooper ML (2011) Addressing scientific fraud. Science 334: 1182.",
+        "text": "Crocker J, Cooper ML (2011) Addressing scientific fraud. Science 334: 1182.",
+        "enumerated": true,
+        "marker": "1."
+      },
+      {
+        "self_ref": "#/texts/61",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 685.6122341520311,
+              "r": 211.47033099999976,
+              "b": 654.7646468645311,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              146
+            ]
+          }
+        ],
+        "orig": "2. Jasny BR, Chin G, Chong L, Vignieri S (2011) Data replication & reproducibility. Again, and again, and again…. Introduction. Science 334: 1225.",
+        "text": "Jasny BR, Chin G, Chong L, Vignieri S (2011) Data replication & reproducibility. Again, and again, and again…. Introduction. Science 334: 1225.",
+        "enumerated": true,
+        "marker": "2."
+      },
+      {
+        "self_ref": "#/texts/62",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 652.7307671520309,
+              "r": 211.45917292,
+              "b": 638.267425584531,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              89
+            ]
+          }
+        ],
+        "orig": "3. Peng RD (2011) Reproducible research in computational science. Science 334: 1226-1227.",
+        "text": "Peng RD (2011) Reproducible research in computational science. Science 334: 1226-1227.",
+        "enumerated": true,
+        "marker": "3."
+      },
+      {
+        "self_ref": "#/texts/63",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.568499999999986,
+              "t": 636.1763607120309,
+              "r": 211.44940959999983,
+              "b": 621.713019144531,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              94
+            ]
+          }
+        ],
+        "orig": "4. Mesirov JP (2010) Computer science. Accessible reproducible research. Science 327: 415-416.",
+        "text": "Mesirov JP (2010) Computer science. Accessible reproducible research. Science 327: 415-416.",
+        "enumerated": true,
+        "marker": "4."
+      },
+      {
+        "self_ref": "#/texts/64",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 619.621954272031,
+              "r": 211.49892357999974,
+              "b": 588.831552144531,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              152
+            ]
+          }
+        ],
+        "orig": "5. Nekrutenko A, Taylor J (2012) Next-generation sequencing data interpretation: enhancing reproducibility and accessibility. Nat Rev Genet 13: 667-672.",
+        "text": "Nekrutenko A, Taylor J (2012) Next-generation sequencing data interpretation: enhancing reproducibility and accessibility. Nat Rev Genet 13: 667-672.",
+        "enumerated": true,
+        "marker": "5."
+      },
+      {
+        "self_ref": "#/texts/65",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 586.7404872720309,
+              "r": 211.4870681199998,
+              "b": 555.9500851445309,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              158
+            ]
+          }
+        ],
+        "orig": "6. Ioannidis JP, Allison DB, Ball CA, Coulibaly I, Cui X, et al. (2009) Repeatability of published microarray gene expression analyses. Nat Genet 41: 149-155.",
+        "text": "Ioannidis JP, Allison DB, Ball CA, Coulibaly I, Cui X, et al. (2009) Repeatability of published microarray gene expression analyses. Nat Genet 41: 149-155.",
+        "enumerated": true,
+        "marker": "6."
+      },
+      {
+        "self_ref": "#/texts/66",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 553.9162054320308,
+              "r": 211.42918557999974,
+              "b": 531.2321484245308,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              133
+            ]
+          }
+        ],
+        "orig": "7. Steen RG (2011) Retractions in the scientific literature: is the incidence of research fraud increasing? J Med Ethics 37: 249-253.",
+        "text": "Steen RG (2011) Retractions in the scientific literature: is the incidence of research fraud increasing? J Med Ethics 37: 249-253.",
+        "enumerated": true,
+        "marker": "7."
+      },
+      {
+        "self_ref": "#/texts/67",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 529.1982687120307,
+              "r": 211.5038052399998,
+              "b": 498.3506814245307,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              156
+            ]
+          }
+        ],
+        "orig": "8. Prinz F, Schlange T, Asadullah K (2011) Believe it or not: how much can we rely on published data on potential drug targets? Nat Rev Drug Discov 10: 712.",
+        "text": "Prinz F, Schlange T, Asadullah K (2011) Believe it or not: how much can we rely on published data on potential drug targets? Nat Rev Drug Discov 10: 712.",
+        "enumerated": true,
+        "marker": "8."
+      },
+      {
+        "self_ref": "#/texts/68",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 61.56849999999999,
+              "t": 496.3168017120307,
+              "r": 211.48916025999978,
+              "b": 473.68992986453077,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              117
+            ]
+          }
+        ],
+        "orig": "9. Begley CG, Ellis LM (2012) Drug development: raise standards for preclinical cancer research. Nature 483: 531-533.",
+        "text": "Begley CG, Ellis LM (2012) Drug development: raise standards for preclinical cancer research. Nature 483: 531-533.",
+        "enumerated": true,
+        "marker": "9."
+      },
+      {
+        "self_ref": "#/texts/69",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 58.05370479999999,
+              "t": 471.59886499203077,
+              "r": 211.49962095999982,
+              "b": 448.9719931445308,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              106
+            ]
+          }
+        ],
+        "orig": "10. Reich M, Liefeld T, Gould J, Lerner J, Tamayo P, et al. (2006) GenePattern 2.0. Nat Genet 38: 500-501.",
+        "text": "Reich M, Liefeld T, Gould J, Lerner J, Tamayo P, et al. (2006) GenePattern 2.0. Nat Genet 38: 500-501.",
+        "enumerated": true,
+        "marker": "10."
+      },
+      {
+        "self_ref": "#/texts/70",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 702.1129423320308,
+              "r": 382.8626240800004,
+              "b": 671.3225402045308,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              165
+            ]
+          }
+        ],
+        "orig": "11. Giardine B, Riemer C, Hardison RC, Burhans R, Elnitski L, et al. (2005) Galaxy: a platform for interactive large-scale genome analysis. Genome Res 15: 1451-1455.",
+        "text": "Giardine B, Riemer C, Hardison RC, Burhans R, Elnitski L, et al. (2005) Galaxy: a platform for interactive large-scale genome analysis. Genome Res 15: 1451-1455.",
+        "enumerated": true,
+        "marker": "11."
+      },
+      {
+        "self_ref": "#/texts/71",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 669.2314753320308,
+              "r": 382.8284524600002,
+              "b": 646.6046034845308,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              101
+            ]
+          }
+        ],
+        "orig": "12. Rex DE, Ma JQ, Toga AW (2003) The LONI Pipeline Processing Environment. Neuroimage 19: 1033-1048.",
+        "text": "Rex DE, Ma JQ, Toga AW (2003) The LONI Pipeline Processing Environment. Neuroimage 19: 1033-1048.",
+        "enumerated": true,
+        "marker": "12."
+      },
+      {
+        "self_ref": "#/texts/72",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 644.5707237720306,
+              "r": 382.83054459999954,
+              "b": 613.7231364845306,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              173
+            ]
+          }
+        ],
+        "orig": "13. Oinn T, Addis M, Ferris J, Marvin D, Senger M, et al. (2004) Taverna: a tool for the composition and enactment of bioinformatics workflows. Bioinformatics 20: 3045-3054.",
+        "text": "Oinn T, Addis M, Ferris J, Marvin D, Senger M, et al. (2004) Taverna: a tool for the composition and enactment of bioinformatics workflows. Bioinformatics 20: 3045-3054.",
+        "enumerated": true,
+        "marker": "13."
+      },
+      {
+        "self_ref": "#/texts/73",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 611.6892567720305,
+              "r": 382.8472817200004,
+              "b": 580.8416694845305,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              168
+            ]
+          }
+        ],
+        "orig": "14. Piwowar HA, Day RS, Fridsma DB (2007) Sharing detailed research data is associated with increased citation rate. PLoS ONE 2: e308. doi:10.1371/journal.pone.0000308.",
+        "text": "Piwowar HA, Day RS, Fridsma DB (2007) Sharing detailed research data is associated with increased citation rate. PLoS ONE 2: e308. doi:10.1371/journal.pone.0000308.",
+        "enumerated": true,
+        "marker": "14."
+      },
+      {
+        "self_ref": "#/texts/74",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 578.8077897720303,
+              "r": 382.85843980000027,
+              "b": 539.7966722045303,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              220
+            ]
+          }
+        ],
+        "orig": "15. Heroux MA, Willenbring JM (2009) Barely sufficient software engineering: 10 practices to improve your cse software. In: 2009 ICSE Workshop on Software Engineering for Computational Science and Engineering. pp. 15-21.",
+        "text": "Heroux MA, Willenbring JM (2009) Barely sufficient software engineering: 10 practices to improve your cse software. In: 2009 ICSE Workshop on Software Engineering for Computational Science and Engineering. pp. 15-21.",
+        "enumerated": true,
+        "marker": "15."
+      },
+      {
+        "self_ref": "#/texts/75",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456,
+              "t": 537.7627924920301,
+              "r": 382.83403150000004,
+              "b": 515.1359206445302,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              116
+            ]
+          }
+        ],
+        "orig": "16. Schwab M, Karrenbach M, Claerbout J (2000) Making scientific computations reproducible. Comput Sci Eng 2: 61-67.",
+        "text": "Schwab M, Karrenbach M, Claerbout J (2000) Making scientific computations reproducible. Comput Sci Eng 2: 61-67.",
+        "enumerated": true,
+        "marker": "16."
+      },
+      {
+        "self_ref": "#/texts/76",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456000003,
+              "t": 513.0448557720301,
+              "r": 382.8249655600002,
+              "b": 474.0909233645302,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              204
+            ]
+          }
+        ],
+        "orig": "17. Goble CA, Bhagat J, Aleksejevs S, Cruickshank D, Michaelides D, et al. (2010) myExperiment: a repository and social network for the sharing of bioinformatics workflows. Nucleic Acids Res 38: W677-682.",
+        "text": "Goble CA, Bhagat J, Aleksejevs S, Cruickshank D, Michaelides D, et al. (2010) myExperiment: a repository and social network for the sharing of bioinformatics workflows. Nucleic Acids Res 38: W677-682.",
+        "enumerated": true,
+        "marker": "17."
+      },
+      {
+        "self_ref": "#/texts/77",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 229.43623456000003,
+              "t": 471.9998584920302,
+              "r": 382.8437948200002,
+              "b": 449.3729866445303,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              141
+            ]
+          }
+        ],
+        "orig": "18. Deelman E, Singh G, Su M-H, Blythe J, Gil Y, et al. (2005) Pegasus: a framework for mapping complex scientific workflows onto distributed",
+        "text": "Deelman E, Singh G, Su M-H, Blythe J, Gil Y, et al. (2005) Pegasus: a framework for mapping complex scientific workflows onto distributed",
+        "enumerated": true,
+        "marker": "18."
+      },
+      {
+        "self_ref": "#/texts/78",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 414.48183328000005,
+              "t": 702.3437751120302,
+              "r": 554.2507328800008,
+              "b": 688.0505942645303,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              52
+            ]
+          }
+        ],
+        "orig": "systems. Scientific Programming Journal 13: 219-237.",
+        "text": "systems. Scientific Programming Journal 13: 219-237.",
+        "enumerated": false,
+        "marker": ""
+      },
+      {
+        "self_ref": "#/texts/79",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 686.4135237720302,
+              "r": 554.2242324400007,
+              "b": 648.1953272645302,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              236
+            ]
+          }
+        ],
+        "orig": "19. Leisch F (2002) Sweave: dynamic generation of statistical reports using literate data analysis. In: Ha ¨ rdle W, Ro ¨nz B, editors. Compstat: proceedings in computational statistics. Heidelberg, Germany: Physika Verlag. pp. 575-580.",
+        "text": "Leisch F (2002) Sweave: dynamic generation of statistical reports using literate data analysis. In: Ha ¨ rdle W, Ro ¨nz B, editors. Compstat: proceedings in computational statistics. Heidelberg, Germany: Physika Verlag. pp. 575-580.",
+        "enumerated": true,
+        "marker": "19."
+      },
+      {
+        "self_ref": "#/texts/80",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 646.5582567720301,
+              "r": 554.2074953200004,
+              "b": 608.3407576445301,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              199
+            ]
+          }
+        ],
+        "orig": "20. Goecks J, Nekrutenko A, Taylor J (2010) Galaxy: a comprehensive approach for supporting accessible, reproducible, and transparent computational research in the life sciences. Genome Biol 11: R86.",
+        "text": "Goecks J, Nekrutenko A, Taylor J (2010) Galaxy: a comprehensive approach for supporting accessible, reproducible, and transparent computational research in the life sciences. Genome Biol 11: R86.",
+        "enumerated": true,
+        "marker": "20."
+      },
+      {
+        "self_ref": "#/texts/81",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 606.7036871520299,
+              "r": 554.1858765400003,
+              "b": 568.5419784245299,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              195
+            ]
+          }
+        ],
+        "orig": "21. Brazma A, Hingamp P, Quackenbush J, Sherlock G, Spellman P, et al. (2001) Minimum information about a microarray experiment (MIAME)toward standards for microarray data. Nat Genet 29: 365-371.",
+        "text": "Brazma A, Hingamp P, Quackenbush J, Sherlock G, Spellman P, et al. (2001) Minimum information about a microarray experiment (MIAME)toward standards for microarray data. Nat Genet 29: 365-371.",
+        "enumerated": true,
+        "marker": "21."
+      },
+      {
+        "self_ref": "#/texts/82",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 566.8484201520298,
+              "r": 554.1844817800005,
+              "b": 536.6235932045298,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              183
+            ]
+          }
+        ],
+        "orig": "22. Brazma A, Parkinson H, Sarkans U, Shojatalab M, Vilo J, et al. (2003) ArrayExpress-a public repository for microarray gene expression data at the EBI. Nucleic Acids Res 31: 68-71.",
+        "text": "Brazma A, Parkinson H, Sarkans U, Shojatalab M, Vilo J, et al. (2003) ArrayExpress-a public repository for microarray gene expression data at the EBI. Nucleic Acids Res 31: 68-71.",
+        "enumerated": true,
+        "marker": "22."
+      },
+      {
+        "self_ref": "#/texts/83",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 534.9865227120297,
+              "r": 554.2067979400002,
+              "b": 504.7630905245297,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              158
+            ]
+          }
+        ],
+        "orig": "23. Edgar R, Domrachev M, Lash AE (2002) Gene Expression Omnibus: NCBI gene expression and hybridization array data repository. Nucleic Acids Res 30: 207-210.",
+        "text": "Edgar R, Domrachev M, Lash AE (2002) Gene Expression Omnibus: NCBI gene expression and hybridization array data repository. Nucleic Acids Res 30: 207-210.",
+        "enumerated": true,
+        "marker": "23."
+      },
+      {
+        "self_ref": "#/texts/84",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 503.0688348720297,
+              "r": 554.1691394200002,
+              "b": 480.83877224452965,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              103
+            ]
+          }
+        ],
+        "orig": "24. Sneddon TP, Li P, Edmunds SC (2012) GigaDB: announcing the GigaScience database. Gigascience 1: 11.",
+        "text": "Sneddon TP, Li P, Edmunds SC (2012) GigaDB: announcing the GigaScience database. Gigascience 1: 11.",
+        "enumerated": true,
+        "marker": "24."
+      },
+      {
+        "self_ref": "#/texts/85",
+        "parent": {
+          "$ref": "#/groups/1"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "list_item",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 400.7622765400001,
+              "t": 479.20170175202963,
+              "r": 554.1921529600003,
+              "b": 448.97826956452957,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              162
+            ]
+          }
+        ],
+        "orig": "25. Prlic ´ A, Procter JB (2012) Ten simple rules for the open development of scientific software. PLoS Comput Biol 8: e1002802. doi:10.1371/journal.pcbi.1002802.",
+        "text": "Prlic ´ A, Procter JB (2012) Ten simple rules for the open development of scientific software. PLoS Comput Biol 8: e1002802. doi:10.1371/journal.pcbi.1002802.",
+        "enumerated": true,
+        "marker": "25."
+      },
+      {
+        "self_ref": "#/texts/86",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 58.0535,
+              "t": 36.09951463203117,
+              "r": 243.41405034000013,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              49
+            ]
+          }
+        ],
+        "orig": "PLOS Computational Biology | www.ploscompbiol.org",
+        "text": "PLOS Computational Biology | www.ploscompbiol.org"
+      },
+      {
+        "self_ref": "#/texts/87",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 304.09357400000016,
+              "t": 36.09951463203117,
+              "r": 308.15837600000015,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              1
+            ]
+          }
+        ],
+        "orig": "4",
+        "text": "4"
+      },
+      {
+        "self_ref": "#/texts/88",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "furniture",
+        "label": "page_footer",
+        "prov": [
+          {
+            "page_no": 4,
+            "bbox": {
+              "l": 383.91751806000013,
+              "t": 36.09951463203117,
+              "r": 554.2885132600001,
+              "b": 29.15385577794666,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              45
+            ]
+          }
+        ],
+        "orig": "October 2013 | Volume 9 | Issue 10 | e1003285",
+        "text": "October 2013 | Volume 9 | Issue 10 | e1003285"
+      }
+    ],
+    "pictures": [
+      {
+        "self_ref": "#/pictures/0",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "picture",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 57.12981414794922,
+              "t": 765.0009574890137,
+              "r": 199.90097045898438,
+              "b": 751.3092651367188,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        ],
+        "captions": [],
+        "references": [],
+        "footnotes": [],
+        "annotations": []
+      },
+      {
+        "self_ref": "#/pictures/1",
+        "parent": {
+          "$ref": "#/body"
+        },
+        "children": [],
+        "content_layer": "body",
+        "label": "picture",
+        "prov": [
+          {
+            "page_no": 1,
+            "bbox": {
+              "l": 426.08782958984375,
+              "t": 769.4374771118164,
+              "r": 554.151611328125,
+              "b": 749.9836921691895,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        ],
+        "captions": [],
+        "references": [],
+        "footnotes": [],
+        "annotations": []
+      }
+    ],
+    "tables": [],
+    "key_value_items": [],
+    "form_items": [],
+    "pages": {
+      "1": {
+        "size": {
+          "width": 612.2830200195312,
+          "height": 790.8660278320312
+        },
+        "page_no": 1
+      },
+      "2": {
+        "size": {
+          "width": 612.2830200195312,
+          "height": 790.8660278320312
+        },
+        "page_no": 2
+      },
+      "3": {
+        "size": {
+          "width": 612.2830200195312,
+          "height": 790.8660278320312
+        },
+        "page_no": 3
+      },
+      "4": {
+        "size": {
+          "width": 612.2830200195312,
+          "height": 790.8660278320312
+        },
+        "page_no": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-03-25T20:34:06.666844",
+  "naming_scheme": "YYYY_firstauthor_short-title-keywords",
+  "total_papers": 37,
+  "renamed": 37,
+  "uncertain": 0,
+  "papers": [
+    {
+      "paper_id": 1,
+      "canonical_basename": "1989_kunsch_jackknife-bootstrap-stationary-observations",
+      "year": 1989,
+      "first_author": "kunsch",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 2,
+      "canonical_basename": "2004_wang_pdl-magnetosheath-flow-structure-forces",
+      "year": 2004,
+      "first_author": "wang",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 3,
+      "canonical_basename": "2004_haaland_four-spacecraft-magnetopause-crossing-time",
+      "year": 2004,
+      "first_author": "haaland",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 4,
+      "canonical_basename": "2007_dekeyser_least-squares-gradient-multipoint-cluster",
+      "year": 2007,
+      "first_author": "dekeyser",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 5,
+      "canonical_basename": "2009_zhou_error-estimation-multi-spacecraft-timing",
+      "year": 2009,
+      "first_author": "zhou",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 6,
+      "canonical_basename": "2011_vogt_accuracy-multipoint-boundary-crossing-time",
+      "year": 2011,
+      "first_author": "vogt",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 7,
+      "canonical_basename": "2013_archer_magnetosheath-dynamic-pressure-enhancements",
+      "year": 2013,
+      "first_author": "archer",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 8,
+      "canonical_basename": "2024_lin_magnetopause-model-performance-themis",
+      "year": 2024,
+      "first_author": "lin",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 9,
+      "canonical_basename": "2023_jung_mshpy23-magnetosheath-parameterized-model",
+      "year": 2023,
+      "first_author": "jung",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 10,
+      "canonical_basename": "2013_sandve_ten-rules-reproducible-computational-research",
+      "year": 2013,
+      "first_author": "sandve",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 11,
+      "canonical_basename": "2024_aghabozorgi_magnetopause-location-ml-solar-wind-propagation",
+      "year": 2024,
+      "first_author": "aghabozorgi",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 12,
+      "canonical_basename": "2024_pi_magnetosheath-spatial-profiles-imf-themis",
+      "year": 2024,
+      "first_author": "pi",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 13,
+      "canonical_basename": "2024_michottedewelle_magnetosheath-density-field-imf-orientation",
+      "year": 2024,
+      "first_author": "michottedewelle",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 14,
+      "canonical_basename": "2003_robertson_xray-emission-terrestrial-magnetosheath",
+      "year": 2003,
+      "first_author": "robertson",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 15,
+      "canonical_basename": "2024_grimmich_magnetopause-deviation-solar-wind-foreshock",
+      "year": 2024,
+      "first_author": "grimmich",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 16,
+      "canonical_basename": "2015_soucek_magnetosheath-plasma-stability-ulf-waves",
+      "year": 2015,
+      "first_author": "soucek",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 17,
+      "canonical_basename": "2017_rezeau_magnetopause-internal-structure-mms",
+      "year": 2017,
+      "first_author": "rezeau",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 18,
+      "canonical_basename": "2018_denton_lmn-current-sheet-coordinates-magnetopause",
+      "year": 2018,
+      "first_author": "denton",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 19,
+      "canonical_basename": "2019_sun_soft-xray-imaging-magnetosheath-cusps-mhd",
+      "year": 2019,
+      "first_author": "sun",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 20,
+      "canonical_basename": "2019_walsh_solar-wind-measurement-uncertainty-geospace",
+      "year": 2019,
+      "first_author": "walsh",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 21,
+      "canonical_basename": "2020_raptis_classifying-magnetosheath-jets-mms",
+      "year": 2020,
+      "first_author": "raptis",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 22,
+      "canonical_basename": "2020_staples_statistical-models-magnetopause-compressions",
+      "year": 2020,
+      "first_author": "staples",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 23,
+      "canonical_basename": "2025_jiang_ion-kinetic-instabilities-magnetosheath-mms",
+      "year": 2025,
+      "first_author": "jiang",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 24,
+      "canonical_basename": "2023_blancocano_jets-mirror-mode-waves-magnetosheath",
+      "year": 2023,
+      "first_author": "blancocano",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 25,
+      "canonical_basename": "1976_zwan_solar-wind-plasma-depletion-planetary-boundary",
+      "year": 1976,
+      "first_author": "zwan",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 26,
+      "canonical_basename": "1994_anderson_magnetic-spectral-signatures-magnetosheath-pdl",
+      "year": 1994,
+      "first_author": "anderson",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 27,
+      "canonical_basename": "1979_crooker_plasma-depletion-observations-dayside-magnetopause",
+      "year": 1979,
+      "first_author": "crooker",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 28,
+      "canonical_basename": "1997_anderson_plasma-depletion-subsolar-reconnection",
+      "year": 1997,
+      "first_author": "anderson",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 29,
+      "canonical_basename": "1998_shue_magnetopause-location-extreme-solar-wind",
+      "year": 1998,
+      "first_author": "shue",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 30,
+      "canonical_basename": "2005_king_solar-wind-spatial-scales-wind-ace-omni",
+      "year": 2005,
+      "first_author": "king",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 31,
+      "canonical_basename": "2005_merka_bow-shock-3d-position-shape-mach-number",
+      "year": 2005,
+      "first_author": "merka",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 32,
+      "canonical_basename": "2008_soucek_magnetosheath-mirror-modes-cluster",
+      "year": 2008,
+      "first_author": "soucek",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 33,
+      "canonical_basename": "2009_li_cold-dense-magnetopause-boundary-northward-imf",
+      "year": 2009,
+      "first_author": "li",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 34,
+      "canonical_basename": "2009_plaschke_magnetopause-motion-statistical-study-themis",
+      "year": 2009,
+      "first_author": "plaschke",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 35,
+      "canonical_basename": "2022_zhang_dayside-transient-phenomena-magnetosphere-ionosphere",
+      "year": 2022,
+      "first_author": "zhang",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 36,
+      "canonical_basename": "2019_vokhmyanin_omni-imf-data-quality-evaluation",
+      "year": 2019,
+      "first_author": "vokhmyanin",
+      "confidence": "high"
+    },
+    {
+      "paper_id": 37,
+      "canonical_basename": "2016_steegen_multiverse-analysis-transparency",
+      "year": 2016,
+      "first_author": "steegen",
+      "confidence": "high"
+    }
+  ]
+}
