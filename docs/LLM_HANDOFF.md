@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Phase 2B audit complete. **CONDITIONAL GO** for later bounded detector-readiness stage.
+Phase 2C interval audit complete. Clean core of 4 passes identified. P7 excluded as spike-dominated. Seed_D weakened.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -94,19 +94,40 @@ Conditions carried forward:
 **Wording audit:** `docs/WORDING_DRIFT_AUDIT.md`
 **Machine-readable:** `runs/20260326T040343Z_d0425fd4/phase2b_audit_summary.json`
 
+## Phase 2C interval audit (2026-03-26)
+
+**Question:** Does the 7-pass bank contain a sufficiently clean subset after interval-level confounder scrutiny?
+
+**Answer: YES, with conditions**
+
+**Clean core (4 passes):** P2 (Sep 3), P4 (Sep 20), P5 (Sep 26), P6 (Sep 27). Metrics survive leave-spike-out. Low-to-moderate density noise.
+
+**Usable with caveats (2 passes):** P1 (Aug 18, seed_A: high density noise CV=0.93), P3 (Sep 13, seed_D: EB partially spike-dependent, Δ=0.50).
+
+**Excluded (1 pass):** P7 (Oct 24) — spike-dominated. Dn collapses 2.19→0.67, EB 4.22→0.97 after spike removal.
+
+**Seed status update:**
+- seed_A (P1): usable with noise caveat
+- seed_B (P4): **cleanest** — unchanged
+- seed_C (P2): clean — unchanged
+- seed_D (P3): weakened — EB partially spike-dependent
+
+**Full audit:** `docs/PHASE_2C_CONFOUNDER_CLOSURE.md`
+**Pass cards:** `docs/PASS_INTERVAL_AUDIT.md`
+**Machine-readable:** `runs/20260326T040343Z_d0425fd4/phase2c_interval_audit.json`
+
 ## Key files (updated)
 
 | What | Where |
 |---|---|
-| **Phase 2B audit** | `docs/PHASE_2B_AUDIT.md` |
-| **Selection function** | `docs/SELECTION_FUNCTION_AUDIT.md` |
-| **Wording audit** | `docs/WORDING_DRIFT_AUDIT.md` |
+| **Phase 2C confounder closure** | `docs/PHASE_2C_CONFOUNDER_CLOSURE.md` |
+| **Pass interval audit** | `docs/PASS_INTERVAL_AUDIT.md` |
+| Phase 2B audit | `docs/PHASE_2B_AUDIT.md` |
+| Seed dossier (updated) | `docs/SEED_DOSSIER.md` |
 | Comparator atlas | `docs/COMPARATOR_ATLAS.md` |
-| Seed dossier | `docs/SEED_DOSSIER.md` |
-| Metric review | `docs/METRIC_BEHAVIOR_REVIEW.md` |
 | Window bank config | `configs/pilot_live_usable.yaml` |
-| Audit artifacts | `runs/20260326T040343Z_d0425fd4/phase2b_audit_summary.json` |
+| Interval audit data | `runs/20260326T040343Z_d0425fd4/phase2c_interval_audit.json` |
 
 ## Next step (do not implement)
 
-Human-supervised decision: given the CONDITIONAL GO, decide whether to proceed to bounded detector-readiness with N=7 and the stated conditions, or whether to first expand the bank to lower-Dp / different-probe windows. This requires human judgment.
+Human-supervised decision on whether the clean core of 4 passes (P2, P4, P5, P6) plus 2 cautious passes (P1, P3) — effective N=4 to 6 — is sufficient for bounded detector-readiness review, or whether P7's exclusion and seed_D's weakening require bank expansion first.

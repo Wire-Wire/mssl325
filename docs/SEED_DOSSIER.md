@@ -44,6 +44,7 @@ All 4 seeds are from independent orbital passes. No two seeds share a pass.
 - **Upstream:** Dp = 4.2 nPa, Bz = +0.3 nT
 - **Why useful for planning:** Occupies one extreme of the observed Dn–EB space. Would be a natural starting point if a human reviewer wants to inspect the lowest-Dn end of the bank.
 - **Caveats:** Membership = 86% (lowest in bank). ρ = -0.46 (weakest anti-correlation among seeds). The low Dn value could reflect measurement-model artifacts at this Dp, not necessarily a physical depletion signal. This window must NOT be treated as a PDL identification.
+- **Phase 2C interval caveat:** Near-bin density CV = 0.93 (highest in bank). Near-bin density is extremely noisy, raising wave/mirror-mode contamination risk. Qualitative Dn < 1 pattern survives spike removal (0.12 → 0.17), but the noise level warrants caution.
 
 ### seed_B (usable_sep20_09_6h)
 
@@ -65,6 +66,7 @@ All 4 seeds are from independent orbital passes. No two seeds share a pass.
 - **Upstream:** Dp = 3.1 nPa, Bz = -1.4 nT (southward)
 - **Why useful for planning:** Shows the strongest observed trend anti-correlation. The only seed with southward Bz.
 - **Caveats:** Universally negative ρ across the bank means ρ alone does not discriminate between windows. The strong ρ here may reflect this pass's particular s-range coverage rather than a distinctive physical process.
+- **Phase 2C interval caveat:** EB is partially spike-dependent. After Pdyn spike removal, EB drops from 1.96 to 1.46 (Δ=0.50). The anti-correlation claim is weakened because the EB contrast was partially inflated by BG-bin spikes. Dn remains robust (0.39 → 0.41).
 
 ---
 
@@ -76,7 +78,7 @@ All 4 seeds are from independent orbital passes. No two seeds share a pass.
 | usable_sep03_8h | P2 | 2.07 | 0.80 | Duration variant of seed_C's pass |
 | usable_sep26_09_10h | P5 | 0.94 | 1.96 | Operationally similar to seed_B in Dn; strong ρ covered by seed_D |
 | usable_sep27_09_10h | P6 | 1.31 | 1.23 | Intermediate — no extreme metric channel distinguishes it from seeds |
-| usable_oct24_09_6h | P7 | 2.19 | 4.22 | Highest EB in bank (4.22), but Dn similar to seed_C; could serve as an alternate |
+| usable_oct24_09_6h | P7 | 2.19 | 4.22 | **Phase 2C: spike-dominated.** 35% spike fraction; Dn collapses 2.19→0.67, EB 4.22→0.97 after spike removal. Not reliable for metric comparison. |
 
 These windows are available for later review. They are not excluded — they are simply not selected as planning seeds in this slate.
 
