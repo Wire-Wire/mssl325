@@ -157,18 +157,52 @@ Conditions carried forward:
 **Full review:** `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md`
 **Evidence matrix:** `docs/READINESS_EVIDENCE_MATRIX.md`
 
+## Evidence-report package (2026-03-26)
+
+A reusable evidence package now exists with two-layer design (factual + review).
+
+**Machine-readable:** `runs/20260326T040343Z_d0425fd4/evidence/`
+- `json/bank_manifest.json` — full per-window structured records (9 windows)
+- `json/bank_summary.json` — compact bank statistics
+- `json/review_layers.json` — stage-local dispositions only
+- `json/pass_summary.jsonl` — one line per pass
+- `csv/window_matrix.csv` — wide-format metrics + context
+- `csv/confounder_register.csv` — per-window confounder flags
+- `csv/interval_audit_matrix.csv` — spike sensitivity data
+- `chunks/bank_report_chunks.json` — AI-consumable chunks
+- `index/artifact_index.json` — links all artifacts
+
+**Human-facing:** `reports/current_bank/`
+- `INDEX.md` — navigation
+- `bank_report.md` — cross-pass evidence matrix + confounder table
+- `passes/<window_id>.md` — per-pass evidence sheets (7 pages)
+- `figures/cross_pass_summary.png` — Dn-EB scatter, spike sensitivity, occupancy
+
+**Schema:** `docs/EVIDENCE_REPORT_SCHEMA.md`
+**Generator:** `src/pdl_pilot/cli/generate_evidence.py`
+**Tests:** 124 pass, 1 skip
+
 ## Key files (updated)
 
 | What | Where |
 |---|---|
-| **Phase 2D readiness review** | `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md` |
-| **Readiness evidence matrix** | `docs/READINESS_EVIDENCE_MATRIX.md` |
-| Phase 2C confounder closure | `docs/PHASE_2C_CONFOUNDER_CLOSURE.md` |
-| Pass interval audit | `docs/PASS_INTERVAL_AUDIT.md` |
-| Phase 2B audit | `docs/PHASE_2B_AUDIT.md` |
-| Seed dossier | `docs/SEED_DOSSIER.md` |
-| Comparator atlas | `docs/COMPARATOR_ATLAS.md` |
+| **Evidence schema** | `docs/EVIDENCE_REPORT_SCHEMA.md` |
+| **Evidence generator** | `src/pdl_pilot/cli/generate_evidence.py` |
+| **Bank manifest (JSON)** | `runs/.../evidence/json/bank_manifest.json` |
+| **Bank report** | `reports/current_bank/bank_report.md` |
+| **Per-pass pages** | `reports/current_bank/passes/` |
+| Phase 2D readiness review | `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md` |
 | Window bank config | `configs/pilot_live_usable.yaml` |
+
+## Commands
+
+```bash
+# Generate evidence package from current run
+PYTHONPATH=src python -m pdl_pilot.cli.generate_evidence --run-dir runs/20260326T040343Z_d0425fd4
+
+# Run all tests (124 pass, 1 skip)
+PYTHONPATH=src python -m pytest tests/ -v
+```
 
 ## Next step (do not implement)
 
