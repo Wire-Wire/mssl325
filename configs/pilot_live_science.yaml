@@ -1,0 +1,131 @@
+# PDL Pilot — Science-valid live pilot configuration
+#
+# Phase 1.5 science pilot: first real dayside encounters run end-to-end.
+#
+# These windows were selected and validated through the candidate
+# curation workflow (configs/pilot_candidates.yaml + validate_candidates).
+#
+# SELECTION RATIONALE:
+#   - THEMIS-D October 2008: apogee ~12 Re, dayside sector
+#   - Position verified from STATE L1 ephemeris via CDAWeb
+#   - Wider windows (60-90 min) to capture full sheath traversal
+#     from outer sheath (background s-bin) through inner sheath (near s-bin)
+#   - X_GSM ~8-10 Re, SZA ~10-25°, near-subsolar geometry confirmed
+#
+# IMPORTANT:
+#   - These are science-valid for the MEASUREMENT MODEL + OCCUPANCY test
+#   - They are NOT confirmed PDL events
+#   - They are NOT the development/validation set
+#   - Membership thresholds relaxed to 0.3 cm⁻³ for low-Dp outer sheath
+#
+# Previous diagnostic windows (configs/pilot_live.yaml) are retained separately.
+
+run_label: "science_pilot_v1"
+data_source: "live"
+random_seed: 42
+
+# Boundary models (frozen)
+boundary_models:
+  magnetopause: "shue1998"
+  bow_shock: "merka2005"
+  distance_direction: "sun_earth_line"
+
+# Normalized s-bins (frozen)
+bins:
+  very_near: [0.0, 0.2]
+  near: [0.2, 0.4]
+  background: [0.6, 1.0]
+
+# Filters
+filters:
+  trend_window_seconds: 120.0
+  min_sheath_duration_seconds: 300.0
+
+# Uncertainty
+uncertainty:
+  mp_standoff_delta_re: 0.5
+  bs_standoff_delta_re: 1.0
+
+# Preflight — slightly relaxed for outer sheath during low-Dp
+preflight:
+  max_sza_deg: 60.0
+  min_x_gsm_re: 5.0
+  max_abs_y_gsm_re: 15.0
+  min_valid_fraction: 0.5
+  min_density_cm3: 0.3        # relaxed from 0.5: outer sheath at low Dp has n~0.3-0.5
+  max_density_cm3: 200.0
+  min_bmag_nT: 1.0
+  max_bmag_nT: 200.0
+  min_beta_sheath: 0.01
+  max_beta_sheath: 100.0
+  min_membership_fraction: 0.3  # relaxed: outer sheath at low Dp
+  min_near_occupancy: 0.02
+  min_bg_occupancy: 0.02
+  min_s_std: 0.005            # relaxed slightly: narrow traversals still informative
+  fill_masking_policy: "auto"
+  grade_with_incomplete_flags: "cap_silver"
+
+output_dir: "runs"
+
+live:
+  backend: "cdasws"
+  fgm_dataset: "TH{probe}_L2_FGM"
+  mom_dataset: "TH{probe}_L2_MOM"
+  state_dataset: "TH{probe}_L1_STATE"
+  omni_dataset: "OMNI_HRO_1MIN"
+  omni_pre_window_minutes: 30.0
+  omni_post_window_minutes: 10.0
+  resample_cadence_seconds: 3.0
+  interpolation_method: "linear"
+  max_gap_seconds: 30.0
+  cache_dir: "data_cache"
+  cache_policy: "use"
+
+# ============================================================
+# SCIENCE-VALID PILOT ENCOUNTERS
+# ============================================================
+# THD October 2008 dayside passes with WIDER windows (60-90 min)
+# to capture full radial traversal through the magnetosheath.
+# The spacecraft moves ~2-3 Re radially during these passes,
+# which should populate both near and background s-bins.
+
+encounters:
+  # --- Science Pilot 1: THD 2008-10-13 full sheath traversal ---
+  # Wide window covering inbound from ~11 Re to ~8 Re
+  # X=[8.0,9.9] Y=[-5.0,-0.8] SZA=[6.5,27°]
+  - encounter_id: "sci_oct13"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-13T19:30:00"
+    time_end: "2008-10-13T21:00:00"
+    crossing_count: 1
+    notes: >
+      Science pilot. THD Oct 13 2008 dayside pass, 90-min window.
+      Verified dayside: X=8-10 Re, SZA=7-27 deg.
+      Wide window to capture full sheath traversal for occupancy.
+
+  # --- Science Pilot 2: THD 2008-10-15 full sheath traversal ---
+  # Same orbital geometry, two days later
+  - encounter_id: "sci_oct15"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-15T19:30:00"
+    time_end: "2008-10-15T21:30:00"
+    crossing_count: 1
+    notes: >
+      Science pilot. THD Oct 15 2008 dayside pass, 120-min window.
+      Verified dayside: X=8-10 Re, SZA=8-27 deg.
+      Two-day revisit of same geometry as sci_oct13.
+
+  # --- Science Pilot 3: THD 2008-07-14 dayside pass ---
+  # Different season, higher latitude
+  - encounter_id: "sci_jul14"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-07-14T15:00:00"
+    time_end: "2008-07-14T17:30:00"
+    crossing_count: 1
+    notes: >
+      Science pilot. THD Jul 14 2008 dayside pass, 150-min window.
+      X~8 Re, SZA=29-36 deg, |Z|~3.9 Re (higher latitude).
+      Wider window for full radial traversal.

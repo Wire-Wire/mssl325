@@ -1,0 +1,140 @@
+# PDL Pilot — Candidate window manifest for science-valid pilot curation
+#
+# Phase 1.5 → science-pilot curation step.
+#
+# HOW THIS FILE WORKS:
+#   - Each entry is a manually curated candidate window
+#   - Run `python -m pdl_pilot.cli.validate_candidates --config configs/pilot_candidates.yaml`
+#     to validate all candidates and produce a comparison summary
+#   - Promoted candidates go into configs/pilot_live_science.yaml
+#
+# CURATION CRITERIA (stricter than preflight evaluability):
+#   - Dayside near-subsolar geometry: X_GSM > 8 Re, |Y| < 5 Re, SZA < 40°
+#   - Spacecraft plausibly in magnetosheath (between MP and BS)
+#   - Moderate steady upstream conditions (Dp ~1–5 nPa)
+#   - Enough duration to span near + background s-bins (~15–30 min)
+#
+# CANDIDATE SELECTION METHOD:
+#   Positions verified from THEMIS STATE L1 ephemeris via CDAWeb.
+#   THEMIS-D in 2008 had ~12 Re apogee with dayside coverage in
+#   Jul–Oct when apogee rotated through local noon.
+
+run_label: "candidate_validation_v2"
+data_source: "live"
+random_seed: 42
+
+boundary_models:
+  magnetopause: "shue1998"
+  bow_shock: "merka2005"
+  distance_direction: "sun_earth_line"
+
+bins:
+  very_near: [0.0, 0.2]
+  near: [0.2, 0.4]
+  background: [0.6, 1.0]
+
+filters:
+  trend_window_seconds: 120.0
+  min_sheath_duration_seconds: 300.0
+
+uncertainty:
+  mp_standoff_delta_re: 0.5
+  bs_standoff_delta_re: 1.0
+
+preflight:
+  max_sza_deg: 60.0
+  min_x_gsm_re: 5.0
+  max_abs_y_gsm_re: 15.0
+  min_valid_fraction: 0.5
+  min_membership_fraction: 0.5
+  min_near_occupancy: 0.02
+  min_bg_occupancy: 0.02
+  min_s_std: 0.01
+  fill_masking_policy: "auto"
+  grade_with_incomplete_flags: "cap_silver"
+
+output_dir: "runs"
+
+live:
+  backend: "cdasws"
+  fgm_dataset: "TH{probe}_L2_FGM"
+  mom_dataset: "TH{probe}_L2_MOM"
+  state_dataset: "TH{probe}_L1_STATE"
+  omni_dataset: "OMNI_HRO_1MIN"
+  omni_pre_window_minutes: 30.0
+  omni_post_window_minutes: 10.0
+  resample_cadence_seconds: 3.0
+  interpolation_method: "linear"
+  max_gap_seconds: 30.0
+  cache_dir: "data_cache"
+  cache_policy: "use"
+
+# ============================================================
+# VERIFIED CANDIDATE WINDOWS
+# ============================================================
+# Positions verified from THEMIS STATE L1 via CDAWeb on 2026-03-26.
+# THEMIS-D October 2008: apogee ~12 Re, dayside sector.
+# X = 8–10 Re, |Y| < 5 Re, SZA < 30° confirmed from ephemeris.
+
+encounters:
+  # --- VERIFIED dayside: THD 2008-10-13 ---
+  # Ephemeris: X=[8.0,9.9] Y=[-5.0,-0.8] Z~0 Re, SZA=[6.5,26.7]
+  # Spacecraft traverses from ~11 Re down to 8 Re (inbound)
+  # Should populate near + background s-bins as X decreases toward MP
+  - encounter_id: "cand_oct13_early"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-13T20:00:00"
+    time_end: "2008-10-13T20:30:00"
+    crossing_count: 1
+    notes: >
+      Verified dayside. THD outbound pass, Oct 13 2008.
+      X~9-10 Re, SZA~15-20 deg, near-subsolar.
+      Position confirmed from STATE L1 ephemeris.
+
+  - encounter_id: "cand_oct13_mid"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-13T21:00:00"
+    time_end: "2008-10-13T21:30:00"
+    crossing_count: 1
+    notes: >
+      Verified dayside. THD pass, Oct 13 2008, different phase.
+      X~9 Re, SZA~10-15 deg.
+
+  # --- VERIFIED dayside: THD 2008-10-15 ---
+  # Ephemeris: X=[8.0,9.8] Y=[-5.0,-1.1] Z~0, SZA=[8.4,27.1]
+  - encounter_id: "cand_oct15_early"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-15T20:00:00"
+    time_end: "2008-10-15T20:30:00"
+    crossing_count: 1
+    notes: >
+      Verified dayside. THD Oct 15 2008.
+      X~9-10 Re, SZA~15-20 deg.
+      Two-day revisit of same orbital geometry as Oct 13.
+
+  - encounter_id: "cand_oct15_late"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-10-15T21:30:00"
+    time_end: "2008-10-15T22:00:00"
+    crossing_count: 1
+    notes: >
+      Verified dayside. THD Oct 15 2008, later phase.
+      X~8-9 Re, closer to MP, SZA~10-20 deg.
+
+  # --- VERIFIED dayside: THD 2008-07-14 ---
+  # Ephemeris: X=[8.0,8.6] Y=[2.4,5.0] Z~-3.9, SZA=[29,36]
+  # Higher SZA and |Z| than the October windows, but still dayside
+  - encounter_id: "cand_jul14"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-07-14T16:00:00"
+    time_end: "2008-07-14T16:30:00"
+    crossing_count: 1
+    notes: >
+      Verified dayside. THD July 14 2008.
+      X~8 Re, SZA~30-35 deg, |Z|~3.9 Re (higher latitude).
+      Less ideal than October windows but still in dayside sheath zone.
