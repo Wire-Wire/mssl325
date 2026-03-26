@@ -21,7 +21,7 @@ This is a bounded descriptive review of how the frozen metric backbone behaves a
 | Dn | 0.12 | 2.31 | 2.19 | Factor ~20. Both depletion (Dn < 1) and enhancement (Dn > 1) observed. |
 | EB | 0.80 | 4.22 | 3.42 | Most windows show EB > 1 (B enhancement near MP). Two Sep 3 windows show EB < 1. |
 | ρ(n,B) | -0.91 | -0.46 | 0.45 | All windows show negative correlation. Universally anti-correlated. |
-| Persistence | 0.00 | 1.00 | 1.00 | Full range. Reflects different depletion extents across passes. |
+| Persistence | 0.00 | 1.00 | 1.00 | Full range observed. High variance across passes. |
 | ptot_smooth | 0.80 | 0.94 | 0.14 | Relatively stable. Total pressure is smooth across most windows. |
 
 ### 2. Duration variants behave consistently within a pass
@@ -33,27 +33,42 @@ For EB: mean within-pass spread = 0.21, between-pass range = 3.41 → ratio 0.06
 
 ### 3. Dn and EB are approximately inversely related
 
-Windows with low Dn (strong near-MP depletion) tend to have high EB (strong B enhancement). This is physically expected for a depletion layer under magnetic pileup — and is exactly the detector backbone's target pattern. The Sep 3 windows (high Dn, low EB) show the opposite pattern, consistent with compressed-sheath conditions.
+Windows with low Dn tend to have high EB, and vice versa. This inverse relationship is observed in the data but is not itself diagnostic of any particular physical state. Both low-Dn/high-EB and high-Dn/low-EB patterns are operationally distinct under the measurement model without implying that either pattern corresponds to a specific physical class.
 
-### 4. Anti-correlation is universal
+### 4. ρ(n,B) is negative across the current bank
 
-Every window with available ρ shows ρ < 0. The anti-correlation between density trends and |B| trends is consistently negative across all upstream regimes and both seasons. This is the most stable metric in the bank.
+Every window with available ρ shows ρ < 0. However, this is observed across only 7 THD passes in 2 seasons, all under encounter-averaged Dp > 3 nPa. The universality of negative ρ within this bank does not make ρ a discriminative metric — it may reflect a property common to all compressed-sheath comparator windows rather than a physically diagnostic signal.
 
 ---
 
 ## What this review does and does not support
 
 **Supports:**
-- The frozen metric backbone resolves genuinely different physical states
+- The frozen metric backbone produces operationally distinguishable outputs across real passes
 - Duration variants are consistent within a pass
-- The bank spans diverse metric behavior
-- ρ(n,B) < 0 is universal in this sample
+- The bank spans diverse metric values
+- ρ(n,B) < 0 is observed across all windows in this sample (but see risk note below)
 
 **Does NOT support:**
 - Any threshold definition
 - Any classification of windows as PDL or non-PDL
 - Development-set membership decisions
 - Detector readiness claims
+
+---
+
+## Scientific risk note
+
+The following limits apply to the current bank and review:
+
+1. **Single probe:** All 9 windows are THD. No cross-probe verification exists.
+2. **Effective N = 7:** Two passes have duration variants that are not independent. The effective independent sample is 7, not 9.
+3. **Encounter-averaged boundaries:** The s-mapping uses one set of boundary distances per encounter, computed from median upstream conditions. Time-varying Dp within an encounter shifts the true s but is not resolved. This is a known provisional limitation.
+4. **Dp > 3 nPa selection bias:** All usable windows required high enough Dp to compress the sheath for dual-bin coverage. This introduces a systematic bias toward compressed-sheath conditions. Lower-Dp sheath states are structurally excluded from the current bank.
+5. **Universal negative ρ is not diagnostic:** Because ρ < 0 in every window, it currently has no discriminative power within this bank. It cannot distinguish between windows and should not be treated as a classification feature at this stage.
+6. **OMNI / mapping uncertainty:** Upstream conditions are from OMNI (L1 propagation, not local measurement). Boundary models are empirical fits. Both introduce condition-dependent uncertainty that is not yet quantified per-encounter.
+7. **No confounder resolution:** transient_flag and mixing_flag remain UNKNOWN (tri-state None). All grades are capped at Silver. Confounder contamination cannot be ruled out for any window.
+8. **Descriptive only:** This review describes measurement-model outputs. It does not establish whether any window contains a plasma depletion layer, a compressed sheath, or any other specific physical structure.
 
 ---
 

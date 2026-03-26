@@ -17,10 +17,10 @@ Every window in the bank remains a **"measurement-model-valid near-MP comparator
 
 | Seed | Window | Date | Dn | EB | ρ(n,B) | Rationale |
 |---|---|---|---|---|---|---|
-| seed_A | usable_aug18_6h | 2008-08-18 | 0.12 | 2.49 | -0.46 | Strongest near-MP depletion + B enhancement pattern observed |
-| seed_B | usable_sep20_09_6h | 2009-09-20 | 0.97 | 1.48 | -0.63 | Near-neutral Dn behavior (Dn ≈ 1) |
-| seed_C | usable_sep03_6h | 2008-09-03 | 2.31 | 0.82 | -0.52 | Strongest near-MP density enhancement (compressed-sheath) |
-| seed_D | usable_sep13_09_6h | 2009-09-13 | 0.39 | 1.96 | -0.90 | Strongest n–|B| anti-correlation |
+| seed_A | usable_aug18_6h | 2008-08-18 | 0.12 | 2.49 | -0.46 | Lowest observed Dn, highest EB among seeds |
+| seed_B | usable_sep20_09_6h | 2009-09-20 | 0.97 | 1.48 | -0.63 | Dn near unity, moderate EB |
+| seed_C | usable_sep03_6h | 2008-09-03 | 2.31 | 0.82 | -0.52 | Highest observed Dn, EB below unity |
+| seed_D | usable_sep13_09_6h | 2009-09-13 | 0.39 | 1.96 | -0.90 | Most negative ρ observed in the bank |
 
 All 4 seeds are from independent orbital passes (4 distinct dates). No two seeds share the same pass.
 
@@ -39,8 +39,8 @@ All 4 seeds are from independent orbital passes (4 distinct dates). No two seeds
 ## What this stratification is and is not
 
 **Is:**
-- A planning artifact for deciding what to review first in a bounded detector preparation
-- A way to ensure coverage of different observed behaviors
+- A planning artifact for deciding what to review first in later human-supervised work
+- A way to ensure coverage of different observed metric outputs
 
 **Is NOT:**
 - A development set

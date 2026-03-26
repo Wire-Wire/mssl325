@@ -30,28 +30,34 @@ All remain "measurement-model-valid near-MP comparator windows." None labeled.
 
 ## Key review findings
 
-1. **Dn and EB inversely related** — low-Dn windows have high EB, consistent with pileup physics
-2. **ρ(n,B) universally negative** — the most stable metric in the bank
+1. **Dn and EB approximately inversely related** — observed pattern, not a diagnostic rule
+2. **ρ(n,B) negative across all bank windows** — but universality within this bank means ρ has no discriminative power here; it may reflect a property common to all compressed-sheath comparator conditions
 3. **Duration variants consistent** — within-pass Dn spread (0.50) ≪ between-pass range (1.80)
-4. **7 effective independent observations**, not 9 (2 passes have duration variants)
+4. **Effective N = 7** independent passes, not 9 windows
 
-## Seed slate (planning only)
+## Scientific risks (see METRIC_BEHAVIOR_REVIEW.md for details)
 
-| Seed | Window | Dn | EB | Why |
+- Single probe (THD only), Dp > 3 nPa selection bias, encounter-averaged boundaries, universal ρ < 0 is non-discriminative, confounder flags incomplete (transient/mixing = UNKNOWN)
+
+## Seed slate (planning only — not labels)
+
+| Seed | Window | Dn | EB | Operational description |
 |---|---|---|---|---|
-| A | aug18_6h | 0.12 | 2.49 | Strongest depletion + enhancement |
-| B | sep20_09_6h | 0.97 | 1.48 | Near-neutral behavior |
-| C | sep03_6h | 2.31 | 0.82 | Strongest enhancement (compressed-sheath) |
-| D | sep13_09_6h | 0.39 | 1.96 | Strongest anti-correlation (ρ=-0.90) |
+| A | aug18_6h | 0.12 | 2.49 | Lowest Dn, highest EB among seeds |
+| B | sep20_09_6h | 0.97 | 1.48 | Dn near unity, moderate EB |
+| C | sep03_6h | 2.31 | 0.82 | Highest Dn, EB below unity |
+| D | sep13_09_6h | 0.39 | 1.96 | Most negative ρ in bank |
 
 ## Key files
 
 | What | Where |
 |---|---|
+| Comparator atlas | `docs/COMPARATOR_ATLAS.md` |
+| Seed dossier | `docs/SEED_DOSSIER.md` |
+| Metric review (tightened) | `docs/METRIC_BEHAVIOR_REVIEW.md` |
 | Window bank config | `configs/pilot_live_usable.yaml` |
-| Metric review doc | `docs/METRIC_BEHAVIOR_REVIEW.md` |
-| Seed stratification | `docs/MINI_SEED_STRATIFICATION.md` |
-| Review script | `src/pdl_pilot/cli/metric_review.py` |
+| Window bank summary | `docs/WINDOW_BANK_SUMMARY.md` |
+| Phase 2a state | `docs/PHASE_2A_STATE.md` |
 | Review artifacts | `runs/20260326T040343Z_d0425fd4/` |
 
 ## Commands
@@ -69,4 +75,4 @@ PYTHONPATH=src python -m pytest tests/ -v
 
 ## Next step (do not implement)
 
-Bounded detector-v0 preparation: use the 4 seeds as a starting point for supervised threshold exploration on Dn and EB. This requires human judgment to decide initial threshold candidates — it is NOT automatable from the current bank alone.
+Human-supervised review of the 4 seed windows to decide whether the current bank is sufficient for bounded threshold exploration, or whether additional passes under different upstream conditions (lower Dp, different Bz regimes) are needed first. This decision requires human judgment — it is not automatable from the current bank alone.
