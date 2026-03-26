@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Phase 2C interval audit complete. Clean core of 4 passes identified. P7 excluded as spike-dominated. Seed_D weakened.
+Phase 2D detector-readiness review complete. **CONDITIONAL GO** for Phase 3A bounded threshold exploration. N=6 interpretable passes (4 clean + 2 cautious). P7 excluded.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -128,6 +128,48 @@ Conditions carried forward:
 | Window bank config | `configs/pilot_live_usable.yaml` |
 | Interval audit data | `runs/20260326T040343Z_d0425fd4/phase2c_interval_audit.json` |
 
+## Phase 2D detector-readiness review (2026-03-26)
+
+**Question:** Is the post-Phase-2C bank sufficient to justify a later bounded threshold-exploration stage?
+
+**Answer: CONDITIONAL GO**
+
+**Clean core (4 passes):** P2, P4, P5, P6. Dn 0.94–2.31, EB 0.82–1.96. Confounder-tested.
+**Cautious (2 passes):** P1, P3. Extend Dn range to 0.12–0.39 but carry density-noise and EB-spike caveats.
+**Excluded (1 pass):** P7. Spike-dominated.
+**Interpretable N = 6** (4 clean + 2 cautious). P7 excluded.
+
+**Key insufficiency:** Clean core alone has no pass with Dn < 0.5. The low-Dn range relies entirely on cautious passes.
+
+**Tolerability of unresolved issues:**
+- Universal negative ρ: acceptable caveat (non-discriminative, cannot be used as threshold)
+- Universal jet triggering: serious warning (long-window artifact; metrics survive in clean core)
+- Transient/mixing/boundary-motion UNKNOWN: serious warning, tolerable for bounded exploration
+- THD-only / Dp > 3 nPa bias: serious warning; results are regime-specific, not universal
+- Encounter-averaged boundaries: acceptable caveat
+
+**Recommended next stage:** Phase 3A — Bounded Metric-Threshold Exploration
+- Identify provisional Dn/EB threshold candidates (descriptive, not classification)
+- Thresholds are exploratory starting points, not frozen decisions
+- ρ excluded as discriminative metric
+- P7 excluded; P1/P3 usable with stated caveats only
+
+**Full review:** `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md`
+**Evidence matrix:** `docs/READINESS_EVIDENCE_MATRIX.md`
+
+## Key files (updated)
+
+| What | Where |
+|---|---|
+| **Phase 2D readiness review** | `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md` |
+| **Readiness evidence matrix** | `docs/READINESS_EVIDENCE_MATRIX.md` |
+| Phase 2C confounder closure | `docs/PHASE_2C_CONFOUNDER_CLOSURE.md` |
+| Pass interval audit | `docs/PASS_INTERVAL_AUDIT.md` |
+| Phase 2B audit | `docs/PHASE_2B_AUDIT.md` |
+| Seed dossier | `docs/SEED_DOSSIER.md` |
+| Comparator atlas | `docs/COMPARATOR_ATLAS.md` |
+| Window bank config | `configs/pilot_live_usable.yaml` |
+
 ## Next step (do not implement)
 
-Human-supervised decision on whether the clean core of 4 passes (P2, P4, P5, P6) plus 2 cautious passes (P1, P3) — effective N=4 to 6 — is sufficient for bounded detector-readiness review, or whether P7's exclusion and seed_D's weakening require bank expansion first.
+Phase 3A — Bounded Metric-Threshold Exploration: examine how provisional Dn and EB thresholds descriptively separate the 6 interpretable passes, without assigning labels or freezing decisions. Requires human review of seed time series first.
