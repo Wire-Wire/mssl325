@@ -2,7 +2,7 @@
 # This config drives 2 synthetic encounters to validate the pipeline end-to-end.
 # Switch data_source to "live" once pyspedas is available and real event times are known.
 
-run_label: "pilot_v0"
+run_label: "pilot_v1_hardened"
 
 data_source: "synthetic"     # synthetic | fixture | live
 random_seed: 42

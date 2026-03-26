@@ -30,7 +30,7 @@ def test_qc_flags_motion():
     enc.crossing_count = 5
     flags = compute_qc_flags(enc)
     assert flags.motion_flag is True
-    assert "Multiple crossings" in flags.warnings[0]
+    assert any("Multiple crossings" in w for w in flags.warnings)
 
 
 def test_qc_report_generates_png(tmp_path):

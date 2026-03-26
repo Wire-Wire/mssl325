@@ -67,6 +67,8 @@ class EncounterData:
     vflow_kms: np.ndarray
 
     # Upstream context (OMNI) — may be None for synthetic
+    omni_bx_gse_nT: np.ndarray | None = None    # radial component for cone angle
+    omni_by_gsm_nT: np.ndarray | None = None     # transverse component for clock angle
     omni_bz_gsm_nT: np.ndarray | None = None
     omni_bt_nT: np.ndarray | None = None
     omni_dp_nPa: np.ndarray | None = None

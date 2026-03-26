@@ -1,4 +1,4 @@
-# LLM Handoff — PDL Pilot Pipeline
+# LLM Handoff — PDL Pilot Pipeline (Hardened)
 
 **Load this first when resuming in a new session.**
 
@@ -6,76 +6,71 @@
 
 ## One-line summary
 
-Phase 1.5 complete: a config-driven THEMIS PDL detection pipeline that runs end-to-end on both synthetic and real CDAWeb data, with full provenance, but the live pilot windows are not actually dayside encounters — the data bridge works, the science-grade pilots have not happened yet.
+Phase 1.5 hardened: THEMIS PDL detection pipeline now enforces fill-value masking, scientific eligibility preflight, sheath-membership checks, correct IMF cone angle, and honest tri-state QC grading — but the live pilot windows are still not dayside encounters, so the data bridge works but no science-grade live results exist yet.
 
 ## Current milestone
 
 - Phase 1 (synthetic MVP): **done**
-- Phase 1.5 (dual-source bridge): **done, needs better pilot windows**
+- Phase 1.5 (dual-source bridge): **done**
+- Phase 1.5 hardening (honest science interface): **done**
 - Phase 2 (threshold tuning, development set, catalogue): **not started**
+
+## What the hardening pass added
+
+1. **Fill-value masking** (`data/masking.py`): OMNI sentinels (9999.99 etc.) and CDF fills (±1e31) → NaN. Per-variable summaries in provenance.
+2. **Scientific preflight** (`qc/preflight.py`): geometry + data validity + sheath membership + bin occupancy + s-sanity → explicit PASS/FAIL_GEOMETRY/FAIL_OCCUPANCY/etc. Failed = not evaluable, NOT a scientific negative.
+3. **Sheath membership**: conservative validator (density/B/beta ranges). Flags upstream-suspect, magnetosphere-suspect, artifact, unknown.
+4. **Correct cone angle**: arccos(|Bx|/|B|) using OMNI BX_GSE, not Bz. Clock angle: arctan2(By_GSM, Bz_GSM). None if unavailable.
+5. **Tri-state QC flags**: True/False/None. transient and mixing are honestly None. Grade capped to Silver max when flags UNKNOWN.
+6. **Config knobs**: PreflightConfig with all preflight thresholds, fill policy, grade policy.
+7. **Encounter output**: scientific_status, evaluable, evaluable_metrics, preflight_checks, membership_summary, masked_fraction_summary.
+8. **37 new tests** (96 total, all passing offline).
 
 ## Frozen decisions (do not reopen)
 
 - Encounter (not crossing) is the statistical unit
-- `s = d_MP / (d_MP + d_BS)` normalized coordinate, Sun–Earth line
+- `s = d_MP / (d_MP + d_BS)` normalized coordinate, Sun-Earth line
 - Shue 1998 (MP) + Merka 2005 (BS) as baseline boundary models
 - Dual near bins: [0.0,0.2] fragile + [0.2,0.4] primary, background [0.6,1.0]
 - IMF-agnostic detection (upstream enters post-detection only)
-- Detector backbone: Dn, EB, Δβ, trend-scale ρ(n,|B|), persistence
-- QC flags + Gold/Silver/Bronze grading are structural, not optional
-- Provenance-first design (frozen config, manifest, logging)
+- Detector backbone: Dn, EB, delta_beta, trend-scale rho(n,|B|), persistence
+- QC flags + grading are structural, not optional
+- Provenance-first design
+- Scientific preflight is mandatory (encounters must be explicitly evaluable)
+- Not-evaluable != negative (structural distinction)
 
-## Provisional choices (Phase 1.5, configurable)
+## Provisional choices (all configurable)
 
-- Backend: cdasws (CDAWeb REST API)
-- Plasma product: THEMIS MOM L2 (peim), not GMOM
-- Resampling: 3 s cadence, linear interpolation, 30 s max gap → NaN
-- OMNI window: 30 min pre, 10 min post
-- Trend window: 120 s running median
-- s-uncertainty: ±0.5 Re MP, ±1.0 Re BS (simple perturbation)
-- QC thresholds: jet=2× median Pdyn, wave=0.3 relative fluctuation, motion=>2 crossings
-- Pilot windows: not vetted as dayside events
+- Preflight thresholds: SZA < 60°, X > 5 Re, |Y| < 15 Re (relaxed from blueprint's <30°)
+- Sheath membership: density 0.5-200 cm-3, B 1-200 nT, beta 0.01-100
+- Min valid fraction: 0.5, min bin occupancy: 2%
+- Fill masking policy: "auto" (attrs > table > generic)
+- Grade policy: "cap_silver" (max Silver when flags UNKNOWN)
+- Backend: cdasws, MOM L2 (peim), 3s cadence, 30s max gap, 30min OMNI pre-window
 
 ## Deferred decisions (do not implement)
 
-- Detector thresholds for Dn, EB, Δβ, ρ, persistence
-- Local-normal s variant
-- Full Monte Carlo uncertainty
-- Alternative MP/BS model pair for sensitivity
-- Encounter merge thresholds
-- Radial-IMF cut
-- Shuffled-s falsification
-- Selection-function audit
-- MMS thickness (timing + gradient-scale)
-- SMILE/SXI priors
-- ML classification
-
-## Core capabilities implemented
-
-1. **Synthetic data generation** — 600-point PDL-like sheath traversal with embedded depletion
-2. **Live data fetch** — THEMIS FGM/MOM/STATE + OMNI 1-min via cdasws, with caching + fallbacks
-3. **Normalization** — resampling, gap masking, unit conversion (km→Re, eV/cm³→nPa)
-4. **s-mapping** — normalized coordinate with uncertainty envelope and bin occupancy
-5. **Metrics** — Dn, EB, Δβ, ρ, persistence, ptot_smoothness, fluctuation_amp (no thresholds)
-6. **QC** — jet/wave/motion flags + Gold/Silver/Bronze grading + 6-panel diagnostic PNG
-7. **Provenance** — frozen config, run manifest with git/packages/source metadata/cache summary
-8. **Config-driven** — YAML configs, Pydantic validation, data_source dispatch
+- Detector thresholds, encounter merge, radial-IMF cut
+- Local-normal s, alternative MP/BS pair, Monte Carlo uncertainty
+- Shuffled-s falsification, selection-function audit
+- Full confounder taxonomy (transient, mixing implementations)
+- MMS thickness, SMILE/SXI priors, ML classification
 
 ## Top 5 risks / gaps
 
-1. **Live pilot windows are not dayside.** pilot_001: SZA=72°, Y=10.5 Re (flank). pilot_002: X=−2.2 Re (nightside). No near-bin occupancy, all metrics NULL. Need windows with X>8 Re, SZA<30°.
-2. **OMNI fill values not filtered.** CDAWeb returns 9999.99 etc. as fill. These propagate into upstream medians. Could produce garbage Dp/Bz/Ma for boundary models.
-3. **No sheath membership check.** Pipeline assumes all data within the encounter window is magnetosheath. No validation against magnetospheric or solar-wind plasma regimes.
-4. **transient_flag and mixing_flag are stubs** (always False). Blueprint §6.4 expects them operational for QC grading.
-5. **Cone/clock angle computation is approximate.** Uses only OMNI BZ_GSM (not full 3D B-vector). Acceptable for Phase 1.5 context but not sufficient for fine IMF conditioning.
+1. **Live pilot windows still not dayside.** pilot_001: SZA=72°, Y=10.5 Re. pilot_002: X=-2.2 Re. Both produce FAIL_GEOMETRY. Pipeline correctly rejects them.
+2. **Cone/clock angle require BX_GSE and BY_GSM from OMNI.** Old cached data may not contain these variables — cache clear needed for live reruns.
+3. **transient_flag and mixing_flag still None.** This caps all grades to Silver max. Implementing these requires physics understanding beyond Phase 1.5.
+4. **Preflight thresholds are relaxed.** SZA < 60° (not blueprint's target 30°) to allow more pilots. Will need tightening for science catalogue.
+5. **Sheath membership is conservative.** Only rejects obvious non-sheath. A magnetospheric interval with moderate beta might still pass. Phase 2 should improve this.
 
 ## Next incremental tasks (priority order)
 
-1. **Curate 3–5 real dayside encounter windows** (X>8 Re, |Y|<5 Re, SZA<30°, steady Dp). This is the single blocker for science-relevant live results.
-2. **Add OMNI fill-value masking** — replace fill values (9999.99, 99999.9) with NaN before computing medians.
-3. **Add minimal sheath membership check** — beta>0.1, density>1 cm⁻³, |B| in sheath range.
-4. **Run blueprint pilot-analysis questions** (§11.1): does s(t) show mixed-bin occupancy? do metrics separate clear positives from negatives?
-5. **Begin development-set construction** for threshold exploration.
+1. **Curate 3-5 real dayside encounter windows** (X>8 Re, |Y|<5 Re, SZA<30°). This is the ONLY blocker for science-relevant live results.
+2. **Clear live data cache** (old OMNI data lacks BX_GSE/BY_GSM) and rerun live pilots.
+3. **Run blueprint pilot-analysis questions** (§11.1) on evaluable encounters.
+4. **Begin development-set construction** for threshold exploration.
+5. **Implement transient/mixing flags** to enable full Gold grading.
 
 ## Key files
 
@@ -84,17 +79,29 @@ Phase 1.5 complete: a config-driven THEMIS PDL detection pipeline that runs end-
 | Blueprint | `RP/internal_master_research_blueprint_PDL_SMILE.md` |
 | Full state doc | `docs/PHASE_1_5_STATE.md` |
 | Pipeline entry | `src/pdl_pilot/cli/run_pilot.py` |
-| Provider interface | `src/pdl_pilot/data/provider.py` |
-| Live adapter | `src/pdl_pilot/data/live_provider.py` |
+| Fill masking | `src/pdl_pilot/data/masking.py` |
+| Preflight | `src/pdl_pilot/qc/preflight.py` |
 | Encounter model | `src/pdl_pilot/encounter/model.py` |
 | Config schema | `src/pdl_pilot/config/schema.py` |
 | Synthetic config | `configs/pilot_themis.yaml` |
 | Live config | `configs/pilot_live.yaml` |
+| Hardening tests | `tests/test_hardening.py` |
+
+## Commands
+
+```bash
+# Synthetic pilot
+PYTHONPATH=src python -m pdl_pilot.cli.run_pilot --config configs/pilot_themis.yaml
+
+# Live pilot (diagnostic only — windows are ineligible)
+PYTHONPATH=src python -m pdl_pilot.cli.run_pilot --config configs/pilot_live.yaml
+
+# Tests (96 pass, 1 skip, all offline-safe)
+PYTHONPATH=src python -m pytest tests/ -v
+```
 
 ## Repo stats
 
-- 59 offline-safe tests, all passing
+- 96 offline-safe tests passing (37 new for hardening)
 - 2 configs (synthetic + live)
-- 4 completed runs (2 synthetic, 2 live)
-- 8 cached CDAWeb datasets
 - Dependencies: numpy, scipy, matplotlib, pydantic, pyyaml + optional cdasws, cdflib

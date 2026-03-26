@@ -33,10 +33,21 @@ def compute_qc_flags(
     enc: Encounter,
     density_residual: np.ndarray | None = None,
     vflow: np.ndarray | None = None,
+    grade_policy: str = "cap_silver",
 ) -> QCFlags:
-    """Compute minimal confounder flags.
+    """Compute minimal confounder flags with tri-state logic.
 
-    Phase-1: simple threshold-based flags, NOT final classification.
+    Phase-1.5: flags are True/False/None (UNKNOWN).
+    NOT_IMPLEMENTED flags are None, not False.
+    Grading is honest about incomplete flag coverage.
+
+    Parameters
+    ----------
+    grade_policy : str
+        How to handle UNKNOWN flags in grading:
+        - "cap_silver": max grade is Silver if any flags are UNKNOWN
+        - "preliminary": emit "Preliminary" grade label
+        - "ungraded": emit "ungraded" if any flags are UNKNOWN
     """
     flags = QCFlags()
     warnings: list[str] = []
@@ -44,10 +55,20 @@ def compute_qc_flags(
     # Jet flag: dynamic-pressure spike > 2× median in sheath
     if vflow is not None and enc.density_cm3 is not None:
         dp_proxy = enc.density_cm3 * vflow**2
-        med_dp = np.nanmedian(dp_proxy)
-        if med_dp > 0 and np.nanmax(dp_proxy) > 2.0 * med_dp:
-            flags.jet_flag = True
-            warnings.append("Possible jet: Pdyn spike > 2× median")
+        valid_dp = dp_proxy[np.isfinite(dp_proxy)]
+        if len(valid_dp) > 3:
+            med_dp = np.nanmedian(valid_dp)
+            if med_dp > 0 and np.nanmax(valid_dp) > 2.0 * med_dp:
+                flags.jet_flag = True
+                warnings.append("Possible jet: Pdyn spike > 2x median")
+            else:
+                flags.jet_flag = False
+        else:
+            flags.jet_flag = None
+            warnings.append("Jet flag: insufficient valid data")
+    else:
+        flags.jet_flag = None
+        warnings.append("Jet flag: no velocity data")
 
     # Wave flag: high fluctuation amplitude relative to trend
     if density_residual is not None and enc.density_trend is not None:
@@ -57,11 +78,25 @@ def compute_qc_flags(
             if rel_fluct > 0.3:
                 flags.wave_flag = True
                 warnings.append(f"High fluctuation amplitude: {rel_fluct:.2f}")
+            else:
+                flags.wave_flag = False
+        else:
+            flags.wave_flag = None
+    else:
+        flags.wave_flag = None
 
     # Motion flag: multiple crossings
     if enc.crossing_count > 2:
         flags.motion_flag = True
         warnings.append(f"Multiple crossings ({enc.crossing_count})")
+    else:
+        flags.motion_flag = False
+
+    # Transient flag: NOT IMPLEMENTED — honest None, not False
+    flags.transient_flag = None
+
+    # Mixing flag: NOT IMPLEMENTED — honest None, not False
+    flags.mixing_flag = None
 
     # s-sanity
     if not enc.mapping.s_sanity_ok:
@@ -69,15 +104,46 @@ def compute_qc_flags(
 
     flags.warnings = warnings
 
-    # Simple grading
-    n_flags = sum([flags.jet_flag, flags.wave_flag, flags.transient_flag,
-                   flags.motion_flag, flags.mixing_flag])
-    if n_flags == 0:
-        flags.grade = "Gold"
-    elif n_flags == 1:
-        flags.grade = "Silver"
+    # Honest grading: count true vs unknown flags
+    all_flags = [flags.jet_flag, flags.wave_flag, flags.transient_flag,
+                 flags.motion_flag, flags.mixing_flag]
+    n_true = sum(1 for f in all_flags if f is True)
+    n_unknown = sum(1 for f in all_flags if f is None)
+    flags.n_flags_true = n_true
+    flags.n_flags_unknown = n_unknown
+
+    # Base grade from known flags
+    if n_true == 0:
+        base_grade = "Gold"
+    elif n_true == 1:
+        base_grade = "Silver"
     else:
-        flags.grade = "Bronze"
+        base_grade = "Bronze"
+
+    # Apply policy for unknown flags
+    if n_unknown > 0:
+        if grade_policy == "cap_silver":
+            if base_grade == "Gold":
+                flags.grade = "Silver"
+                flags.grade_note = (
+                    f"Capped from Gold: {n_unknown} flag(s) UNKNOWN "
+                    "(transient, mixing not implemented)"
+                )
+            else:
+                flags.grade = base_grade
+                flags.grade_note = f"{n_unknown} flag(s) UNKNOWN"
+        elif grade_policy == "preliminary":
+            flags.grade = f"Preliminary-{base_grade}"
+            flags.grade_note = f"{n_unknown} flag(s) not yet implemented"
+        elif grade_policy == "ungraded":
+            flags.grade = "ungraded"
+            flags.grade_note = f"Cannot grade: {n_unknown} flag(s) UNKNOWN"
+        else:
+            flags.grade = base_grade
+            flags.grade_note = f"{n_unknown} flag(s) UNKNOWN"
+    else:
+        flags.grade = base_grade
+        flags.grade_note = ""
 
     return flags
 
@@ -150,20 +216,43 @@ def generate_qc_report(
         ax.legend(loc="upper right", fontsize=7, ncol=3)
     ax.set_ylabel("s")
 
-    # Panel 6: metric + QC summary
+    # Panel 6: metric + QC + eligibility summary
     ax = axes[5]
     ax.axis("off")
     m = enc.metrics
+
+    # Status header
+    status_str = getattr(enc, "scientific_status", "REVIEW_NEEDED")
+    evaluable_str = "YES" if getattr(enc, "evaluable", False) else "NO"
+
     lines = [
-        f"Dn = {m.Dn:.3f}" if m.Dn is not None else "Dn = N/A",
-        f"EB = {m.EB:.3f}" if m.EB is not None else "EB = N/A",
+        f"STATUS: {status_str}  |  Evaluable: {evaluable_str}",
+        "",
+        f"Dn = {m.Dn:.3f}" if m.Dn is not None else "Dn = N/A (not evaluable)",
+        f"EB = {m.EB:.3f}" if m.EB is not None else "EB = N/A (not evaluable)",
         f"Δβ = {m.delta_beta:.3f}" if m.delta_beta is not None else "Δβ = N/A",
         f"ρ(n,B) = {m.rho_nB_trend:.3f}" if m.rho_nB_trend is not None else "ρ = N/A",
         f"Persistence = {m.persistence_frac:.2f}" if m.persistence_frac is not None else "Persist = N/A",
         f"Ptot smooth = {m.ptot_smoothness:.2f}" if m.ptot_smoothness is not None else "Ptot = N/A",
+        "",
         f"Grade: {enc.qc.grade}",
-        f"Flags: {'  '.join(enc.qc.warnings) if enc.qc.warnings else 'none'}",
     ]
+    if enc.qc.grade_note:
+        lines.append(f"  ({enc.qc.grade_note})")
+
+    # Flag summary with tri-state display
+    flag_strs = []
+    for name, val in [("jet", enc.qc.jet_flag), ("wave", enc.qc.wave_flag),
+                      ("transient", enc.qc.transient_flag), ("motion", enc.qc.motion_flag),
+                      ("mixing", enc.qc.mixing_flag)]:
+        if val is True:
+            flag_strs.append(f"{name}=YES")
+        elif val is False:
+            flag_strs.append(f"{name}=no")
+        else:
+            flag_strs.append(f"{name}=UNKNOWN")
+    lines.append(f"Flags: {' | '.join(flag_strs)}")
+
     occupancy = enc.mapping.occupancy
     if occupancy:
         lines.append(
@@ -171,6 +260,14 @@ def generate_qc_report(
             f"near: {occupancy.get('near', 0):.1%}  "
             f"bg: {occupancy.get('background', 0):.1%}"
         )
+
+    # Preflight reasons if any
+    reasons = getattr(enc, "preflight_reasons", [])
+    if reasons:
+        lines.append("")
+        lines.append("Preflight issues:")
+        for r in reasons[:5]:  # max 5 lines
+            lines.append(f"  - {r}")
     ax.text(
         0.02, 0.95, "\n".join(lines),
         transform=ax.transAxes, va="top", fontsize=10, family="monospace",

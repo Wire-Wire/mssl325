@@ -135,6 +135,49 @@ class LiveDataConfig(BaseModel):
     )
 
 
+class PreflightConfig(BaseModel):
+    """Thresholds for scientific preflight / eligibility checks.
+
+    All values PROVISIONAL — will be refined from pilot experience.
+    Ref: blueprint §5.1 (sheath membership), §6.2 (sample design)
+    """
+    # Geometry — target dayside near-subsolar
+    max_sza_deg: float = Field(default=60.0, description="PROVISIONAL: max solar zenith angle for dayside target.")
+    min_x_gsm_re: float = Field(default=5.0, description="PROVISIONAL: min X_GSM (Re) — must be sunward.")
+    max_abs_y_gsm_re: float = Field(default=15.0, description="PROVISIONAL: max |Y_GSM| — not deep flank.")
+
+    # Data validity
+    min_valid_fraction: float = Field(default=0.5, description="PROVISIONAL: min fraction of non-NaN/non-fill data.")
+
+    # Sheath membership
+    min_density_cm3: float = Field(default=0.5, description="PROVISIONAL: below → upstream/void suspect.")
+    max_density_cm3: float = Field(default=200.0, description="PROVISIONAL: above → artifact suspect.")
+    min_bmag_nT: float = Field(default=1.0, description="PROVISIONAL: below → upstream-like.")
+    max_bmag_nT: float = Field(default=200.0, description="PROVISIONAL: above → magnetospheric suspect.")
+    min_beta_sheath: float = Field(default=0.01, description="PROVISIONAL: very low → magnetosphere.")
+    max_beta_sheath: float = Field(default=100.0, description="PROVISIONAL: very high → artifact.")
+    min_membership_fraction: float = Field(default=0.5, description="PROVISIONAL: min plausible-sheath fraction.")
+
+    # Bin occupancy
+    min_near_occupancy: float = Field(default=0.02, description="PROVISIONAL: min fraction in near bin.")
+    min_bg_occupancy: float = Field(default=0.02, description="PROVISIONAL: min fraction in background bin.")
+
+    # s-sanity
+    min_s_std: float = Field(default=0.01, description="PROVISIONAL: min std(s(t)) for non-degenerate mapping.")
+
+    # Fill masking
+    fill_masking_policy: Literal["auto", "attrs_only", "table_only", "off"] = Field(
+        default="auto",
+        description="PROVISIONAL: fill-value masking strategy. 'auto'=attrs+table fallback.",
+    )
+
+    # QC grading policy
+    grade_with_incomplete_flags: Literal["cap_silver", "preliminary", "ungraded"] = Field(
+        default="cap_silver",
+        description="PROVISIONAL: how to grade when some QC flags are UNKNOWN.",
+    )
+
+
 class PipelineConfig(BaseModel):
     """Top-level configuration for a PDL pilot run."""
 
@@ -143,6 +186,7 @@ class PipelineConfig(BaseModel):
     boundary_models: BoundaryModelConfig = BoundaryModelConfig()
     filters: FilterConfig = FilterConfig()
     uncertainty: UncertaintyConfig = UncertaintyConfig()
+    preflight: PreflightConfig = PreflightConfig()
     encounters: list[EncounterSpec] = []
     output_dir: str = "runs"
     data_source: Literal["synthetic", "fixture", "live"] = "fixture"

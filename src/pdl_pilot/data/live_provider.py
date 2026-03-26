@@ -323,6 +323,8 @@ class LiveProvider(DataProvider):
             minutes=self._cfg.omni_post_window_minutes
         )).isoformat()
         omni_vars = [
+            "BX_GSE",          # IMF Bx GSE (radial) — needed for cone angle
+            "BY_GSM",          # IMF By GSM — needed for clock angle
             "BZ_GSM",          # IMF Bz GSM
             "F",               # |B| total
             "Pressure",        # dynamic pressure
@@ -407,21 +409,20 @@ class LiveProvider(DataProvider):
             z_raw = np.full(n_pts, np.nan)
 
         # OMNI upstream context
-        omni_bz = _interp_to_timeline(omni_time_raw, omni_data.get("BZ_GSM", np.array([])).astype(np.float64),
-                                       target_time, "nearest", 120.0) \
-            if "BZ_GSM" in omni_data else None
-        omni_bt = _interp_to_timeline(omni_time_raw, omni_data.get("F", np.array([])).astype(np.float64),
-                                       target_time, "nearest", 120.0) \
-            if "F" in omni_data else None
-        omni_dp = _interp_to_timeline(omni_time_raw, omni_data.get("Pressure", np.array([])).astype(np.float64),
-                                       target_time, "nearest", 120.0) \
-            if "Pressure" in omni_data else None
-        omni_ma = _interp_to_timeline(omni_time_raw, omni_data.get("Mach_num", np.array([])).astype(np.float64),
-                                       target_time, "nearest", 120.0) \
-            if "Mach_num" in omni_data else None
-        omni_vsw = _interp_to_timeline(omni_time_raw, omni_data.get("flow_speed", np.array([])).astype(np.float64),
-                                        target_time, "nearest", 120.0) \
-            if "flow_speed" in omni_data else None
+        def _omni_interp(key):
+            if key in omni_data:
+                raw = omni_data[key].astype(np.float64)
+                if len(raw) > 0:
+                    return _interp_to_timeline(omni_time_raw, raw, target_time, "nearest", 120.0)
+            return None
+
+        omni_bx_gse = _omni_interp("BX_GSE")
+        omni_by_gsm = _omni_interp("BY_GSM")
+        omni_bz = _omni_interp("BZ_GSM")
+        omni_bt = _omni_interp("F")
+        omni_dp = _omni_interp("Pressure")
+        omni_ma = _omni_interp("Mach_num")
+        omni_vsw = _omni_interp("flow_speed")
 
         # Quality notes
         quality_notes = []
@@ -442,6 +443,8 @@ class LiveProvider(DataProvider):
             beta=beta,
             ptot_nPa=ptot,
             vflow_kms=vflow,
+            omni_bx_gse_nT=omni_bx_gse,
+            omni_by_gsm_nT=omni_by_gsm,
             omni_bz_gsm_nT=omni_bz,
             omni_bt_nT=omni_bt,
             omni_dp_nPa=omni_dp,

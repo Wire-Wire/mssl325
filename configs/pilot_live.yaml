@@ -4,11 +4,18 @@
 # as the synthetic pilot.  The encounter windows below are manually
 # specified — Phase 1.5 does NOT auto-discover crossings.
 #
-# PROVISIONAL: these pilot windows are chosen for data availability
-# and known dayside magnetosheath presence.  They are NOT the final
-# development or validation set.
+# WARNING (Phase 1.5 hardening): The current pilot windows are
+# SCIENTIFICALLY INELIGIBLE.  They are retained as diagnostic
+# examples only.  Pipeline runs will produce FAIL_GEOMETRY or
+# FAIL_OCCUPANCY status.  See preflight output for details.
+#
+# To get a scientifically evaluable live pilot, replace these
+# windows with confirmed dayside magnetosheath encounters:
+#   - X_GSM > 8 Re, |Y_GSM| < 5 Re, SZA < 30°
+#   - spacecraft in sheath (not magnetosphere or upstream)
+#   - known moderate steady Dp (1-4 nPa)
 
-run_label: "pilot_live_v0"
+run_label: "pilot_live_v1_hardened"
 
 data_source: "live"
 random_seed: 42
@@ -35,6 +42,25 @@ uncertainty:
   mp_standoff_delta_re: 0.5
   bs_standoff_delta_re: 1.0
 
+# Scientific preflight (Phase 1.5 hardening)
+preflight:
+  max_sza_deg: 60.0
+  min_x_gsm_re: 5.0
+  max_abs_y_gsm_re: 15.0
+  min_valid_fraction: 0.5
+  min_density_cm3: 0.5
+  max_density_cm3: 200.0
+  min_bmag_nT: 1.0
+  max_bmag_nT: 200.0
+  min_beta_sheath: 0.01
+  max_beta_sheath: 100.0
+  min_membership_fraction: 0.5
+  min_near_occupancy: 0.02
+  min_bg_occupancy: 0.02
+  min_s_std: 0.01
+  fill_masking_policy: "auto"
+  grade_with_incomplete_flags: "cap_silver"
+
 # Output
 output_dir: "runs"
 
@@ -53,23 +79,14 @@ live:
   cache_dir: "data_cache"
   cache_policy: "use"
 
-# Pilot encounters — manually specified real THEMIS windows
+# Pilot encounters — SCIENTIFICALLY INELIGIBLE diagnostic windows
 #
-# These windows were selected for:
-#   - known dayside magnetosheath presence (THEMIS-D near subsolar MP)
-#   - likely PDL-like signatures (steady southward IMF, moderate Dp)
-#   - good data availability in CDAWeb
+# KNOWN ISSUE (Phase 1.5):
+#   - live_pilot_001: THD at Y=10.5 Re, SZA=72° → deep flank, FAIL_GEOMETRY
+#   - live_pilot_002: THE at X=-2.2 Re, SZA=116° → nightside, FAIL_GEOMETRY
 #
-# Window 1: THEMIS-D, 2012-11-03 ~15:00-15:20 UT
-#   THD was on the dayside near the subsolar magnetopause.
-#   OMNI shows moderately steady Dp ~ 2-3 nPa, Bz ~ -2 to +1 nT.
-#
-# Window 2: THEMIS-E, 2008-11-12 ~06:00-06:15 UT
-#   THE was in the dayside magnetosheath.
-#   Moderate solar wind conditions (Dp ~ 2 nPa).
-#
-# NOTE: these are provisional pilot windows for pipeline validation.
-# They have NOT been vetted as confirmed PDL events.
+# These demonstrate that the live pipeline works end-to-end but are
+# NOT valid dayside science pilots.  Replace with curated windows.
 
 encounters:
   - encounter_id: "live_pilot_001"
@@ -79,8 +96,8 @@ encounters:
     time_end: "2012-11-03T15:20:00"
     crossing_count: 1
     notes: >
-      Provisional pilot window. THD near subsolar MP, dayside magnetosheath.
-      Selected for data availability, not confirmed as PDL event.
+      DIAGNOSTIC ONLY — NOT dayside. THD at Y=10.5 Re (deep flank), SZA=72°.
+      Will produce FAIL_GEOMETRY. Retained to validate live pipeline works.
 
   - encounter_id: "live_pilot_002"
     spacecraft: "themis"
@@ -89,5 +106,5 @@ encounters:
     time_end: "2008-11-12T06:15:00"
     crossing_count: 1
     notes: >
-      Provisional pilot window. THE in dayside magnetosheath.
-      Selected for data availability, not confirmed as PDL event.
+      DIAGNOSTIC ONLY — NOT dayside. THE at X=-2.2 Re (nightside), SZA=116°.
+      Will produce FAIL_GEOMETRY. Retained to validate live pipeline works.

@@ -86,20 +86,40 @@ class MetricBundle:
 @dataclass
 class QCFlags:
     """Confounder and quality flags.
+
+    Tri-state logic:
+      True  = flag triggered (confounder detected)
+      False = flag evaluated and not triggered
+      None  = UNKNOWN / not implemented — honest about gaps
+
     Ref: 2013_archer_magnetosheath-dynamic-pressure-enhancements (jets)
     Ref: 2008_soucek_magnetosheath-mirror-modes-cluster (mirror modes)
     Ref: 2020_raptis_classifying-magnetosheath-jets-mms (jets)
     """
-    jet_flag: bool = False
-    wave_flag: bool = False
-    transient_flag: bool = False
-    motion_flag: bool = False
-    mixing_flag: bool = False
-    grade: str = "ungraded"  # Gold / Silver / Bronze / ungraded
+    jet_flag: bool | None = None
+    wave_flag: bool | None = None
+    transient_flag: bool | None = None   # NOT IMPLEMENTED in Phase 1.5
+    motion_flag: bool | None = None
+    mixing_flag: bool | None = None      # NOT IMPLEMENTED in Phase 1.5
+    grade: str = "ungraded"  # Gold / Silver / Bronze / Preliminary / ungraded
+    grade_note: str = ""     # explains grade limitations
+    n_flags_true: int = 0
+    n_flags_unknown: int = 0
     warnings: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict:
-        return {k: v for k, v in self.__dict__.items()}
+        return {
+            "jet_flag": self.jet_flag,
+            "wave_flag": self.wave_flag,
+            "transient_flag": self.transient_flag,
+            "motion_flag": self.motion_flag,
+            "mixing_flag": self.mixing_flag,
+            "grade": self.grade,
+            "grade_note": self.grade_note,
+            "n_flags_true": self.n_flags_true,
+            "n_flags_unknown": self.n_flags_unknown,
+            "warnings": self.warnings,
+        }
 
 
 @dataclass
@@ -138,6 +158,15 @@ class Encounter:
     density_residual: np.ndarray | None = None
     bmag_residual: np.ndarray | None = None
 
+    # Scientific eligibility (Phase 1.5 hardening)
+    scientific_status: str = "REVIEW_NEEDED"   # from preflight
+    evaluable: bool = False
+    preflight_checks: dict[str, str] = field(default_factory=dict)
+    preflight_reasons: list[str] = field(default_factory=list)
+    evaluable_metrics: list[str] = field(default_factory=list)
+    membership_summary: dict = field(default_factory=dict)
+    masked_fraction_summary: dict[str, float] = field(default_factory=dict)
+
     # Artifact paths
     artifact_paths: dict[str, str] = field(default_factory=dict)
 
@@ -154,6 +183,13 @@ class Encounter:
             "mlt_hours": self.mlt_hours,
             "sza_deg": self.sza_deg,
             "abs_z_re": self.abs_z_re,
+            "scientific_status": self.scientific_status,
+            "evaluable": self.evaluable,
+            "evaluable_metrics": self.evaluable_metrics,
+            "preflight_checks": self.preflight_checks,
+            "preflight_reasons": self.preflight_reasons,
+            "membership_summary": self.membership_summary,
+            "masked_fraction_summary": self.masked_fraction_summary,
             "upstream": self.upstream.__dict__,
             "mapping": self.mapping.to_dict(),
             "metrics": self.metrics.to_dict(),

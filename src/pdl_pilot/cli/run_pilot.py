@@ -1,8 +1,9 @@
 """
 CLI entry point — run 1–2 pilot encounters end-to-end.
 
-Phase 1.5: supports both synthetic and live THEMIS/OMNI data sources
-via the DataProvider abstraction.
+Phase 1.5 hardened: supports both synthetic and live THEMIS/OMNI data sources
+via the DataProvider abstraction, with fill-value masking, scientific
+preflight, honest QC grading, and corrected upstream computation.
 
 Usage:
     python -m pdl_pilot.cli.run_pilot --config configs/pilot_themis.yaml
@@ -21,10 +22,12 @@ from pdl_pilot.config import load_config
 from pdl_pilot.provenance import ProvenanceTracker
 from pdl_pilot.data.provider import DataProvider, EncounterData
 from pdl_pilot.data.synthetic_provider import SyntheticProvider
+from pdl_pilot.data.masking import mask_fill_values, MaskingSummary
 from pdl_pilot.encounter.model import Encounter, UpstreamSummary, MappingResult
 from pdl_pilot.mapping import compute_s_with_uncertainty, compute_bin_occupancy
 from pdl_pilot.metrics import compute_metrics
 from pdl_pilot.qc import generate_qc_report, compute_qc_flags
+from pdl_pilot.qc.preflight import run_preflight, PreflightConfig as PFConfig
 
 log = logging.getLogger(__name__)
 
@@ -40,11 +43,91 @@ def _build_provider(config) -> DataProvider:
         raise ValueError(f"Unknown data_source: {config.data_source!r}")
 
 
+def _apply_fill_masking(
+    edata: EncounterData, data_source: str, policy: str = "auto"
+) -> dict[str, MaskingSummary]:
+    """Apply fill-value masking to encounter data arrays.
+
+    For live data: masks OMNI sentinels and CDF fills.
+    For synthetic: no-op (synthetic has no fills).
+
+    Returns dict of variable_name → MaskingSummary.
+    """
+    summaries: dict[str, MaskingSummary] = {}
+
+    if policy == "off" or data_source in ("synthetic", "fixture"):
+        return summaries
+
+    # OMNI upstream arrays
+    omni_pairs = [
+        ("omni_bz_gsm_nT", "BZ_GSM", "omni"),
+        ("omni_bt_nT", "F", "omni"),
+        ("omni_dp_nPa", "Pressure", "omni"),
+        ("omni_mach_alfven", "Mach_num", "omni"),
+        ("omni_flow_speed_kms", "flow_speed", "omni"),
+    ]
+    for attr, var_name, ds_type in omni_pairs:
+        arr = getattr(edata, attr, None)
+        if arr is not None:
+            masked, summary = mask_fill_values(arr, var_name, dataset_type=ds_type)
+            setattr(edata, attr, masked)
+            summaries[var_name] = summary
+            if summary.n_masked_fill > 0:
+                log.info("Masked %d fill values in OMNI %s (%.1f%%)",
+                         summary.n_masked_fill, var_name,
+                         summary.masked_fraction * 100)
+
+    # THEMIS encounter arrays
+    themis_pairs = [
+        ("density_cm3", "density", "themis_mom"),
+        ("bmag_nT", "bmag", "themis_fgm"),
+        ("vflow_kms", "vflow", "themis_mom"),
+        ("beta", "beta", "themis_mom"),
+        ("ptot_nPa", "ptot", "themis_mom"),
+    ]
+    for attr, var_name, ds_type in themis_pairs:
+        arr = getattr(edata, attr, None)
+        if arr is not None:
+            masked, summary = mask_fill_values(arr, var_name, dataset_type=ds_type)
+            setattr(edata, attr, masked)
+            summaries[var_name] = summary
+
+    return summaries
+
+
+def compute_cone_angle(bx: float | None, bt: float | None) -> float | None:
+    """Compute IMF cone angle: angle between B and Sun-Earth line.
+
+    Correct definition: cone_angle = arccos(|Bx| / |B|)
+    where Bx is the radial (Sun-Earth) component.
+
+    This requires the radial component, NOT Bz.
+    Returns degrees, or None if inputs unavailable.
+    """
+    if bx is None or bt is None or bt <= 0:
+        return None
+    ratio = min(abs(bx) / bt, 1.0)
+    return float(np.degrees(np.arccos(ratio)))
+
+
+def compute_clock_angle(by: float | None, bz: float | None) -> float | None:
+    """Compute IMF clock angle: arctan2(By, Bz) in GSM.
+
+    Returns degrees [0, 360), or None if inputs unavailable.
+    """
+    if by is None or bz is None:
+        return None
+    return float(np.degrees(np.arctan2(by, bz))) % 360.0
+
+
 def _build_upstream(edata: EncounterData, data_source: str) -> UpstreamSummary:
     """Build UpstreamSummary from EncounterData.
 
     For synthetic: use hardcoded defaults (as in Phase 1).
-    For live: use OMNI time-series medians.
+    For live: use OMNI time-series medians with corrected cone/clock angles.
+
+    IMPORTANT: Cone angle is arccos(|Bx|/|B|), not arccos(|Bz|/|B|).
+    This requires BX_GSE from OMNI.  If unavailable, cone_angle = None.
     """
     if data_source in ("synthetic", "fixture"):
         return UpstreamSummary(
@@ -57,27 +140,33 @@ def _build_upstream(edata: EncounterData, data_source: str) -> UpstreamSummary:
     def _nanmed(arr):
         if arr is None or len(arr) == 0:
             return None
-        v = float(np.nanmedian(arr))
-        return v if np.isfinite(v) else None
+        valid = arr[np.isfinite(arr)]
+        if len(valid) == 0:
+            return None
+        return float(np.nanmedian(valid))
 
     bz = _nanmed(edata.omni_bz_gsm_nT)
     bt = _nanmed(edata.omni_bt_nT)
     dp = _nanmed(edata.omni_dp_nPa)
     ma = _nanmed(edata.omni_mach_alfven)
 
-    # Cone/clock angle from Bz/Bt
-    cone_angle = None
-    clock_angle = None
-    if bz is not None and bt is not None and bt > 0:
-        cone_angle = float(np.degrees(np.arccos(np.clip(abs(bz) / bt, 0, 1))))
-        clock_angle = float(np.degrees(np.arctan2(abs(bz), bt)))
+    # Cone angle: requires Bx (radial component).
+    # OMNI provides BX_GSE — we store it in extra omni arrays if available.
+    # For now, if we have omni_bx_gse, use it; otherwise None (honest).
+    bx_gse = _nanmed(getattr(edata, "omni_bx_gse_nT", None))
+    cone_angle = compute_cone_angle(bx_gse, bt)
+
+    # Clock angle: arctan2(By, Bz) in GSM
+    by_gsm = _nanmed(getattr(edata, "omni_by_gsm_nT", None))
+    clock_angle = compute_clock_angle(by_gsm, bz)
 
     # Stability: coefficient of variation of Dp
     stability = "unknown"
     if edata.omni_dp_nPa is not None:
         valid = edata.omni_dp_nPa[np.isfinite(edata.omni_dp_nPa)]
         if len(valid) > 5:
-            cv = float(np.std(valid) / np.mean(valid)) if np.mean(valid) > 0 else 999
+            mean_val = float(np.mean(valid))
+            cv = float(np.std(valid) / mean_val) if mean_val > 0 else 999
             stability = "stable" if cv < 0.3 else "variable"
 
     return UpstreamSummary(
@@ -109,6 +198,13 @@ def process_encounter(
     if tracker and edata.source_metadata:
         tracker.record_source_metadata(enc_spec.encounter_id, edata.source_metadata)
 
+    # --- 1b. Fill-value masking (Phase 1.5 hardening) ---
+    mask_policy = config.preflight.fill_masking_policy
+    masking_summaries = _apply_fill_masking(edata, config.data_source, mask_policy)
+    masked_fractions = {
+        k: v.masked_fraction for k, v in masking_summaries.items()
+    }
+
     # Use legacy dict interface for backward-compat with downstream code
     data = edata.to_legacy_dict()
 
@@ -127,6 +223,7 @@ def process_encounter(
     enc.beta = data["beta"]
     enc.ptot_nPa = data["ptot_nPa"]
     enc.vflow_kms = data["vflow_kms"]
+    enc.masked_fraction_summary = masked_fractions
 
     # Position metadata
     enc.position_gsm_re = (
@@ -190,6 +287,44 @@ def process_encounter(
     log.info("s-mapping: MP=%.2f Re  BS=%.2f Re  occupancy=%s",
              mp0, bs0, occupancy)
 
+    # --- 4b. Scientific preflight (Phase 1.5 hardening) ---
+    pf_cfg = PFConfig(
+        max_sza_deg=config.preflight.max_sza_deg,
+        min_x_gsm_re=config.preflight.min_x_gsm_re,
+        max_abs_y_gsm_re=config.preflight.max_abs_y_gsm_re,
+        min_valid_fraction=config.preflight.min_valid_fraction,
+        min_density_cm3=config.preflight.min_density_cm3,
+        max_density_cm3=config.preflight.max_density_cm3,
+        min_bmag_nT=config.preflight.min_bmag_nT,
+        max_bmag_nT=config.preflight.max_bmag_nT,
+        min_beta_sheath=config.preflight.min_beta_sheath,
+        max_beta_sheath=config.preflight.max_beta_sheath,
+        min_membership_fraction=config.preflight.min_membership_fraction,
+        min_near_occupancy=config.preflight.min_near_occupancy,
+        min_bg_occupancy=config.preflight.min_bg_occupancy,
+        min_s_std=config.preflight.min_s_std,
+    )
+
+    preflight = run_preflight(
+        position_gsm_re=enc.position_gsm_re,
+        sza_deg=enc.sza_deg,
+        occupancy=occupancy,
+        s_array=s_nom,
+        density=enc.density_cm3,
+        bmag=enc.bmag_nT,
+        beta=enc.beta,
+        masked_fractions=masked_fractions,
+        cfg=pf_cfg,
+        bins=config.bins,
+    )
+
+    enc.scientific_status = preflight.scientific_status
+    enc.evaluable = preflight.evaluable
+    enc.preflight_checks = preflight.checks
+    enc.preflight_reasons = preflight.reasons
+    enc.evaluable_metrics = preflight.evaluable_metrics
+    enc.membership_summary = preflight.membership.to_dict()
+
     # --- 5. Metrics ---
     cadence = float(np.nanmedian(np.diff(enc.time_unix)))
     bundle, n_trend, b_trend, n_resid, b_resid = compute_metrics(
@@ -202,8 +337,9 @@ def process_encounter(
     enc.density_residual = n_resid
     enc.bmag_residual = b_resid
 
-    # --- 6. QC flags ---
-    enc.qc = compute_qc_flags(enc, n_resid, enc.vflow_kms)
+    # --- 6. QC flags (with honest tri-state + grading policy) ---
+    grade_policy = config.preflight.grade_with_incomplete_flags
+    enc.qc = compute_qc_flags(enc, n_resid, enc.vflow_kms, grade_policy)
 
     # --- 7. QC report ---
     qc_path = generate_qc_report(enc, run_dir, config.bins)
@@ -213,14 +349,15 @@ def process_encounter(
     enc_path = run_dir / f"encounter_{enc.encounter_id}.json"
     enc.save_json(enc_path)
     enc.artifact_paths["encounter_json"] = str(enc_path)
-    log.info("Encounter saved → %s", enc_path)
+    log.info("Encounter saved -> %s  [status=%s, evaluable=%s]",
+             enc_path, enc.scientific_status, enc.evaluable)
 
     return enc
 
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
-        description="PDL Pilot — Phase-1/1.5 encounter pipeline"
+        description="PDL Pilot — Phase-1.5 hardened encounter pipeline"
     )
     parser.add_argument(
         "--config", required=True, help="Path to YAML config file."
@@ -262,8 +399,14 @@ def main(argv: list[str] | None = None) -> None:
     with open(combined, "w") as f:
         json.dump(results, f, indent=2, default=str)
 
-    tracker.write_manifest(extra={"n_encounters_processed": len(results)})
-    log.info("Run complete. Output → %s", tracker.run_dir)
+    # Summary
+    n_evaluable = sum(1 for r in results if r.get("evaluable", False))
+    tracker.write_manifest(extra={
+        "n_encounters_processed": len(results),
+        "n_evaluable": n_evaluable,
+    })
+    log.info("Run complete. Output -> %s  (%d/%d evaluable)",
+             tracker.run_dir, n_evaluable, len(results))
 
 
 if __name__ == "__main__":
