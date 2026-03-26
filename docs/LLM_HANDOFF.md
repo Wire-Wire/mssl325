@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Metric-behavior review complete. 4-seed provisional stratification slate produced.
+Phase 2B audit complete. **CONDITIONAL GO** for later bounded detector-readiness stage.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -73,6 +73,40 @@ PYTHONPATH=src python -m pdl_pilot.cli.metric_review --run-dir runs/20260326T040
 PYTHONPATH=src python -m pytest tests/ -v
 ```
 
+## Phase 2B audit gate (2026-03-26)
+
+**Question:** Is the bank clean enough for a later bounded detector-readiness stage?
+
+**Answer: CONDITIONAL GO**
+
+Passes: dual-bin leverage confirmed, spatial structure survives shuffled-s null, duration variants consistent, membership ≥85%, primary metrics insensitive to very-near bin, naming conservative.
+
+Conditions carried forward:
+1. Universal jet triggering (all 9 windows) — jet_flag has zero discriminative power; threshold may need recalibration for long windows
+2. transient_flag and mixing_flag remain UNKNOWN — max grade = Silver
+3. THD-only, Dp > 3 nPa selection bias — bank does not represent full sheath population
+4. Effective N = 7, not 9
+5. ρ universally negative — non-discriminative in this bank
+6. ±1 nPa Dp shifts boundaries ~1 Re — moderate upstream sensitivity (deferred)
+
+**Full audit:** `docs/PHASE_2B_AUDIT.md`
+**Selection logic:** `docs/SELECTION_FUNCTION_AUDIT.md`
+**Wording audit:** `docs/WORDING_DRIFT_AUDIT.md`
+**Machine-readable:** `runs/20260326T040343Z_d0425fd4/phase2b_audit_summary.json`
+
+## Key files (updated)
+
+| What | Where |
+|---|---|
+| **Phase 2B audit** | `docs/PHASE_2B_AUDIT.md` |
+| **Selection function** | `docs/SELECTION_FUNCTION_AUDIT.md` |
+| **Wording audit** | `docs/WORDING_DRIFT_AUDIT.md` |
+| Comparator atlas | `docs/COMPARATOR_ATLAS.md` |
+| Seed dossier | `docs/SEED_DOSSIER.md` |
+| Metric review | `docs/METRIC_BEHAVIOR_REVIEW.md` |
+| Window bank config | `configs/pilot_live_usable.yaml` |
+| Audit artifacts | `runs/20260326T040343Z_d0425fd4/phase2b_audit_summary.json` |
+
 ## Next step (do not implement)
 
-Human-supervised review of the 4 seed windows to decide whether the current bank is sufficient for bounded threshold exploration, or whether additional passes under different upstream conditions (lower Dp, different Bz regimes) are needed first. This decision requires human judgment — it is not automatable from the current bank alone.
+Human-supervised decision: given the CONDITIONAL GO, decide whether to proceed to bounded detector-readiness with N=7 and the stated conditions, or whether to first expand the bank to lower-Dp / different-probe windows. This requires human judgment.
