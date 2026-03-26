@@ -1,0 +1,91 @@
+# PDL Pilot — Window-family experiment manifest
+#
+# Each seed family represents a known dayside orbital pass.
+# The duration ladder tests whether expanding the time window
+# populates both near and background s-bins.
+#
+# FORMAT:
+#   families:
+#     - seed_id: <unique name>
+#       probe: <themis probe>
+#       center: <ISO timestamp at approximate mid-traversal>
+#       anchor: centered | fixed_start | fixed_end
+#       durations_minutes: [30, 90, 180, 360, 720]
+#       notes: <rationale>
+#       expected_geometry:
+#         x_gsm_range: [lo, hi]
+#         sza_range: [lo, hi]
+#         r_max_re: <estimated max geocentric distance>
+#
+# SEED SELECTION:
+#   Family A (oct08_thd): existing Oct 2008 THD seed — known dayside geometry
+#     but apogee only ~11.6 Re → insufficient for background bin
+#   Family B (jul07_thc): NEW — THC July 2007, apogee ~14.7 Re
+#     R sweeps from 9 to 14.7 Re through the full sheath → should populate all bins
+#   Family C (jul07_thd): NEW — THD July 2007, same orbit as THC
+#     independent verification of the same orbital phase
+
+families:
+  # --- Family A: THD October 2008 (existing seed, low apogee) ---
+  # Known from previous curation: X~10 Re, SZA~15-25°, apogee ~11.6 Re
+  # Expected: near-bin occupancy but NO background-bin at any duration
+  # Purpose: controlled negative — confirms duration alone cannot fix low apogee
+  - seed_id: "oct08_thd"
+    probe: "thd"
+    center: "2008-10-13T19:00:00"
+    anchor: "centered"
+    durations_minutes: [30, 90, 180, 360, 720]
+    notes: >
+      Existing Oct 2008 THD seed. Max R ~11.6 Re. Purpose: confirm that
+      duration expansion alone cannot populate background bin when orbit
+      apogee is below BS standoff (~13 Re). Controlled negative.
+    expected_geometry:
+      x_gsm_range: [8.0, 10.0]
+      sza_range: [10, 30]
+      r_max_re: 11.6
+
+  # --- Family B: THC July 2007 (NEW — high apogee, full traversal) ---
+  # THC orbit: apogee ~14.7 Re, near-subsolar (SZA~15-20°), X=7-14 Re
+  # R spans 9-14.7 Re on the dayside — crosses full sheath:
+  #   - near-MP (~10 Re, s~0.08)
+  #   - mid-sheath (~12 Re, s~0.6)
+  #   - near-BS (~13 Re, s~0.93)
+  # Outbound from R=10→14.7: ~10:00-21:00 UT (Jul 15)
+  # Inbound from R=14.7→10: ~21:00-02:00 UT (Jul 15-16)
+  - seed_id: "jul07_thc"
+    probe: "thc"
+    center: "2007-07-15T17:00:00"
+    anchor: "centered"
+    durations_minutes: [30, 90, 180, 360, 720]
+    notes: >
+      NEW high-apogee seed. THC July 2007. Apogee ~14.7 Re, SZA~16°.
+      R sweeps 9-14.7 Re on the dayside. Should populate all s-bins
+      at duration >= 180 min. Primary candidate for first usable science window.
+    expected_geometry:
+      x_gsm_range: [10, 14]
+      sza_range: [15, 22]
+      r_max_re: 14.7
+
+  # --- Family C: THD September 3 2008 (HIGH Dp compressed sheath) ---
+  # KEY DISCOVERY: even with ~11.6 Re apogee, compressed boundaries during
+  # high Dp (3-7 nPa) + strong northward Bz push the sheath inward,
+  # so the same orbital range spans s from 0.2 to 0.94.
+  # At ~16:00 UT: Dp~6.8 nPa, s=0.87 (background!)
+  # At ~19:30 UT: Dp drops, s=0.3 (near)
+  # At ~23:00-01:00 UT: s=0.2-0.37 (near again)
+  # Full day has both near AND background occupancy — first usable window.
+  # MOM: 11991 pts, FGM: 11991 pts confirmed.
+  - seed_id: "sep03_thd"
+    probe: "thd"
+    center: "2008-09-03T19:00:00"
+    anchor: "centered"
+    durations_minutes: [90, 180, 360, 540, 720]
+    notes: >
+      CRITICAL SEED. THD Sep 3 2008. High Dp (3-7 nPa) compresses
+      boundaries so that 11.6 Re apogee reaches background bin (s~0.9).
+      Near bin populated at 15:30 and 19:30-01:00. Both bins in one pass.
+      SZA=11-25 deg, X=8-11 Re, confirmed dayside. MOM+FGM available.
+    expected_geometry:
+      x_gsm_range: [8.0, 11.5]
+      sza_range: [11, 25]
+      r_max_re: 11.6

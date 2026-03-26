@@ -1,0 +1,124 @@
+# PDL Pilot — First USABLE real science pilot configuration
+#
+# These windows produce non-null core metrics with both near AND background
+# bin occupancy. They are the first encounters in this project that
+# demonstrate the measurement model working end-to-end on real data.
+#
+# DISCOVERY RATIONALE:
+#   The Oct 2008 THD windows (configs/pilot_live_science.yaml) had correct
+#   dayside geometry (SZA<25°, 100% sheath membership) but zero background
+#   occupancy because Dp~1 nPa pushed the boundaries outward, making the
+#   sheath wider than the spacecraft's radial range.
+#
+#   Solution: THD Sep 3 2008 had elevated Dp (3-7 nPa) which compressed
+#   the boundaries inward. The same ~11.6 Re apogee now spans s=0 to s~0.7,
+#   populating both near (s=0.2-0.4) and background (s>0.6) bins.
+#
+# KEY INSIGHT: The dual-bin measurement model requires encounter-averaged
+# upstream conditions to compress the sheath enough that the orbital
+# range spans both bins. This is a real measurement-model constraint,
+# not a code limitation.
+#
+# METRICS NOTE: Dn > 1 (density enhancement near MP), EB < 1 (B reduction) —
+# this is the OPPOSITE of a PDL signature. This is expected for a
+# compressed sheath under high Dp + northward Bz. These are NOT
+# PDL candidates — they are measurement-model validation windows.
+
+run_label: "usable_science_pilot_v1"
+data_source: "live"
+random_seed: 42
+
+boundary_models:
+  magnetopause: "shue1998"
+  bow_shock: "merka2005"
+  distance_direction: "sun_earth_line"
+
+bins:
+  very_near: [0.0, 0.2]
+  near: [0.2, 0.4]
+  background: [0.6, 1.0]
+
+filters:
+  trend_window_seconds: 120.0
+  min_sheath_duration_seconds: 300.0
+
+uncertainty:
+  mp_standoff_delta_re: 0.5
+  bs_standoff_delta_re: 1.0
+
+preflight:
+  max_sza_deg: 60.0
+  min_x_gsm_re: 5.0
+  max_abs_y_gsm_re: 15.0
+  min_valid_fraction: 0.3
+  min_density_cm3: 0.3
+  max_density_cm3: 200.0
+  min_bmag_nT: 1.0
+  max_bmag_nT: 200.0
+  min_beta_sheath: 0.01
+  max_beta_sheath: 100.0
+  min_membership_fraction: 0.3
+  min_near_occupancy: 0.01
+  min_bg_occupancy: 0.01
+  min_s_std: 0.005
+  fill_masking_policy: "auto"
+  grade_with_incomplete_flags: "cap_silver"
+
+output_dir: "runs"
+
+live:
+  backend: "cdasws"
+  fgm_dataset: "TH{probe}_L2_FGM"
+  mom_dataset: "TH{probe}_L2_MOM"
+  state_dataset: "TH{probe}_L1_STATE"
+  omni_dataset: "OMNI_HRO_1MIN"
+  omni_pre_window_minutes: 30.0
+  omni_post_window_minutes: 10.0
+  resample_cadence_seconds: 10.0    # coarser for multi-hour windows
+  interpolation_method: "linear"
+  max_gap_seconds: 60.0             # relaxed for long windows
+  cache_dir: "data_cache"
+  cache_policy: "use"
+
+# ============================================================
+# USABLE SCIENCE PILOT ENCOUNTERS
+# ============================================================
+# THD Sep 3 2008: high Dp compresses sheath → both bins populated.
+# Three window variants for comparison:
+#   - opt_A: 6h (19:00-01:00) — balanced near/bg, best s-range
+#   - opt_B: 8h (17:00-01:00) — most bg occupancy, includes apogee
+#   - opt_C: 5h (20:00-01:00) — tightest, highest Δβ signal
+
+encounters:
+  - encounter_id: "usable_sep03_6h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-09-03T19:00:00"
+    time_end: "2008-09-04T01:00:00"
+    crossing_count: 1
+    notes: >
+      USABLE. THD Sep 3 2008. 6h window. Dp~3.5 nPa compresses sheath.
+      Near=16.9%, BG=26.7%. Dn=2.3, EB=0.82, rho=-0.52. SZA=14°.
+      First window with both bins populated and non-null metrics.
+
+  - encounter_id: "usable_sep03_8h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-09-03T17:00:00"
+    time_end: "2008-09-04T01:00:00"
+    crossing_count: 1
+    notes: >
+      USABLE. THD Sep 3 2008. 8h window. Extends into high-Dp apogee phase.
+      Near=13.1%, BG=39.7%. Most background occupancy of all variants.
+      Dn=2.1, EB=0.80, rho=-0.51. SZA=12°.
+
+  - encounter_id: "usable_sep03_5h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-09-03T20:00:00"
+    time_end: "2008-09-04T01:00:00"
+    crossing_count: 1
+    notes: >
+      USABLE. THD Sep 3 2008. 5h window. Post-apogee inbound leg.
+      Near=18.5%, BG=21.0%. Strongest anti-correlation rho=-0.63.
+      Dn=2.9, EB=0.80, Δβ=2.1. SZA=15°.
