@@ -89,3 +89,72 @@ families:
       x_gsm_range: [8.0, 11.5]
       sza_range: [11, 25]
       r_max_re: 11.6
+
+  # --- Family D: THD August 18 2008 (HIGH Dp, mixed Bz) ---
+  # KEY: Different upstream regime from Sep 3 (which was northward Bz).
+  # Aug 18 has Dp 3-5 nPa with Bz transitioning from weakly positive to
+  # moderately negative. BG bin (s>0.6) populated from 18:00-21:00.
+  # Near bin populated from 00:00-03:00 UT next day.
+  # MOM: 11683 pts confirmed. FGM: data available (13% NaN fraction).
+  # 6h window produces Dn=0.12, EB=2.5, dBeta=-10 (layer-like pattern
+  # under the measurement model, but NOT labeled as PDL-positive or negative).
+  - seed_id: "aug18_thd"
+    probe: "thd"
+    center: "2008-08-18T21:00:00"
+    anchor: "centered"
+    durations_minutes: [90, 180, 360, 480]
+    notes: >
+      Second usable seed. THD Aug 18 2008. Dp 3-5 nPa, Bz mixed/negative.
+      Different upstream regime from Sep 3. Both bins populated in 6h window.
+      SZA=18-30 deg, X=8-11 Re, confirmed dayside. MOM+FGM available.
+    expected_geometry:
+      x_gsm_range: [7.0, 11.0]
+      sza_range: [16, 35]
+      r_max_re: 11.6
+
+  # --- Family E: THD September 13 2009 (southward Bz regime) ---
+  # From 2009 season scan. Dp~3.1, Bz~-1.4 (southward).
+  # Strong anti-correlation rho=-0.90. Different regime from 2008 windows.
+  - seed_id: "sep13_09_thd"
+    probe: "thd"
+    center: "2009-09-13T20:00:00"
+    anchor: "centered"
+    durations_minutes: [90, 180, 360]
+    notes: >
+      2009 season seed. THD Sep 13 2009. Dp~3.1, southward Bz.
+      Strong anti-correlation. 6h window validated as usable.
+    expected_geometry:
+      x_gsm_range: [9.0, 11.5]
+      sza_range: [10, 25]
+      r_max_re: 11.6
+
+  # --- Family F: THD September 26 2009 (near-subsolar SZA~4°) ---
+  # From 2009 season scan. Nearly subsolar, Dp~3.0.
+  # 10h window needed for near-bin occupancy.
+  - seed_id: "sep26_09_thd"
+    probe: "thd"
+    center: "2009-09-26T19:00:00"
+    anchor: "centered"
+    durations_minutes: [180, 360, 600]
+    notes: >
+      2009 season seed. THD Sep 26 2009. Nearly subsolar (SZA~4 deg).
+      10h window validated as usable. Very strong rho=-0.91.
+    expected_geometry:
+      x_gsm_range: [9.0, 11.5]
+      sza_range: [2, 10]
+      r_max_re: 11.6
+
+  # --- Family G: THD October 24 2009 (high Dp regime) ---
+  # From 2009 season scan. Dp~4.2, highest EB in current bank.
+  - seed_id: "oct24_09_thd"
+    probe: "thd"
+    center: "2009-10-24T17:30:00"
+    anchor: "centered"
+    durations_minutes: [180, 360]
+    notes: >
+      2009 season seed. THD Oct 24 2009. Dp~4.2, highest EB (4.22).
+      65% background occupancy. 6h window validated as usable.
+    expected_geometry:
+      x_gsm_range: [9.0, 11.5]
+      sza_range: [15, 25]
+      r_max_re: 11.6

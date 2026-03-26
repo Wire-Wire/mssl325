@@ -1,30 +1,24 @@
-# PDL Pilot — First USABLE real science pilot configuration
+# PDL Pilot — Usable real-window bank (Phase 2a frozen state v2)
 #
-# These windows produce non-null core metrics with both near AND background
-# bin occupancy. They are the first encounters in this project that
-# demonstrate the measurement model working end-to-end on real data.
+# STATUS: Measurement-model-valid windows with near/background leverage.
 #
-# DISCOVERY RATIONALE:
-#   The Oct 2008 THD windows (configs/pilot_live_science.yaml) had correct
-#   dayside geometry (SZA<25°, 100% sheath membership) but zero background
-#   occupancy because Dp~1 nPa pushed the boundaries outward, making the
-#   sheath wider than the spacecraft's radial range.
+# NAMING DISCIPLINE:
+#   All windows are: "measurement-model-valid near-MP comparator windows"
+#   None is classified as PDL-positive, non-PDL, or a labeled example.
 #
-#   Solution: THD Sep 3 2008 had elevated Dp (3-7 nPa) which compressed
-#   the boundaries inward. The same ~11.6 Re apogee now spans s=0 to s~0.7,
-#   populating both near (s=0.2-0.4) and background (s>0.6) bins.
+# CONSTRAINT LAYERS (Phase 2a upstream decision memo):
+#   Layer A (strong): dual-bin leverage, dayside geometry, QC intact
+#   Layer B (ranking only): SZA/geometry preferences, moderate Dp guidance
+#   Layer C (deferred): PDL labels, thresholds, dev-set membership
 #
-# KEY INSIGHT: The dual-bin measurement model requires encounter-averaged
-# upstream conditions to compress the sheath enough that the orbital
-# range spans both bins. This is a real measurement-model constraint,
-# not a code limitation.
-#
-# METRICS NOTE: Dn > 1 (density enhancement near MP), EB < 1 (B reduction) —
-# this is the OPPOSITE of a PDL signature. This is expected for a
-# compressed sheath under high Dp + northward Bz. These are NOT
-# PDL candidates — they are measurement-model validation windows.
+# WINDOW BANK: 7 windows across 4 orbital passes, 2 seasons (2008, 2009)
+#   2008-08-18 THD: Dp ~4 nPa, mixed Bz, layer-like pattern
+#   2008-09-03 THD: Dp ~3.5 nPa, northward Bz, compressed-sheath pattern
+#   2009-09-13 THD: Dp ~3 nPa, southward Bz, depletion pattern
+#   2009-09-26 THD: Dp ~3 nPa, weak Bz, near-subsolar (SZA~4°)
+#   2009-10-24 THD: Dp ~4 nPa, weak Bz, high enhancement
 
-run_label: "usable_science_pilot_v1"
+run_label: "usable_window_bank_v2"
 data_source: "live"
 random_seed: 42
 
@@ -74,22 +68,30 @@ live:
   omni_dataset: "OMNI_HRO_1MIN"
   omni_pre_window_minutes: 30.0
   omni_post_window_minutes: 10.0
-  resample_cadence_seconds: 10.0    # coarser for multi-hour windows
+  resample_cadence_seconds: 10.0
   interpolation_method: "linear"
-  max_gap_seconds: 60.0             # relaxed for long windows
+  max_gap_seconds: 60.0
   cache_dir: "data_cache"
   cache_policy: "use"
 
 # ============================================================
-# USABLE SCIENCE PILOT ENCOUNTERS
+# WINDOW BANK — 7 measurement-model-valid comparator windows
 # ============================================================
-# THD Sep 3 2008: high Dp compresses sheath → both bins populated.
-# Three window variants for comparison:
-#   - opt_A: 6h (19:00-01:00) — balanced near/bg, best s-range
-#   - opt_B: 8h (17:00-01:00) — most bg occupancy, includes apogee
-#   - opt_C: 5h (20:00-01:00) — tightest, highest Δβ signal
 
 encounters:
+  # --- 2008 Season ---
+
+  - encounter_id: "usable_aug18_6h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-08-18T18:00:00"
+    time_end: "2008-08-19T00:00:00"
+    crossing_count: 1
+    notes: >
+      Comparator window. THD Aug 18 2008. 6h.
+      Dp~4.2, Bz~+0.3. Near=16%, BG=48%.
+      Dn=0.12, EB=2.49, rho=-0.46. Layer-like pattern.
+
   - encounter_id: "usable_sep03_6h"
     spacecraft: "themis"
     probe: "thd"
@@ -97,9 +99,9 @@ encounters:
     time_end: "2008-09-04T01:00:00"
     crossing_count: 1
     notes: >
-      USABLE. THD Sep 3 2008. 6h window. Dp~3.5 nPa compresses sheath.
-      Near=16.9%, BG=26.7%. Dn=2.3, EB=0.82, rho=-0.52. SZA=14°.
-      First window with both bins populated and non-null metrics.
+      Comparator window. THD Sep 3 2008. 6h.
+      Dp~3.5, Bz~+0.9. Near=17%, BG=27%.
+      Dn=2.31, EB=0.82, rho=-0.52. Compressed-sheath pattern.
 
   - encounter_id: "usable_sep03_8h"
     spacecraft: "themis"
@@ -108,17 +110,50 @@ encounters:
     time_end: "2008-09-04T01:00:00"
     crossing_count: 1
     notes: >
-      USABLE. THD Sep 3 2008. 8h window. Extends into high-Dp apogee phase.
-      Near=13.1%, BG=39.7%. Most background occupancy of all variants.
-      Dn=2.1, EB=0.80, rho=-0.51. SZA=12°.
+      Comparator window. Sep 3 wider. Dp~3.5, Bz~+2.6.
+      Near=13%, BG=40%.
 
-  - encounter_id: "usable_sep03_5h"
+  # --- 2009 Season ---
+
+  - encounter_id: "usable_sep13_09_6h"
     spacecraft: "themis"
     probe: "thd"
-    time_start: "2008-09-03T20:00:00"
-    time_end: "2008-09-04T01:00:00"
+    time_start: "2009-09-13T17:00:00"
+    time_end: "2009-09-13T23:00:00"
     crossing_count: 1
     notes: >
-      USABLE. THD Sep 3 2008. 5h window. Post-apogee inbound leg.
-      Near=18.5%, BG=21.0%. Strongest anti-correlation rho=-0.63.
-      Dn=2.9, EB=0.80, Δβ=2.1. SZA=15°.
+      Comparator window. THD Sep 13 2009. 6h.
+      Dp~3.1, Bz~-1.4 (southward). Near=17%, BG=47%.
+      Dn=0.39, EB=1.96, rho=-0.90. Strong anti-correlation.
+
+  - encounter_id: "usable_sep26_09_10h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2009-09-26T14:00:00"
+    time_end: "2009-09-27T00:00:00"
+    crossing_count: 1
+    notes: >
+      Comparator window. THD Sep 26 2009. 10h. Near-subsolar SZA~4 deg.
+      Dp~3.0, Bz~+0.9. Near=18%, BG=40%.
+      Dn=0.94, EB=1.96, rho=-0.91. Strong anti-correlation.
+
+  - encounter_id: "usable_oct24_09_6h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2009-10-24T14:30:00"
+    time_end: "2009-10-24T20:30:00"
+    crossing_count: 1
+    notes: >
+      Comparator window. THD Oct 24 2009. 6h.
+      Dp~4.2, Bz~-0.5. Near=14%, BG=65%.
+      Dn=2.19, EB=4.22, rho=-0.66. High enhancement.
+
+  - encounter_id: "usable_aug18_8h"
+    spacecraft: "themis"
+    probe: "thd"
+    time_start: "2008-08-18T17:00:00"
+    time_end: "2008-08-19T01:00:00"
+    crossing_count: 1
+    notes: >
+      Comparator window. Aug 18 wider. Dp~3.6, Bz~+0.1.
+      Near=17%, BG=12%.
