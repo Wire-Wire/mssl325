@@ -137,6 +137,33 @@ Contains current evidence-status assignments (clean_core / cautious / excluded),
 
 ---
 
+## Phase 3A schema extensions
+
+### Additional artifacts (Phase 3A)
+
+| Artifact | Format | Purpose |
+|---|---|---|
+| `pass_matrix.csv` | CSV (wide) | One row per pass, representative metrics |
+| `figure_manifest.json` | JSON | Registry of all figures with `question_answered` |
+| `claim_map.json` | JSON | Registry of all descriptive claims with evidence basis and caveats |
+| `pass_report_chunks.json` | JSON | AI-consumable per-pass evidence chunks |
+| `RUN_REVIEW_PACKET.md` | Markdown | Self-contained run-level review document |
+| `RUN_REVIEW_PACKET_chunks.json` | JSON | Machine-readable review packet |
+
+### Review-packet field conventions
+
+- `operational_role`: "comparator_window" (stable)
+- `comparison_scope`: "phase_3a_dneb" (stage-local)
+- `primary_vs_secondary_evidence`: determined by `review_disposition.evidence_status`
+- `caveat_register`: stored per-window in `review_disposition.caveats`
+
+### Deferred artifacts
+
+- `bin_stats_long.csv`: deferred because current run products do not expose per-bin profile-level exports
+- `profile_long.csv`: deferred for same reason
+
+---
+
 ## Naming discipline
 
 Every window is a "measurement-model-valid near-MP comparator window."

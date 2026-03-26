@@ -194,10 +194,28 @@ A reusable evidence package now exists with two-layer design (factual + review).
 | Phase 2D readiness review | `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md` |
 | Window bank config | `configs/pilot_live_usable.yaml` |
 
+## Phase 3A: Bounded Dn/EB exploratory comparison (2026-03-26)
+
+Completed. Descriptive only. No thresholds or labels.
+
+**Key finding:** Clean core (P2, P4, P5, P6) spans Dn 0.94-2.31, EB 0.80-1.96. Low-Dn range (< 0.5) depends entirely on cautious passes (P1: 0.12, P3: 0.39).
+
+**Artifacts:**
+- Science memo: `docs/PHASE_3A_DNEB_EXPLORATORY_COMPARISON.md`
+- Comparison report: `reports/current_bank/phase3a_dneb_comparison.md`
+- Run review packet: `runs/.../evidence/review/RUN_REVIEW_PACKET.md`
+- Figure: `reports/current_bank/figures/phase3a_dneb_comparison.png`
+- Schema gaps filled: `pass_matrix.csv`, `figure_manifest.json`, `claim_map.json`, `pass_report_chunks.json`
+
+**Schema deferred:** `bin_stats_long.csv` and `profile_long.csv` — current run products do not expose per-bin profile-level exports.
+
 ## Commands
 
 ```bash
-# Generate evidence package from current run
+# Generate Phase 3A artifacts
+PYTHONPATH=src python -m pdl_pilot.cli.generate_phase3a --run-dir runs/20260326T040343Z_d0425fd4
+
+# Generate base evidence package
 PYTHONPATH=src python -m pdl_pilot.cli.generate_evidence --run-dir runs/20260326T040343Z_d0425fd4
 
 # Run all tests (124 pass, 1 skip)
@@ -206,4 +224,4 @@ PYTHONPATH=src python -m pytest tests/ -v
 
 ## Next step (do not implement)
 
-Phase 3A — Bounded Metric-Threshold Exploration: examine how provisional Dn and EB thresholds descriptively separate the 6 interpretable passes, without assigning labels or freezing decisions. Requires human review of seed time series first.
+Human-supervised review of the Phase 3A comparison package and run review packet to decide whether to proceed to any later bounded stage. This requires human judgment about whether the Dn/EB spread, the low-Dn caveat dependency, and the 3 unresolved confounder channels are acceptable for further work.
