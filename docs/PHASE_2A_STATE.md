@@ -1,131 +1,79 @@
-# Phase 2a State Document — Frozen Window Bank
+# Phase 2a State Document — Final Window Bank
 
 **Date:** 2026-03-26
 **Repo:** `mssl325`
-**Canonical run:** `runs/20260326T033744Z_9f985ab9/`
+**Canonical run:** `runs/20260326T040343Z_d0425fd4/`
 
 ---
 
-## 1. What Phase 2a is
+## 1. What Phase 2a achieved
 
-Phase 2a is a controlled real-window expansion stage. It is NOT Phase 2 (threshold tuning, development-set construction, or scientific classification). Its purpose is to demonstrate that the frozen measurement model can produce usable near/background metric comparisons from real THEMIS data across multiple upstream regimes.
-
----
-
-## 2. What has been achieved
-
-1. **7 measurement-model-valid comparator windows** across 4 orbital passes, 2 THEMIS seasons (2008 + 2009)
-2. **All 7 produce PASS status** with non-null core metrics (Dn, EB, Δβ, ρ)
-3. **Both near and background bins populated** in every window
-4. **Multiple upstream regimes** represented: northward Bz / southward Bz / mixed Bz, Dp range 3–4 nPa
-5. **SZA range 4°–22°** — near-subsolar geometry confirmed for all
-6. **Different metric patterns observed**: Dn>1 (compressed sheath) and Dn<1 (layer-like), demonstrating the measurement model resolves real regime differences
+A bank of **9 measurement-model-valid comparator windows** across **7 distinct orbital passes** and 2 THEMIS seasons (2008-09), all producing PASS status with non-null core metrics and dual-bin (near + background) leverage.
 
 ---
 
-## 3. What each window can and cannot be called
+## 2. Pass inventory
 
-### What it IS
-Every window in the bank is a **measurement-model-valid near-MP comparator window**. This means:
-- It passes all preflight checks (geometry, data validity, membership, occupancy, s-sanity)
-- It produces non-null core metrics under the frozen measurement model
-- Its near/background comparison is interpretable within the current s-bin framework
+7 distinct orbital passes, all THD:
+- 2008-08-18 (2 windows), 2008-09-03 (2 windows)
+- 2009-09-13, 2009-09-20, 2009-09-26, 2009-09-27, 2009-10-24 (1 each)
 
-### What it is NOT
-No window is:
-- A confirmed PDL event
-- A confirmed non-PDL baseline or negative control
-- A labeled development-set example
-- A validated event in any classifier sense
-- Evidence for or against any upstream-dependence hypothesis
+See `docs/WINDOW_BANK_SUMMARY.md` for the full per-window table.
 
 ---
 
-## 4. Constraint model (three layers)
+## 3. What windows can and cannot be called
 
-### Layer A — strong execution constraints (enforced in code)
-- All windows have near + background s-bin leverage
-- All are dayside / near-subsolar / low-latitude
-- QC / eligibility grammar preserved (preflight is a hard gate)
-- Radial IMF avoided in this stage
-- Fill-value masking active; sheath membership checked
+**Can be called:** measurement-model-valid near-MP comparator window.
 
-### Layer B — ranking / exploratory guidance (not hard rules)
-- SZA < 30° and X > 8 Re were used as ranking preferences during candidate selection
-- "Moderate steady Dp" (2–5 nPa) was useful for interpretability
-- 6–10h window durations are empirically determined, not literature-defined standards
-- Non-radial IMF was preferred but not formally required
-
-### Layer C — deferred (not decided here)
-- PDL-positive / non-PDL classification
-- Detector thresholds for Dn, EB, Δβ, ρ, persistence
-- Development-set labels
-- Encounter-family boundaries from exploratory long windows
-- Selection-function audit, shuffled-s falsification
-- Time-varying boundary computation
-- MMS thickness, SMILE/SXI priors
+**Cannot be called:** PDL-positive, non-PDL, baseline, development-set member, labeled example of any kind.
 
 ---
 
-## 5. Physical insight from current bank
-
-The current bank shows two distinct metric patterns under the encounter-averaged measurement model:
-
-| Pattern | Dn | EB | Δβ | Example windows |
-|---|---|---|---|---|
-| Compressed-sheath | >1 | <1 | >0 | sep03 (both), oct24 |
-| Layer-like | <1 | >1 | <0 | aug18, sep13 |
-
-The sep26 window (Dn≈1, EB≈2) is intermediate.
-
-**This is a descriptive observation, not a classification.** The patterns may reflect different upstream conditions, different boundary-motion histories, or different sheath structures. The frozen measurement model correctly resolves these differences, which is the Phase 2a validation target.
-
----
-
-## 6. Decision status
+## 4. Decision status
 
 ### Frozen
 - Encounter as statistical unit
 - s = d_MP/(d_MP+d_BS) along Sun-Earth line
 - Shue 1998 MP + Merka 2005 BS baseline
 - Dual near bins [0.2,0.4] + background [0.6,1.0]
-- IMF-agnostic detection (upstream enters post-detection)
+- IMF-agnostic detection
 - Detector backbone: Dn, EB, Δβ, ρ(n,B), persistence
 - QC flags + grading structural (tri-state, cap_silver)
-- Fill-value masking (OMNI sentinels, CDF fills)
 - Preflight eligibility checks
+- Fill-value masking
 - Conservative window naming
 
 ### Provisional
-- Window durations: 6–10h (empirical, not standard)
-- Dp > 3 nPa constraint (empirical for 11.6 Re apogee)
-- Resampling: 10 s cadence, 60 s max gap
-- Encounter-averaged boundaries (time-varying deferred)
-- Sheath membership: conservative plasma/field sanity
+- 6–10 h window durations (empirical, not standard)
+- Dp > 3 nPa practical selection preference
+- 10 s cadence / 60 s max gap for multi-hour windows
+- Encounter-averaged boundaries
+- Conservative sheath membership (plasma/field sanity)
 
 ### Deferred
-- Detector thresholds, dev-set labels, encounter merge
-- Radial-IMF cut, selection-function audit, shuffled-s
+- Detector thresholds
+- PDL / non-PDL labels
+- Development-set membership
+- Encounter merge finalization
+- Radial-IMF cut
+- Selection-function audit, shuffled-s falsification
 - Time-varying s-mapping, alternative MP/BS pair
 - MMS thickness, SMILE/SXI priors
-- PDL / non-PDL classification
 
 ---
 
-## 7. Remaining blocker
+## 5. Readiness for the next bounded step
 
-The bank has 7 windows but only 4 distinct orbital passes (2 dates in 2008, 2 dates in 2009). For threshold exploration, ~10–15 diverse passes would be better. The THD Sep-Oct 2009 season has additional candidates (Sep 3, Sep 27, others) that could expand the bank further, but each requires individual validation.
+**The bank is broad enough for a bounded metric-behavior review.** 7 distinct passes with Dn ranging 0.12–2.31 and EB ranging 0.80–4.22 provide sufficient diversity to examine how the detector backbone metrics vary across windows without defining thresholds or assigning labels. This would be the first controlled scientific step beyond window-bank construction.
 
 ---
 
-## 8. Commands
+## 6. Commands
 
 ```bash
-# Run the frozen window bank (7/7 evaluable)
+# Run the 9-window bank (9/9 evaluable)
 PYTHONPATH=src python -m pdl_pilot.cli.run_pilot --config configs/pilot_live_usable.yaml
-
-# Family validation
-PYTHONPATH=src python -m pdl_pilot.cli.validate_families --config configs/pilot_window_families.yaml
 
 # Tests (111 pass, 1 skip)
 PYTHONPATH=src python -m pytest tests/ -v
