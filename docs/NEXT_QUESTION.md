@@ -1,30 +1,39 @@
 # Next Question
 
-**Stage:** Phase 3A sign-off pending
+**Stage:** Phase 3B complete. Awaiting user review of retention audit.
 
 ## Active question
 
-Should the Phase 3A descriptive Dn/EB comparison package be signed off, and if so, what is the next bounded stage?
+Phase 3B has been executed. P1 and P3 are both confirmed-cautious. What is the next bounded stage?
+
+## Outcome of Phase 3B
+
+- P1: confirmed-cautious (near-bin density CV=0.93; Dn driven by noisy median)
+- P3: confirmed-cautious (EB spike-dependent; mapping sensitivity ±0.23 at Dp=3.1)
+- Six-pass bank remains defensible as a descriptive comparator bank
+- All low-Dn evidence (Dn < 0.5) remains cautious-only
 
 ## Allowed this round
 
-- Human review of the RUN_REVIEW_PACKET
-- Decision on whether 6 interpretable passes suffice for any next step
-- Naming and scoping the next bounded step
+- Human review of the Phase 3B retention audit
+- Decision on the next bounded stage
+- No scope beyond the existing six-pass bank without explicit authorization
 
 ## Forbidden this round
 
 - Thresholds, labels, detector semantics, dev-set membership
+- Promotion of P1 or P3 to clean
 - New window expansion, MMS thickness, SMILE/SXI priors
 - Changes to the frozen measurement model
+- Use of upgrade, unchanged, clean, detector-ready, or any strengthening vocabulary
 
 ## Sign-off condition
 
-Human confirms: Phase 3A package is descriptively adequate and names the next stage (or requests a specific follow-up).
+User confirms Phase 3B audit and names the next stage (or requests a specific follow-up).
 
 ## Decision mode
 
-- `decision_mode`: yellow (delegated — Pro A/B may draft the next stage scope if human approves Phase 3A)
-- `auto_decision_scope`: green actions only (report formatting, artifact completion)
-- `escalate_if`: any proposed next stage involves thresholds, labels, detector semantics, or bank changes
+- `decision_mode`: red (next-stage decision requires user authorization)
+- `auto_decision_scope`: green actions only
+- `escalate_if`: any proposed next step
 - `final_owner_if_escalated`: User

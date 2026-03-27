@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Phase 3A descriptive Dn/EB comparison complete. Ready for human sign-off. No thresholds, no labels, no detector semantics. N=6 interpretable passes (4 clean + 2 cautious). P7 excluded.
+Phase 3A signed off as a descriptive checkpoint (user decision, not model decision). Phase 3B executed: P1 and P3 retention audit complete. Both confirmed-cautious. Six-pass bank remains defensible. All low-Dn evidence (Dn < 0.5) is cautious-only. No thresholds, no labels, no detector semantics.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -203,6 +203,24 @@ Completed. Descriptive only. No thresholds or labels.
 - Schema gaps filled: `pass_matrix.csv`, `figure_manifest.json`, `claim_map.json`, `pass_report_chunks.json`
 
 **Schema deferred:** `bin_stats_long.csv` and `profile_long.csv` — current run products do not expose per-bin profile-level exports.
+
+## Phase 3B: P1/P3 retention audit (2026-03-27)
+
+**User decisions applied:** Phase 3A signed off as descriptive checkpoint. Phase 3B authorized as P1/P3 retention audit only. Decision vocabulary restricted to confirmed-cautious or downgraded.
+
+**Outcome:**
+- P1 (aug18_6h): **confirmed-cautious.** Near-bin density CV=0.93; Dn=0.12 driven by noisy median; 14% NaN. Pattern qualitatively survives spike removal but is not confounder-tested at the interval level.
+- P3 (sep13_09_6h): **confirmed-cautious.** EB partially spike-dependent (Δ=0.50); mapping sensitivity ±0.23 at Dp=3.1 (largest in bank). Dn=0.39 is robust to spike removal.
+
+**Bank status:** Six-pass interpretable bank remains defensible. All low-Dn evidence (Dn < 0.5) is cautious-only and must always be reported as such.
+
+**Strongest supportable low-Dn statement:** Two cautious passes produce Dn < 0.5, both robust to spike removal, but P1's Dn is driven by a noisy near-bin sample and both carry mapping-sensitivity caveats that cannot be resolved under the frozen model.
+
+**Not supportable:** Confounder-tested evidence for Dn < 0.5.
+
+**Full audit:** `docs/PHASE_3B_P1P3_RETENTION_AUDIT.md`
+**Report:** `reports/current_bank/phase3b_p1p3_retention_audit.md`
+**Decision record:** `docs/PHASE_3A_SIGNOFF_AND_PHASE_3B_SCOPE.md`
 
 ## Commands
 
