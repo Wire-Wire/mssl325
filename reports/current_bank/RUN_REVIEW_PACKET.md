@@ -148,3 +148,15 @@ The current package supports a descriptive Dn/EB comparison but does NOT support
 | Pass chunks (JSON) | `evidence/chunks/pass_report_chunks.json` |
 | Phase 3A figure | `reports/current_bank/figures/phase3a_dneb_comparison.png` |
 | Per-window QC reports | `qc_<window_id>.png` (9 files) |
+
+---
+
+## I. Decision status
+
+**Current stage:** Phase 3A descriptive comparison — sign-off pending.
+
+**This packet supports:** green and yellow decisions only (report improvements, artifact completion, descriptive framing within current ceiling).
+
+**This packet does NOT authorize:** thresholds, threshold candidates, labels, detector semantics, dev-set membership, bank expansion, or changes to the frozen measurement model. These are red decisions requiring user sign-off.
+
+**Preferred review entry point:** This packet is the recommended starting document for all roles (Pro A, Pro B, Pro C, and human reviewers).

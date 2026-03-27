@@ -219,28 +219,55 @@ PYTHONPATH=src python -m pytest tests/ -v
 
 ## Collaboration protocol
 
-**4-file system.** Every round uses only these:
+### Shared inputs (4-file system)
 
-| File | Role |
+| File | Purpose |
 |---|---|
 | `docs/LLM_HANDOFF.md` | Load first in any new session |
-| `docs/NEXT_QUESTION.md` | One active question per round; start here |
-| `reports/current_bank/RUN_REVIEW_PACKET.md` | Main evidence entry for all brains |
+| `docs/NEXT_QUESTION.md` | One active question per round |
+| `reports/current_bank/RUN_REVIEW_PACKET.md` | Main evidence entry for all roles |
 | `docs/WORKLOG_LATEST.md` | What changed last round |
 
-**Roles:**
+### Roles
 
-- **Claude Code** — executor. Only role that edits repo files. Receives a final prompt, implements it, reports results.
-- **Pro A** — design brain. Reads NEXT_QUESTION + HANDOFF, drafts the Claude prompt with scope/constraints/deliverables.
-- **Pro B** — gatekeeper. Reviews Pro A's draft, removes scope creep and wording drift, produces the final prompt.
-- **Pro C** — science brain. Literature-constrained judgment only. No code, no prompts, no engineering decisions.
-- **User** — final approver. Updates NEXT_QUESTION after each round.
+- **Claude Code** — executor only. Only role that edits repo files. Receives a final prompt from Pro B, implements it, reports results, updates WORKLOG_LATEST.
+- **Pro A** — design brain. Reads NEXT_QUESTION + HANDOFF, drafts the next-step plan and prompt. Does not execute.
+- **Pro B** — gatekeeper / final prompt editor. Reviews Pro A's draft for scope creep and wording drift. Can approve green/yellow decisions. Emits the final prompt for Claude Code.
+- **Pro C** — science-only brain. Reads evidence + papers, sets scientific ceiling. No code, no prompts, no engineering decisions.
+- **User** — final authority for red decisions and unresolved disputes. Updates NEXT_QUESTION after each round.
 
-**Rules:**
-- One active question per round (in NEXT_QUESTION.md)
-- Claude Code updates WORKLOG_LATEST after each execution
-- No role may introduce thresholds, labels, or detector semantics without an explicit prior gate decision
+### Output authority
 
-## Next step (do not implement)
+Pro A drafts → Pro C constrains scientifically → Pro B produces final prompt → Claude executes → User approves red decisions only.
 
-See `docs/NEXT_QUESTION.md` for the current active question.
+### Delegated decision authority
+
+**Green — automatic.** May be decided and executed without user escalation:
+- Report structure, file organization, artifact completion
+- Wording harmonization, schema completion within current semantics
+- Figure/layout choices, implementation details that do not alter scientific meaning
+
+**Yellow — delegated but recorded.** May be decided by Pro A/B without user escalation, but must be recorded in WORKLOG_LATEST:
+- Emphasis among already-allowed metrics
+- Review-layer bookkeeping refinements
+- Descriptive framing choices within the current science ceiling
+- Choosing one bounded next-step within an already-authorized stage
+
+**Red — escalate to user.** Must NOT be decided by models alone:
+- New scientific definitions, thresholds, threshold candidates
+- Labels, classes, dev-set semantics, detector semantics
+- Stage escalation, changes to frozen measurement model
+- Bank expansion, new windows/probes/seasons
+- Reinterpretation of evidence hierarchy into physics classes
+
+**If uncertain whether something is red, treat it as red.**
+
+### Semantic guardrails
+
+**Forbidden vocabulary** (in all repo outputs): PDL-positive, non-PDL, baseline, control, truth, threshold, threshold candidate, label, dev-set, detector-ready class.
+
+**Allowed vocabulary:** comparator window, pass, evidence, caveat, review layer, descriptive comparison, primary evidence, secondary evidence with caveats, excluded from core comparison.
+
+## Next step
+
+See `docs/NEXT_QUESTION.md`.
