@@ -217,6 +217,30 @@ PYTHONPATH=src python -m pdl_pilot.cli.generate_evidence --run-dir runs/20260326
 PYTHONPATH=src python -m pytest tests/ -v
 ```
 
+## Collaboration protocol
+
+**4-file system.** Every round uses only these:
+
+| File | Role |
+|---|---|
+| `docs/LLM_HANDOFF.md` | Load first in any new session |
+| `docs/NEXT_QUESTION.md` | One active question per round; start here |
+| `reports/current_bank/RUN_REVIEW_PACKET.md` | Main evidence entry for all brains |
+| `docs/WORKLOG_LATEST.md` | What changed last round |
+
+**Roles:**
+
+- **Claude Code** — executor. Only role that edits repo files. Receives a final prompt, implements it, reports results.
+- **Pro A** — design brain. Reads NEXT_QUESTION + HANDOFF, drafts the Claude prompt with scope/constraints/deliverables.
+- **Pro B** — gatekeeper. Reviews Pro A's draft, removes scope creep and wording drift, produces the final prompt.
+- **Pro C** — science brain. Literature-constrained judgment only. No code, no prompts, no engineering decisions.
+- **User** — final approver. Updates NEXT_QUESTION after each round.
+
+**Rules:**
+- One active question per round (in NEXT_QUESTION.md)
+- Claude Code updates WORKLOG_LATEST after each execution
+- No role may introduce thresholds, labels, or detector semantics without an explicit prior gate decision
+
 ## Next step (do not implement)
 
-Human-supervised review of the Phase 3A comparison package and run review packet to decide whether to proceed to any later bounded stage. This requires human judgment about whether the Dn/EB spread, the low-Dn caveat dependency, and the 3 unresolved confounder channels are acceptable for further work.
+See `docs/NEXT_QUESTION.md` for the current active question.
