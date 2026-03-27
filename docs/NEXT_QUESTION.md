@@ -1,35 +1,31 @@
 # Next Question
 
-**Stage:** Phase 3B complete. Awaiting user review of retention audit.
+**Stage:** Phase 4A complete. Awaiting user review.
 
 ## Active question
 
-Phase 3B has been executed. P1 and P3 are both confirmed-cautious. What is the next bounded stage?
+Phase 4A independent low-Dn recurrence test is complete. One cross-probe recurrence found (THE Sep 19, Dn = 0.76) below the clean-core floor but above the cautious range. No independent recurrence of Dn < 0.5. What is the next bounded stage?
 
-## Outcome of Phase 3B
+## Outcome of Phase 4A
 
-- P1: confirmed-cautious (near-bin density CV=0.93; Dn driven by noisy median)
-- P3: confirmed-cautious (EB spike-dependent; mapping sensitivity ±0.23 at Dp=3.1)
-- Six-pass bank remains defensible as a descriptive comparator bank
-- All low-Dn evidence (Dn < 0.5) remains cautious-only
+- 4 independent candidates tested (2 cross-probe THE, 1 different-year THD 2010, 1 same-probe different-date)
+- 2 PASS, 2 FAIL_OCCUPANCY
+- THE Sep 19 2008: Dn = 0.76, below clean-core floor (0.94), cross-probe independence
+- THD Oct 23 2010: Dn = 1.30, not low-Dn
+- No independent candidate reaches Dn < 0.5
+- Dn < 0.5 remains cautious-only under the current apparatus
 
 ## Allowed this round
 
-- Human review of the Phase 3B retention audit
-- Decision on the next bounded stage
-- No scope beyond the existing six-pass bank without explicit authorization
+- User review of Phase 4A results
+- Decision on next bounded stage
+- Decision on whether THE Sep 19 should be admitted to the main bank (red decision)
 
 ## Forbidden this round
 
 - Thresholds, labels, detector semantics, dev-set membership
-- Promotion of P1 or P3 to clean
-- New window expansion, MMS thickness, SMILE/SXI priors
+- Auto-admission of any candidate to the main bank
 - Changes to the frozen measurement model
-- Use of upgrade, unchanged, clean, detector-ready, or any strengthening vocabulary
-
-## Sign-off condition
-
-User confirms Phase 3B audit and names the next stage (or requests a specific follow-up).
 
 ## Decision mode
 

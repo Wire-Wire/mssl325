@@ -1,38 +1,42 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-27
-**Round:** Phase 3A sign-off sync + Phase 3B execution
+**Round:** Phase 4A — Independent low-Dn recurrence test
 
 ## What changed
 
-**Task A (control-state sync):** Applied three user decisions as final repo control state. Phase 3A signed off as descriptive checkpoint. Phase 3B authorized as P1/P3 retention audit. Decision vocabulary restricted to confirmed-cautious / downgraded. Converted the sign-off memo into a decision record. Updated milestone, next-question, and handoff.
+Executed Phase 4A: systematic search for independent THEMIS candidates outside the current six-pass bank. Searched THD 2008-09, THE 2008, THD 2010 (every other day, SZA < 40°, Dp > 2.5 nPa). Found 6 candidates with dual-bin potential; ran 4 through the full frozen pipeline. 2 PASS, 2 FAIL_OCCUPANCY.
 
-**Task B (Phase 3B execution):** Executed P1/P3 retention audit across five review dimensions (mapping sensitivity, propagated-upstream limitations, foreshock/jet alternatives, mixing risk, boundary-motion risk). Both passes confirmed-cautious. Six-pass bank remains defensible.
+Key result: THE Sep 19 2008 produces Dn = 0.76 on a cross-probe independent pass, below the clean-core floor (0.94). No independent candidate reaches Dn < 0.5.
 
 ## Files created
 
-- `docs/PHASE_3B_P1P3_RETENTION_AUDIT.md` — full audit document
-- `reports/current_bank/phase3b_p1p3_retention_audit.md` — compact audit report
+- `docs/PHASE_4A_INDEPENDENT_LOWDN_RECURRENCE.md` — full analysis
+- `reports/current_bank/phase4a_lowdn_recurrence_report.md` — compact report
+- `reports/current_bank/figures/phase4a_lowdn_recurrence.png` — Dn/EB figure with independent candidates
+- `runs/20260327T221306Z_227f7e3f/evidence/csv/phase4a_candidate_shortlist.csv` — machine-readable shortlist
+- `runs/20260327T221306Z_227f7e3f/` — run outputs (4 encounter JSONs, 4 QC PNGs)
 
 ## Files modified
 
-- `docs/PHASE_3A_SIGNOFF_AND_PHASE_3B_SCOPE.md` — converted from decision-support memo to decision record; removed all allowances for upgrade/unchanged/clean/detector-ready language
-- `docs/NEXT_QUESTION.md` — stage updated to Phase 3B complete; question changed to next-stage decision
-- `docs/LLM_HANDOFF.md` — milestone updated; Phase 3B gate block added
+- `docs/NEXT_QUESTION.md` — stage updated to Phase 4A complete
+- `docs/LLM_HANDOFF.md` — milestone updated, Phase 4A block added
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — reviewed; already consistent with Phase 3A sign-off language; no sync edit needed (Phase 3A packet remains as-is; Phase 3B audit is a separate document)
-- All evidence artifacts, configs, code, stored metric values — no changes
-- All other docs — no changes needed
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — Phase 3A packet; Phase 4A results are separate
+- All Phase 3A/3B documents — evidence values unchanged
+- `configs/pilot_live_usable.yaml` — main bank config unchanged; no candidate auto-admitted
+- All frozen core pipeline code — unchanged
 
 ## Impact
 
-Phase 3B retention audit complete. P1 confirmed-cautious (near-bin noise CV=0.93). P3 confirmed-cautious (EB spike-dependent, mapping sensitivity ±0.23). Six-pass bank defensible. All low-Dn evidence is cautious-only.
+One cross-probe recurrence of Dn < 1 found. Dn < 0.5 remains cautious-only. The independent candidate is not less caveated than P1/P3.
 
 ## Decisions this round
 
-- **Green taken:** file structure, section ordering, wording within constraints
+- **Green taken:** search-space selection, candidate window placement, figure layout
 - **Yellow taken:** none
-- **Red applied:** three user decisions applied as final (Phase 3A sign-off, Phase 3B authorization, decision vocabulary restriction)
+- **Red applied:** Phase 4A authorization (user decision from prior round)
+- **Red detected for next round:** whether to admit THE Sep 19 to the main bank (user decision required)

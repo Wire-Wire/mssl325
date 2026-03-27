@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Phase 3A signed off as a descriptive checkpoint (user decision, not model decision). Phase 3B executed: P1 and P3 retention audit complete. Both confirmed-cautious. Six-pass bank remains defensible. All low-Dn evidence (Dn < 0.5) is cautious-only. No thresholds, no labels, no detector semantics.
+Phase 4A complete. One cross-probe recurrence found (THE Sep 19, Dn = 0.76) below clean-core floor but not in cautious range. Dn < 0.5 remains cautious-only. Six-pass bank + 1 independent candidate. No thresholds, no labels.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -221,6 +221,23 @@ Completed. Descriptive only. No thresholds or labels.
 **Full audit:** `docs/PHASE_3B_P1P3_RETENTION_AUDIT.md`
 **Report:** `reports/current_bank/phase3b_p1p3_retention_audit.md`
 **Decision record:** `docs/PHASE_3A_SIGNOFF_AND_PHASE_3B_SCOPE.md`
+
+## Phase 4A: Independent low-Dn recurrence test (2026-03-27)
+
+**User-authorized.** Searched for independent candidates outside the current six-pass bank.
+
+**Search space:** THD 2008-09, THE 2008, THD 2010. 4 candidates tested. 2 PASS, 2 FAIL_OCCUPANCY.
+
+**Key finding:** THE Sep 19 2008 produces Dn = 0.76 on a different probe. This is below the clean-core floor (0.94) but above the cautious range (Dn < 0.5). It is the first cross-probe evidence that Dn < 1 behavior recurs independently.
+
+**However:** The candidate is not less caveated than P1/P3 (84% membership, borderline Dp = 2.8, extreme Ma = 21.1). No independent candidate reaches Dn < 0.5. The cautious-only character of all Dn < 0.5 evidence is unchanged.
+
+**Strongest claim:** Dn < 1 recurs on an independent probe. Dn < 0.5 does not.
+
+**Full analysis:** `docs/PHASE_4A_INDEPENDENT_LOWDN_RECURRENCE.md`
+**Report:** `reports/current_bank/phase4a_lowdn_recurrence_report.md`
+**Shortlist:** `runs/20260327T221306Z_227f7e3f/evidence/csv/phase4a_candidate_shortlist.csv`
+**Figure:** `reports/current_bank/figures/phase4a_lowdn_recurrence.png`
 
 ## Commands
 
