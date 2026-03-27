@@ -10,7 +10,7 @@
 
 ## Current milestone
 
-Phase 2D detector-readiness review complete. **CONDITIONAL GO** for Phase 3A bounded threshold exploration. N=6 interpretable passes (4 clean + 2 cautious). P7 excluded.
+Phase 3A descriptive Dn/EB comparison complete. Ready for human sign-off. No thresholds, no labels, no detector semantics. N=6 interpretable passes (4 clean + 2 cautious). P7 excluded.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -128,31 +128,26 @@ Conditions carried forward:
 | Window bank config | `configs/pilot_live_usable.yaml` |
 | Interval audit data | `runs/20260326T040343Z_d0425fd4/phase2c_interval_audit.json` |
 
-## Phase 2D detector-readiness review (2026-03-26)
+## Phase 2D comparison-readiness review (2026-03-26)
 
-**Question:** Is the post-Phase-2C bank sufficient to justify a later bounded threshold-exploration stage?
+**Question:** Is the post-Phase-2C bank sufficient to support a very bounded descriptive Dn/EB comparison?
 
-**Answer: CONDITIONAL GO**
+**Answer: CONDITIONAL GO — for descriptive comparison only**
 
 **Clean core (4 passes):** P2, P4, P5, P6. Dn 0.94–2.31, EB 0.82–1.96. Confounder-tested.
 **Cautious (2 passes):** P1, P3. Extend Dn range to 0.12–0.39 but carry density-noise and EB-spike caveats.
 **Excluded (1 pass):** P7. Spike-dominated.
-**Interpretable N = 6** (4 clean + 2 cautious). P7 excluded.
 
 **Key insufficiency:** Clean core alone has no pass with Dn < 0.5. The low-Dn range relies entirely on cautious passes.
 
-**Tolerability of unresolved issues:**
-- Universal negative ρ: acceptable caveat (non-discriminative, cannot be used as threshold)
-- Universal jet triggering: serious warning (long-window artifact; metrics survive in clean core)
-- Transient/mixing/boundary-motion UNKNOWN: serious warning, tolerable for bounded exploration
-- THD-only / Dp > 3 nPa bias: serious warning; results are regime-specific, not universal
-- Encounter-averaged boundaries: acceptable caveat
+**Carried-forward caveats:**
+- Universal negative ρ: non-discriminative within this bank
+- Universal jet triggering: long-window artifact; metrics survive in clean core
+- Transient/mixing/boundary-motion UNKNOWN: tolerable for descriptive work only
+- THD-only / Dp > 3 nPa bias: results are regime-specific
+- Encounter-averaged boundaries: provisional limitation
 
-**Recommended next stage:** Phase 3A — Bounded Metric-Threshold Exploration
-- Identify provisional Dn/EB threshold candidates (descriptive, not classification)
-- Thresholds are exploratory starting points, not frozen decisions
-- ρ excluded as discriminative metric
-- P7 excluded; P1/P3 usable with stated caveats only
+**This review does NOT authorize:** thresholds, labels, detector semantics, or dev-set membership.
 
 **Full review:** `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md`
 **Evidence matrix:** `docs/READINESS_EVIDENCE_MATRIX.md`

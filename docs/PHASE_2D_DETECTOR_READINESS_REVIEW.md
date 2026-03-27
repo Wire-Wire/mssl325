@@ -1,4 +1,4 @@
-# Phase 2D — Detector-Readiness Review
+# Phase 2D — Descriptive-Comparison Readiness Review
 
 **Date:** 2026-03-26
 **Basis:** Post-Phase-2C evidence base (9 windows / 7 passes / 4 clean + 2 cautious + 1 excluded)
@@ -7,7 +7,7 @@
 
 ## 1. Question
 
-Does the current post-Phase-2C bank contain a sufficiently clean and sufficiently defensible evidence subset to justify a later bounded threshold-exploration stage?
+Does the current post-Phase-2C bank contain a sufficiently clean and sufficiently defensible evidence subset to justify a later bounded descriptive Dn/EB comparison stage?
 
 ---
 
@@ -24,7 +24,7 @@ Does the current post-Phase-2C bank contain a sufficiently clean and sufficientl
 
 ## 3. Metric diversity vs confounder-tested diversity
 
-This is the central question for detector readiness. The distinction matters because metric range alone — without confounder testing — can be misleading.
+This is the central question for comparison readiness. The distinction matters because metric range alone — without confounder testing — can be misleading.
 
 ### Metric diversity (what the numbers span)
 
@@ -52,14 +52,14 @@ The low-Dn range (Dn < 0.5) — which is where the detector backbone's primary d
 
 ### Universal negative ρ — non-discriminative
 
-**Status: acceptable as a caveat.** ρ(n,B) < 0 in every window makes it useless for within-bank discrimination. Any later threshold work must acknowledge that ρ is a bank-wide property, not a signal/noise separator. This does not block threshold exploration on Dn and EB.
+**Status: acceptable as a caveat.** ρ(n,B) < 0 in every window makes it useless for within-bank discrimination. Any later descriptive comparison must acknowledge that ρ is a bank-wide property, not a signal/noise separator. This does not block descriptive Dn/EB comparison.
 
 ### Universal jet-like triggering — reinterpreted but not resolved
 
 **Status: acceptable as a serious warning.** Phase 2C showed this is largely a long-window artifact (the 2× median Pdyn threshold is too broad for 6-10h windows). For the clean core, leave-spike-out analysis shows metrics survive. But the jet_flag remains TRUE for all windows, which means:
 - No window has clean-of-jets certification
-- Any later threshold work must acknowledge that Pdyn fluctuations are present in all passes
-- The jet threshold itself needs recalibration before any detector-v0 (deferred)
+- Any later comparison must acknowledge that Pdyn fluctuations are present in all passes
+- The jet criterion itself needs recalibration before any later confounder-resolution stage (deferred)
 
 ### Transient / mixing / boundary-motion — UNKNOWN
 
@@ -68,15 +68,15 @@ The low-Dn range (Dn < 0.5) — which is where the detector backbone's primary d
 - Mixing resolution would require plasma-regime classification beyond current membership check (deferred)
 - Boundary-motion resolution would require time-varying s (deferred: baseline-changing)
 
-These unresolved channels mean any later threshold exploration must proceed with the understanding that all windows carry unquantified transient/mixing/boundary-motion risk. This is tolerable for a bounded, exploratory threshold stage — it would be intolerable for final detector validation.
+These unresolved channels mean any later descriptive comparison must proceed with the understanding that all windows carry unquantified transient/mixing/boundary-motion risk. This is tolerable for a bounded, descriptive comparison stage — it would be intolerable for any later detector-oriented validation.
 
 ### THD-only / Dp > 3 nPa selection bias
 
-**Status: serious warning, but not a blocker for bounded exploration.** The bank systematically represents only compressed-sheath conditions on one probe. Any threshold candidates emerging from this bank cannot be claimed as universal. They would be provisional, THD-specific, compressed-sheath-specific starting points only.
+**Status: serious warning, but not a blocker for bounded exploration.** The bank systematically represents only compressed-sheath conditions on one probe. Any descriptive patterns observed in this bank cannot be claimed as universal. They are THD-specific, compressed-sheath-specific observations only.
 
 ### Encounter-averaged boundary uncertainty
 
-**Status: acceptable as a caveat.** ±1 nPa Dp shifts boundaries ~1 Re. This is a known limitation of the frozen measurement model. It does not prevent bounded threshold exploration but must be carried forward.
+**Status: acceptable as a caveat.** ±1 nPa Dp shifts boundaries ~1 Re. This is a known limitation of the frozen measurement model. It does not prevent bounded descriptive comparison but must be carried forward.
 
 ---
 
@@ -99,23 +99,23 @@ These unresolved channels mean any later threshold exploration must proceed with
 
 ### Decision: **CONDITIONAL GO**
 
-The current evidence base is sufficient to justify a later **bounded, exploratory threshold-behavior review** — provided the following conditions are respected:
+The current evidence base is sufficient to justify a later **very bounded, descriptive Dn/EB comparison** — provided the following conditions are respected:
 
 ### What a later stage CAN do
 
-1. Examine how Dn and EB separate the 6 interpretable passes (4 clean + 2 cautious)
-2. Identify provisional threshold candidates for Dn and EB that descriptively separate observed metric patterns
-3. Test whether those threshold candidates are stable across duration variants
-4. Assess whether Δβ or persistence add discriminative value beyond Dn and EB
+1. Describe how Dn and EB vary across the 6 interpretable passes (4 clean + 2 cautious)
+2. Note which passes show operationally similar or different metric patterns
+3. Check whether duration variants produce consistent behavior within a pass
+4. Report whether Δβ or persistence co-vary with Dn/EB patterns
 
 ### What a later stage CANNOT do
 
-1. Claim thresholds are validated — they would be exploratory starting points only
-2. Apply thresholds to classify windows as PDL or non-PDL
+1. Define or propose threshold values
+2. Classify any window as PDL-positive or non-PDL
 3. Use ρ as a discriminative metric (it is universal in this bank)
 4. Ignore the fact that the low-Dn range relies on cautious passes
-5. Treat results as generalizable beyond THD / compressed-sheath conditions
-6. Skip human review of individual pass time series before promoting any threshold
+5. Treat observations as generalizable beyond THD / compressed-sheath conditions
+6. Skip human review before drawing any scientific conclusion
 
 ### Named evidence subset for the later stage
 
@@ -127,19 +127,19 @@ The current evidence base is sufficient to justify a later **bounded, explorator
 
 ## 7. Recommended next stage
 
-### Name: **Phase 3A — Bounded Metric-Threshold Exploration**
+### Name: **Phase 3A — Very Bounded Dn/EB Descriptive Comparison**
 
 ### Goal
-Identify provisional Dn and EB threshold candidates that descriptively separate the observed metric patterns in the 6-pass interpretable bank. This is exploratory and descriptive, not classification.
+Describe how Dn and EB vary across the 6-pass interpretable bank. This is descriptive only — no thresholds, no labels, no detector semantics.
 
 ### Hard boundaries
-1. Thresholds are provisional — not frozen science decisions
+1. No thresholds are defined, proposed, or implied
 2. No window may be labeled PDL-positive or non-PDL
-3. The exploration must be reported as "under compressed-sheath / THD-only conditions"
+3. The comparison must be reported as "under compressed-sheath / THD-only conditions"
 4. P7 must remain excluded
-5. Cautious passes (P1, P3) may be used for range exploration but their caveats must be stated
-6. ρ must not be used as a discriminative threshold (non-discriminative in this bank)
-7. Human review of individual seed time series must occur before any threshold is promoted
+5. Cautious passes (P1, P3) may be included for range context but their caveats must be stated
+6. ρ must not be treated as discriminative (non-discriminative in this bank)
+7. Human review is required before any further stage
 
 ### What remains deferred beyond Phase 3A
 - Final detector thresholds
@@ -157,4 +157,4 @@ Identify provisional Dn and EB threshold candidates that descriptively separate 
 
 ## 8. Summary
 
-The bank's confounder-tested clean core (N=4) is narrow but defensible. Combined with 2 cautious passes (N=6 total interpretable), it spans enough metric and upstream diversity for a bounded, exploratory threshold-behavior review. The review would be probe-specific, regime-specific, and explicitly provisional. The 3 permanently unresolved confounder channels (transient, mixing, boundary motion) are tolerable for exploratory work but would need resolution before any detector validation.
+The bank's confounder-tested clean core (N=4) is narrow but defensible. Combined with 2 cautious passes (N=6 total interpretable), it spans enough metric and upstream diversity for a very bounded, descriptive Dn/EB comparison. The comparison is probe-specific, regime-specific, and explicitly descriptive only. The 3 permanently unresolved confounder channels (transient, mixing, boundary motion) are tolerable for descriptive work but would need resolution before any detector-oriented stage.

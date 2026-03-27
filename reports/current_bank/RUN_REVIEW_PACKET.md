@@ -100,6 +100,22 @@
 
 ---
 
+## F2. Literature-constrained rationale: why descriptive comparison only
+
+The current package supports a descriptive Dn/EB comparison but does NOT support thresholds, labels, or detector semantics. The reasons are grounded in the evidence limits and the paper-library constraints:
+
+1. **Encounter-averaged boundaries are provisional.** The s-mapping uses median upstream conditions per encounter. Walsh et al. (2019) and Aghabozorgi et al. (2024) document condition-dependent MP model inaccuracy under propagation uncertainty. Until time-varying s is implemented, bin assignments carry encounter-averaging artifacts.
+
+2. **The bank is structurally biased.** All 9 windows require Dp > 3 nPa for dual-bin coverage (a practical constraint from THD's 11.6 Re apogee). Pi et al. (2024) and Michotte de Welle et al. (2024) show that dayside sheath profiles are IMF- and pressure-dependent. The current bank cannot represent the full dayside sheath population.
+
+3. **Three confounder channels remain unresolved.** Transient contamination (Zhang et al. 2022), magnetospheric mixing (Li et al. 2009), and boundary motion (Plaschke et al. 2009) cannot be assessed with current data products. Archer & Horbury (2013) and Raptis et al. (2020) show that Pdyn spikes are heterogeneous; the universal jet triggering in this bank reflects long-window sampling, not uniform jet contamination.
+
+4. **Effective N = 7 passes (4 clean + 2 cautious + 1 excluded).** This is insufficient for threshold calibration or statistical detector construction. It is sufficient only for a descriptive comparison of how the measurement model behaves across a small, biased, confounder-audited sample.
+
+5. **The low-Dn range depends on caveated evidence.** No clean-core pass has Dn < 0.5. The two cautious passes (P1, P3) that provide the low-Dn range carry density-noise and EB-spike caveats respectively. Any claim about low-Dn behavior must acknowledge this dependency.
+
+---
+
 ## G. What this run supports / does not support
 
 **Supports:**
