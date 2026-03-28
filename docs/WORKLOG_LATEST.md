@@ -1,38 +1,48 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-28
-**Round:** Phase 4B — Results freeze for thesis integration
+**Round:** Thesis-body block creation + bounded verification
 
 ## What changed
 
-Froze the completed comparator + independent recurrence branch into a writing-safe integration layer. Created the Phase 4B freeze document with: branch status, exact strongest claims, exact non-claims, external recurrence explanation, writing-safe results block (thesis paragraph, paper paragraph, safe sentences, do-not-say examples), and stop condition. Updated all control files to reflect frozen state.
+Created `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — a thesis-body results block for the frozen comparator + external-recurrence branch. Written in results logic (not repo phase chronology). Includes: frozen evidence ledger, clean-core Dn/EB span, cautious low-Dn extension, independent external recurrence, exact supportable statements, limitations, and traceability note. References two frozen figures.
+
+## Verification performed
+
+- All Dn/EB values verified against `runs/20260326T040343Z_d0425fd4/all_encounters.json`
+- THE Sep 19 values verified against `runs/20260327T221306Z_227f7e3f/encounter_cand4a_sep19_08_the.json`
+- Clean-core ranges confirmed: Dn [0.94, 2.31], EB [0.80, 1.96]
+- SZA range confirmed: 4°–22° across 6 interpretable passes
+- Dp range confirmed: 3.0–4.2 nPa
+- P1 near-bin density CV = 0.93, membership = 86% confirmed
+- P3 EB spike sensitivity Δ = 0.50, mapping sensitivity ±0.23 confirmed
+- THE Sep 19: Dn = 0.76, Dp = 2.8, Ma = 21.1, membership = 84% confirmed
+- P7 spike-removal collapse (2.19→0.67, 4.22→0.97) confirmed
+- No mismatch found between thesis block numbers and frozen artifacts
 
 ## Files created
 
-- `docs/PHASE_4B_RESULTS_FREEZE.md` — full freeze document with writing-safe results block
-- `reports/current_bank/phase4b_results_freeze_report.md` — compact freeze report
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`
 
 ## Files modified
 
-- `docs/LLM_HANDOFF.md` — milestone updated to frozen state; Phase 4B block added
-- `docs/NEXT_QUESTION.md` — replaced with post-freeze control state (no active question)
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
+- `docs/LLM_HANDOFF.md` — per instructions
+- `docs/NEXT_QUESTION.md` — per instructions
 - `reports/current_bank/RUN_REVIEW_PACKET.md` — per instructions
-- All Phase 3A/3B/4A evidence values, documents, and artifacts — unchanged
-- `configs/pilot_live_usable.yaml` — main bank config unchanged
-- All frozen core pipeline code — unchanged
-- THE Sep 19 status — kept as external recurrence, not admitted
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — per instructions
+- All Phase 3A/3B/4A evidence values — unchanged
+- All frozen figures, configs, pipeline code — unchanged
 
 ## Impact
 
-Documentation-only. No scientific evidence values changed. THE Sep 19 remains external recurrence. The branch is now writing-safe for thesis integration. Any future scientific move requires a new red-level user decision.
+Writing-layer only. No scientific content, evidence values, or control state changed. The thesis block is ready for integration into a thesis or paper draft.
 
 ## Decisions this round
 
-- **Green taken:** document structure, paragraph drafting within frozen ceiling, control-file updates
+- **Green taken:** thesis block structure, paragraph composition, ledger layout, figure references
 - **Yellow taken:** none
-- **Red applied:** Phase 4B authorization (user decision from this round's prompt)
-- **Red detected for next round:** all future scientific moves require user authorization
+- **Red detected:** none
