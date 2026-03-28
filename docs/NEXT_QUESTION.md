@@ -1,36 +1,39 @@
 # Next Question
 
-**Stage:** MMS thickness branch opened — methods-scaffold only.
+**Stage:** MMS shortlist screening complete. Post-shortlist decision state.
 
-## Branch status
+## Outcome
 
-- **THEMIS comparator branch:** frozen (Phase 4B). No changes permitted.
-- **MMS thickness branch:** opened at methods-scaffold stage. No events shortlisted. No pilot results. No thickness values.
+3 primary + 1 reserve MMS event-contexts survive coarse screening from 11 screened. All are MMS1 near-subsolar dayside passes with FGM/FPI data, steady upstream, and sustained density gradient structure.
+
+No thickness values, no physical identification, no quality grades assigned.
 
 ## Active question
 
-The MMS thickness method scaffold is complete. The next decision is whether to authorize:
-- an MMS event shortlist round (identifying 3–5 candidate near-MP gradient intervals), OR
-- a specific follow-up to the scaffold itself
+**Authorize full event packages + first thickness attempt on the 3 primary candidates only?**
 
-## What would require a new red-level user decision
+Primaries:
+- MMS-P1: 2015-11-12 (SZA 18°, Dp 1.1)
+- MMS-P2: 2015-12-12 (SZA 11°, Dp 2.0)
+- MMS-P3: 2016-12-26 (SZA 6°, Dp 2.6)
 
-1. Moving to an MMS event shortlist or pilot execution
-2. Any MMS thickness value reported
-3. Any connection between MMS results and the frozen THEMIS branch
-4. Any detector, threshold, or classification work on either branch
-5. SMILE/SXI prior or mission-translation work
-6. Bank expansion or reinterpretation of the frozen THEMIS evidence
+This would involve detailed multi-spacecraft analysis, timing, normal estimation, dual thickness definitions, and quality grading per the existing scaffold.
 
-## Allowed without escalation (green)
+## Alternatives
 
-- Wording refinement of the scaffold document
-- Schema corrections if errors are found
-- Thesis writing using the frozen THEMIS results block
+- Revise shortlist basis (different source, different gates)
+- Pause MMS branch
+
+## Forbidden
+
+- Thickness without user authorization
+- Physical class labels
+- THEMIS branch integration
+- Detector/threshold work
 
 ## Decision mode
 
-- `decision_mode`: red (MMS event shortlist requires user authorization)
-- `auto_decision_scope`: green actions only
-- `escalate_if`: any move toward event selection, thickness computation, or branch integration
+- `decision_mode`: red (full-event thickness requires user authorization)
+- `auto_decision_scope`: green only (wording, formatting)
+- `escalate_if`: any thickness computation, any event-level L value
 - `final_owner_if_escalated`: User

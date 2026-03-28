@@ -278,7 +278,26 @@ Completed. Descriptive only. No thresholds or labels.
 
 **What the scaffold does NOT do:** shortlist events, compute thickness values, validate THEMIS results, or define physical classes.
 
-**Next:** MMS event shortlist requires another explicit user decision.
+### MMS event shortlist (2026-03-28)
+
+**User-authorized.** Screened 11 MMS1 near-subsolar dayside passes from Phase 1 (2015–2017).
+
+**Result:** 3 primary + 1 reserve candidates.
+
+| ID | Date | SZA | Dp | Density CV | Disposition |
+|---|---|---|---|---|---|
+| MMS-P1 | 2015-11-12 | 18° | 1.1 | 0.45 | primary |
+| MMS-P2 | 2015-12-12 | 11° | 2.0 | 0.35 | primary |
+| MMS-P3 | 2016-12-26 | 6° | 2.6 | 0.47 | primary |
+| MMS-R1 | 2017-01-05 | 7° | 2.6 | 0.44 | reserve |
+
+**No thickness values, no physical identification, no quality grades assigned.**
+
+**Full shortlist:** `docs/MMS_EVENT_SHORTLIST.md`
+**Screening registry:** `reports/mms_shortlist/screening_registry.csv`
+**Quicklooks:** `reports/mms_shortlist/figures/`
+
+**Next:** Full event packages + first thickness attempt on primaries requires user authorization.
 
 ## Commands
 
