@@ -297,7 +297,23 @@ Completed. Descriptive only. No thresholds or labels.
 **Screening registry:** `reports/mms_shortlist/screening_registry.csv`
 **Quicklooks:** `reports/mms_shortlist/figures/`
 
-**Next:** Full event packages + first thickness attempt on primaries requires user authorization.
+### MMS event-package readiness audit (2026-03-28)
+
+**User-authorized.** Full event-package analysis on 3 primaries. No thickness values produced.
+
+| ID | Dist to MP | Beta trans | Dens trans | Boundary adj | Verdict |
+|---|---|---|---|---|---|
+| MMS-P1 | 0.4 Re | ✓ | ✓ | plausible | **ADVANCE** |
+| MMS-P2 | 1.8 Re | ✓ | ✗ | not plausible | HOLD |
+| MMS-P3 | 2.1 Re | ✓ | ✓ | plausible (motion) | **ADVANCE** |
+
+**No thickness values, no quality grades, no physical identification.**
+Reserve MMS-R1 untouched. MMS-P2 on hold.
+
+**Full audit:** `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md`
+**Event cards:** `reports/mms_event_packages/events/`
+
+**Next:** First thickness attempt on MMS-P1 and MMS-P3 requires user authorization.
 
 ## Commands
 

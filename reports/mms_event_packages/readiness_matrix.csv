@@ -1,0 +1,4 @@
+id,date,sza,dp,mp,dist_mp,fgm_4sc,fpi_4sc,beta_trans,dens_trans,bndry_adj,bz_range,pairing,normal_preflight,timing_preflight,gradient_preflight,main_blocker,verdict
+MMS-P1,2015-11-12,18,1.1,11.0,0.4,4/4,4/4,yes,yes,plausible,75,promising,feasible,feasible,feasible,none identified,advance
+MMS-P2,2015-12-12,11,2.1,10.0,1.8,4/4,4/4,yes,no,not plausible,111,ambiguous,uncertain,uncertain,uncertain,spacecraft 1.8 Re from MP; no clear density transition,hold
+MMS-P3,2016-12-26,6,2.7,9.8,2.1,4/4,4/4,yes,yes,plausible with caveat,119,promising,feasible,feasible,feasible,nominal dist 2.1 Re from MP; boundary motion required for adjacency,advance
