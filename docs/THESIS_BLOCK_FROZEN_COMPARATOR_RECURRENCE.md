@@ -14,7 +14,7 @@ No thresholds, labels, physical identifications, or detector semantics are assig
 
 Six independent near-subsolar dayside THEMIS-D orbital passes from two seasons (2008 and 2009) constitute the interpretable comparator bank. All six passes were observed under compressed-sheath conditions (encounter-averaged dynamic pressure Dp = 3.0–4.2 nPa) at solar zenith angles of 4°–22°. Each pass required a 6–10 hour analysis window to populate both the near and background s-bins at the ~11.6 Re THD apogee under these Dp levels.
 
-Of the seven passes originally considered, one (P7, 2009-10-24) was excluded after interval-level sensitivity analysis showed that its window-level metrics collapsed to near-unity values upon removal of Pdyn spike intervals (Dn shifted from 2.19 to 0.67; EB from 4.22 to 0.97). The remaining six passes were classified into two operational categories for evidence-bookkeeping purposes: four passes (P2, P4, P5, P6) form a confounder-tested clean core whose metrics are robust to leave-spike-out analysis (ΔDn ≤ 0.22, ΔEB ≤ 0.02), while two passes (P1, P3) were retained as confirmed-cautious comparators carrying documented interval-level caveats.
+Of the seven passes originally considered, one (P7, 2009-10-24) was excluded after interval-level sensitivity analysis showed that its window-level metrics collapsed to near-unity values upon removal of Pdyn spike intervals (Dn shifted from 2.19 to 0.67; EB from 4.22 to 0.97). The remaining six passes were classified into two operational categories for evidence-bookkeeping purposes: four passes (P2, P4, P5, P6) form a confounder-tested clean core whose metrics are robust to leave-spike-out analysis (ΔDn ≤ 0.22, ΔEB ≤ 0.02), while two passes (P1, P3) were retained under documented interval-level caveats.
 
 These categories are stage-local review bookkeeping. They are not physical classes.
 
@@ -48,7 +48,7 @@ Within the clean core, Dn and EB show an approximate inverse relationship: passe
 
 ## Cautious low-Dn extension
 
-Two confirmed-cautious passes extend the bank's Dn range below 0.5:
+Two passes retained with documented interval-level caveats extend the bank's Dn range below 0.5:
 
 **P1 (2008-08-18, Dn = 0.12).** This pass has the lowest Dn in the bank and the highest EB (2.49). However, the near-bin density has a coefficient of variation of 0.93, indicating that the median density — from which Dn is computed — is drawn from a highly variable sample. The pattern qualitatively survives spike removal (Dn shifts from 0.12 to 0.17), but whether the low near-bin density reflects an ordered spatial structure or high magnetosheath variability (including possible mirror-mode or compressive-wave contributions; cf. Soucek et al. 2015) cannot be determined under the encounter-averaged measurement model. Membership is 86%, the lowest in the bank, with 14% of data points classified as unknown/NaN.
 
@@ -60,11 +60,13 @@ All Dn < 0.5 evidence in this bank is cautious-only.
 
 ## Independent external recurrence outside the main bank
 
-A systematic search across THEMIS-D (2008–2010) and THEMIS-E (2008) identified one independent candidate producing Dn below the clean-core floor: THE on 2008-09-19 (Dn = 0.76, EB = 2.12). This is the sole cross-probe evidence under the frozen measurement model that sub-unity Dn behavior recurs on an instrument chain independent of THD.
+One external recurrence record exists outside the main bank: THEMIS-E on 2008-09-19 (Dn = 0.76, EB = 2.12), identified by a bounded search across THD 2008–2010 and THE 2008 dayside seasons. This candidate is not admitted to the main six-pass bank and is not treated as a stronger anchor for the low-Dn branch.
 
-However, this candidate does not enter the cautious-only low-Dn region (Dn < 0.5), is not less caveated than the existing cautious passes (membership = 84%, encounter-averaged Dp = 2.8 nPa below the bank's practical preference, Alfvén Mach number = 21.1), and is preserved as an external recurrence record only — it is not admitted to the main six-pass bank.
+What this external recurrence adds is limited: it demonstrates that sub-unity Dn behavior recurs on an instrument chain independent of THD, under the same frozen measurement model.
 
-No independent candidate reproduces Dn < 0.5 under the frozen model. This does not imply that such behavior is physically absent; it may reflect the selection-function constraints of the current apparatus, including the practical requirement for compressed-sheath conditions at the ~11.6 Re inner-probe apogee.
+What it does not add: the candidate does not enter the cautious-only low-Dn region (Dn < 0.5), is not less caveated than the existing cautious passes (membership = 84%, encounter-averaged Dp = 2.8 nPa below the bank's practical preference, Alfvén Mach number = 21.1), and does not independently validate the cautious-only Dn < 0.5 branch.
+
+No independent candidate reproduces Dn < 0.5 under the frozen model. This does not imply that such behavior is physically absent; it may reflect the selection-function constraints of the current apparatus.
 
 *[See Figure 2: reports/current_bank/figures/phase4a_lowdn_recurrence.png.]*
 
@@ -76,9 +78,9 @@ No independent candidate reproduces Dn < 0.5 under the frozen model. This does n
 
 2. The clean core (four passes) spans Dn 0.94–2.31 and EB 0.80–1.96, with metrics robust to leave-spike-out sensitivity analysis.
 
-3. Two confirmed-cautious passes extend Dn below 0.5 (Dn = 0.12 and 0.39), but both carry interval-level caveats that cannot be resolved under the encounter-averaged measurement model.
+3. Two passes retained under caveat extend Dn below 0.5 (Dn = 0.12 and 0.39), but both carry interval-level caveats that cannot be resolved under the encounter-averaged measurement model. All Dn < 0.5 evidence is cautious-only.
 
-4. One cross-probe candidate (THEMIS-E, 2008-09-19, Dn = 0.76) demonstrates that sub-unity Dn behavior recurs independently of THEMIS-D, though under comparable caveats and without entering the cautious-only low-Dn region.
+4. One external cross-probe recurrence (THEMIS-E, 2008-09-19, Dn = 0.76) demonstrates that sub-unity Dn behavior recurs independently of THEMIS-D, though under comparable caveats, without entering the Dn < 0.5 region, and without independently validating the cautious low-Dn branch.
 
 5. No thresholds, labels, physical identifications, or detector semantics are defined or implied by these results.
 
@@ -86,7 +88,7 @@ No independent candidate reproduces Dn < 0.5 under the frozen model. This does n
 
 ## Limitations carried forward
 
-1. **Single primary probe and compressed-sheath bias.** The bank comprises THD passes under encounter-averaged Dp > 3 nPa. Lower-Dp conditions — which may be more relevant for classical magnetic pileup under reduced reconnection rates (Zwan & Wolf 1976; Wang et al. 2004) — are structurally excluded because the ~11.6 Re inner-probe apogee cannot reach the background s-bin without boundary compression.
+1. **Single primary probe and compressed-sheath bias.** The bank comprises THD passes under encounter-averaged Dp > 3 nPa. Lower-Dp conditions are structurally excluded because the ~11.6 Re inner-probe apogee cannot reach the background s-bin without boundary compression. The behavior of the measurement model under lower-Dp conditions is therefore not assessed here.
 
 2. **Encounter-averaged boundary placement.** The s-mapping uses one set of boundary standoff distances per encounter, derived from median OMNI-propagated Dp and Bz. Condition-dependent magnetopause model errors (Lin et al. 2024; Aghabozorgi et al. 2024) and OMNI propagation uncertainty (Vokhmyanin et al. 2019; Walsh et al. 2019) are not resolved per-event. A ±1 nPa Dp perturbation shifts boundaries by approximately 1 Re, which is a substantial fraction of the ~3 Re compressed-sheath width.
 
@@ -98,10 +100,6 @@ No independent candidate reproduces Dn < 0.5 under the frozen model. This does n
 
 ---
 
-## Traceability / provenance note
+## Traceability note
 
-The results reported here were produced through a sequence of bounded stages: bank construction and validation (Phase 2a–2D), descriptive Dn/EB comparison (Phase 3A), cautious-pass retention audit (Phase 3B), independent recurrence test (Phase 4A), and results freeze (Phase 4B). Each stage was user-authorized with explicit scope boundaries. The full audit trail is preserved in the repository under `docs/PHASE_*.md` and `reports/current_bank/`. Machine-readable evidence artifacts are available under `runs/20260326T040343Z_d0425fd4/evidence/`.
-
-P7 (2009-10-24, THD) was excluded after Phase 2C interval analysis showed that 35% of its data consisted of Pdyn spike intervals concentrated in the background bin, and removal of these intervals shifted Dn from 2.19 to 0.67 and EB from 4.22 to 0.97, indicating that the window-level metrics were predominantly spike-driven.
-
-The THEMIS-E external recurrence (2008-09-19) was identified by a bounded search across THD 2008–2010 and THE 2008 dayside seasons (Phase 4A) and is preserved as an external record, not admitted to the main bank.
+The comparator bank, interval-level sensitivity analysis, cautious-pass retention audit, and independent recurrence search were conducted through a sequence of bounded, scope-controlled stages documented in the repository. A seventh pass (P7, 2009-10-24) was excluded because its metrics were predominantly spike-driven (Dn collapsed from 2.19 to 0.67 upon removal of Pdyn spike intervals). The full audit trail, machine-readable evidence artifacts, and per-pass QC reports are preserved in the repository.

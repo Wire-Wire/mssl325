@@ -1,48 +1,35 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-28
-**Round:** Thesis-body block creation + bounded verification
+**Round:** Thesis block wording revision (writing-safe repair only)
 
 ## What changed
 
-Created `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — a thesis-body results block for the frozen comparator + external-recurrence branch. Written in results logic (not repo phase chronology). Includes: frozen evidence ledger, clean-core Dn/EB span, cautious low-Dn extension, independent external recurrence, exact supportable statements, limitations, and traceability note. References two frozen figures.
+Revised `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` to address five targeted wording issues identified by external scientific review. No scientific evidence values, bank membership, or stage status changed.
 
-## Verification performed
+## Wording repairs made
 
-- All Dn/EB values verified against `runs/20260326T040343Z_d0425fd4/all_encounters.json`
-- THE Sep 19 values verified against `runs/20260327T221306Z_227f7e3f/encounter_cand4a_sep19_08_the.json`
-- Clean-core ranges confirmed: Dn [0.94, 2.31], EB [0.80, 1.96]
-- SZA range confirmed: 4°–22° across 6 interpretable passes
-- Dp range confirmed: 3.0–4.2 nPa
-- P1 near-bin density CV = 0.93, membership = 86% confirmed
-- P3 EB spike sensitivity Δ = 0.50, mapping sensitivity ±0.23 confirmed
-- THE Sep 19: Dn = 0.76, Dp = 2.8, Ma = 21.1, membership = 84% confirmed
-- P7 spike-removal collapse (2.19→0.67, 4.22→0.97) confirmed
-- No mismatch found between thesis block numbers and frozen artifacts
+1. **Limitations §1:** Removed "lower-Dp conditions may be more relevant for classical magnetic pileup under reduced reconnection rates" — replaced with "lower-Dp conditions are structurally excluded … not assessed here." This prevents the results block from implying a physics inference not directly established by the frozen comparator results.
 
-## Files created
+2. **External recurrence section:** Restructured to lead with "one external recurrence record exists outside the main bank" before stating what it adds and does not add. Added explicit sentence: "does not independently validate the cautious-only Dn < 0.5 branch."
 
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`
+3. **Traceability note:** Compressed from 3 paragraphs to 3 sentences. Removed internal repo phase labels and file paths from the main narrative. Kept P7 exclusion rationale and audit-trail reference.
+
+4. **Running prose:** Changed "confirmed-cautious passes" / "confirmed-cautious comparators" to "retained with documented caveats" / "retained under caveat" in running text. Ledger table status column unchanged for consistency.
+
+5. **Exact supportable statements §3–4:** Tightened to match revised external recurrence wording.
 
 ## Files modified
 
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — 5 targeted edits
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `docs/LLM_HANDOFF.md` — per instructions
-- `docs/NEXT_QUESTION.md` — per instructions
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — per instructions
-- `docs/PHASE_4B_RESULTS_FREEZE.md` — per instructions
-- All Phase 3A/3B/4A evidence values — unchanged
-- All frozen figures, configs, pipeline code — unchanged
+- `docs/LLM_HANDOFF.md` — current stage status unchanged
+- `docs/NEXT_QUESTION.md` — no change needed
+- All frozen evidence values, configs, pipeline code — unchanged
 
 ## Impact
 
-Writing-layer only. No scientific content, evidence values, or control state changed. The thesis block is ready for integration into a thesis or paper draft.
-
-## Decisions this round
-
-- **Green taken:** thesis block structure, paragraph composition, ledger layout, figure references
-- **Yellow taken:** none
-- **Red detected:** none
+Writing-layer only. The thesis block is now less likely to overclaim on: lower-Dp physical relevance, external recurrence strength, and repo-internal process language. No scientific substance changed.
