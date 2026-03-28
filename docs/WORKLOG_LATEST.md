@@ -1,42 +1,38 @@
 # Worklog — Latest Round
 
-**Date:** 2026-03-27
-**Round:** Phase 4A — Independent low-Dn recurrence test
+**Date:** 2026-03-28
+**Round:** Phase 4B — Results freeze for thesis integration
 
 ## What changed
 
-Executed Phase 4A: systematic search for independent THEMIS candidates outside the current six-pass bank. Searched THD 2008-09, THE 2008, THD 2010 (every other day, SZA < 40°, Dp > 2.5 nPa). Found 6 candidates with dual-bin potential; ran 4 through the full frozen pipeline. 2 PASS, 2 FAIL_OCCUPANCY.
-
-Key result: THE Sep 19 2008 produces Dn = 0.76 on a cross-probe independent pass, below the clean-core floor (0.94). No independent candidate reaches Dn < 0.5.
+Froze the completed comparator + independent recurrence branch into a writing-safe integration layer. Created the Phase 4B freeze document with: branch status, exact strongest claims, exact non-claims, external recurrence explanation, writing-safe results block (thesis paragraph, paper paragraph, safe sentences, do-not-say examples), and stop condition. Updated all control files to reflect frozen state.
 
 ## Files created
 
-- `docs/PHASE_4A_INDEPENDENT_LOWDN_RECURRENCE.md` — full analysis
-- `reports/current_bank/phase4a_lowdn_recurrence_report.md` — compact report
-- `reports/current_bank/figures/phase4a_lowdn_recurrence.png` — Dn/EB figure with independent candidates
-- `runs/20260327T221306Z_227f7e3f/evidence/csv/phase4a_candidate_shortlist.csv` — machine-readable shortlist
-- `runs/20260327T221306Z_227f7e3f/` — run outputs (4 encounter JSONs, 4 QC PNGs)
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — full freeze document with writing-safe results block
+- `reports/current_bank/phase4b_results_freeze_report.md` — compact freeze report
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — stage updated to Phase 4A complete
-- `docs/LLM_HANDOFF.md` — milestone updated, Phase 4A block added
+- `docs/LLM_HANDOFF.md` — milestone updated to frozen state; Phase 4B block added
+- `docs/NEXT_QUESTION.md` — replaced with post-freeze control state (no active question)
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — Phase 3A packet; Phase 4A results are separate
-- All Phase 3A/3B documents — evidence values unchanged
-- `configs/pilot_live_usable.yaml` — main bank config unchanged; no candidate auto-admitted
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — per instructions
+- All Phase 3A/3B/4A evidence values, documents, and artifacts — unchanged
+- `configs/pilot_live_usable.yaml` — main bank config unchanged
 - All frozen core pipeline code — unchanged
+- THE Sep 19 status — kept as external recurrence, not admitted
 
 ## Impact
 
-One cross-probe recurrence of Dn < 1 found. Dn < 0.5 remains cautious-only. The independent candidate is not less caveated than P1/P3.
+Documentation-only. No scientific evidence values changed. THE Sep 19 remains external recurrence. The branch is now writing-safe for thesis integration. Any future scientific move requires a new red-level user decision.
 
 ## Decisions this round
 
-- **Green taken:** search-space selection, candidate window placement, figure layout
+- **Green taken:** document structure, paragraph drafting within frozen ceiling, control-file updates
 - **Yellow taken:** none
-- **Red applied:** Phase 4A authorization (user decision from prior round)
-- **Red detected for next round:** whether to admit THE Sep 19 to the main bank (user decision required)
+- **Red applied:** Phase 4B authorization (user decision from this round's prompt)
+- **Red detected for next round:** all future scientific moves require user authorization

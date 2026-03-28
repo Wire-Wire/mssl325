@@ -1,35 +1,33 @@
 # Next Question
 
-**Stage:** Phase 4A complete. Awaiting user review.
+**Stage:** Branch frozen (Phase 4B). Post-freeze control state.
+
+## Status
+
+The comparator + independent recurrence branch is now frozen for thesis/results integration. The six-pass interpretable bank and one external cross-probe recurrence (THE Sep 19) are writing-safe. No further same-apparatus search, detector work, threshold work, or class language is authorized under the current frozen apparatus.
 
 ## Active question
 
-Phase 4A independent low-Dn recurrence test is complete. One cross-probe recurrence found (THE Sep 19, Dn = 0.76) below the clean-core floor but above the cautious range. No independent recurrence of Dn < 0.5. What is the next bounded stage?
+None. The branch is frozen. Any future scientific move requires a new red-level user decision.
 
-## Outcome of Phase 4A
+## What would require a new red-level user decision
 
-- 4 independent candidates tested (2 cross-probe THE, 1 different-year THD 2010, 1 same-probe different-date)
-- 2 PASS, 2 FAIL_OCCUPANCY
-- THE Sep 19 2008: Dn = 0.76, below clean-core floor (0.94), cross-probe independence
-- THD Oct 23 2010: Dn = 1.30, not low-Dn
-- No independent candidate reaches Dn < 0.5
-- Dn < 0.5 remains cautious-only under the current apparatus
+1. A fundamentally different search space (different orbital geometry, different plasma product, relaxed measurement model)
+2. Admission of THE Sep 19 or any other candidate to the main bank
+3. Any detector, threshold, or classification work
+4. Any bank expansion beyond the current frozen six-pass bank
+5. MMS thickness, SMILE/SXI prior, or mission-translation work
+6. Any reinterpretation of the current evidence hierarchy
 
-## Allowed this round
+## Allowed without escalation (green)
 
-- User review of Phase 4A results
-- Decision on next bounded stage
-- Decision on whether THE Sep 19 should be admitted to the main bank (red decision)
-
-## Forbidden this round
-
-- Thresholds, labels, detector semantics, dev-set membership
-- Auto-admission of any candidate to the main bank
-- Changes to the frozen measurement model
+- Thesis writing and figure preparation using the frozen results block
+- Report formatting and artifact completion
+- Wording harmonization within the frozen ceiling
 
 ## Decision mode
 
-- `decision_mode`: red (next-stage decision requires user authorization)
-- `auto_decision_scope`: green actions only
-- `escalate_if`: any proposed next step
+- `decision_mode`: frozen (no active question; branch is at rest)
+- `auto_decision_scope`: green actions only (writing, formatting)
+- `escalate_if`: any scientific move whatsoever
 - `final_owner_if_escalated`: User

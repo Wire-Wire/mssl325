@@ -10,7 +10,11 @@
 
 ## Current milestone
 
-Phase 4A complete. One cross-probe recurrence found (THE Sep 19, Dn = 0.76) below clean-core floor but not in cautious range. Dn < 0.5 remains cautious-only. Six-pass bank + 1 independent candidate. No thresholds, no labels.
+**Branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration. No thresholds, no labels, no detector semantics.
+
+**Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
+
+**Strongest non-claim:** No physical identification, no threshold, no generalization beyond compressed-sheath THD conditions. THE Sep 19 is external recurrence only, not admitted to the main bank.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -238,6 +242,20 @@ Completed. Descriptive only. No thresholds or labels.
 **Report:** `reports/current_bank/phase4a_lowdn_recurrence_report.md`
 **Shortlist:** `runs/20260327T221306Z_227f7e3f/evidence/csv/phase4a_candidate_shortlist.csv`
 **Figure:** `reports/current_bank/figures/phase4a_lowdn_recurrence.png`
+
+## Phase 4B: Results freeze (2026-03-28)
+
+**Comparator + recurrence branch frozen for thesis integration.**
+
+- Six-pass interpretable bank: frozen (P2/P4/P5/P6 clean core + P1/P3 confirmed-cautious; P7 excluded)
+- THE Sep 19 (Dn = 0.76): external recurrence record only; not admitted to bank
+- Writing-safe results block: thesis paragraph, paper paragraph, 5 safe sentences, 5 do-not-say examples
+- Stop condition: no renewed same-apparatus search, no detector work, no class language under current apparatus
+
+**Full freeze:** `docs/PHASE_4B_RESULTS_FREEZE.md`
+**Report:** `reports/current_bank/phase4b_results_freeze_report.md`
+
+**Any future scientific move requires a new red-level user decision outside the current frozen apparatus.**
 
 ## Commands
 
