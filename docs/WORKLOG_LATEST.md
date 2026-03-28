@@ -1,53 +1,50 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-28
-**Round:** MMS event-package readiness audit (3 primaries)
+**Round:** MMS-P1 first thickness attempt (P1 only, narrowed from P1+P3 bundle)
 
 ## What changed
 
-Performed detailed event-level reportability analysis for MMS-P1, MMS-P2, and MMS-P3. For each: verified 4-spacecraft FGM/FPI completeness, computed boundary-model distance to MP, checked for beta transition, density transition, and B-field rotation signatures, and assessed boundary-adjacency plausibility. Generated evidence panels and per-event cards.
+Executed a full single-event thickness attempt on MMS-P1 (2015-11-12). Fetched all 4 MMS spacecraft FGM survey data and MMS1 FPI ions for a focused 2-hour window. Identified the main near-MP gradient interval (~5 min, |B| drops 28 nT, density drops 10 cm⁻³). Attempted MVA normal estimation and 4-SC timing normal. Both failed due to structural scale mismatch: the ~10 km Phase 1 tetrahedron separation is ~100× smaller than the observed gradient spatial scale (~750–3750 km).
 
-## Verdicts
+## Outcome
 
-- **MMS-P1 (2015-11-12): ADVANCE** — 0.4 Re from MP, clear boundary crossing, all preflights feasible
-- **MMS-P2 (2015-12-12): HOLD** — 1.8 Re from MP, no density transition to magnetospheric levels, boundary adjacency not plausible
-- **MMS-P3 (2016-12-26): ADVANCE** — boundary-adjacent with motion caveat, strongest gradient, all preflights feasible
+**do_not_report.** No defensible thickness value. No quality grade assigned.
 
-Reserve MMS-R1 untouched. No thickness values produced.
+### Method results
+- Lt (timing-based): NOT defensible — no reliable normal direction (MVA poorly constrained λ₂/λ₁ = 3.0, 70° from expected; timing degenerate)
+- Lg (gradient-scale): NOT defensible — separation (~10 km) << gradient scale (~1000 km)
+- Representative event thickness: NOT justified (both paths fail)
+
+### What was learned
+A clear near-MP gradient exists but is too spatially extended for Phase 1 methods. This is a general Phase 1 scale-mismatch limitation, not P1-specific.
 
 ## Files created
 
-- `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md` — full audit document
-- `reports/mms_event_packages/mms_event_package_readiness_report.md` — compact report
-- `reports/mms_event_packages/readiness_matrix.csv` — machine-readable
-- `reports/mms_event_packages/events/MMS-P1_20151112.md` — event card
-- `reports/mms_event_packages/events/MMS-P2_20151212.md` — event card
-- `reports/mms_event_packages/events/MMS-P3_20161226.md` — event card
-- `reports/mms_event_packages/figures/mms_20151112_evidence_panel.png`
-- `reports/mms_event_packages/figures/mms_20151212_evidence_panel.png`
-- `reports/mms_event_packages/figures/mms_20161226_evidence_panel.png`
+- `docs/MMS_P1_FIRST_THICKNESS_ATTEMPT.md` — full analysis document
+- `reports/mms_p1_first_thickness/mms_p1_first_thickness_report.md` — compact report
+- `reports/mms_p1_first_thickness/p1_thickness_attempt_summary.json` — machine-readable summary
+- `reports/mms_p1_first_thickness/p1_analysis_raw.json` — raw analysis outputs
+- `reports/mms_p1_first_thickness/figures/p1_evidence_panel.png` — evidence panel
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — post-audit decision state
-- `docs/LLM_HANDOFF.md` — readiness audit block added
+- `docs/NEXT_QUESTION.md` — updated to do_not_report outcome
+- `docs/LLM_HANDOFF.md` — MMS-P1 thickness attempt block added
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
 - THEMIS frozen branch (all docs, values, configs)
-- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` — no correction needed
-- `docs/MMS_EVENT_SHORTLIST.md` — historical input, not modified
-- Reserve MMS-R1 — untouched
-- Pipeline code, configs
-
-## Impact
-
-MMS branch advanced from shortlist to event-package stage. 2 of 3 primaries earn a later thickness attempt. No THEMIS evidence changed. No MMS thickness values generated.
+- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md`
+- `docs/MMS_EVENT_SHORTLIST.md`
+- `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md`
+- MMS-P3 event card, MMS-P2, reserve MMS-R1
+- Pipeline code, configs, frozen figures
 
 ## Decisions this round
 
-- **Green taken:** evidence panel layout, card structure, matrix fields
+- **Green taken:** analysis window selection, figure layout, method execution details
 - **Yellow taken:** none
-- **Red applied:** event-package readiness authorization (user decision)
-- **Red detected for next round:** thickness attempt on ADVANCE events requires user authorization
+- **Red applied:** P1-only thickness attempt authorization (user decision)
+- **Red detected for next round:** whether to attempt P3, search Phase 2 candidates, or pause MMS branch

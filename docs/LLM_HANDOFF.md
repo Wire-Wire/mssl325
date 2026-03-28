@@ -313,7 +313,29 @@ Reserve MMS-R1 untouched. MMS-P2 on hold.
 **Full audit:** `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md`
 **Event cards:** `reports/mms_event_packages/events/`
 
-**Next:** First thickness attempt on MMS-P1 and MMS-P3 requires user authorization.
+### MMS-P1 first thickness attempt (2026-03-28)
+
+**User-authorized (P1 only, not P1+P3 bundle).** Full single-event thickness attempt on MMS-P1.
+
+**Outcome: do_not_report.**
+
+The MMS Phase 1 tetrahedron separation (~10 km) is ~100× smaller than the observed near-MP gradient spatial scale (~750–3750 km). Both timing-based and gradient-scale thickness paths fail:
+- MVA normal: poorly constrained (λ₂/λ₁ = 3.0), 70° from expected direction
+- Timing normal: degenerate (4-SC separation too small for this crossing timescale)
+- Lt: not defensible (no reliable normal)
+- Lg: not defensible (separation << gradient scale)
+
+**A clear gradient exists** (|B| drops ~28 nT, density drops ~10 cm⁻³ over ~5 min) but the structure is too spatially extended for Phase 1 methods.
+
+**This is a structural Phase 1 scale-mismatch limitation**, not a data-quality failure. It likely applies to any MMS Phase 1 dayside event with similarly extended gradient layers.
+
+**No reportable thickness. No quality grade. P3 untouched. Reserve untouched.**
+
+**Full analysis:** `docs/MMS_P1_FIRST_THICKNESS_ATTEMPT.md`
+**Report:** `reports/mms_p1_first_thickness/mms_p1_first_thickness_report.md`
+**Summary:** `reports/mms_p1_first_thickness/p1_thickness_attempt_summary.json`
+
+**Next:** MMS branch paused pending user decision on whether to attempt P3, search Phase 2, or pause entirely.
 
 ## Commands
 
