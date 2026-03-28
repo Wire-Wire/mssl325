@@ -1,33 +1,36 @@
 # Next Question
 
-**Stage:** Branch frozen (Phase 4B). Post-freeze control state.
+**Stage:** MMS thickness branch opened — methods-scaffold only.
 
-## Status
+## Branch status
 
-The comparator + independent recurrence branch is now frozen for thesis/results integration. The six-pass interpretable bank and one external cross-probe recurrence (THE Sep 19) are writing-safe. No further same-apparatus search, detector work, threshold work, or class language is authorized under the current frozen apparatus.
+- **THEMIS comparator branch:** frozen (Phase 4B). No changes permitted.
+- **MMS thickness branch:** opened at methods-scaffold stage. No events shortlisted. No pilot results. No thickness values.
 
 ## Active question
 
-None. The branch is frozen. Any future scientific move requires a new red-level user decision.
+The MMS thickness method scaffold is complete. The next decision is whether to authorize:
+- an MMS event shortlist round (identifying 3–5 candidate near-MP gradient intervals), OR
+- a specific follow-up to the scaffold itself
 
 ## What would require a new red-level user decision
 
-1. A fundamentally different search space (different orbital geometry, different plasma product, relaxed measurement model)
-2. Admission of THE Sep 19 or any other candidate to the main bank
-3. Any detector, threshold, or classification work
-4. Any bank expansion beyond the current frozen six-pass bank
-5. MMS thickness, SMILE/SXI prior, or mission-translation work
-6. Any reinterpretation of the current evidence hierarchy
+1. Moving to an MMS event shortlist or pilot execution
+2. Any MMS thickness value reported
+3. Any connection between MMS results and the frozen THEMIS branch
+4. Any detector, threshold, or classification work on either branch
+5. SMILE/SXI prior or mission-translation work
+6. Bank expansion or reinterpretation of the frozen THEMIS evidence
 
 ## Allowed without escalation (green)
 
-- Thesis writing and figure preparation using the frozen results block
-- Report formatting and artifact completion
-- Wording harmonization within the frozen ceiling
+- Wording refinement of the scaffold document
+- Schema corrections if errors are found
+- Thesis writing using the frozen THEMIS results block
 
 ## Decision mode
 
-- `decision_mode`: frozen (no active question; branch is at rest)
-- `auto_decision_scope`: green actions only (writing, formatting)
-- `escalate_if`: any scientific move whatsoever
+- `decision_mode`: red (MMS event shortlist requires user authorization)
+- `auto_decision_scope`: green actions only
+- `escalate_if`: any move toward event selection, thickness computation, or branch integration
 - `final_owner_if_escalated`: User

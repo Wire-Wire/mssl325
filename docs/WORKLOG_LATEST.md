@@ -1,35 +1,39 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-28
-**Round:** Thesis block wording revision (writing-safe repair only)
+**Round:** MMS thickness branch — methods-scaffold only
 
 ## What changed
 
-Revised `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` to address five targeted wording issues identified by external scientific review. No scientific evidence values, bank membership, or stage status changed.
+Opened an independent MMS thickness branch at methods-scaffold stage by user-authorized red-level decision. Created `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` containing: branch scope/separation, eligibility gate, start/end feature menu, normal-estimation hierarchy, two fixed thickness definitions (timing + gradient), uncertainty ledger, event quality grading, per-event evidence package requirements, event-registry schema template, and explicit stop condition.
 
-## Wording repairs made
+Updated control files to reflect the new dual-branch state (THEMIS frozen + MMS scaffold open).
 
-1. **Limitations §1:** Removed "lower-Dp conditions may be more relevant for classical magnetic pileup under reduced reconnection rates" — replaced with "lower-Dp conditions are structurally excluded … not assessed here." This prevents the results block from implying a physics inference not directly established by the frozen comparator results.
+## Files created
 
-2. **External recurrence section:** Restructured to lead with "one external recurrence record exists outside the main bank" before stating what it adds and does not add. Added explicit sentence: "does not independently validate the cautious-only Dn < 0.5 branch."
-
-3. **Traceability note:** Compressed from 3 paragraphs to 3 sentences. Removed internal repo phase labels and file paths from the main narrative. Kept P7 exclusion rationale and audit-trail reference.
-
-4. **Running prose:** Changed "confirmed-cautious passes" / "confirmed-cautious comparators" to "retained with documented caveats" / "retained under caveat" in running text. Ledger table status column unchanged for consistency.
-
-5. **Exact supportable statements §3–4:** Tightened to match revised external recurrence wording.
+- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` — full methods scaffold
 
 ## Files modified
 
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — 5 targeted edits
+- `docs/NEXT_QUESTION.md` — updated to MMS branch-starter state
+- `docs/LLM_HANDOFF.md` — milestone updated; MMS branch section added
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `docs/LLM_HANDOFF.md` — current stage status unchanged
-- `docs/NEXT_QUESTION.md` — no change needed
-- All frozen evidence values, configs, pipeline code — unchanged
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — THEMIS branch, frozen
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen
+- All frozen THEMIS evidence values, configs, pipeline code, figures — unchanged
+- No MMS event results generated (scaffold only)
 
 ## Impact
 
-Writing-layer only. The thesis block is now less likely to overclaim on: lower-Dp physical relevance, external recurrence strength, and repo-internal process language. No scientific substance changed.
+Branch-definition only. No scientific evidence values changed on either branch. No MMS events shortlisted or analyzed. The scaffold establishes operational gates, definitions, and templates for a future MMS pilot round if authorized.
+
+## Decisions this round
+
+- **Green taken:** scaffold structure, section ordering, gate definitions, schema design
+- **Yellow taken:** none
+- **Red applied:** MMS branch opening (user decision)
+- **Red detected for next round:** MMS event shortlist requires user authorization

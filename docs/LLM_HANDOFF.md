@@ -10,7 +10,9 @@
 
 ## Current milestone
 
-**Branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration. No thresholds, no labels, no detector semantics.
+**THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration.
+**MMS branch opened** at methods-scaffold stage only. No events, no results.
+No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
 
@@ -255,7 +257,28 @@ Completed. Descriptive only. No thresholds or labels.
 **Full freeze:** `docs/PHASE_4B_RESULTS_FREEZE.md`
 **Report:** `reports/current_bank/phase4b_results_freeze_report.md`
 
-**Any future scientific move requires a new red-level user decision outside the current frozen apparatus.**
+**Any future scientific move on the THEMIS branch requires a new red-level user decision.**
+
+## MMS thickness branch (2026-03-28)
+
+**User-authorized.** Independent branch opened at methods-scaffold stage only.
+
+**Status:** Methods scaffold complete (`docs/MMS_THICKNESS_METHOD_SCAFFOLD.md`). No event shortlist. No pilot results. No thickness values.
+
+**What the scaffold defines:**
+- Thickness-eligibility gate (geometry, data, tetrahedron, upstream, gradient)
+- Start/end feature menu and feature-pairing rules
+- Normal-estimation hierarchy with cross-check requirements
+- Two fixed thickness definitions (timing-based + gradient-scale)
+- Uncertainty ledger and `L ± σ` combination design
+- Event quality grading (Gold / Silver / Bronze / do not report)
+- Minimum per-event evidence package
+- Event-registry schema (template, no events registered)
+- Explicit stop condition and THEMIS branch separation
+
+**What the scaffold does NOT do:** shortlist events, compute thickness values, validate THEMIS results, or define physical classes.
+
+**Next:** MMS event shortlist requires another explicit user decision.
 
 ## Commands
 
