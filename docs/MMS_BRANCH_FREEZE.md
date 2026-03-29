@@ -49,10 +49,37 @@ The basis reset confirmed that this scale mismatch is structural: MMS Phase 2 se
 6. Neither timing-based nor gradient-scale definitions yielded a reportable result.
 7. The current shortlist/readiness basis did not include a separation–scale match gate, which is necessary to avoid future scale-mismatch failures.
 
+### Root-cause decomposition
+
+The failure is driven by three interacting causes, not only the geometric mismatch:
+
+**Primary cause — geometric scale mismatch.** The structure to be measured (~750–3750 km) exceeds the tetrahedron separation (~10–34 km) by 40–100×. In the multi-spacecraft timing literature, timing/triangulation error is controlled by whether crossing times can be stably and unambiguously marked and whether the formation geometry provides adequate baseline. When the crossing-time uncertainty is comparable to the inter-spacecraft time delay, the normal and speed become indefensible, and thickness follows.
+
+**Contributing cause — method applicability domain.** The timing method's classical assumptions (approximately 1-D, planar boundary moving at constant speed, with unambiguous per-spacecraft passage-time identification) are not met for a broad, possibly non-planar gradient region. The four-point gradient/reciprocal-vector methods amplify relative error when the measured inter-spacecraft differences are small compared to measurement noise — exactly the regime encountered when separation is much smaller than the gradient scale.
+
+**Contributing cause — object-definition ambiguity.** The target structure is a broad near-MP gradient/transition/pileup-depletion region, not a thin current sheet or sharp discontinuity. Published PDL studies note that the outer boundary of the depletion layer is typically not sharp and that defining it carries inherent arbitrariness (whether by depletion factor, beta criterion, or N/B ratio). MMS was designed for thin-structure resolution at electron-kinetic scales, not for spatially extended gradient layers.
+
+### Literature-grounded scale expectation
+
+The observed gradient scale (~750–3750 km, or ~0.12–0.59 Re) is consistent with published PDL/pileup thickness estimates across multiple missions and epochs: classical theory predicted depletion layers of ~700–1300 km under certain parameters (Zwan & Wolf 1976); observational estimates range from ~0.1 Re (ISEE straight crossings) to ~0.6–1 Re in individual case studies. The observed scale at MMS-P1 is not anomalous — it is typical for this class of structure.
+
 ### What the failure most likely means
 
 8. The failure is not event-specific. Any near-MP gradient layer with a spatial scale much larger than the tetrahedron separation (~100+ km) would produce the same outcome under MMS Phase 1/2.
 9. Viable thickness measurement under the current scaffold methods would require either much larger inter-spacecraft separations (Cluster-scale, ~100–10,000 km) or events with much sharper structure (sub-100 km gradient scale).
+
+### Closed continuation routes
+
+An independent literature review confirmed that no viable continuation route exists under the current basis:
+
+| Route | Assessment |
+|---|---|
+| Continue current shortlist (more Phase 1/2 events) | Same separation, same scale mismatch. High probability of repeating do_not_report. |
+| Refine MVA/normal methods | Cannot overcome a physical configuration mismatch. Published MMS boundary studies confirm that non-planar, non-stationary boundaries cause normal-method disagreement systematically. |
+| Use OMNI/model distance as geometric truth | OMNI is a propagated/time-shifted L1 product with documented representativeness limitations. Magnetopause model accuracy has a theoretical ceiling imposed by upstream propagation uncertainty. Neither constitutes event-level geometric truth. |
+| Switch to MMS current-sheet thickness (thin-layer target) | Methodologically viable and well-matched to MMS separation. But this answers a different scientific question (current-sheet structure, not broad gradient-layer thickness). |
+| Downgrade deliverable to operational effective width | Reduces the claim but still depends on boundary-definition choices and model/propagation geometry. Medium risk of circularity. |
+| Switch mission (e.g. Cluster) | Scale-matched but constitutes a new project outside current scope. |
 
 ### What remains unknown
 

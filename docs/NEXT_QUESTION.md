@@ -1,37 +1,32 @@
 # Next Question
 
-**Stage:** Frozen-writing-safe mode. Both branches frozen. No active science question.
+**Stage:** Phase 5A THEMIS caseset complete. 5 atlas-usable cards (4 clear + 1 ambiguous).
 
-## Branch status
+## Outcome
 
-- **THEMIS comparator + recurrence:** frozen (Phase 4B). Writing-safe for thesis integration.
-- **MMS thickness:** frozen under current basis. No reportable thickness. Writing-safe as methodological finding.
+Phase 5A created 8 case cards from the frozen THEMIS seed pass. 4 reviewed as clear (P3, P4, P5, EXT), 1 ambiguous (P6), 2 not convincing (P2, P7), 1 screen fail (P1, quasi-radial). No bounded extension was needed. Stop condition met from seed pass alone.
 
 ## Active question
 
-**None.** Both branches are at rest.
+**Authorize Phase 5B as a caseset-conditioned descriptive pass using caseset_summary only, with no new search?**
 
-## Allowed actions (green / yellow)
+Phase 5B would use the structured caseset_summary.json to produce a bounded descriptive conditioning layer (e.g., Dn/EB patterns grouped by clock angle among atlas-usable cases). It would remain descriptive only and thesis-facing.
 
-- Thesis writing, section drafting, figure preparation
-- Documentation harmonization, cross-linking, formatting
-- Protocol cleanup, helper templates, traceability sync
-- Bounded editorial emphasis within frozen scientific ceiling
+**Phase 5B would NOT authorize:**
+- detector work, thresholds, or labels
+- new case search or bank expansion
+- physics-class language
+- conditioned occurrence rates or mechanism inference
+- any change to frozen Phase 4B claims
 
-## Forbidden without explicit user authorization (red)
+## Alternatives
 
-- Reopening any science branch
-- New scientific analysis, search, shortlist, or thickness attempt
-- Detector, threshold, label, or classification work
-- SMILE/SXI or mission-translation work
-- Reinterpretation of frozen evidence or strengthening of frozen claims
-- Any change to bank membership, scientific values, or measurement model
-
-Use `docs/REOPEN_REQUEST_TEMPLATE.md` for any red-level reopen request.
+- Pause after Phase 5A (caseset exists for later use but no conditioned pass is done now)
+- Request broader THEMIS reopen (requires separate justification)
 
 ## Decision mode
 
-- `decision_mode`: frozen-writing-safe
-- `auto_decision_scope`: green + yellow (documentation, protocol, editorial within ceiling)
-- `escalate_if`: any scientific move
+- `decision_mode`: red (Phase 5B requires user authorization)
+- `auto_decision_scope`: green only
+- `escalate_if`: any conditioned analysis, any new search
 - `final_owner_if_escalated`: User

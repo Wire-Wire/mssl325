@@ -1,43 +1,51 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-29
-**Round:** Protocol migration to frozen-writing-safe mode
+**Round:** Phase 5A — THEMIS case-study confirmation set
 
 ## What changed
 
-Migrated the repo control layer from old analysis-stage coordination into a coherent frozen-writing-mode protocol. Implemented new A/B/C/Claude role model. Added control-state precedence. Demoted RUN_REVIEW_PACKET to historical artifact. Created reopen-request template and precedence doc.
+Created a THEMIS case-confirmation atlas from the frozen evidence path. Screened all 7 frozen-bank passes + external recurrence against Phase 5A operational filters (SZA ≤ 30°, non-quasi-radial IMF, upstream stable). Assigned review statuses (clear / ambiguous / not convincing). Generated standardized crossing quicklook figures and case cards.
 
-## Files modified
+## Selection
 
-- `docs/LLM_HANDOFF.md` — top rewritten with precedence table, writing-safe summary separated from historical ledger, collaboration protocol migrated to new model
-- `docs/ROLE_PROTOCOL.md` — full rewrite to new A/B/C model with expanded autonomy
-- `docs/NEXT_QUESTION.md` — normalized to frozen-writing-safe mode
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical-artifact banner added
-- `runs/20260326T040343Z_d0425fd4/evidence/review/RUN_REVIEW_PACKET.md` — mirrored banner synced
-- `docs/CHANGESET_LATEST.md` — updated
-- `docs/WORKLOG_LATEST.md` — this file
+- **Seed pass only.** No bounded extension needed.
+- **Total screened:** 8 (P1–P7 + EXT)
+- **Screen fail:** 1 (P1, quasi-radial cone = 24°)
+- **Clear:** 4 (P3, P4, P5, EXT)
+- **Ambiguous:** 1 (P6 — Dn > 1 but |B|↑ and β↓)
+- **Not convincing:** 2 (P2 — all indicators reversed; P7 — spike-dominated)
+- **Atlas-usable:** 5 (4 clear + 1 ambiguous)
+- **Stop condition:** Preferred target met from seed pass. No extension performed.
+
+## Fallback/coarsening decisions
+
+1. Non-quasi-radial: fallback cutoff cone > 30° (no inherited project cutoff found)
+2. Upstream stability: Dp CV < 0.3 (simple rule-based gate)
+3. Near-MP indicators: Dn < 1 = n down, EB > 1 = |B| up, delta_beta < 0 = beta down
 
 ## Files created
 
-- `docs/REOPEN_REQUEST_TEMPLATE.md` — red-level reopen template
-- `docs/CONTROL_STATE_PRECEDENCE.md` — precedence rules
+- `docs/THEMIS_CASESET.md` — Phase 5A top-level document
+- `reports/themis_caseset/INDEX.md` — case atlas index
+- `reports/themis_caseset/caseset_summary.json` — structured machine-readable summary
+- `reports/themis_caseset/cases/` — 8 case cards (P1–P7 + EXT)
+- `reports/themis_caseset/figures/` — 7 crossing quicklook figures
+
+## Files modified
+
+- `docs/NEXT_QUESTION.md` — updated to post-Phase-5A state
+- `docs/LLM_HANDOFF.md` — Phase 5A sidecar note added
+- `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen THEMIS record
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen thesis block
-- `docs/MMS_BRANCH_FREEZE.md` — frozen MMS record
-- `docs/REPO_NAVIGATION_FOR_THESIS.md` — already current
-- `reports/INDEX.md` — already current
-- All historical phase docs (2B through 4A, MMS stages) — preserved as historical
-- All frozen evidence values, configs, pipeline code, figures, tests — unchanged
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen
+- `docs/MMS_BRANCH_FREEZE.md` — frozen
+- All frozen evidence values, bank membership, configs, pipeline code
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical artifact
 
-## No scientific values changed
+## Impact
 
-All changes are protocol/documentation-layer only. No frozen numerical values, claims, bank membership, evidence hierarchy, or caveat hierarchy was altered.
-
-## Decisions this round
-
-- **Green taken:** precedence doc, reopen template, banner text, protocol structure, role definitions, wording harmonization
-- **Yellow taken:** role-model migration (A/B/C definitions, autonomy expansion, C-mandatory rule) — documented here
-- **Red taken:** none
+Additive caseset layer created. Frozen Phase 4B claims, frozen bank membership, and frozen evidence values are completely unchanged. Phase 5A review statuses are editorial packaging only.

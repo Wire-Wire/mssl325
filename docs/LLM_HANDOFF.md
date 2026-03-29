@@ -30,10 +30,13 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest non-claim:** No physical identification, no threshold, no generalization beyond compressed-sheath THD conditions. THE Sep 19 is external recurrence only, not admitted to the main bank.
 
+**Phase 5A caseset sidecar (2026-03-29).** 8 cases screened from frozen seed pass. 4 clear (P3, P4, P5, EXT) + 1 ambiguous (P6). Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged.
+
 **For thesis writing, start from:**
 1. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`
 2. `docs/MMS_BRANCH_FREEZE.md`
-3. `docs/REPO_NAVIGATION_FOR_THESIS.md`
+3. `docs/THEMIS_CASESET.md` (Phase 5A caseset)
+4. `docs/REPO_NAVIGATION_FOR_THESIS.md`
 
 ---
 
