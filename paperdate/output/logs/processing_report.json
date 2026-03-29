@@ -1,9 +1,9 @@
 {
-  "run_at": "2026-03-25T19:50:37.658079",
-  "total": 37,
-  "success": 37,
+  "run_at": "2026-03-29T20:55:44.935653",
+  "total": 1,
+  "success": 1,
   "partial_success": 0,
   "failed": 0,
   "skipped": 0,
-  "total_time_s": 1315.48
+  "total_time_s": 170.58
 }

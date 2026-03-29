@@ -3,8 +3,8 @@
 **Generated:** 2026-03-25T20:34:06.666844
 
 ## Summary
-- Total papers: **37**
-- Successfully renamed: **37**
+- Total papers: **38**
+- Successfully renamed: **38**
 - Papers with naming uncertainty: **0**
 
 ## Naming Scheme
@@ -88,6 +88,7 @@ The mapping files provide full traceability from old → new names.
 | 35 | `2022_zhang_dayside-transient-phenomena-magnetosphere-ionosphere` | 2022 | zhang | high |
 | 36 | `2019_vokhmyanin_omni-imf-data-quality-evaluation` | 2019 | vokhmyanin | high |
 | 37 | `2016_steegen_multiverse-analysis-transparency` | 2016 | steegen | high |
+| 38 | `1993_paschmann_dayside-magnetopause-structure-low-magnetic-shear` | 1993 | paschmann | high |
 
 ## Uncertainties
-None — all 37 papers have high-confidence naming.
+None — all 38 papers have high-confidence naming.

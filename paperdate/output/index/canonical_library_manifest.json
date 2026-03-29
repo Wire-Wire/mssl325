@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-25T20:34:06.666844",
   "naming_scheme": "YYYY_firstauthor_short-title-keywords",
-  "total_papers": 37,
+  "total_papers": 38,
   "renamed": 37,
   "uncertain": 0,
   "papers": [
@@ -263,6 +263,17 @@
       "year": 2016,
       "first_author": "steegen",
       "confidence": "high"
+    },
+    {
+      "canonical_basename": "1993_paschmann_dayside-magnetopause-structure-low-magnetic-shear",
+      "year": 1993,
+      "first_author": "paschmann",
+      "title_keywords": "dayside-magnetopause-structure-low-magnetic-shear",
+      "original_filename": "Paschmann JGR1993- Structure of the dayside magnetopause for low shear.pdf",
+      "confidence": "high",
+      "source": "manual_addition",
+      "full_title": "Structure of the dayside magnetopause for low magnetic shear",
+      "journal": "Journal of Geophysical Research"
     }
   ]
 }
