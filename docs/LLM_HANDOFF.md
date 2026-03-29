@@ -1,7 +1,7 @@
 # LLM Handoff — PDL Pilot Pipeline
 
 **Load this first when resuming in a new session.**
-**Mode: frozen-writing-safe.** Both branches frozen. No active science question.
+**Mode: frozen-writing-safe.** Both branches frozen. Phase 5A/5B sidecars complete. No active science question.
 
 ---
 
@@ -30,7 +30,7 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest non-claim:** No physical identification, no threshold, no generalization beyond compressed-sheath THD conditions. THE Sep 19 is external recurrence only, not admitted to the main bank.
 
-**Phase 5A caseset sidecar (2026-03-29).** 8 cases screened from frozen seed pass. 4 clear (P3, P4, P5, EXT) + 1 ambiguous (P6). Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged.
+**Phase 5A/5B caseset sidecars (2026-03-29).** 8 cases screened from frozen seed pass. 4 reviewed as clear (P3, P4, P5, EXT) + 1 reviewed as ambiguous (P6). Phase 5B grouped these by clock-angle bin: atlas-usable cases appear in 60–120° and >120° bins only; the sole <60° screened case is reviewed as not convincing. Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged. See `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`.
 
 **For thesis writing, start from:**
 1. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`

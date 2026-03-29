@@ -1,0 +1,76 @@
+{
+  "phase": "5B",
+  "source": "caseset_summary.json (8 records)",
+  "total_screened": 8,
+  "total_atlas_usable": 5,
+  "groups": [
+    {
+      "clock_group": "<60",
+      "screened_ids": [
+        "P2"
+      ],
+      "atlas_usable_ids": [],
+      "n_screened": 1,
+      "n_atlas_usable": 0,
+      "review_statuses": {
+        "not_convincing": [
+          "P2"
+        ]
+      },
+      "indicator_summary": "sole case has all indicators reversed"
+    },
+    {
+      "clock_group": "60-120",
+      "screened_ids": [
+        "P5",
+        "P6"
+      ],
+      "atlas_usable_ids": [
+        "P5",
+        "P6"
+      ],
+      "n_screened": 2,
+      "n_atlas_usable": 2,
+      "review_statuses": {
+        "clear": [
+          "P5"
+        ],
+        "ambiguous": [
+          "P6"
+        ]
+      },
+      "indicator_summary": "P5: n_down+b_up+beta_down (all three); P6: b_up+beta_down only (Dn>1)"
+    },
+    {
+      "clock_group": ">120",
+      "screened_ids": [
+        "P3",
+        "P4",
+        "EXT",
+        "P7",
+        "P1"
+      ],
+      "atlas_usable_ids": [
+        "P3",
+        "P4",
+        "EXT"
+      ],
+      "n_screened": 5,
+      "n_atlas_usable": 3,
+      "review_statuses": {
+        "clear": [
+          "P3",
+          "P4",
+          "EXT"
+        ],
+        "not_convincing": [
+          "P7"
+        ],
+        "screen_fail": [
+          "P1"
+        ]
+      },
+      "indicator_summary": "all 3 atlas-usable have n_down+b_up+beta_down (all three); EXT is external recurrence only"
+    }
+  ]
+}
