@@ -1,35 +1,30 @@
 # Next Question
 
-**Stage:** MMS-P1 first thickness attempt complete. Outcome: do_not_report.
+**Stage:** MMS basis reset complete. Single decision pending.
 
-## What happened
+## Diagnosis outcome
 
-MMS-P1 (2015-11-12) shows a clear near-MP gradient structure, but the MMS Phase 1 tetrahedron separation (~10 km) is approximately two orders of magnitude smaller than the observed gradient spatial scale (~1000 km). Both timing-based and gradient-scale thickness methods fail due to this structural scale mismatch. No thickness value, no quality grade.
-
-This is not a data-quality failure. It is a scale-mismatch structural limitation of MMS Phase 1 dayside operations for spatially extended gradient layers.
+The MMS-P1 scale-mismatch failure is structural: MMS Phase 1/2 separations (10–34 km) are 40–100× smaller than typical near-MP gradient scales (~750–3750 km). No currently identified route (P3 attempt, Phase 2 search, method salvage, or P1 rescue) resolves this mismatch. Phase 2 provides only a 2–3× improvement, which is insufficient.
 
 ## Active question
 
-**Pause MMS thickness branch, or explicitly authorize a different basis for the next attempt?**
+**Approve pausing the MMS thickness branch?**
 
-Options:
-1. **Authorize MMS-P3 (2016-12-26) thickness attempt** — same Phase 1 separation, likely same scale-mismatch issue unless P3's gradient is much sharper
-2. **Search for MMS Phase 2 candidates** (larger separation, post-2018) — requires a new shortlist round with different data source
-3. **Search for sharp/thin-layer events** where the ~10 km separation might be adequate — requires targeted selection criteria different from the current shortlist
-4. **Pause the MMS branch entirely** — accept that the current scaffold + shortlist basis cannot produce defensible thickness under Phase 1 separation
+Pause means:
+- No new shortlist, no new event packages, no new thickness attempts
+- MMS scaffold, shortlist, readiness audit, and P1 attempt preserved as historical records
+- The P1 scale-mismatch result documented as a methodological finding
+- The revised thickness-reportability basis (separation–scale match criterion) documented for future reference
+- Resumption would require a fundamentally different target (Cluster-scale separation, ultra-sharp features, or a different measurement approach)
 
-## Forbidden
+## Alternatives (only if user explicitly rejects pause)
 
-- Automatic rescue loop on P1
-- Automatic move to P3 without user decision
-- Cross-event statistics
-- Physical class labels
-- THEMIS branch integration
-- Thickness values for any event
+- Authorize P3 attempt despite likely same outcome (high risk of going in circles)
+- Propose a Cluster or alternative-mission thickness approach (fundamentally different branch)
 
 ## Decision mode
 
-- `decision_mode`: red (next MMS action requires user authorization)
-- `auto_decision_scope`: green only
-- `escalate_if`: any MMS analysis beyond documentation
+- `decision_mode`: red (pause/resume requires user authorization)
+- `auto_decision_scope`: green only (documentation, formatting)
+- `escalate_if`: any MMS analysis, any new search, any thickness attempt
 - `final_owner_if_escalated`: User

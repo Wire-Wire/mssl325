@@ -1,38 +1,50 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-29
-**Round:** Control-state synchronization patch
+**Round:** MMS thickness-reportability basis reset
 
 ## What changed
 
-Synchronized the top-level LLM_HANDOFF.md milestone and MMS branch header to reflect the actual completed state: MMS branch has advanced through scaffold → shortlist → readiness audit → P1 first thickness attempt (do_not_report). The prior wording still said "scaffold stage only" and "No events, no results."
+Diagnosed the MMS-P1 thickness failure using root-cause analysis and bounded feasibility probes. Built a five-direction comparison matrix. Proposed a revised thickness-reportability basis (separation–scale match criterion). Recommended pausing the MMS branch.
+
+## Key findings
+
+1. **Root cause:** Scale mismatch (~100×) between MMS tetrahedron (~10 km Phase 1, ~25 km Phase 2) and typical near-MP gradient scale (~750–3750 km).
+2. **Feasibility probe:** Phase 2 separations checked via CDAWeb (20–34 km). Only 2–3× improvement. Insufficient.
+3. **Five-direction comparison:** All four non-pause routes face the same structural barrier. P3 would likely produce the same do_not_report. Phase 2 doesn't solve it. Method salvage is not possible for a physical configuration mismatch.
+4. **Revised criterion:** Gradient scale must be within ~10× of tetrahedron separation. This was missing from the original scaffold.
+5. **P1 invalidation:** The current shortlist/readiness basis is invalidated (missing scale-match gate). The methods and the gradient itself are not invalidated.
+
+## Files created
+
+- `docs/MMS_BASIS_RESET.md` — full basis-reset document
+- `reports/mms_basis_reset/mms_basis_reset_report.md` — compact report
 
 ## Files modified
 
-- `docs/LLM_HANDOFF.md` — milestone line 14 and MMS branch header (lines 262-266) updated from stale "scaffold only" to reflect full MMS branch history through P1 do_not_report outcome
+- `docs/NEXT_QUESTION.md` — replaced four-way menu with single pause decision
+- `docs/LLM_HANDOFF.md` — updated milestone; added basis-reset block
 - `docs/WORKLOG_LATEST.md` — this file
 
-## Files inspected and intentionally not changed
+## Files intentionally not changed
 
-- `docs/NEXT_QUESTION.md` — already current (reflects post-P1 decision state)
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical Phase 3A artifact; explicitly preserved per prior instructions
-- `reports/mms_shortlist/mms_event_shortlist_report.md` — historical shortlist record
-- `reports/mms_event_packages/mms_event_package_readiness_report.md` — historical readiness record
-- `reports/current_bank/INDEX.md` — THEMIS bank index; correct for that branch
-- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen THEMIS record
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen thesis block
-- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` — historical scaffold definition
-- `docs/MMS_EVENT_SHORTLIST.md` — historical shortlist record
-- `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md` — historical readiness record
-- `docs/MMS_P1_FIRST_THICKNESS_ATTEMPT.md` — historical P1 attempt record
-- All THEMIS evidence values, configs, pipeline code — unchanged
+- All THEMIS frozen branch docs and values
+- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` — historical scaffold (the gap is documented in the reset, not patched into the scaffold)
+- `docs/MMS_EVENT_SHORTLIST.md`, readiness audit, P1 attempt — historical records
+- Pipeline code, configs, figures
+
+## Feasibility probes used
+
+1. MMS Phase 2 separation check (MMS1/MMS2 position data for 4 dates 2019–2021): found ~20–34 km separations
+2. Sharp/thin-layer probe: not executed (analysis showed the required scale is ~10–100 km, which is discontinuity-like and outside the current scaffold's intended target)
 
 ## Impact
 
-Control-state synchronization only. No scientific content changed. The top-level entry point (LLM_HANDOFF) now accurately reflects both branch states on first read.
+No new thickness values. No new shortlist. No new event packages. The four-way menu is replaced by a single clear recommendation (pause). THEMIS evidence unchanged.
 
 ## Decisions this round
 
-- **Green taken:** wording alignment in milestone and branch header
+- **Green taken:** root-cause structure, comparison matrix layout, probe selection
 - **Yellow taken:** none
-- **Red detected:** none (sync only)
+- **Red applied:** basis-reset authorization (user decision)
+- **Red detected for next round:** pause approval requires user authorization

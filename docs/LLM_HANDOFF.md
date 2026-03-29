@@ -11,7 +11,7 @@
 ## Current milestone
 
 **THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration.
-**MMS branch:** scaffold → shortlist → readiness audit → P1 first thickness attempt (do_not_report). Phase 1 scale mismatch. Next MMS move requires user decision.
+**MMS branch:** scaffold → shortlist → readiness → P1 do_not_report → basis reset. Scale mismatch structural (~100×). Pause recommended.
 No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
@@ -335,7 +335,22 @@ The MMS Phase 1 tetrahedron separation (~10 km) is ~100× smaller than the obser
 **Report:** `reports/mms_p1_first_thickness/mms_p1_first_thickness_report.md`
 **Summary:** `reports/mms_p1_first_thickness/p1_thickness_attempt_summary.json`
 
-**Next:** MMS branch paused pending user decision on whether to attempt P3, search Phase 2, or pause entirely.
+### MMS basis reset (2026-03-29)
+
+**Root cause:** Scale mismatch between MMS tetrahedron (~10–34 km in Phase 1/2) and typical near-MP gradient scale (~750–3750 km). Ratio is ~40–100×. Both Phase 1 and Phase 2 are structurally inadequate for extended gradient layers.
+
+**Feasibility probes:** Phase 2 separations checked (20–34 km). Only 2–3× improvement. Insufficient.
+
+**Five-direction comparison:** P3 attempt (not recommended, same barrier), basis reset (useful for documentation), method salvage (not viable), **pause (recommended)**, P1 rescue (not viable).
+
+**Revised reportability criterion:** Gradient spatial scale must be within ~10× of tetrahedron separation. Current MMS can only resolve ~10–100 km features (Phase 1) or ~25–250 km features (Phase 2).
+
+**Primary recommendation: Pause the MMS thickness branch.** The documented scale-mismatch result is a legitimate methodological thesis contribution.
+
+**Full analysis:** `docs/MMS_BASIS_RESET.md`
+**Report:** `reports/mms_basis_reset/mms_basis_reset_report.md`
+
+**Next:** User decision to approve MMS pause, or explicitly override with an alternative route.
 
 ## Commands
 
