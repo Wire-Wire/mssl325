@@ -11,7 +11,7 @@
 ## Current milestone
 
 **THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration.
-**MMS branch:** scaffold → shortlist → readiness → P1 do_not_report → basis reset. Scale mismatch structural (~100×). Pause recommended.
+**MMS branch frozen.** Scaffold → shortlist → readiness → P1 do_not_report → basis reset → freeze. No reportable thickness. Scale mismatch structural (~100×). Branch closed as methodological finding.
 No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
@@ -261,7 +261,7 @@ Completed. Descriptive only. No thresholds or labels.
 
 ## MMS thickness branch (2026-03-28)
 
-**User-authorized.** Independent branch. Current status: P1 first thickness attempt complete (do_not_report). Next move requires user decision.
+**Independent branch. Frozen under current basis.** No reportable thickness. The P1 scale-mismatch result and revised reportability criterion are documented as methodological findings for thesis use.
 
 **Branch history:** scaffold → shortlist (3 primary + 1 reserve) → readiness audit (P1/P3 advance, P2 hold) → P1-only thickness attempt (do_not_report due to Phase 1 scale mismatch).
 
@@ -350,7 +350,15 @@ The MMS Phase 1 tetrahedron separation (~10 km) is ~100× smaller than the obser
 **Full analysis:** `docs/MMS_BASIS_RESET.md`
 **Report:** `reports/mms_basis_reset/mms_basis_reset_report.md`
 
-**Next:** User decision to approve MMS pause, or explicitly override with an alternative route.
+### MMS branch freeze (2026-03-29)
+
+**MMS branch frozen.** No reportable thickness. The scale-mismatch result and revised reportability criterion are preserved as methodological findings.
+
+**Freeze document:** `docs/MMS_BRANCH_FREEZE.md`
+**Repo navigation:** `docs/REPO_NAVIGATION_FOR_THESIS.md`
+**Reports index:** `reports/INDEX.md`
+
+**Any future MMS reopening requires explicit user authorization.**
 
 ## Commands
 
