@@ -1,50 +1,38 @@
 # Worklog — Latest Round
 
-**Date:** 2026-03-28
-**Round:** MMS-P1 first thickness attempt (P1 only, narrowed from P1+P3 bundle)
+**Date:** 2026-03-29
+**Round:** Control-state synchronization patch
 
 ## What changed
 
-Executed a full single-event thickness attempt on MMS-P1 (2015-11-12). Fetched all 4 MMS spacecraft FGM survey data and MMS1 FPI ions for a focused 2-hour window. Identified the main near-MP gradient interval (~5 min, |B| drops 28 nT, density drops 10 cm⁻³). Attempted MVA normal estimation and 4-SC timing normal. Both failed due to structural scale mismatch: the ~10 km Phase 1 tetrahedron separation is ~100× smaller than the observed gradient spatial scale (~750–3750 km).
-
-## Outcome
-
-**do_not_report.** No defensible thickness value. No quality grade assigned.
-
-### Method results
-- Lt (timing-based): NOT defensible — no reliable normal direction (MVA poorly constrained λ₂/λ₁ = 3.0, 70° from expected; timing degenerate)
-- Lg (gradient-scale): NOT defensible — separation (~10 km) << gradient scale (~1000 km)
-- Representative event thickness: NOT justified (both paths fail)
-
-### What was learned
-A clear near-MP gradient exists but is too spatially extended for Phase 1 methods. This is a general Phase 1 scale-mismatch limitation, not P1-specific.
-
-## Files created
-
-- `docs/MMS_P1_FIRST_THICKNESS_ATTEMPT.md` — full analysis document
-- `reports/mms_p1_first_thickness/mms_p1_first_thickness_report.md` — compact report
-- `reports/mms_p1_first_thickness/p1_thickness_attempt_summary.json` — machine-readable summary
-- `reports/mms_p1_first_thickness/p1_analysis_raw.json` — raw analysis outputs
-- `reports/mms_p1_first_thickness/figures/p1_evidence_panel.png` — evidence panel
+Synchronized the top-level LLM_HANDOFF.md milestone and MMS branch header to reflect the actual completed state: MMS branch has advanced through scaffold → shortlist → readiness audit → P1 first thickness attempt (do_not_report). The prior wording still said "scaffold stage only" and "No events, no results."
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — updated to do_not_report outcome
-- `docs/LLM_HANDOFF.md` — MMS-P1 thickness attempt block added
+- `docs/LLM_HANDOFF.md` — milestone line 14 and MMS branch header (lines 262-266) updated from stale "scaffold only" to reflect full MMS branch history through P1 do_not_report outcome
 - `docs/WORKLOG_LATEST.md` — this file
 
-## Files intentionally not changed
+## Files inspected and intentionally not changed
 
-- THEMIS frozen branch (all docs, values, configs)
-- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md`
-- `docs/MMS_EVENT_SHORTLIST.md`
-- `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md`
-- MMS-P3 event card, MMS-P2, reserve MMS-R1
-- Pipeline code, configs, frozen figures
+- `docs/NEXT_QUESTION.md` — already current (reflects post-P1 decision state)
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical Phase 3A artifact; explicitly preserved per prior instructions
+- `reports/mms_shortlist/mms_event_shortlist_report.md` — historical shortlist record
+- `reports/mms_event_packages/mms_event_package_readiness_report.md` — historical readiness record
+- `reports/current_bank/INDEX.md` — THEMIS bank index; correct for that branch
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen THEMIS record
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen thesis block
+- `docs/MMS_THICKNESS_METHOD_SCAFFOLD.md` — historical scaffold definition
+- `docs/MMS_EVENT_SHORTLIST.md` — historical shortlist record
+- `docs/MMS_EVENT_PACKAGES_READINESS_AUDIT.md` — historical readiness record
+- `docs/MMS_P1_FIRST_THICKNESS_ATTEMPT.md` — historical P1 attempt record
+- All THEMIS evidence values, configs, pipeline code — unchanged
+
+## Impact
+
+Control-state synchronization only. No scientific content changed. The top-level entry point (LLM_HANDOFF) now accurately reflects both branch states on first read.
 
 ## Decisions this round
 
-- **Green taken:** analysis window selection, figure layout, method execution details
+- **Green taken:** wording alignment in milestone and branch header
 - **Yellow taken:** none
-- **Red applied:** P1-only thickness attempt authorization (user decision)
-- **Red detected for next round:** whether to attempt P3, search Phase 2 candidates, or pause MMS branch
+- **Red detected:** none (sync only)

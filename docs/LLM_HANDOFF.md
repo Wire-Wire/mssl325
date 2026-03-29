@@ -11,7 +11,7 @@
 ## Current milestone
 
 **THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration.
-**MMS branch opened** at methods-scaffold stage only. No events, no results.
+**MMS branch:** scaffold → shortlist → readiness audit → P1 first thickness attempt (do_not_report). Phase 1 scale mismatch. Next MMS move requires user decision.
 No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
@@ -261,9 +261,9 @@ Completed. Descriptive only. No thresholds or labels.
 
 ## MMS thickness branch (2026-03-28)
 
-**User-authorized.** Independent branch opened at methods-scaffold stage only.
+**User-authorized.** Independent branch. Current status: P1 first thickness attempt complete (do_not_report). Next move requires user decision.
 
-**Status:** Methods scaffold complete (`docs/MMS_THICKNESS_METHOD_SCAFFOLD.md`). No event shortlist. No pilot results. No thickness values.
+**Branch history:** scaffold → shortlist (3 primary + 1 reserve) → readiness audit (P1/P3 advance, P2 hold) → P1-only thickness attempt (do_not_report due to Phase 1 scale mismatch).
 
 **What the scaffold defines:**
 - Thickness-eligibility gate (geometry, data, tetrahedron, upstream, gradient)
