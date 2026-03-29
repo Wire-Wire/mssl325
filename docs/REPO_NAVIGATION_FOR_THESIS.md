@@ -6,16 +6,31 @@
 
 ## A. Directory map
 
-### Frozen science layers (cite from these)
+### Thesis-entry hub
 
-| Directory | What it contains | Status |
+| Document | Role |
+|---|---|
+| **`docs/THEMIS_THESIS_WRITING_PACK.md`** | **Start here for THEMIS writing.** Source hierarchy, subsection structure, figure/table placement, wording discipline. |
+
+### Frozen science layers (claim-bearing — cite from these)
+
+| Document | What it contains | Status |
 |---|---|---|
-| `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` | **Start here.** Thesis-body results block for THEMIS comparator + recurrence branch. | Frozen, writing-safe |
-| `docs/MMS_BRANCH_FREEZE.md` | MMS branch freeze document with thesis-safe wording block. | Frozen, writing-safe |
-| `docs/PHASE_4B_RESULTS_FREEZE.md` | THEMIS branch freeze with strongest claims/non-claims and safe sentences. | Frozen |
+| `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` | THEMIS results block: evidence ledger, supportable statements, limitations. | Frozen, claim-bearing |
+| `docs/PHASE_4B_RESULTS_FREEZE.md` | THEMIS freeze: strongest claims, non-claims, safe sentences. | Frozen, claim-bearing |
+| `docs/MMS_BRANCH_FREEZE.md` | MMS branch freeze with thesis-safe wording block. | Frozen, claim-bearing (methods/limitation) |
 | `reports/current_bank/` | THEMIS bank evidence: per-pass sheets, figures, comparison reports. | Frozen |
 | `reports/mms_p1_first_thickness/` | MMS-P1 thickness attempt: evidence panel, summary JSON, report. | Frozen |
 | `reports/mms_basis_reset/` | MMS basis-reset diagnosis report. | Frozen |
+
+### Editorial sidecars (illustrative only — do not strengthen frozen claims)
+
+| Document | What it contains | Status |
+|---|---|---|
+| `docs/THEMIS_CASESET.md` | Phase 5A case-atlas: 8 screened cases, review statuses, cards. | Sidecar |
+| `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` | **Active** Phase 5B grouped inventory by clock-angle bin. | Sidecar |
+| `docs/PHASE_5B_CASESET_DESCRIPTIVE_INVENTORY.md` | Older Phase 5B variant — **superseded** for thesis route. | Historical |
+| `reports/themis_caseset/` | Phase 5A cards, figures, caseset_summary.json, grouped_summary.json. | Sidecar data |
 
 ### Historical process records (cite for methods provenance only)
 
@@ -55,17 +70,19 @@
 
 ## B. What to read first when writing
 
-1. **`docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`** — the THEMIS results block. Contains the evidence ledger, exact supportable statements, limitations, and traceability note.
+1. **`docs/THEMIS_THESIS_WRITING_PACK.md`** — the THEMIS thesis-entry hub. Source hierarchy, subsection structure, figure/table placement, wording discipline.
 
-2. **`docs/MMS_BRANCH_FREEZE.md`** — the MMS methods/limitation block. Contains what was learned, what failed, and the safe wording block.
+2. **`docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`** — the THEMIS results block (claim-bearing).
 
-3. **`docs/PHASE_4B_RESULTS_FREEZE.md`** — the THEMIS freeze document with strongest claims and do-not-say examples.
+3. **`docs/PHASE_4B_RESULTS_FREEZE.md`** — the THEMIS freeze with strongest claims, non-claims, and safe sentences.
 
-4. **`reports/current_bank/figures/`** — the two main THEMIS figures:
+4. **`docs/MMS_BRANCH_FREEZE.md`** — the MMS methods/limitation block.
+
+5. **`reports/current_bank/figures/`** — the two main THEMIS figures:
    - `phase3a_dneb_comparison.png` (Dn vs EB comparison)
    - `phase4a_lowdn_recurrence.png` (independent recurrence)
 
-5. **`reports/mms_p1_first_thickness/figures/p1_evidence_panel.png`** — the MMS-P1 evidence panel.
+6. **`docs/THEMIS_CASESET.md`** + **`docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`** — Phase 5A/5B editorial sidecars (illustration only, not claim-bearing).
 
 ---
 
@@ -86,6 +103,8 @@
 |---|---|
 | **Results: THEMIS comparator bank** | `THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`, `PHASE_4B_RESULTS_FREEZE.md` |
 | **Results: figures** | `reports/current_bank/figures/` |
+| **Results: case-atlas illustration** | `THEMIS_CASESET.md`, `PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` (sidecar only) |
+| **Results: appendix cards** | `reports/themis_caseset/cases/` (atlas-usable: P3, P4, P5, EXT, P6) |
 | **Methods: THEMIS measurement model** | `RP/internal_master_research_blueprint_PDL_SMILE.md` §5–6, `src/pdl_pilot/` |
 | **Methods: MMS thickness approach** | `MMS_THICKNESS_METHOD_SCAFFOLD.md`, `MMS_BRANCH_FREEZE.md` |
 | **Discussion: MMS limitation** | `MMS_BRANCH_FREEZE.md` §3–5, `MMS_BASIS_RESET.md` |

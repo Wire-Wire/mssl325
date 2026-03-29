@@ -33,10 +33,10 @@ No thresholds, no labels, no detector semantics on either branch.
 **Phase 5A/5B caseset sidecars (2026-03-29).** 8 cases screened from frozen seed pass. 4 reviewed as clear (P3, P4, P5, EXT) + 1 reviewed as ambiguous (P6). Phase 5B grouped these by clock-angle bin: atlas-usable cases appear in 60–120° and >120° bins only; the sole <60° screened case is reviewed as not convincing. Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged. See `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`.
 
 **For thesis writing, start from:**
-1. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`
-2. `docs/MMS_BRANCH_FREEZE.md`
-3. `docs/THEMIS_CASESET.md` (Phase 5A caseset)
-4. `docs/REPO_NAVIGATION_FOR_THESIS.md`
+1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)
+2. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` (claim-bearing results)
+3. `docs/MMS_BRANCH_FREEZE.md` (MMS methods/limitation)
+4. `docs/REPO_NAVIGATION_FOR_THESIS.md` (full repo map)
 
 ---
 
