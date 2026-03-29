@@ -1,36 +1,52 @@
 # Latest Changeset
 
-**Round:** Phase 3A sign-off wording harmonization
-**Date:** 2026-03-26
+**Round:** Protocol migration to frozen-writing-safe mode
+**Date:** 2026-03-29
 
 ---
 
 ## What changed
 
-Tightened all top-level documents to remove threshold-oriented language inherited from the Phase 2D gate review. Added a literature-constrained rationale block to the RUN_REVIEW_PACKET. This was a wording-only pass; no scientific content changed.
-
-## Created files
-
-(none in this round)
+Migrated the repo control layer from old analysis-stage coordination into a coherent frozen-writing-mode protocol. All frozen scientific boundaries preserved. No scientific values, claims, bank membership, or evidence hierarchy changed.
 
 ## Modified files
 
 | File | Change |
 |---|---|
-| `docs/PHASE_2D_DETECTOR_READINESS_REVIEW.md` | Title changed to "Descriptive-Comparison Readiness Review"; 10 threshold-related phrases replaced with descriptive-comparison language |
-| `docs/LLM_HANDOFF.md` | Milestone updated; Phase 2D section rewritten to remove threshold authorization language |
-| `reports/current_bank/RUN_REVIEW_PACKET.md` | Added section F2: literature-constrained rationale explaining why only descriptive comparison is supported |
-| `runs/.../evidence/review/RUN_REVIEW_PACKET.md` | Synced from reports mirror |
+| `docs/LLM_HANDOFF.md` | Top rewritten: added control-state precedence table, separated writing-safe summary from historical ledger, migrated collaboration protocol to new A/B/C model, removed stale RUN_REVIEW_PACKET-as-live-entry wording |
+| `docs/ROLE_PROTOCOL.md` | Full rewrite: A = section drafter + methods/audit, B = lead integrator + final prompt emitter, C = mandatory science ceiling reviewer, Claude = frozen-writing-safe executor with broader green/yellow autonomy |
+| `docs/NEXT_QUESTION.md` | Normalized to frozen-writing-safe mode with explicit allowed/forbidden actions and reopen-template pointer |
+| `reports/current_bank/RUN_REVIEW_PACKET.md` | Historical-artifact banner added at top, pointing to current authority docs |
+| `runs/.../evidence/review/RUN_REVIEW_PACKET.md` | Mirrored historical banner synced |
+| `docs/CHANGESET_LATEST.md` | This file |
+| `docs/WORKLOG_LATEST.md` | Updated to describe this migration round |
 
-## Key implications for future rounds
+## Created files
 
-1. **Phase 3A is now consistently described as "descriptive only"** across all top-level documents
-2. **No document now authorizes threshold exploration.** Any future threshold-oriented stage would require a new explicit gate decision.
-3. **The RUN_REVIEW_PACKET now contains a literature-grounded rationale** (§F2) citing Walsh 2019, Aghabozorgi 2024, Pi 2024, Michotte de Welle 2024, Zhang 2022, Li 2009, Plaschke 2009, Archer & Horbury 2013, Raptis et al. 2020 for why descriptive comparison is the current ceiling.
+| File | Purpose |
+|---|---|
+| `docs/REOPEN_REQUEST_TEMPLATE.md` | Template for red-level scientific reopen requests |
+| `docs/CONTROL_STATE_PRECEDENCE.md` | Explicit precedence rules for control-state docs |
 
-## What future A/B/C should know first
+## Historical artifacts preserved (not rewritten)
 
-- Read `docs/LLM_HANDOFF.md` (current milestone)
-- Read `reports/current_bank/RUN_REVIEW_PACKET.md` (self-contained review)
-- The active question is in `docs/NEXT_QUESTION.md`
-- All prior decisions are in `docs/DECISION_LOG.md`
+- All Phase 2B/2C/2D/3A/3B/4A/4B stage docs — body content unchanged
+- All MMS stage docs (scaffold, shortlist, readiness, P1 attempt, basis reset, freeze) — unchanged
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — unchanged
+- `docs/PHASE_4B_RESULTS_FREEZE.md` — unchanged
+- `docs/MMS_BRANCH_FREEZE.md` — unchanged
+- `reports/current_bank/` evidence and figures — unchanged
+- All MMS report directories — unchanged
+- Configs, pipeline code, tests — unchanged
+
+## Key protocol changes
+
+1. RUN_REVIEW_PACKET demoted from "main evidence entry for all roles" to "historical Phase 3A artifact"
+2. Old Pro A/B/C model replaced: A = drafter, B = integrator + prompt emitter (not just gatekeeper), C = mandatory for science-facing text
+3. Claude Code given explicit green/yellow documentation autonomy without science autonomy
+4. Control-state precedence formalized: NEXT_QUESTION > WORKLOG > HANDOFF > historical artifacts
+5. Reopen template created for future red-level requests
+
+## No red decisions taken
+
+All changes are protocol/documentation-layer (green/yellow). No frozen scientific values, claims, bank membership, or evidence hierarchy was altered.

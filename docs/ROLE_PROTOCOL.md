@@ -1,51 +1,100 @@
-# Multi-Model Role Protocol
+# Role Protocol — Frozen-Writing-Safe Mode
 
-**Repo-internal coordination protocol for multi-model collaboration.**
+**Current mode:** Both branches frozen. Thesis writing and documentation only.
 
 ---
 
 ## Roles
 
-### Claude Code — Executor
+### A — Section Drafter + Methods/Audit Brain
 
-**Reads first:** `docs/LLM_HANDOFF.md`, then the prompt.
-**Does:** Implements bounded tasks as specified in the prompt. Writes code, generates artifacts, runs tests, produces docs.
-**Must not:** Make science decisions autonomously. Invent labels, thresholds, or detector semantics. Expand scope beyond the prompt. Rename comparator windows into physical classes.
-**Output structure:** Modified/created files + final report with: summary, file tree, commands run, key findings, frozen/provisional/deferred status.
+**Does:** Drafts section skeletons, methods blocks, audit/safeguard text, limitation placement, reviewer-risk notes. May proactively reorganize section logic within the frozen science ceiling. May identify missing inputs, safeguards, and consistency gaps.
+**Does not:** Set final scientific claims. Own final prompt emission. Execute code or edit repo files.
+**Reads first:** `docs/NEXT_QUESTION.md`, `docs/LLM_HANDOFF.md`, frozen thesis/freeze docs.
 
-### ChatGPT Pro A — Design Brain
+### B — Lead Integrator + Final Editorial Brain + Final Claude Prompt Emitter
 
-**Reads first:** `docs/NEXT_QUESTION.md`, `docs/DECISION_LOG.md`, `docs/CHANGESET_LATEST.md`, `docs/LLM_HANDOFF.md`.
-**Does:** Designs the next bounded stage. Drafts the prompt for Claude Code. Defines scope, constraints, deliverables. Ensures the task stays within the current scientific ceiling.
-**Must not:** Execute code. Change repo files directly. Skip the gatekeeper review. Authorize thresholds or labels without explicit human sign-off.
-**Output structure:** Draft prompt + rationale memo. The prompt must include: task framing, hard constraints (frozen/provisional/deferred), required work, success criteria, disallowed scope, final response format.
+**Does:** Integrates A + C outputs. Decides what may enter formal thesis-facing prose now, what must remain limitation/caveat, and what must stay out. Directly emits the final Claude Code prompt. May originate bounded repo-safe execution tasks from scratch within the frozen-writing-safe envelope.
+**Does not:** Override frozen scientific claims. Skip C for science-facing text. Authorize red-level decisions.
+**Reads first:** A draft + C review, `docs/NEXT_QUESTION.md`, `docs/WORKLOG_LATEST.md`.
 
-### ChatGPT Pro B — Gatekeeper / Final Prompt Editor
+### C — Science Ceiling Reviewer
 
-**Reads first:** Pro A's draft prompt, `docs/NEXT_QUESTION.md`, `docs/DECISION_LOG.md`, `docs/RUN_REVIEW_PACKET.md` or the latest `CHANGESET_LATEST.md`.
-**Does:** Reviews the draft prompt for scope creep, wording drift, and constraint violations. Edits the prompt to remove: threshold language, label language, detector-oriented language (unless explicitly authorized by a prior gate decision). Ensures the prompt respects the frozen/provisional/deferred hierarchy.
-**Must not:** Design the task from scratch. Expand scope. Add scientific content. Override human decisions.
-**Output structure:** Edited prompt (final version for Claude Code) + short edit log noting what was changed and why.
+**Does:** Decides what science-facing prose is supportable vs not supportable. Flags overclaiming, overgeneralization, and wording drift. May proactively supply safer substitute wording. **Mandatory** for all science-facing text: results, discussion, abstract, conclusion, claim wording, mission-facing wording.
+**Does not:** Write code. Design prompts. Make operational decisions about repo structure. Override engineering constraints.
+**Reads first:** Frozen thesis/freeze docs, paper library, `docs/PHASE_4B_RESULTS_FREEZE.md`, `docs/MMS_BRANCH_FREEZE.md`.
 
-### ChatGPT Pro C — Science-Only Brain
+### Claude Code — Frozen-Writing-Safe Executor
 
-**Reads first:** `RP/internal_master_research_blueprint_PDL_SMILE.md`, relevant paper-library files, `docs/PHASE_3A_DNEB_EXPLORATORY_COMPARISON.md`, `reports/current_bank/RUN_REVIEW_PACKET.md`.
-**Does:** Provides literature-constrained scientific judgment. Reviews whether repo claims stay within paper-supported limits. Flags wording that over-interprets current evidence. Answers science questions posed by A or B.
-**Must not:** Write code. Design prompts. Make operational decisions about repo structure. Override engineering constraints.
-**Output structure:** Science memo answering the posed question + explicit statement of what the literature does and does not support.
+**Does:** Edits repo files as directed by final prompts from B. May perform coherent multi-file doc migration and consistency repairs in one round without pausing for every small choice. May choose exact wording, file layout, helper docs, and synchronization steps within green/yellow scope. May update adjacent related files for consistency even if not explicitly named, as long as no red boundary is crossed.
+**Does not:** Make red-level science decisions. Introduce thresholds, labels, or detector semantics. Expand scope beyond the prompt. Reopen frozen branches.
+**Must escalate:** Genuine red decisions only.
+
+### User — Final Authority
+
+**Does:** Approves red-level decisions. May reopen frozen branches by explicit authorization. Updates NEXT_QUESTION.md for red decisions.
+**Not required for:** Green or yellow actions within the frozen-writing-safe envelope.
 
 ---
 
-## Coordination flow
+## Authority flow
 
-```
-1. Human decides the next question → updates NEXT_QUESTION.md
-2. Pro A reads the question + current state → drafts a prompt
-3. Pro B reviews the draft → edits for scope/wording discipline → produces final prompt
-4. Claude Code receives the final prompt → executes → produces outputs
-5. Human reviews outputs → updates DECISION_LOG.md and NEXT_QUESTION.md
-6. Pro C consulted as needed for science questions at any step
-```
+**Science-facing or claim-affecting work:**
+A and C may work in parallel → B integrates → B emits final Claude prompt → Claude executes → User handles red decisions only.
+
+**Pure repo-safe / protocol / writing-safe housekeeping:**
+B may send directly to Claude without requiring A/C every time.
+
+---
+
+## Control-state precedence
+
+| Priority | File | Role |
+|---|---|---|
+| 1 | `docs/NEXT_QUESTION.md` | Live control state |
+| 2 | `docs/WORKLOG_LATEST.md` | Latest applied round |
+| 3 | `docs/LLM_HANDOFF.md` | Consolidated project entry |
+| 4 | Historical artifacts | Provenance/audit only — never override live state |
+
+Historical evidence packets (e.g. `RUN_REVIEW_PACKET.md`, old phase memos) are preserved for audit traceability but must never be treated as the current control state.
+
+---
+
+## Delegated decision authority
+
+**Green — automatic, no user escalation:**
+- Protocol cleanup, wording harmonization, file organization
+- Helper template creation, banners, historical demotion headers
+- Thesis-safe section scaffolding from already-frozen docs
+- Changelog / worklog / changeset updates
+- Safe cross-linking among existing frozen docs
+
+**Yellow — delegated, must be recorded in WORKLOG_LATEST:**
+- Bounded editorial emphasis choices within the frozen scientific ceiling
+- Choosing one coherent wording among already-supported frozen phrasings
+- Deciding exact file placement for new helper docs
+- Protocol refinements that do not alter scientific meaning
+- B directly issuing a final Claude prompt for repo-safe writing tasks
+
+**Red — must escalate to user:**
+- Reopening any science branch
+- New search / renewed recurrence / renewed same-apparatus work
+- Detector semantics, thresholds, labels, classes
+- Changing frozen measurement model
+- Changing bank membership / scientific values / evidence hierarchy
+- Expanding bank / adding new probes / seasons / windows
+- Changing frozen claims into stronger claims
+- Making MMS thickness active again
+- Moving beyond frozen-writing-safe mode
+
+**If uncertain whether something is red, treat it as red.**
+
+---
+
+## Naming discipline (all roles)
+
+**Forbidden:** PDL-positive, non-PDL, baseline, control, truth, threshold, threshold candidate, label, dev-set, detector-ready class.
+**Allowed:** comparator window, pass, evidence, caveat, review layer, descriptive comparison, primary evidence, secondary evidence with caveats, excluded from core comparison.
 
 ---
 
@@ -53,15 +102,14 @@
 
 | File | Updated by | When |
 |---|---|---|
-| `docs/NEXT_QUESTION.md` | Human (or Pro A draft, human approves) | After each round |
-| `docs/DECISION_LOG.md` | Claude Code (appends) or Human | After each decision |
+| `docs/NEXT_QUESTION.md` | User (red) or B (green/yellow) | After each round |
+| `docs/WORKLOG_LATEST.md` | Claude Code | After each execution round |
 | `docs/CHANGESET_LATEST.md` | Claude Code | After each execution round |
-| `docs/ROLE_PROTOCOL.md` | Human only | Rarely |
-| `docs/LLM_HANDOFF.md` | Claude Code | After each execution round |
+| `docs/LLM_HANDOFF.md` | Claude Code | After significant state changes |
+| `docs/ROLE_PROTOCOL.md` | User only | Rarely |
 
 ---
 
-## Naming discipline (all roles)
+## Reopen procedure
 
-Use: comparator window, pass, evidence, caveat, review layer, descriptive comparison.
-Never use: PDL-positive, non-PDL, baseline, control, truth, label, dev-set, threshold candidate.
+Any request to reopen a frozen branch must use the template at `docs/REOPEN_REQUEST_TEMPLATE.md` and requires explicit user authorization.

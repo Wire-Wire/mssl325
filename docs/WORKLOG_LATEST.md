@@ -1,39 +1,43 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-29
-**Round:** MMS branch closure/freeze + repo organization for thesis writing
+**Round:** Protocol migration to frozen-writing-safe mode
 
 ## What changed
 
-Formally closed/froze the MMS thickness branch at its current basis. Created a writing-safe MMS freeze document with thesis paragraph, safe sentences, and do-not-say examples. Created a repo navigation guide for thesis writing. Created a top-level reports index. Updated all control files to reflect both-branches-frozen state.
-
-## Files created
-
-- `docs/MMS_BRANCH_FREEZE.md` — MMS branch freeze with thesis-safe wording block
-- `docs/REPO_NAVIGATION_FOR_THESIS.md` — repo navigation map for thesis writing
-- `reports/INDEX.md` — top-level reports index
+Migrated the repo control layer from old analysis-stage coordination into a coherent frozen-writing-mode protocol. Implemented new A/B/C/Claude role model. Added control-state precedence. Demoted RUN_REVIEW_PACKET to historical artifact. Created reopen-request template and precedence doc.
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — replaced open decision with frozen/closed state
-- `docs/LLM_HANDOFF.md` — MMS milestone updated to frozen; MMS freeze block added
+- `docs/LLM_HANDOFF.md` — top rewritten with precedence table, writing-safe summary separated from historical ledger, collaboration protocol migrated to new model
+- `docs/ROLE_PROTOCOL.md` — full rewrite to new A/B/C model with expanded autonomy
+- `docs/NEXT_QUESTION.md` — normalized to frozen-writing-safe mode
+- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical-artifact banner added
+- `runs/20260326T040343Z_d0425fd4/evidence/review/RUN_REVIEW_PACKET.md` — mirrored banner synced
+- `docs/CHANGESET_LATEST.md` — updated
 - `docs/WORKLOG_LATEST.md` — this file
+
+## Files created
+
+- `docs/REOPEN_REQUEST_TEMPLATE.md` — red-level reopen template
+- `docs/CONTROL_STATE_PRECEDENCE.md` — precedence rules
 
 ## Files intentionally not changed
 
-- `reports/current_bank/RUN_REVIEW_PACKET.md` — historical THEMIS artifact
 - `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen THEMIS record
 - `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen thesis block
-- All historical MMS stage docs (scaffold, shortlist, readiness, P1 attempt, basis reset)
-- All THEMIS evidence values, configs, pipeline code
-- All existing report directories and their contents
+- `docs/MMS_BRANCH_FREEZE.md` — frozen MMS record
+- `docs/REPO_NAVIGATION_FOR_THESIS.md` — already current
+- `reports/INDEX.md` — already current
+- All historical phase docs (2B through 4A, MMS stages) — preserved as historical
+- All frozen evidence values, configs, pipeline code, figures, tests — unchanged
 
-## Impact
+## No scientific values changed
 
-Documentation/control-state only. No scientific content changed. Both branches are now formally frozen. The repo is organized for thesis writing with clear navigation to frozen materials.
+All changes are protocol/documentation-layer only. No frozen numerical values, claims, bank membership, evidence hierarchy, or caveat hierarchy was altered.
 
 ## Decisions this round
 
-- **Green taken:** freeze document structure, navigation layout, index creation
-- **Yellow taken:** none
-- **Red applied:** MMS branch closure (this round's authorization)
+- **Green taken:** precedence doc, reopen template, banner text, protocol structure, role definitions, wording harmonization
+- **Yellow taken:** role-model migration (A/B/C definitions, autonomy expansion, C-mandatory rule) — documented here
+- **Red taken:** none

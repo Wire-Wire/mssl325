@@ -1,6 +1,16 @@
+> **HISTORICAL ARTIFACT — NOT LIVE CONTROL STATE.**
+> This packet was produced during Phase 3A (2026-03-26) and is preserved for provenance and audit traceability. It does NOT reflect the current project state, which has advanced through Phase 3B, Phase 4A/4B freeze, and MMS branch freeze.
+>
+> **Current authority docs:**
+> - `docs/NEXT_QUESTION.md` — live control state
+> - `docs/WORKLOG_LATEST.md` — latest applied round
+> - `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen THEMIS branch
+> - `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — thesis results block
+> - `docs/MMS_BRANCH_FREEZE.md` — frozen MMS branch
+
 # Run Review Packet — Phase 3A
 
-**Self-contained review document for human/AI inspection.**
+**Historical review document. See banner above for current authority.**
 
 ---
 

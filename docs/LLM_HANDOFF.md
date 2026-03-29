@@ -1,22 +1,45 @@
 # LLM Handoff — PDL Pilot Pipeline
 
 **Load this first when resuming in a new session.**
+**Mode: frozen-writing-safe.** Both branches frozen. No active science question.
 
 ---
 
-## One-line summary
+## Control-state precedence
 
-9 measurement-model-valid THEMIS windows across 7 passes, now reviewed: Dn spans 0.12–2.31, EB 0.80–4.22, ρ universally negative. 4 provisional planning seeds selected. Duration variants are consistent within passes. No labels or thresholds assigned.
+| Priority | File | Role |
+|---|---|---|
+| 1 | `docs/NEXT_QUESTION.md` | Live control state |
+| 2 | `docs/WORKLOG_LATEST.md` | Latest applied round |
+| 3 | `docs/LLM_HANDOFF.md` | Consolidated project entry (this file) |
+| 4 | Historical artifacts (RUN_REVIEW_PACKET, old phase memos, sign-off packets) | Provenance/audit only — never override live state |
 
-## Current milestone
+See also `docs/CONTROL_STATE_PRECEDENCE.md` for full precedence rules.
 
-**THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank + one external cross-probe recurrence. Writing-safe for thesis integration.
+---
+
+## Current writing-safe frozen summary
+
+**THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank (4 clean core + 2 cautious) + one external cross-probe recurrence (THE Sep 19). Writing-safe for thesis integration.
+
 **MMS branch frozen.** Scaffold → shortlist → readiness → P1 do_not_report → basis reset → freeze. No reportable thickness. Scale mismatch structural (~100×). Branch closed as methodological finding.
+
 No thresholds, no labels, no detector semantics on either branch.
 
 **Strongest claim:** The frozen measurement model produces operationally distinguishable Dn/EB outputs across 6 independent THD passes. Sub-unity Dn recurs on an independent cross-probe (THE Sep 19, Dn = 0.76). The cautious-only low-Dn region (Dn < 0.5) is not independently recurred.
 
 **Strongest non-claim:** No physical identification, no threshold, no generalization beyond compressed-sheath THD conditions. THE Sep 19 is external recurrence only, not admitted to the main bank.
+
+**For thesis writing, start from:**
+1. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`
+2. `docs/MMS_BRANCH_FREEZE.md`
+3. `docs/REPO_NAVIGATION_FOR_THESIS.md`
+
+---
+
+## Historical bank ledger (provenance — do not lift into thesis prose without context)
+
+9 measurement-model-valid THEMIS windows across 7 passes. Dn spans 0.12–2.31, EB 0.80–4.22, rho universally negative. Duration variants consistent within passes. No labels or thresholds assigned.
 
 ## Window bank (9 windows / 7 passes)
 
@@ -375,52 +398,45 @@ PYTHONPATH=src python -m pytest tests/ -v
 
 ## Collaboration protocol
 
-### Shared inputs (4-file system)
+See `docs/ROLE_PROTOCOL.md` for full role definitions. Summary below.
 
-| File | Purpose |
-|---|---|
-| `docs/LLM_HANDOFF.md` | Load first in any new session |
-| `docs/NEXT_QUESTION.md` | One active question per round |
-| `reports/current_bank/RUN_REVIEW_PACKET.md` | Main evidence entry for all roles |
-| `docs/WORKLOG_LATEST.md` | What changed last round |
+### Shared inputs (frozen-writing-safe mode)
+
+| Priority | File | Purpose |
+|---|---|---|
+| 1 | `docs/NEXT_QUESTION.md` | Live control state |
+| 2 | `docs/WORKLOG_LATEST.md` | Latest applied round |
+| 3 | `docs/LLM_HANDOFF.md` | Consolidated project entry |
+| — | Historical evidence artifacts | Provenance/audit only |
+
+Note: `reports/current_bank/RUN_REVIEW_PACKET.md` is a historical Phase 3A artifact preserved for provenance. It is NOT the live control state.
 
 ### Roles
 
-- **Claude Code** — executor only. Only role that edits repo files. Receives a final prompt from Pro B, implements it, reports results, updates WORKLOG_LATEST.
-- **Pro A** — design brain. Reads NEXT_QUESTION + HANDOFF, drafts the next-step plan and prompt. Does not execute.
-- **Pro B** — gatekeeper / final prompt editor. Reviews Pro A's draft for scope creep and wording drift. Can approve green/yellow decisions. Emits the final prompt for Claude Code.
-- **Pro C** — science-only brain. Reads evidence + papers, sets scientific ceiling. No code, no prompts, no engineering decisions.
-- **User** — final authority for red decisions and unresolved disputes. Updates NEXT_QUESTION after each round.
+- **A** — Section Drafter + Methods/Audit Brain. Drafts section skeletons, methods blocks, safeguard text. Does not set final claims or emit Claude prompts.
+- **B** — Lead Integrator + Final Editorial Brain + Final Claude Prompt Emitter. Integrates A + C, decides what enters thesis-facing prose, emits final Claude prompts. May originate bounded repo-safe tasks directly.
+- **C** — Science Ceiling Reviewer. Decides what science-facing prose is supportable. Mandatory for results, discussion, abstract, conclusion, and any claim wording. May proactively supply safer substitute wording.
+- **Claude Code** — Frozen-Writing-Safe Executor. Edits repo files within green/yellow scope. May perform coherent multi-file documentation work in one pass. Must escalate genuine red decisions.
+- **User** — Final authority for red decisions only.
 
-### Output authority
+### Authority flow
 
-Pro A drafts → Pro C constrains scientifically → Pro B produces final prompt → Claude executes → User approves red decisions only.
+For science-facing work: A + C (parallel) → B integrates → B emits final prompt → Claude executes.
+For repo-safe housekeeping: B → Claude directly.
 
 ### Delegated decision authority
 
-**Green — automatic.** May be decided and executed without user escalation:
-- Report structure, file organization, artifact completion
-- Wording harmonization, schema completion within current semantics
-- Figure/layout choices, implementation details that do not alter scientific meaning
+**Green — automatic:** protocol cleanup, wording harmonization, file organization, helper templates, thesis-safe section scaffolding from frozen docs, cross-linking, banners, changelog updates.
 
-**Yellow — delegated but recorded.** May be decided by Pro A/B without user escalation, but must be recorded in WORKLOG_LATEST:
-- Emphasis among already-allowed metrics
-- Review-layer bookkeeping refinements
-- Descriptive framing choices within the current science ceiling
-- Choosing one bounded next-step within an already-authorized stage
+**Yellow — delegated, recorded in WORKLOG_LATEST:** bounded editorial emphasis within frozen ceiling, file placement for new helpers, protocol refinements that do not alter scientific meaning, B originating repo-safe Claude tasks.
 
-**Red — escalate to user.** Must NOT be decided by models alone:
-- New scientific definitions, thresholds, threshold candidates
-- Labels, classes, dev-set semantics, detector semantics
-- Stage escalation, changes to frozen measurement model
-- Bank expansion, new windows/probes/seasons
-- Reinterpretation of evidence hierarchy into physics classes
+**Red — escalate to user:** reopening any science branch, new search, detector semantics, thresholds, labels, bank changes, measurement-model changes, frozen-claim strengthening, MMS reactivation.
 
 **If uncertain whether something is red, treat it as red.**
 
 ### Semantic guardrails
 
-**Forbidden vocabulary** (in all repo outputs): PDL-positive, non-PDL, baseline, control, truth, threshold, threshold candidate, label, dev-set, detector-ready class.
+**Forbidden vocabulary:** PDL-positive, non-PDL, baseline, control, truth, threshold, threshold candidate, label, dev-set, detector-ready class.
 
 **Allowed vocabulary:** comparator window, pass, evidence, caveat, review layer, descriptive comparison, primary evidence, secondary evidence with caveats, excluded from core comparison.
 
