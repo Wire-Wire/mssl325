@@ -1,6 +1,6 @@
 # Control-State Precedence
 
-This document defines which files are authoritative for the current project state.
+> This document defines read-order and conflict rules. It does not itself define the current stage. For live state, read `docs/NEXT_QUESTION.md` first.
 
 ---
 
@@ -10,7 +10,7 @@ This document defines which files are authoritative for the current project stat
 |---|---|---|
 | **1** | `docs/NEXT_QUESTION.md` | **Live control state.** Current mode, active question, allowed/forbidden actions. |
 | **2** | `docs/WORKLOG_LATEST.md` | Latest applied round. What changed most recently. |
-| **3** | `docs/LLM_HANDOFF.md` | Consolidated project entry. Load first in new sessions. |
+| **3** | `docs/LLM_HANDOFF.md` | Consolidated project context. Read after NEXT_QUESTION and WORKLOG. |
 | **4** | Historical artifacts | Provenance and audit traceability only. |
 
 ## What counts as a historical artifact

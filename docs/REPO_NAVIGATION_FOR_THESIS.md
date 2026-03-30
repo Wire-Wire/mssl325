@@ -1,5 +1,7 @@
 # Repo Navigation for Thesis Writing
 
+> **SCOPE:** Thesis navigation only. This file does not define the current project stage or mode. For live control state, read `docs/NEXT_QUESTION.md`.
+
 **Purpose:** Help a thesis writer quickly find the right materials and know what to ignore.
 
 ---
@@ -32,12 +34,12 @@
 | `docs/PHASE_5B_CASESET_DESCRIPTIVE_INVENTORY.md` | Older Phase 5B variant — **superseded** for thesis route. | Historical |
 | `reports/themis_caseset/` | Phase 5A cards, figures, caseset_summary.json, grouped_summary.json. | Sidecar data |
 
-### Active analysis branch (not yet thesis-safe)
+### Phase 6 analysis records (not thesis-safe — check core control files for current live status)
 
 | Document | What it contains | Status |
 |---|---|---|
-| `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` | Phase 6A upstream conditioning: 11-encounter descriptor summaries by cone-angle regime | Active — not thesis-safe until completed |
-| `reports/themis_conditioning/` | Encounter catalogue, selection flow, conditioning summary, figures | Active analysis data |
+| `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` | Phase 6A upstream conditioning record (audited, closed as apparatus-limited pilot) | Not thesis-safe |
+| `reports/themis_conditioning/` | Encounter catalogue, selection flow, conditioning summary, figures | Analysis record |
 
 ### Historical process records (cite for methods provenance only)
 

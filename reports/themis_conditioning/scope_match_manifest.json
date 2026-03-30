@@ -1,0 +1,14 @@
+{
+  "generated": "2026-03-30T21:51:27.566782",
+  "declared_source_universe": "All locally cached evaluable THEMIS encounters from live-mode CDAWeb-fetched runs",
+  "actually_searched_universe": "All runs/*/encounter_*.json, deduplicated by date+probe, filtered to evaluable with Dn>0",
+  "scope_match": true,
+  "source_filter_used": "Exclude encounters where dp=2.0 AND bz=2.0 AND ma=8.0 AND sza=0.0 (synthetic fixture signature)",
+  "synthetic_detected": [
+    "pilot_001",
+    "pilot_002"
+  ],
+  "synthetic_count": 2,
+  "clean_real_count": 9,
+  "tranche2_low_cone_count": 3
+}

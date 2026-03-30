@@ -1,24 +1,15 @@
 # LLM Handoff — PDL Pilot Pipeline
 
-**Load this first when resuming in a new session.**
-**Mode: Phase 6A audited and closed.** Current formulation exhausted as apparatus-limited pilot. Broader question still open. Phase 4B/5A/5B remain frozen anchors. MMS branch frozen.
+> **READ ORDER:** 1. `docs/NEXT_QUESTION.md` → 2. `docs/WORKLOG_LATEST.md` → 3. this file.
+> This file is **third priority**. If this file conflicts with `NEXT_QUESTION.md`, that file wins.
+> Do not infer the current project stage from this file alone.
+
+> **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
+> Phase 6 Route 3 activated. Route A complete (synthetic removed, N=9 clean). Route B regression: 1 low-cone encounter recovered. Awaiting user B-vs-C choice. Phase 6B blocked.
 
 ---
 
-## Control-state precedence
-
-| Priority | File | Role |
-|---|---|---|
-| 1 | `docs/NEXT_QUESTION.md` | Live control state |
-| 2 | `docs/WORKLOG_LATEST.md` | Latest applied round |
-| 3 | `docs/LLM_HANDOFF.md` | Consolidated project entry (this file) |
-| 4 | Historical artifacts (RUN_REVIEW_PACKET, old phase memos, sign-off packets) | Provenance/audit only — never override live state |
-
-See also `docs/CONTROL_STATE_PRECEDENCE.md` for full precedence rules.
-
----
-
-## Current writing-safe frozen summary
+## Frozen anchors (claim-bearing, not live control — these do not define the current stage)
 
 **THEMIS branch frozen (Phase 4B).** Six-pass interpretable bank (4 clean core + 2 cautious) + one external cross-probe recurrence (THE Sep 19). Writing-safe for thesis integration.
 
@@ -47,11 +38,25 @@ No thresholds, no labels, no detector semantics on either branch.
 - **Phase 6B remains blocked** until a reset succeeds.
 - See `docs/PHASE_6_RESET_OPTIONS.md`.
 
+**Phase 6 Route 3 (2026-03-30).**
+- **Route A complete:** 2 synthetic fixtures removed. Clean catalogue N=9 real. Scope-match manifest produced.
+- **Route B regression:** Auxiliary descriptor (very_near / near ratio) tested. 1 low-cone encounter recovered (t2_20080904_thd, cone=43°). Marginal viability.
+- **Route C:** not yet executed.
+- See `docs/PHASE_6_ROUTE3_ACTIVATION.md` and `docs/PHASE_6_ROUTE3_B_COMPATIBLE_MEASUREMENT_MODEL.md`.
+
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)
 2. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` (claim-bearing results)
 3. `docs/MMS_BRANCH_FREEZE.md` (MMS methods/limitation)
 4. `docs/REPO_NAVIGATION_FOR_THESIS.md` (full repo map)
+
+---
+
+---
+
+## HISTORICAL DETAIL BELOW — provenance and audit trail only
+
+Everything below this line is preserved for traceability. It does not define the current project stage. For the live control state, always read `docs/NEXT_QUESTION.md`.
 
 ---
 
@@ -416,47 +421,7 @@ PYTHONPATH=src python -m pytest tests/ -v
 
 ## Collaboration protocol
 
-See `docs/ROLE_PROTOCOL.md` for full role definitions. Summary below.
-
-### Shared inputs (frozen-writing-safe mode)
-
-| Priority | File | Purpose |
-|---|---|---|
-| 1 | `docs/NEXT_QUESTION.md` | Live control state |
-| 2 | `docs/WORKLOG_LATEST.md` | Latest applied round |
-| 3 | `docs/LLM_HANDOFF.md` | Consolidated project entry |
-| — | Historical evidence artifacts | Provenance/audit only |
-
-Note: `reports/current_bank/RUN_REVIEW_PACKET.md` is a historical Phase 3A artifact preserved for provenance. It is NOT the live control state.
-
-### Roles
-
-- **A** — Section Drafter + Methods/Audit Brain. Drafts section skeletons, methods blocks, safeguard text. Does not set final claims or emit Claude prompts.
-- **B** — Lead Integrator + Final Editorial Brain + Final Claude Prompt Emitter. Integrates A + C, decides what enters thesis-facing prose, emits final Claude prompts. May originate bounded repo-safe tasks directly.
-- **C** — Science Ceiling Reviewer. Decides what science-facing prose is supportable. Mandatory for results, discussion, abstract, conclusion, and any claim wording. May proactively supply safer substitute wording.
-- **Claude Code** — Frozen-Writing-Safe Executor. Edits repo files within green/yellow scope. May perform coherent multi-file documentation work in one pass. Must escalate genuine red decisions.
-- **User** — Final authority for red decisions only.
-
-### Authority flow
-
-For science-facing work: A + C (parallel) → B integrates → B emits final prompt → Claude executes.
-For repo-safe housekeeping: B → Claude directly.
-
-### Delegated decision authority
-
-**Green — automatic:** protocol cleanup, wording harmonization, file organization, helper templates, thesis-safe section scaffolding from frozen docs, cross-linking, banners, changelog updates.
-
-**Yellow — delegated, recorded in WORKLOG_LATEST:** bounded editorial emphasis within frozen ceiling, file placement for new helpers, protocol refinements that do not alter scientific meaning, B originating repo-safe Claude tasks.
-
-**Red — escalate to user:** reopening any science branch, new search, detector semantics, thresholds, labels, bank changes, measurement-model changes, frozen-claim strengthening, MMS reactivation.
-
-**If uncertain whether something is red, treat it as red.**
-
-### Semantic guardrails
-
-**Forbidden vocabulary:** PDL-positive, non-PDL, baseline, control, truth, threshold, threshold candidate, label, dev-set, detector-ready class.
-
-**Allowed vocabulary:** comparator window, pass, evidence, caveat, review layer, descriptive comparison, primary evidence, secondary evidence with caveats, excluded from core comparison.
+Roles, authority flow, green/yellow/red decision rules, and semantic guardrails are defined in `docs/ROLE_PROTOCOL.md`. Current mode is inherited from the three core control files. Do not duplicate protocol rules here.
 
 ## Next step
 

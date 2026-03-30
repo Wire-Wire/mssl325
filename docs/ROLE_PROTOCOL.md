@@ -1,6 +1,6 @@
-# Role Protocol — Frozen-Writing-Safe Mode
+# Role Protocol
 
-**Current mode:** Both branches frozen. Thesis writing and documentation only.
+> **Current mode is inherited from the three core control files.** For live state, read `docs/NEXT_QUESTION.md` first. This file defines roles and authority flow only.
 
 ---
 

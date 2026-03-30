@@ -1,3 +1,5 @@
+> **OPERATIONAL LOG ONLY.** Not a source of current project stage. For live state, read `docs/NEXT_QUESTION.md`.
+
 # Decision Log
 
 Chronological record of bounded project decisions.

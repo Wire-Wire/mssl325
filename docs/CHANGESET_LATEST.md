@@ -1,7 +1,9 @@
+> **OPERATIONAL LOG ONLY.** Not a source of current project stage. For live state, read `docs/NEXT_QUESTION.md`.
+
 # Latest Changeset
 
-**Round:** Protocol migration to frozen-writing-safe mode
-**Date:** 2026-03-29
+**Round:** Documentation information-architecture cleanup for LLM readability
+**Date:** 2026-03-30
 
 ---
 

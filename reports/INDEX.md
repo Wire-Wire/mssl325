@@ -1,6 +1,8 @@
 # Reports Index
 
-**Status:** Both branches frozen. All reports below are historical/frozen records.
+> **SCOPE:** Report-directory index only. This file does not define the current project stage. For live control state, read `docs/NEXT_QUESTION.md`.
+
+Reports below are historical/frozen records or analysis artifacts.
 
 ---
 

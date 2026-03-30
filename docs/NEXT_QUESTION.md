@@ -1,33 +1,32 @@
+> **THIS FILE IS THE LIVE CONTROL STATE.**
+> Read this file first. If any other file in the repo conflicts with this file's stage, question, or blocking status, this file wins. Do not infer the current project stage from any other document.
+
 # Next Question
 
-**Stage:** Phase 6A closed. Reset-options memo complete. Awaiting user choice.
+**Stage:** Phase 6 Route 3 activated. Route A complete. Route B regression tested. Awaiting user choice.
 
-## Context
+## What was done this round
 
-Phase 6A is audited and closed as an apparatus-limited pilot. Route A (mandatory provenance/scope repair) is required before any strategic reset. Three live strategic reset families are defined. Phase 6B remains blocked.
+1. **Route A (mandatory repair):** 2 synthetic fixtures removed. Clean catalogue: N = 9 real encounters. Scope-match manifest produced.
+2. **Route B (regression test):** Auxiliary near-MP descriptor (very_near / near ratio) tested on 12 encounters. 1 low-cone encounter recovered (t2_20080904_thd, cone = 43°). Marginal viability.
 
 ## Active question
 
-**After mandatory provenance/scope repair (Route A), which Phase 6 reset family should be authorized?**
+**Route B recovers 1 low-cone encounter. Is that sufficient to proceed, or should Route C (broader search) be authorized instead?**
 
-| Option | Purpose | Main trade-off |
+| Option | What it does | Trade-off |
 |---|---|---|
-| **B** | Measurement-model reset: remove dual-bin bottleneck | Loses Dn/EB comparability with frozen Phase 4B |
-| **C** | Regime-access reset: broader search for low-cone + high-Dp encounters | May hit same physical co-occurrence limit |
-| **D** | Branch-question reset: narrow to accessible non-radial regime only | Gives up quasi-radial; small corrected sample |
-
-## Mandatory regardless of B/C/D
-
-Route A (provenance repair): synthetic-fixture exclusion, scope-declaration/search-match discipline, data-source filter. This is required before any reset executes.
+| **Authorize bounded Route B execution** | Use the auxiliary descriptor on the clean universe + 1 recovered low-cone encounter | Only 1 new data point; descriptor not comparable to Phase 4B Dn/EB |
+| **Authorize Route C** | Broader archive search preserving original Dn/EB | Requires new CDAWeb search; may hit same Dp co-occurrence limit |
 
 ## Blocked
 
-- Phase 6B (conditioned occurrence / detector-preparatory)
-- Direct detector / threshold / label / class / prior work
+- Phase 6B, detector/threshold/label/class/prior work
+- No further science without explicit user authorization
 
 ## Decision mode
 
-- `decision_mode`: red (reset-family choice requires user)
-- `auto_decision_scope`: green only (documentation, formatting)
+- `decision_mode`: red
+- `auto_decision_scope`: green only
 - `escalate_if`: any science execution
 - `final_owner_if_escalated`: User
