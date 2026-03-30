@@ -1,0 +1,53 @@
+{
+  "slice": "all locally cached evaluable THEMIS encounters",
+  "universe": 11,
+  "retained": 11,
+  "excluded": 0,
+  "exclusion_details": [],
+  "strata": {
+    "quasi-radial": {
+      "N": 0
+    },
+    "intermediate": {
+      "N": 6,
+      "eids": [
+        "usable_aug18_6h",
+        "usable_sep03_5h",
+        "usable_sep27_09_10h",
+        "cand4a_oct23_10_thd",
+        "pilot_001",
+        "pilot_002"
+      ],
+      "Dn_median": 1.124,
+      "Dn_IQR": [
+        0.949,
+        1.31
+      ],
+      "EB_median": 1.054,
+      "EB_IQR": [
+        1.03,
+        1.184
+      ]
+    },
+    "perpendicular": {
+      "N": 5,
+      "eids": [
+        "cand4a_sep19_08_the",
+        "usable_sep13_09_6h",
+        "usable_sep20_09_6h",
+        "usable_sep26_09_10h",
+        "usable_oct24_09_6h"
+      ],
+      "Dn_median": 0.94,
+      "Dn_IQR": [
+        0.763,
+        0.969
+      ],
+      "EB_median": 1.958,
+      "EB_IQR": [
+        1.958,
+        2.124
+      ]
+    }
+  }
+}

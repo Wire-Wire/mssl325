@@ -1,7 +1,7 @@
 # LLM Handoff — PDL Pilot Pipeline
 
 **Load this first when resuming in a new session.**
-**Mode: frozen-writing-safe.** Both branches frozen. Phase 5A/5B sidecars complete. No active science question.
+**Mode: Phase 6A active.** THEMIS upstream-conditioning branch open by user authorization. Phase 4B/5A/5B remain frozen anchors. MMS branch frozen.
 
 ---
 
@@ -32,7 +32,9 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Phase 5A/5B caseset sidecars (2026-03-29).** 8 cases screened from frozen seed pass. 4 reviewed as clear (P3, P4, P5, EXT) + 1 reviewed as ambiguous (P6). Phase 5B grouped these by clock-angle bin: atlas-usable cases appear in 60–120° and >120° bins only; the sole <60° screened case is reviewed as not convincing. Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged. See `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`.
 
-**For thesis writing, start from:**
+**Phase 6A (2026-03-30).** User-authorized THEMIS upstream-conditioning branch. 11 encounters retained. Descriptor-only (no occurrence/recovery layer). Perpendicular-IMF encounters show lower Dn and higher EB than intermediate-IMF. Quasi-radial bin empty. Analysis-active, not yet thesis-safe. See `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md`.
+
+**For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)
 2. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` (claim-bearing results)
 3. `docs/MMS_BRANCH_FREEZE.md` (MMS methods/limitation)

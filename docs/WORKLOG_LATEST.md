@@ -1,32 +1,50 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-30
-**Round:** Editorial writing-pack hub creation + navigation harmonization
+**Round:** Phase 6A — THEMIS upstream conditioning, first tranche
 
 ## What changed
 
-Created `docs/THEMIS_THESIS_WRITING_PACK.md` — a compact thesis-entry hub that organizes the frozen claim-bearing layer, Phase 5A/5B editorial sidecars, figure/table placement, and wording discipline into one navigable surface. Updated `REPO_NAVIGATION_FOR_THESIS.md` to point to the hub first and to clarify the sidecar/superseded status of Phase 5B variants. Updated `LLM_HANDOFF.md` thesis-start list.
+Opened Phase 6A as a user-authorized THEMIS science branch. Built a controlled near-subsolar encounter catalogue from all locally cached evaluable THEMIS encounters (N=11 after deduplication). Applied 5 inclusion screens (SZA, upstream availability, occupancy, membership) — all 11 pass. Stratified by IMF cone-angle regime (primary) and clock-angle group (secondary). Produced continuous descriptor summaries (Dn, EB) by stratum.
+
+## Declared slice
+
+All locally cached evaluable THEMIS encounters across all run directories in the repository. This is the single predeclared slice for Phase 6A tranche 1.
+
+## Key findings
+
+- **Perpendicular-IMF** (cone > 60°, N=5): Dn median 0.94 [0.76, 0.97], EB median 1.96 [1.96, 2.12]
+- **Intermediate-IMF** (30° < cone ≤ 60°, N=6): Dn median 1.12 [0.95, 1.31], EB median 1.05 [1.03, 1.18]
+- **Quasi-radial** (cone ≤ 30°): N=0 (empty bin)
+- Occurrence/recovery layer: **deferred** (no inherited operational bundle field exists)
 
 ## Files created
 
-- `docs/THEMIS_THESIS_WRITING_PACK.md` — THEMIS thesis-entry hub
+- `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` — branch charter + analysis narrative
+- `reports/themis_conditioning/encounter_catalogue.json` — machine-readable catalogue
+- `reports/themis_conditioning/encounter_catalogue.csv` — CSV mirror
+- `reports/themis_conditioning/selection_flow.md` — inclusion/exclusion ledger
+- `reports/themis_conditioning/conditioning_summary.json` — stratum summaries
+- `reports/themis_conditioning/figures/phase6a_dn_eb_by_cone.png` — Dn vs EB scatter by regime
+- `scripts/phase6a_pipeline.py` — sidecar analysis script
 
 ## Files modified
 
-- `docs/REPO_NAVIGATION_FOR_THESIS.md` — hub added as primary entry; editorial-sidecar section added; Phase 5B inventory marked as superseded; quick-reference table expanded
-- `docs/LLM_HANDOFF.md` — thesis-start list updated to point to hub first
+- `docs/NEXT_QUESTION.md` — Phase 6A active, three-option next decision
+- `docs/LLM_HANDOFF.md` — mode updated to Phase 6A active; Phase 6A block added
+- `docs/REPO_NAVIGATION_FOR_THESIS.md` — Phase 6A listed as active analysis (not thesis-safe)
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `docs/NEXT_QUESTION.md` — per instructions
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen claim-bearing
+- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen
 - `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen
-- `docs/THEMIS_CASESET.md` — Phase 5A sidecar, unchanged
-- `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` — Phase 5B sidecar, unchanged
+- `docs/THEMIS_CASESET.md` — frozen Phase 5A sidecar
+- `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` — frozen Phase 5B sidecar
+- `docs/THEMIS_THESIS_WRITING_PACK.md` — frozen thesis hub
 - `docs/MMS_BRANCH_FREEZE.md` — frozen
-- All frozen evidence values, configs, pipeline code, Phase 5A cards
+- All frozen evidence values, bank membership, configs, pipeline code
 
-## No scientific values changed
+## No frozen values changed
 
-Editorial/navigation packaging only. No new claims, no strengthened claims, no new figures, no new analysis.
+Phase 4B remains the unchanged checkpoint. Phase 6A is additive and descriptor-only.
