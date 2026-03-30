@@ -5,7 +5,7 @@
 > Do not infer the current project stage from this file alone.
 
 > **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
-> Phase 6 Route 3 activated. Route A complete (synthetic removed, N=9 clean). Route B regression: 1 low-cone encounter recovered. Awaiting user B-vs-C choice. Phase 6B blocked.
+> Phase 6 Route 3B executed. Bounded analysis complete. 3/5 encounters show PDL-consistent inner-sheath gradients. Recovered low-cone encounter shows no depletion. Awaiting user decision on Phase 6 continuation. Phase 6B blocked.
 
 ---
 
@@ -43,6 +43,14 @@ No thresholds, no labels, no detector semantics on either branch.
 - **Route B regression:** Auxiliary descriptor (very_near / near ratio) tested. 1 low-cone encounter recovered (t2_20080904_thd, cone=43°). Marginal viability.
 - **Route C:** not yet executed.
 - See `docs/PHASE_6_ROUTE3_ACTIVATION.md` and `docs/PHASE_6_ROUTE3_B_COMPATIBLE_MEASUREMENT_MODEL.md`.
+
+**Phase 6 Route 3B bounded execution (2026-03-30).**
+- Computed Δn_near and Δ|B|_near for 5 Route-B-computable encounters (4 tranche-1 + 1 tranche-2 recovered).
+- **3/5** show PDL-consistent inner-sheath gradient (Δn < 1 AND Δ|B| > 1). Strongest: sep26_09_10h (Δn=0.028, Δ|B|=2.055).
+- **Recovered low-cone encounter** (t2_20080904_thd, cone=43°): Δn=1.053, Δ|B|=1.071 — flat, no depletion signature.
+- Cross-check vs Dn/EB: 2/4 consistent, 2/4 divergent (expected — different gradient scales).
+- **Verdict:** Route B descriptive value is modest. The 3 PDL-consistent encounters are already evaluable under original Dn/EB. The recovered low-cone does not extend regime coverage meaningfully.
+- See `docs/PHASE_6_ROUTEB_BOUNDED_EXECUTION.md`.
 
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)
