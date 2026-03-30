@@ -5,7 +5,7 @@
 > Do not infer the current project stage from this file alone.
 
 > **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
-> Phase 6 Route 3B executed. Bounded analysis complete. 3/5 encounters show PDL-consistent inner-sheath gradients. Recovered low-cone encounter shows no depletion. Awaiting user decision on Phase 6 continuation. Phase 6B blocked.
+> Phase 6 post-Route-B. Route B bounded execution complete (modest yield: 3/5 inner-sheath gradients, recovered low-cone shows no depletion). Full four-option decision menu now live (Route B continuation / Route C / Route D narrowing / writing-safe return). Awaiting user route choice. Phase 6B blocked.
 
 ---
 
@@ -49,8 +49,17 @@ No thresholds, no labels, no detector semantics on either branch.
 - **3/5** show PDL-consistent inner-sheath gradient (Δn < 1 AND Δ|B| > 1). Strongest: sep26_09_10h (Δn=0.028, Δ|B|=2.055).
 - **Recovered low-cone encounter** (t2_20080904_thd, cone=43°): Δn=1.053, Δ|B|=1.071 — flat, no depletion signature.
 - Cross-check vs Dn/EB: 2/4 consistent, 2/4 divergent (expected — different gradient scales).
+- Route B descriptors are NOT Dn/EB. Semantically distinct. Not interchangeable with frozen Phase 4B.
 - **Verdict:** Route B descriptive value is modest. The 3 PDL-consistent encounters are already evaluable under original Dn/EB. The recovered low-cone does not extend regime coverage meaningfully.
 - See `docs/PHASE_6_ROUTEB_BOUNDED_EXECUTION.md`.
+
+**Phase 6 post-Route-B decision-space repair (2026-03-31).**
+- No new science. Decision-space cleanup only.
+- Previous narrow three-option menu (close B / open C / close Phase 6) replaced with full four-option post-Route-B menu.
+- **Four live options:** (A) Route B continuation, (B) Route C execution, (C) Route D-style narrowing, (D) writing-safe return.
+- Route D and writing-safe return were always legitimate options but were not presented in the previous menu.
+- Awaiting user route choice. Phase 6B remains blocked.
+- See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
 
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)

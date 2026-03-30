@@ -3,32 +3,46 @@
 
 # Next Question
 
-**Stage:** Phase 6 Route 3B executed. Route B bounded analysis complete. Awaiting user decision on Phase 6 continuation.
+**Stage:** Phase 6 post-Route-B. Route A complete. Route B bounded execution complete. Routes C and D not executed. Writing-safe return is a live option. Phase 6B blocked.
 
 ## What was done this round
 
-1. **Route B bounded execution:** Computed Δn_near and Δ|B|_near auxiliary descriptors on 5 Route-B-computable encounters (4 tranche-1 + 1 tranche-2 recovered).
-2. **Coherence assessment:** 3/5 encounters show PDL-consistent inner-sheath gradients (Δn < 1, Δ|B| > 1). The recovered low-cone encounter (t2_20080904_thd, cone=43°) shows no depletion signature (Δn=1.053, Δ|B|=1.071).
-3. **Cross-check:** Dn vs Δn_near directionally consistent in 2/4 cases; divergence expected since they measure different gradient scales.
+Decision-space repair only. No new science execution.
+
+The previous three-option menu (close B / open C / close Phase 6) did not represent the actual decision space. It omitted Route D (branch-question narrowing) and misframed writing-safe return as "close Phase 6 entirely." This round repaired the menu to reflect all four live post-Route-B options.
+
+See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` for full decision blocks.
+
+## Route B bounded execution (completed previous round)
+
+- Dn_near and D|B|_near computed on 5 Route-B-computable encounters (4 tranche-1 + 1 tranche-2 recovered)
+- 3/5 show inner-sheath depletion gradient (Dn_near < 1 AND D|B|_near > 1)
+- Recovered low-cone encounter (t2_20080904_thd, cone=43deg): no depletion (flat profile)
+- Route B descriptors are NOT Dn/EB. Not interchangeable with frozen Phase 4B.
+- Modest but nonzero descriptive yield. Does not extend regime coverage.
 
 ## Active question
 
-**Route B is complete. What is the next step for Phase 6?**
+**Which of the four post-Route-B options should be authorized next?**
 
-| Option | What it does | Trade-off |
-|---|---|---|
-| **Close Route B, return to Phase 6 decision tree** | Route B descriptive value documented; no further Route B work | Modest descriptive yield: the recovered low-cone encounter shows no depletion, and the 3 PDL-consistent encounters are already evaluable under Dn/EB |
-| **Authorize Route C (broader search preserving Dn/EB)** | New CDAWeb archive search for encounters with background-bin occupancy at lower Dp | May hit same Dp co-occurrence limit; requires new search design |
-| **Close Phase 6 entirely, proceed to thesis writing** | Accept Phase 6 as a conditioning/scoping exercise that documented the Dp access barrier | Thesis block: Phase 6 is a methodological finding, not new science results |
+| Option | Label | What it does | Main risk |
+|---|---|---|---|
+| **A** | Route B continuation | Refine or expand inner-sheath descriptor; search for more vn-occupied encounters | Diminishing returns; yield already known to be modest |
+| **B** | Route C execution | Search unsearched 2007-2010 archive for low-cone encounters evaluable under original Dn/EB | Low-cone + high-Dp co-occurrence may be physically rare; may reproduce tranche-2 null |
+| **C** | Route D-style narrowing | Narrow to within-regime stratification on accessible N=9 sample | N=9 may be too sparse; may just repackage Phase 4B |
+| **D** | Writing-safe return | Accept Phase 6 as methodological finding; return to thesis writing | Lowest yield; no new science results beyond documented limitation |
+
+Full decision blocks with scientific ceilings, preservation/sacrifice trade-offs, and first executable actions are in `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
 
 ## Blocked
 
-- Phase 6B, detector/threshold/label/class/prior work
+- Phase 6B (occurrence / detector-preparatory / thresholds / labels / classes)
 - No further science execution without explicit user authorization
+- No modification of frozen Phase 4B, 5A/5B, or MMS branch
 
 ## Decision mode
 
 - `decision_mode`: red
 - `auto_decision_scope`: green only
-- `escalate_if`: any science execution or phase closure
+- `escalate_if`: any science execution, route choice, or phase closure
 - `final_owner_if_escalated`: User

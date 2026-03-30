@@ -1,41 +1,49 @@
 > **USAGE:** This file records what changed in the most recent applied round. It is secondary to `docs/NEXT_QUESTION.md`. Do not use this file alone to infer the current project stage. If conflict exists, `docs/NEXT_QUESTION.md` wins.
 
-> **Current-state echo:** Phase 6 Route 3B executed. Route B bounded analysis complete. Awaiting user decision on Phase 6 continuation. See `docs/NEXT_QUESTION.md`.
+> **Current-state echo:** Phase 6 post-Route-B. Decision-space repair complete. Four-option menu now live. Awaiting user route choice. Phase 6B blocked. See `docs/NEXT_QUESTION.md`.
 
 # Worklog — Latest Round
 
-**Date:** 2026-03-30
-**Round:** Phase 6 Route 3B bounded execution
+**Date:** 2026-03-31
+**Round:** Post-Route-B decision-space repair (no new science)
 
 ## What changed
 
-### Route B bounded execution
+### Decision-space repair
 
-Loaded cached THEMIS FGM/MOM/STATE data for all 12 Phase 6 encounters. Recomputed s-mapping from raw position data. Computed per-bin medians for very-near [0.0, 0.2] and near [0.2, 0.4] s-bins. Applied Route B auxiliary descriptors (Δn_near, Δ|B|_near) to 5 computable encounters.
+The previous NEXT_QUESTION.md presented a narrow three-option menu:
+1. Close Route B, return to Phase 6 decision tree
+2. Authorize Route C
+3. Close Phase 6 entirely, proceed to thesis writing
 
-**Key results:**
-- 3/5 encounters show PDL-consistent inner-sheath gradient (Δn < 1 and Δ|B| > 1)
-- Strongest signal: usable_sep26_09_10h (Δn=0.028, Δ|B|=2.055, perpendicular geometry)
-- Recovered low-cone encounter (t2_20080904_thd, cone=43°): no depletion (Δn=1.053, Δ|B|=1.071)
-- Cross-check vs original Dn/EB: 2/4 directionally consistent, 2/4 divergent (expected)
+This menu was incomplete. It omitted Route D (branch-question narrowing to accessible non-radial regime) and misframed the writing-safe return as "close Phase 6 entirely" without making it explicit as a deliberate, supported fallback.
 
-### Coherence assessment
+### Repaired route menu
 
-Four bounded questions answered. Route B descriptive value is modest: the 3 PDL-consistent encounters are already evaluable under the original Dn/EB basis, and the recovered low-cone encounter does not show a depletion signature.
+The post-Route-B decision space now presents four explicit options:
+- **Option A:** Route B continuation (refine/expand inner-sheath descriptor)
+- **Option B:** Route C execution (search for low-cone encounters under original Dn/EB)
+- **Option C:** Route D-style narrowing (within-regime stratification on N=9)
+- **Option D:** Writing-safe return (accept Phase 6 as methodological finding)
+
+Each option has a full decision block in `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` specifying: what it solves, what it preserves, what it sacrifices, its scientific ceiling, its main risk, and its first executable action.
+
+### Exact red-level question now posed
+
+"Which of the four post-Route-B options should be authorized next?"
 
 ## Files created
 
-- `docs/PHASE_6_ROUTEB_BOUNDED_EXECUTION.md` — full analysis document with coherence assessment
-- `reports/themis_conditioning/route3b_ledger.json` — full ledger (12 encounters, 5 computed)
-- `reports/themis_conditioning/route3b_ledger.csv` — tabular ledger
-- `scripts/phase6_route3b_bounded_execution.py` — execution script
+- `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` — full post-Route-B decision memo with four option blocks
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — Phase 6 continuation decision
+- `docs/NEXT_QUESTION.md` — repaired to four-option menu
 - `docs/WORKLOG_LATEST.md` — this file
-- `docs/LLM_HANDOFF.md` — Route 3B block added
+- `docs/LLM_HANDOFF.md` — Phase 6 state updated
+- `docs/PHASE_6_ROUTE3_ACTIVATION.md` — superseded-by note added
+- `docs/PHASE_6_ROUTE3_B_COMPATIBLE_MEASUREMENT_MODEL.md` — superseded-by note added
 
-## No Route C search and no Phase 6B work
+## No new science execution
 
-Route C remains contingent on user decision. Phase 6B remains blocked. Frozen anchors unchanged.
+No calculations, no archive search, no Route B continuation, no Route C search, no Route D analysis, no Phase 6 closure, no Phase 6B work. Frozen anchors unchanged.

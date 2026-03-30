@@ -1,3 +1,5 @@
+> **STATUS:** Superseded by `docs/PHASE_6_ROUTEB_BOUNDED_EXECUTION.md` (2026-03-30). The bounded execution has been completed; the regression test described here was the precursor. For Route B results, read the bounded execution doc. For the current decision space, read `docs/NEXT_QUESTION.md`.
+
 # Phase 6 Route 3B — Compatible Measurement-Model Extension
 
 **Date:** 2026-03-30

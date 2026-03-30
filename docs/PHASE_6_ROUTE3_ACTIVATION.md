@@ -1,3 +1,5 @@
+> **STATUS:** Superseded by `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` (2026-03-31). Route B bounded execution is now complete. This document records the earlier Route A repair + Route B regression-test round. For the current decision space, read `docs/NEXT_QUESTION.md`.
+
 # Phase 6 Route 3 Activation
 
 **Date:** 2026-03-30
