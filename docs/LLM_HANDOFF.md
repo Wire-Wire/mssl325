@@ -32,7 +32,12 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Phase 5A/5B caseset sidecars (2026-03-29).** 8 cases screened from frozen seed pass. 4 reviewed as clear (P3, P4, P5, EXT) + 1 reviewed as ambiguous (P6). Phase 5B grouped these by clock-angle bin: atlas-usable cases appear in 60–120° and >120° bins only; the sole <60° screened case is reviewed as not convincing. Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged. See `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`.
 
-**Phase 6A (2026-03-30).** User-authorized THEMIS upstream-conditioning branch. 11 encounters retained. Descriptor-only (no occurrence/recovery layer). Perpendicular-IMF encounters show lower Dn and higher EB than intermediate-IMF. Quasi-radial bin empty. Analysis-active, not yet thesis-safe. See `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md`.
+**Phase 6A (2026-03-30).** User-authorized THEMIS upstream-conditioning branch. Two tranches complete.
+- Tranche 1: 11 encounters retained. Perpendicular-IMF (N=5): Dn med 0.94, EB med 1.96. Intermediate (N=6): Dn med 1.12, EB med 1.05. Quasi-radial: empty.
+- Tranche 2: 3 low-cone candidates found, all failed BG occupancy (Dp too low). Zero retained. Quasi-radial remains empty.
+- **Structural finding:** The dual-bin requirement + inner-probe apogee systematically excludes the low-Dp conditions that co-occur with quasi-radial IMF.
+- Descriptor-only. No occurrence layer. Phase 6B not justified.
+- See `docs/PHASE_6A_TRANCHE2_LOWCONE_SLICE.md`.
 
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)

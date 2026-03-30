@@ -1,28 +1,27 @@
 # Next Question
 
-**Stage:** Phase 6A first tranche complete. THEMIS science branch active by user authorization.
+**Stage:** Phase 6A tranche 2 complete. Low-cone expansion failed. Two-tranche result unchanged from tranche 1.
 
 ## Outcome
 
-Phase 6A processed 11 unique encounters from the local archive. All 11 passed inclusion screens. Descriptor summaries by cone-angle regime show: perpendicular-IMF encounters (N=5) have lower Dn (median 0.94) and higher EB (median 1.96) than intermediate-IMF encounters (N=6, Dn median 1.12, EB median 1.05). The quasi-radial bin is empty. No occurrence/recovery layer was produced (deferred — no inherited bundle field exists).
+Tranche 2 found 3 low-cone candidates (cone 43–44°) from the 2007–2010 THEMIS dayside archive. All 3 failed the background-bin occupancy screen (BG = 0%) because low-cone IMF conditions co-occur with lower Dp, making the sheath too wide for the ~11.6 Re inner-probe apogee. Zero new encounters retained. Quasi-radial bin remains empty. Combined sample unchanged (N = 11 from tranche 1 only).
 
 ## Active question
 
-**Choose one of:**
-1. **Authorize a second bounded Phase 6A slice** — expand the local encounter archive under predeclared rules, then rerun the same conditioning pipeline on a larger sample
-2. **Authorize Phase 6B planning** — define a defensible operational signature bundle and proceed to within-sample recovery analysis on the current or expanded catalogue
-3. **Stop Phase 6A** — keep the current 11-encounter descriptor-only result as a small bounded conditioning finding
+**Stop Phase 6A and freeze this two-tranche result as a documented structural-limitation finding?**
 
-## Frozen anchors unchanged
+The two-tranche Phase 6A result shows:
+1. A descriptive cone-angle pattern exists within the accessible (non-radial, compressed-sheath) regime
+2. The quasi-radial regime is structurally inaccessible under the current measurement model
+3. Phase 6B is not justified from this basis
 
-- Phase 4B THEMIS comparator bank remains frozen
-- Phase 5A/5B sidecars remain frozen editorial packaging
-- MMS branch remains frozen
-- No frozen claims strengthened or altered
+## Alternative (only if user explicitly rejects stopping)
+
+- Accept a fundamentally different measurement model or spacecraft constraint (requires a separate branch-level decision)
 
 ## Decision mode
 
-- `decision_mode`: red (next Phase 6 action requires user authorization)
-- `auto_decision_scope`: green only (documentation, formatting)
-- `escalate_if`: any archive expansion, any bundle definition, any occurrence analysis
+- `decision_mode`: red (Phase 6A freeze requires user authorization)
+- `auto_decision_scope`: green only
+- `escalate_if`: any further analysis, any model change, any new search
 - `final_owner_if_escalated`: User

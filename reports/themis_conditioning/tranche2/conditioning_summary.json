@@ -1,0 +1,21 @@
+{
+  "slice": "Low-cone-targeted (cone<=45) THEMIS 2007-2010 dayside encounters not in tranche 1",
+  "candidates_scanned": 3,
+  "processed": 3,
+  "retained": 0,
+  "excluded": 3,
+  "strata": {
+    "quasi-radial": {
+      "N": 0
+    },
+    "low-cone-buffer": {
+      "N": 0
+    },
+    "intermediate": {
+      "N": 0
+    },
+    "perpendicular": {
+      "N": 0
+    }
+  }
+}

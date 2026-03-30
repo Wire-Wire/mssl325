@@ -1,50 +1,60 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-30
-**Round:** Phase 6A — THEMIS upstream conditioning, first tranche
-
-## What changed
-
-Opened Phase 6A as a user-authorized THEMIS science branch. Built a controlled near-subsolar encounter catalogue from all locally cached evaluable THEMIS encounters (N=11 after deduplication). Applied 5 inclusion screens (SZA, upstream availability, occupancy, membership) — all 11 pass. Stratified by IMF cone-angle regime (primary) and clock-angle group (secondary). Produced continuous descriptor summaries (Dn, EB) by stratum.
+**Round:** Phase 6A tranche 2 — low-cone-targeted second slice
 
 ## Declared slice
 
-All locally cached evaluable THEMIS encounters across all run directories in the repository. This is the single predeclared slice for Phase 6A tranche 1.
+All THEMIS encounters from 2007–2010 dayside archive with 30-min mean IMF cone angle ≤ 45° and SZA ≤ 30°, not already in tranche 1. Processed in chronological order. One slice only.
 
-## Key findings
+## Candidate search
 
-- **Perpendicular-IMF** (cone > 60°, N=5): Dn median 0.94 [0.76, 0.97], EB median 1.96 [1.96, 2.12]
-- **Intermediate-IMF** (30° < cone ≤ 60°, N=6): Dn median 1.12 [0.95, 1.31], EB median 1.05 [1.03, 1.18]
-- **Quasi-radial** (cone ≤ 30°): N=0 (empty bin)
-- Occurrence/recovery layer: **deferred** (no inherited operational bundle field exists)
+~80 dates scanned (THD + THE, Aug–Oct 2008–2009, every 3rd day). 3 low-cone candidates found (cone 43–44°). All 3 processed through the full pipeline.
+
+## Result
+
+**Zero retained.** All 3 candidates failed background-bin occupancy (BG = 0%) because associated Dp (1.9–2.7 nPa) is too low for the ~11.6 Re inner-probe apogee to reach s > 0.6.
+
+## Quasi-radial regime populated?
+
+**No.** The quasi-radial bin (cone ≤ 30°) remains empty. No true quasi-radial candidate was even found in the cone ≤ 45° search — the closest candidates had cone = 43–44°.
+
+## Integrated cone-angle structure
+
+Tranche-1 pattern preserved under reclassification (perpendicular: lower Dn / higher EB; low-cone/intermediate: Dn and EB near unity). But this reflects the same 11 encounters from tranche 1. The targeted expansion added no new data.
+
+## Occurrence/recovery
+
+**Deferred.** No inherited bundle field. Branch stays descriptor-only.
+
+## Phase 6B readiness
+
+**NOT justified.** Zero new encounters retained. Quasi-radial structurally inaccessible. Recommended: stop Phase 6A.
 
 ## Files created
 
-- `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` — branch charter + analysis narrative
-- `reports/themis_conditioning/encounter_catalogue.json` — machine-readable catalogue
-- `reports/themis_conditioning/encounter_catalogue.csv` — CSV mirror
-- `reports/themis_conditioning/selection_flow.md` — inclusion/exclusion ledger
-- `reports/themis_conditioning/conditioning_summary.json` — stratum summaries
-- `reports/themis_conditioning/figures/phase6a_dn_eb_by_cone.png` — Dn vs EB scatter by regime
-- `scripts/phase6a_pipeline.py` — sidecar analysis script
+- `docs/PHASE_6A_TRANCHE2_LOWCONE_SLICE.md` — tranche-2 charter + results + integrated synthesis
+- `reports/themis_conditioning/tranche2/encounter_catalogue.json` — tranche-2 catalogue (3 excluded)
+- `reports/themis_conditioning/tranche2/encounter_catalogue.csv`
+- `reports/themis_conditioning/tranche2/selection_flow.md`
+- `reports/themis_conditioning/tranche2/conditioning_summary.json`
+- `reports/themis_conditioning/phase6a_integrated_two_slice_summary.json`
+- `reports/themis_conditioning/figures/phase6a_two_slice_cone_summary.png`
+- `scripts/phase6a_tranche2.py` — sidecar analysis script
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — Phase 6A active, three-option next decision
-- `docs/LLM_HANDOFF.md` — mode updated to Phase 6A active; Phase 6A block added
-- `docs/REPO_NAVIGATION_FOR_THESIS.md` — Phase 6A listed as active analysis (not thesis-safe)
+- `docs/NEXT_QUESTION.md` — post-tranche-2 stop decision
+- `docs/LLM_HANDOFF.md` — Phase 6A tranche-2 result added
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
 
-- `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` — frozen
-- `docs/PHASE_4B_RESULTS_FREEZE.md` — frozen
-- `docs/THEMIS_CASESET.md` — frozen Phase 5A sidecar
-- `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` — frozen Phase 5B sidecar
-- `docs/THEMIS_THESIS_WRITING_PACK.md` — frozen thesis hub
-- `docs/MMS_BRANCH_FREEZE.md` — frozen
+- All frozen docs (THESIS_BLOCK, PHASE_4B, THEMIS_CASESET, PHASE_5B, THESIS_WRITING_PACK, MMS_BRANCH_FREEZE)
 - All frozen evidence values, bank membership, configs, pipeline code
+- `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` — tranche-1 document preserved unchanged
+- `docs/REPO_NAVIGATION_FOR_THESIS.md` — Phase 6A already marked analysis-active
 
-## No frozen values changed
+## Frozen Phase 4B values unchanged
 
-Phase 4B remains the unchanged checkpoint. Phase 6A is additive and descriptor-only.
+No frozen claims strengthened or altered.

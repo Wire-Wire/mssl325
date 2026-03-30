@@ -1,0 +1,69 @@
+{
+  "total_combined": 11,
+  "tranche1_N": 11,
+  "tranche2_N": 0,
+  "strata": {
+    "low-cone": {
+      "N": 4,
+      "N_t1": 4,
+      "N_t2": 0,
+      "eids": [
+        "usable_aug18_6h",
+        "cand4a_oct23_10_thd",
+        "pilot_001",
+        "pilot_002"
+      ],
+      "Dn_median": 0.949,
+      "Dn_IQR": [
+        0.742,
+        1.037
+      ],
+      "EB_median": 1.054,
+      "EB_IQR": [
+        1.046,
+        1.413
+      ]
+    },
+    "intermediate": {
+      "N": 2,
+      "N_t1": 2,
+      "N_t2": 0,
+      "eids": [
+        "usable_sep03_5h",
+        "usable_sep27_09_10h"
+      ],
+      "Dn_median": 2.093,
+      "Dn_IQR": [
+        1.313,
+        2.872
+      ],
+      "EB_median": 1.013,
+      "EB_IQR": [
+        0.799,
+        1.227
+      ]
+    },
+    "perpendicular": {
+      "N": 5,
+      "N_t1": 5,
+      "N_t2": 0,
+      "eids": [
+        "cand4a_sep19_08_the",
+        "usable_sep13_09_6h",
+        "usable_sep20_09_6h",
+        "usable_sep26_09_10h",
+        "usable_oct24_09_6h"
+      ],
+      "Dn_median": 0.94,
+      "Dn_IQR": [
+        0.763,
+        0.969
+      ],
+      "EB_median": 1.958,
+      "EB_IQR": [
+        1.958,
+        2.124
+      ]
+    }
+  }
+}

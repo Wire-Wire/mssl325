@@ -1,0 +1,4 @@
+eid,probe,date,sza,Dn,EB,delta_beta,dp,bz,ma,cone_deg,clock_deg,cone_regime,clock_group,upstream_stable,dp_cv,near_occ,bg_occ,membership,status,reason
+t2_20080904_thd,thd,2008-09-04,,,,,,,,,,,,,,,,,excluded,FAIL_OCCUPANCY
+t2_20090928_thd,thd,2009-09-28,,,,,,,,,,,,,,,,,excluded,FAIL_OCCUPANCY
+t2_20090928_the,the,2009-09-28,,,,,,,,,,,,,,,,,excluded,FAIL_OCCUPANCY

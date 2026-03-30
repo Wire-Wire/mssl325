@@ -1,0 +1,26 @@
+[
+  {
+    "eid": "t2_20080904_thd",
+    "date": "2008-09-04",
+    "probe": "thd",
+    "status": "excluded",
+    "reason": "FAIL_OCCUPANCY",
+    "cone_search": 43.3
+  },
+  {
+    "eid": "t2_20090928_thd",
+    "date": "2009-09-28",
+    "probe": "thd",
+    "status": "excluded",
+    "reason": "FAIL_OCCUPANCY",
+    "cone_search": 42.9
+  },
+  {
+    "eid": "t2_20090928_the",
+    "date": "2009-09-28",
+    "probe": "the",
+    "status": "excluded",
+    "reason": "FAIL_OCCUPANCY",
+    "cone_search": 43.6
+  }
+]
