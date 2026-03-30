@@ -1,27 +1,30 @@
 # Next Question
 
-**Stage:** Phase 6A tranche 2 complete. Low-cone expansion failed. Two-tranche result unchanged from tranche 1.
+**Stage:** Phase 6A audited. Current formulation closed as apparatus-limited pilot.
 
-## Outcome
+## Audit outcome
 
-Tranche 2 found 3 low-cone candidates (cone 43–44°) from the 2007–2010 THEMIS dayside archive. All 3 failed the background-bin occupancy screen (BG = 0%) because low-cone IMF conditions co-occur with lower Dp, making the sheath too wide for the ~11.6 Re inner-probe apogee. Zero new encounters retained. Quasi-radial bin remains empty. Combined sample unchanged (N = 11 from tranche 1 only).
+Post-tranche-2 audit found:
+1. **Synthetic contamination:** pilot_001 and pilot_002 are synthetic fixtures in the tranche-1 catalogue (SZA=0, hardcoded Dp/Bz/Ma). Effective real N = 9, not 11.
+2. **Declared vs searched slice mismatch:** Tranche 2 declared "2007–2010" but searched only Aug–Oct 2008–2009.
+3. **No true quasi-radial encounter:** All "low-cone" group encounters have cone > 30°.
+
+**Verdict:** Apparatus-limited pilot stop with broader question still open.
 
 ## Active question
 
-**Stop Phase 6A and freeze this two-tranche result as a documented structural-limitation finding?**
+**Authorize a Phase 6 reset branch?**
 
-The two-tranche Phase 6A result shows:
-1. A descriptive cone-angle pattern exists within the accessible (non-radial, compressed-sheath) regime
-2. The quasi-radial regime is structurally inaccessible under the current measurement model
-3. Phase 6B is not justified from this basis
+A reset would need to address:
+- synthetic fixture exclusion from the encounter universe
+- proper archive scope declaration matching actual search
+- the dual-bin occupancy constraint that co-excludes low-Dp / low-cone conditions
 
-## Alternative (only if user explicitly rejects stopping)
-
-- Accept a fundamentally different measurement model or spacecraft constraint (requires a separate branch-level decision)
+Current Phase 6A formulation is closed. Phase 6B is not justified. No further science proceeds without explicit reset authorization.
 
 ## Decision mode
 
-- `decision_mode`: red (Phase 6A freeze requires user authorization)
-- `auto_decision_scope`: green only
-- `escalate_if`: any further analysis, any model change, any new search
+- `decision_mode`: red (reset authorization requires user)
+- `auto_decision_scope`: green only (documentation, formatting)
+- `escalate_if`: any new science, search, or analysis
 - `final_owner_if_escalated`: User

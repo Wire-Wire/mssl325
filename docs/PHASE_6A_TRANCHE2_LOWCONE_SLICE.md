@@ -1,3 +1,5 @@
+> **POST-AUDIT STATUS (2026-03-30):** This tranche-2 document has a confirmed declared-slice vs searched-slice mismatch: the declared slice was "2007–2010" but only Aug–Oct 2008–2009 was actually searched. The zero-retained result applies to the searched subspace only, not the full declared interval. See `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md` for the full audit.
+
 # Phase 6A Tranche 2 — Low-Cone-Targeted Second Slice
 
 **Date:** 2026-03-30

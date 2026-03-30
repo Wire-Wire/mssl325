@@ -1,7 +1,7 @@
 # LLM Handoff — PDL Pilot Pipeline
 
 **Load this first when resuming in a new session.**
-**Mode: Phase 6A active.** THEMIS upstream-conditioning branch open by user authorization. Phase 4B/5A/5B remain frozen anchors. MMS branch frozen.
+**Mode: Phase 6A audited and closed.** Current formulation exhausted as apparatus-limited pilot. Broader question still open. Phase 4B/5A/5B remain frozen anchors. MMS branch frozen.
 
 ---
 
@@ -32,12 +32,13 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Phase 5A/5B caseset sidecars (2026-03-29).** 8 cases screened from frozen seed pass. 4 reviewed as clear (P3, P4, P5, EXT) + 1 reviewed as ambiguous (P6). Phase 5B grouped these by clock-angle bin: atlas-usable cases appear in 60–120° and >120° bins only; the sole <60° screened case is reviewed as not convincing. Review statuses are editorial packaging only, not scientific confidence classes. Frozen Phase 4B claims unchanged. See `docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`.
 
-**Phase 6A (2026-03-30).** User-authorized THEMIS upstream-conditioning branch. Two tranches complete.
-- Tranche 1: 11 encounters retained. Perpendicular-IMF (N=5): Dn med 0.94, EB med 1.96. Intermediate (N=6): Dn med 1.12, EB med 1.05. Quasi-radial: empty.
-- Tranche 2: 3 low-cone candidates found, all failed BG occupancy (Dp too low). Zero retained. Quasi-radial remains empty.
-- **Structural finding:** The dual-bin requirement + inner-probe apogee systematically excludes the low-Dp conditions that co-occur with quasi-radial IMF.
-- Descriptor-only. No occurrence layer. Phase 6B not justified.
-- See `docs/PHASE_6A_TRANCHE2_LOWCONE_SLICE.md`.
+**Phase 6A (2026-03-30).** User-authorized THEMIS upstream-conditioning branch. Two tranches complete. **Audited and closed as apparatus-limited pilot.**
+- Tranche 1: 11 encounters retained, but **2 are synthetic fixtures** (pilot_001, pilot_002). Effective real N = 9.
+- Tranche 2: 3 low-cone candidates found, all failed BG occupancy. Zero retained. **Declared slice (2007–2010) was broader than searched slice (Aug–Oct 2008–2009).**
+- No true quasi-radial encounter (cone ≤ 30°) in either tranche.
+- **Verdict:** apparatus-limited pilot stop; broader upstream-conditioning question not yet answered.
+- Phase 6B not justified. Reset would be required.
+- See `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md`.
 
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)

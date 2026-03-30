@@ -1,3 +1,5 @@
+> **POST-AUDIT STATUS (2026-03-30):** This tranche-1 document is an apparatus-limited pilot result, not a controlled catalogue finding. It contains 2 synthetic fixture encounters (pilot_001, pilot_002) that should not have entered the real-data catalogue. The effective real-data sample is N=9, not N=11. See `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md` for the full audit.
+
 # Phase 6A — THEMIS Upstream Conditioning in a Controlled Near-Subsolar Encounter Catalogue
 
 **Date:** 2026-03-30
