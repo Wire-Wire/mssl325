@@ -37,8 +37,15 @@ No thresholds, no labels, no detector semantics on either branch.
 - Tranche 2: 3 low-cone candidates found, all failed BG occupancy. Zero retained. **Declared slice (2007–2010) was broader than searched slice (Aug–Oct 2008–2009).**
 - No true quasi-radial encounter (cone ≤ 30°) in either tranche.
 - **Verdict:** apparatus-limited pilot stop; broader upstream-conditioning question not yet answered.
-- Phase 6B not justified. Reset would be required.
 - See `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md`.
+
+**Phase 6 reset-options memo (2026-03-30).**
+- **Route A (mandatory repair):** synthetic exclusion, scope-match discipline, data-source filter. Required before any reset.
+- **Route B (measurement-model reset):** relax dual-bin requirement. Gains low-cone access but loses Dn/EB comparability with Phase 4B.
+- **Route C (regime-access reset):** preserve Dn/EB, broaden search for low-cone + high-Dp encounters. May hit same co-occurrence limit.
+- **Route D (branch-question reset):** narrow to accessible non-radial regime only. Gives up quasi-radial but can proceed on corrected sample.
+- **Phase 6B remains blocked** until a reset succeeds.
+- See `docs/PHASE_6_RESET_OPTIONS.md`.
 
 **For thesis writing (frozen layers only), start from:**
 1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)

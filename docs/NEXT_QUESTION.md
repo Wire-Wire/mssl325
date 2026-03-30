@@ -1,30 +1,33 @@
 # Next Question
 
-**Stage:** Phase 6A audited. Current formulation closed as apparatus-limited pilot.
+**Stage:** Phase 6A closed. Reset-options memo complete. Awaiting user choice.
 
-## Audit outcome
+## Context
 
-Post-tranche-2 audit found:
-1. **Synthetic contamination:** pilot_001 and pilot_002 are synthetic fixtures in the tranche-1 catalogue (SZA=0, hardcoded Dp/Bz/Ma). Effective real N = 9, not 11.
-2. **Declared vs searched slice mismatch:** Tranche 2 declared "2007–2010" but searched only Aug–Oct 2008–2009.
-3. **No true quasi-radial encounter:** All "low-cone" group encounters have cone > 30°.
-
-**Verdict:** Apparatus-limited pilot stop with broader question still open.
+Phase 6A is audited and closed as an apparatus-limited pilot. Route A (mandatory provenance/scope repair) is required before any strategic reset. Three live strategic reset families are defined. Phase 6B remains blocked.
 
 ## Active question
 
-**Authorize a Phase 6 reset branch?**
+**After mandatory provenance/scope repair (Route A), which Phase 6 reset family should be authorized?**
 
-A reset would need to address:
-- synthetic fixture exclusion from the encounter universe
-- proper archive scope declaration matching actual search
-- the dual-bin occupancy constraint that co-excludes low-Dp / low-cone conditions
+| Option | Purpose | Main trade-off |
+|---|---|---|
+| **B** | Measurement-model reset: remove dual-bin bottleneck | Loses Dn/EB comparability with frozen Phase 4B |
+| **C** | Regime-access reset: broader search for low-cone + high-Dp encounters | May hit same physical co-occurrence limit |
+| **D** | Branch-question reset: narrow to accessible non-radial regime only | Gives up quasi-radial; small corrected sample |
 
-Current Phase 6A formulation is closed. Phase 6B is not justified. No further science proceeds without explicit reset authorization.
+## Mandatory regardless of B/C/D
+
+Route A (provenance repair): synthetic-fixture exclusion, scope-declaration/search-match discipline, data-source filter. This is required before any reset executes.
+
+## Blocked
+
+- Phase 6B (conditioned occurrence / detector-preparatory)
+- Direct detector / threshold / label / class / prior work
 
 ## Decision mode
 
-- `decision_mode`: red (reset authorization requires user)
+- `decision_mode`: red (reset-family choice requires user)
 - `auto_decision_scope`: green only (documentation, formatting)
-- `escalate_if`: any new science, search, or analysis
+- `escalate_if`: any science execution
 - `final_owner_if_escalated`: User

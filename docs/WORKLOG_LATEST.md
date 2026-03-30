@@ -1,24 +1,22 @@
 # Worklog — Latest Round
 
 **Date:** 2026-03-30
-**Round:** Phase 6A post-tranche-2 audit and control reset
+**Round:** Phase 6 reset-options memo / decision-space packaging
 
 ## What changed
 
-Performed a post-tranche-2 audit of the Phase 6A implementation. Found three verified issues: (1) synthetic contamination — pilot_001 and pilot_002 are synthetic fixtures with hardcoded upstream (SZA=0, Dp=2), effective real N = 9 not 11; (2) declared vs searched slice mismatch — tranche 2 declared "2007–2010" but searched only Aug–Oct 2008–2009; (3) no true quasi-radial encounter — all "low-cone" group entries have cone > 30°.
+Created `docs/PHASE_6_RESET_OPTIONS.md` — a decision memo separating mandatory provenance/scope repair (Route A) from three strategic reset families (B: measurement-model reset, C: regime-access reset, D: branch-question reset). Made rejected routes explicit. Defined minimum Phase 6B preconditions. Updated control files to present the B/C/D choice cleanly for the user.
 
-**Verdict:** Apparatus-limited pilot stop with broader question still open. Current structural-limitation wording was too strong. Downgraded.
+No new science was run. Route A was separated from B/C/D as mandatory precondition vs strategic science choice. Rejected routes: provenance-only-as-final-answer, same-model-just-search-more, axis-change-away-from-cone-angle, direct-6B-launch.
 
 ## Files created
 
-- `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md` — main audit note
+- `docs/PHASE_6_RESET_OPTIONS.md` — main decision memo
 
 ## Files modified
 
-- `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` — post-audit status header added
-- `docs/PHASE_6A_TRANCHE2_LOWCONE_SLICE.md` — post-audit status header added
-- `docs/NEXT_QUESTION.md` — replaced "freeze as structural finding" with "authorize reset"
-- `docs/LLM_HANDOFF.md` — Phase 6A block downgraded; mode updated
+- `docs/NEXT_QUESTION.md` — replaced generic reset question with explicit B/C/D choice
+- `docs/LLM_HANDOFF.md` — Phase 6 reset-route block added
 - `docs/WORKLOG_LATEST.md` — this file
 
 ## Files intentionally not changed
