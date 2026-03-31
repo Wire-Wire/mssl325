@@ -1,0 +1,32 @@
+{
+  "event": "MMS-P1",
+  "date": "2015-11-12",
+  "window": "07:30-09:30 UT",
+  "position_x_re": 11.4,
+  "sza_deg": 18,
+  "dp_nPa": 1.1,
+  "bz_nT": -1.7,
+  "fgm_4sc": "4/4",
+  "fpi_mms1": true,
+  "tetrahedron_sep_km": 10,
+  "gradient_scale_km": "750-3750 (estimated)",
+  "scale_mismatch_factor": "~100x",
+  "mva_normal_gsm": [
+    0.318,
+    0.371,
+    -0.873
+  ],
+  "mva_eigenvalue_ratio": 3.0,
+  "mva_status": "FAIL (poorly constrained, geophysically inconsistent)",
+  "timing_normal_status": "FAIL (degenerate, separation too small)",
+  "normal_cross_check": "No two methods agree",
+  "Lt_defensible": false,
+  "Lt_blocker": "No reliable normal direction from MVA or timing",
+  "Lg_defensible": false,
+  "Lg_blocker": "Tetrahedron separation (~10 km) << gradient scale (~1000 km)",
+  "representative_L_justified": false,
+  "final_outcome": "do_not_report",
+  "quality_grade": null,
+  "dominant_blocker": "Phase 1 tetrahedron scale mismatch with gradient structure scale",
+  "structural_lesson": "MMS Phase 1 ~10 km separation not matched to ~1000 km near-MP gradient layers"
+}

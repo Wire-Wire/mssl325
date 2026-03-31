@@ -1,0 +1,46 @@
+{
+  "generated": "2026-03-31T07:51:33.702467",
+  "archive_scope": "THEMIS 2007-2025, all 5 probes, all months",
+  "geometry": {
+    "x_min": 5.0,
+    "sza_max": 30.0,
+    "r_min": 8.0,
+    "r_max": 25.0
+  },
+  "state_files": 1135,
+  "qualifying_days": 6903,
+  "processed": 6903,
+  "unique_retained": 757,
+  "cone_counts": {
+    "quasi-radial": 28,
+    "low-cone": 89,
+    "intermediate": 199,
+    "perpendicular": 441
+  },
+  "by_year": {
+    "2007": 56,
+    "2008": 48,
+    "2009": 39,
+    "2010": 9,
+    "2013": 7,
+    "2014": 18,
+    "2015": 37,
+    "2016": 27,
+    "2017": 63,
+    "2018": 85,
+    "2019": 66,
+    "2020": 28,
+    "2021": 46,
+    "2022": 63,
+    "2023": 72,
+    "2024": 53,
+    "2025": 40
+  },
+  "by_probe": {
+    "tha": 233,
+    "thb": 37,
+    "thc": 51,
+    "thd": 217,
+    "the": 219
+  }
+}
