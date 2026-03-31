@@ -6,7 +6,7 @@
 
 ## A. Role statement
 
-Phase 6 is a **bounded descriptive-methodological sidecar** placed after the frozen Phase 4B comparator bank in the thesis. Phase 4B remains the claim-bearing anchor for all THEMIS near-magnetopause descriptor results. Phase 6 does not strengthen, extend, or validate Phase 4B claims.
+Phase 6 is a **bounded descriptive-methodological sidecar** placed after the frozen Phase 4B comparator bank in the thesis. Phase 4B remains the sole claim-bearing anchor for all THEMIS near-magnetopause descriptor results. Phase 6 does not strengthen, extend, or validate Phase 4B claims. No occurrence, threshold, class, detector, or mission-prior interpretation is supported by Phase 6.
 
 ---
 
