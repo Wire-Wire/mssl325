@@ -5,7 +5,7 @@
 > Do not infer the current project stage from this file alone.
 
 > **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
-> Phase 6 post-Route-B. Route B bounded execution complete (modest yield: 3/5 inner-sheath gradients, recovered low-cone shows no depletion). Full four-option decision menu now live (Route B continuation / Route C / Route D narrowing / writing-safe return). Awaiting user route choice. Phase 6B blocked.
+> Writing-safe thesis return. Phase 6 science closed. Route C HARD NULL (zero new low-cone/quasi-radial encounters in locally available data). Route B frozen sidecar. Phase 6B blocked. Project in frozen-writing-safe mode.
 
 ---
 
@@ -55,9 +55,23 @@ No thresholds, no labels, no detector semantics on either branch.
 
 **Phase 6 post-Route-B decision-space repair (2026-03-31).**
 - No new science. Decision-space cleanup only.
-- Previous narrow three-option menu (close B / open C / close Phase 6) replaced with full four-option post-Route-B menu.
-- **Four live options:** (A) Route B continuation, (B) Route C execution, (C) Route D-style narrowing, (D) writing-safe return.
-- Route D and writing-safe return were always legitimate options but were not presented in the previous menu.
+- Previous narrow three-option menu replaced with full four-option post-Route-B menu.
+- User chose Option B: Route C execution.
+
+**Phase 6 Route C execution and closure (2026-03-31).**
+- One full predeclared scan of the Route C declared slice (2007 + 2010 + 2008-2009 non-Aug-Oct) under original Dn/EB semantics. Locally cached data only, no internet fetch.
+- **3 unique date+probe combinations** found in the Route C slice. 2 had incomplete data. 1 was the already-catalogued 2010-10-23 THD.
+- **No new evaluable low-cone or quasi-radial encounters.**
+- **HARD NULL:** quasi-radial=0, low-cone=1 (below thresholds of >=1 and >=5 respectively).
+- **Deterministic closure activated:** Phase 6 science closed. Writing-safe thesis return.
+- Route B remains frozen sidecar. Route D not executed. Phase 6B not opened.
+- The broader upstream-conditioning question remains explicitly open, not answered negatively. Deferred to future work.
+- See `docs/PHASE_6_ROUTEC_RESULT.md`.
+
+**Phase 6 final summary.**
+- Phase 6 is documented as a methodological exercise: attempted upstream conditioning, discovered Dp-dependent barrier, explored Route B sidecar, confirmed local-data null via Route C.
+- The quasi-radial conditioning question is deferred, not closed negatively.
+- **Project is now in writing-safe thesis mode.**
 - Awaiting user route choice. Phase 6B remains blocked.
 - See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
 

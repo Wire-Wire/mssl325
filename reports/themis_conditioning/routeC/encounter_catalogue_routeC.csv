@@ -1,0 +1,4 @@
+encounter_id,spacecraft,date,year,month,probe,sza_deg,mlt,cone_deg,clock_deg,dp_nPa,bz_nT,near_occ,bg_occ,Dn,EB,qc_transition_cleanliness,qc_disturbance,qc_boundary_motion,omni_context_quality_note,boundary_uncertainty_note,routeC_core_usable,exclude_reason,cone_bin
+routeC_20070715_thc,themis,2007-07-15,2007,7,thc,,,,,,,,,,,,,,,,False,"incomplete local data (missing: MOM, STATE, OMNI)",unknown
+routeC_20080714_thd,themis,2008-07-14,2008,7,thd,,,,,,,,,,,,,,,,False,incomplete local data (missing: STATE),unknown
+routeC_20101023_thd,themis,2010-10-23,2010,10,thd,14.4,12.5,54.8,306.2,3.16,2.04,0.073,0.231,1.3303,1.2028,mixed,uncertain,stable,good,plausible,True,,intermediate

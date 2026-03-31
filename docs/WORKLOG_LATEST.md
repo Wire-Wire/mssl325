@@ -1,49 +1,59 @@
 > **USAGE:** This file records what changed in the most recent applied round. It is secondary to `docs/NEXT_QUESTION.md`. Do not use this file alone to infer the current project stage. If conflict exists, `docs/NEXT_QUESTION.md` wins.
 
-> **Current-state echo:** Phase 6 post-Route-B. Decision-space repair complete. Four-option menu now live. Awaiting user route choice. Phase 6B blocked. See `docs/NEXT_QUESTION.md`.
+> **Current-state echo:** Writing-safe thesis return. Phase 6 science closed. Route C HARD NULL. See `docs/NEXT_QUESTION.md`.
 
 # Worklog — Latest Round
 
 **Date:** 2026-03-31
-**Round:** Post-Route-B decision-space repair (no new science)
+**Round:** Phase 6 Route C execution + deterministic closure
 
 ## What changed
 
-### Decision-space repair
+### Route C executed
 
-The previous NEXT_QUESTION.md presented a narrow three-option menu:
-1. Close Route B, return to Phase 6 decision tree
-2. Authorize Route C
-3. Close Phase 6 entirely, proceed to thesis writing
+One full predeclared scan of the Route C declared slice (2007 + 2010 + 2008-2009 non-Aug-Oct) under original Dn/EB semantics. Locally cached data only, no internet fetch.
 
-This menu was incomplete. It omitted Route D (branch-question narrowing to accessible non-radial regime) and misframed the writing-safe return as "close Phase 6 entirely" without making it explicit as a deliberate, supported fallback.
+**Scan results:**
+- 3 unique date+probe combinations found in the Route C slice
+- 2 had incomplete data (missing STATE, MOM, or OMNI)
+- 1 was data-complete (2010-10-23 THD) — already in the clean N=9 catalogue
+- No new evaluable low-cone or quasi-radial encounters
 
-### Repaired route menu
+**Hard stop evaluation:**
+- quasi-radial retained: 0 (threshold: >= 1) — NOT MET
+- low-cone retained: 1 (threshold: >= 5) — NOT MET
+- **OUTCOME: HARD NULL**
 
-The post-Route-B decision space now presents four explicit options:
-- **Option A:** Route B continuation (refine/expand inner-sheath descriptor)
-- **Option B:** Route C execution (search for low-cone encounters under original Dn/EB)
-- **Option C:** Route D-style narrowing (within-regime stratification on N=9)
-- **Option D:** Writing-safe return (accept Phase 6 as methodological finding)
+### Deterministic closure activated
 
-Each option has a full decision block in `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` specifying: what it solves, what it preserves, what it sacrifices, its scientific ceiling, its main risk, and its first executable action.
+Per the predeclared Route C execution plan, HARD NULL triggers automatic writing-safe return:
+- Phase 6 science closed
+- Route B remains frozen sidecar
+- Route D not executed
+- Phase 6B not opened
+- Project returns to writing-safe thesis mode
 
-### Exact red-level question now posed
+### Route B frozen as sidecar
 
-"Which of the four post-Route-B options should be authorized next?"
+Route B bounded execution (completed in a prior round) is now a frozen sidecar. Its descriptors (Dn_near, D|B|_near) are documented but not continued or substituted for Dn/EB.
 
 ## Files created
 
-- `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` — full post-Route-B decision memo with four option blocks
+- `docs/PHASE_6_ROUTEC_EXECUTION_PLAN.md` — pre-registered plan
+- `docs/PHASE_6_ROUTEC_RESULT.md` — bounded null result memo
+- `reports/themis_conditioning/routeC/scope_manifest.json` — machine-readable scope manifest
+- `reports/themis_conditioning/routeC/selection_flow.md` — human-readable selection flow
+- `reports/themis_conditioning/routeC/encounter_catalogue_routeC.json` — full catalogue
+- `reports/themis_conditioning/routeC/encounter_catalogue_routeC.csv` — tabular catalogue
+- `reports/themis_conditioning/routeC/routeC_summary.json` — summary with hard stop
+- `scripts/phase6_routeC_scan.py` — scan script
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — repaired to four-option menu
+- `docs/NEXT_QUESTION.md` — writing-safe thesis return
 - `docs/WORKLOG_LATEST.md` — this file
-- `docs/LLM_HANDOFF.md` — Phase 6 state updated
-- `docs/PHASE_6_ROUTE3_ACTIVATION.md` — superseded-by note added
-- `docs/PHASE_6_ROUTE3_B_COMPATIBLE_MEASUREMENT_MODEL.md` — superseded-by note added
+- `docs/LLM_HANDOFF.md` — Phase 6 closure block added
 
-## No new science execution
+## Frozen anchors unchanged
 
-No calculations, no archive search, no Route B continuation, no Route C search, no Route D analysis, no Phase 6 closure, no Phase 6B work. Frozen anchors unchanged.
+Phase 4B, 5A/5B, MMS branch — all intact. No thresholds, labels, or detector semantics introduced.

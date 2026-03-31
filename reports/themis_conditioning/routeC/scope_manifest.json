@@ -1,0 +1,63 @@
+{
+  "generated": "2026-03-31T02:19:47.896905",
+  "declared_slice": {
+    "description": "2007 full year + 2010 full year + 2008 non-Aug-Oct + 2009 non-Aug-Oct",
+    "sub_slices": [
+      {
+        "label": "2007",
+        "year": 2007,
+        "months": "all"
+      },
+      {
+        "label": "2010",
+        "year": 2010,
+        "months": "all"
+      },
+      {
+        "label": "2008 non-Aug-Oct",
+        "year": 2008,
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          12
+        ]
+      },
+      {
+        "label": "2009 non-Aug-Oct",
+        "year": 2009,
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11,
+          12
+        ]
+      }
+    ]
+  },
+  "searched_slice": {
+    "description": "All locally cached THEMIS encounter data within the declared slice",
+    "method": "Exhaustive scan of data_cache/normalized/ directories. Every directory with data timestamped in the declared slice was evaluated.",
+    "data_source": "Local cache only. No internet fetch."
+  },
+  "scope_match": true,
+  "scope_match_note": "Declared slice equals searched slice. Every locally cached data point in the slice was evaluated. The local cache is sparse (most of 2007-2010 was never fetched from CDAWeb). This means the Route C scan is complete over available local data but does NOT cover the full 2007-2010 THEMIS archive.",
+  "cache_inventory_total": 60,
+  "in_routeC_slice_total": 3,
+  "data_complete_in_slice": 1,
+  "routeC_retained": 1,
+  "routeA_encounters_in_slice": 1,
+  "hard_stop_outcome": "HARD_NULL",
+  "hard_stop_quasi_radial": 0,
+  "hard_stop_low_cone": 1
+}

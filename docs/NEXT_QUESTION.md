@@ -3,46 +3,49 @@
 
 # Next Question
 
-**Stage:** Phase 6 post-Route-B. Route A complete. Route B bounded execution complete. Routes C and D not executed. Writing-safe return is a live option. Phase 6B blocked.
+**Stage:** Writing-safe thesis return. Phase 6 science closed. Route C HARD NULL triggered automatic closure per predeclared plan.
 
-## What was done this round
+## Phase 6 final status
 
-Decision-space repair only. No new science execution.
+| Component | Final status |
+|---|---|
+| Route A (provenance repair) | **Complete.** Clean catalogue N=9. |
+| Route B (inner-sheath descriptor) | **Frozen sidecar.** Modest yield. Not interchangeable with Dn/EB. |
+| Route C (regime-access search) | **Complete. Bounded null.** No new low-cone/quasi-radial encounters in locally available data. |
+| Route D (branch-question narrowing) | **Not executed.** |
+| Phase 6B (occurrence/detector) | **Blocked. Not opened.** |
+| Phase 6 science | **Closed.** |
 
-The previous three-option menu (close B / open C / close Phase 6) did not represent the actual decision space. It omitted Route D (branch-question narrowing) and misframed writing-safe return as "close Phase 6 entirely." This round repaired the menu to reflect all four live post-Route-B options.
+## What this closure means
 
-See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` for full decision blocks.
+Phase 6 is documented as a methodological exercise:
+- Attempted upstream conditioning of the frozen THEMIS measurement model
+- Discovered and documented the Dp-dependent dual-bin occupancy barrier
+- Explored an alternative inner-sheath descriptor (Route B) with modest yield
+- Scanned the locally available unsearched archive with no new low-cone recovery (Route C)
+- The quasi-radial conditioning question remains explicitly open for future work
 
-## Route B bounded execution (completed previous round)
+The broader upstream-conditioning question is NOT answered negatively. It is deferred to future work with broader archive coverage or wider-apogee missions.
 
-- Dn_near and D|B|_near computed on 5 Route-B-computable encounters (4 tranche-1 + 1 tranche-2 recovered)
-- 3/5 show inner-sheath depletion gradient (Dn_near < 1 AND D|B|_near > 1)
-- Recovered low-cone encounter (t2_20080904_thd, cone=43deg): no depletion (flat profile)
-- Route B descriptors are NOT Dn/EB. Not interchangeable with frozen Phase 4B.
-- Modest but nonzero descriptive yield. Does not extend regime coverage.
+## Current project mode
 
-## Active question
+**Writing-safe thesis integration.** The project returns to frozen-writing-safe mode.
 
-**Which of the four post-Route-B options should be authorized next?**
-
-| Option | Label | What it does | Main risk |
-|---|---|---|---|
-| **A** | Route B continuation | Refine or expand inner-sheath descriptor; search for more vn-occupied encounters | Diminishing returns; yield already known to be modest |
-| **B** | Route C execution | Search unsearched 2007-2010 archive for low-cone encounters evaluable under original Dn/EB | Low-cone + high-Dp co-occurrence may be physically rare; may reproduce tranche-2 null |
-| **C** | Route D-style narrowing | Narrow to within-regime stratification on accessible N=9 sample | N=9 may be too sparse; may just repackage Phase 4B |
-| **D** | Writing-safe return | Accept Phase 6 as methodological finding; return to thesis writing | Lowest yield; no new science results beyond documented limitation |
-
-Full decision blocks with scientific ceilings, preservation/sacrifice trade-offs, and first executable actions are in `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
+Available for thesis writing:
+- Phase 4B frozen THEMIS bank (primary science result)
+- Phase 5A/5B caseset sidecars (editorial packaging)
+- MMS branch freeze (methodological finding)
+- Phase 6 conditioning exercise (methodological finding)
 
 ## Blocked
 
-- Phase 6B (occurrence / detector-preparatory / thresholds / labels / classes)
-- No further science execution without explicit user authorization
-- No modification of frozen Phase 4B, 5A/5B, or MMS branch
+- Phase 6B (occurrence / detector / thresholds / labels / classes)
+- Route B continuation
+- New science execution on any branch
+- Modification of any frozen claims
 
 ## Decision mode
 
-- `decision_mode`: red
-- `auto_decision_scope`: green only
-- `escalate_if`: any science execution, route choice, or phase closure
+- `decision_mode`: green/yellow within writing-safe envelope
+- `escalate_if`: any request to reopen science branches
 - `final_owner_if_escalated`: User
