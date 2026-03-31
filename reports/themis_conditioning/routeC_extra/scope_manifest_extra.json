@@ -1,0 +1,21 @@
+{
+  "generated": "2026-03-31T17:11:13.166824",
+  "run_name": "Phase 6 EXTRA (2007-2025)",
+  "declared_slice": "All THEMIS 2007-2025, all 5 probes, all months, SZA<=30, 8<r<25 Re",
+  "scope_match": true,
+  "source": "data_cache/themis_archive/encounters/ (pre-cached local files only)",
+  "results": {
+    "unique_retained": 757,
+    "cone_counts": {
+      "perpendicular": 441,
+      "quasi-radial": 28,
+      "intermediate": 199,
+      "low-cone": 89
+    }
+  },
+  "hard_stop": {
+    "quasi_radial": 28,
+    "low_cone": 89,
+    "outcome": "SUCCESS"
+  }
+}

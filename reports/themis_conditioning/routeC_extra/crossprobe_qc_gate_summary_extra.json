@@ -1,0 +1,35 @@
+{
+  "generated": "2026-03-31T17:11:13.168321",
+  "gate_type": "cross-probe QC gate (EXTRA, 2007-2025)",
+  "input": "757 retained encounters from full local cache",
+  "overlap_groups_count": 208,
+  "lc_qr_overlap_groups": 41,
+  "pairwise_total": 436,
+  "oom_dn_pairs": 71,
+  "oom_eb_pairs": 5,
+  "consistent_groups": 163,
+  "inconsistent_groups": 45,
+  "lc_qr_oom_groups": 9,
+  "extreme_encounters": 222,
+  "probe_stats": {
+    "thd": {
+      "n": 217,
+      "dn_med": 0.715,
+      "eb_med": 2.243,
+      "dp_med": 2.45
+    },
+    "non_thd": {
+      "n": 540,
+      "dn_med": 0.774,
+      "eb_med": 2.46,
+      "dp_med": 2.1
+    }
+  },
+  "cross_cycle": {
+    "cycle1_n": 152,
+    "cycle2_n": 241,
+    "artemis_n": 364
+  },
+  "final_verdict": "FAIL",
+  "packaging_recommendation": "Phase 6 EXTRA remains packageable only as a bounded descriptive-methodological sidecar."
+}
