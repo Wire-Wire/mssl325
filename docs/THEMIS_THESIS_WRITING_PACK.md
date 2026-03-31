@@ -195,3 +195,4 @@ The following are blocked for THEMIS thesis writing under the current frozen cei
 | `RUN_REVIEW_PACKET.md` | Historical Phase 3A artifact — off thesis-results route |
 | Old phase docs (2B–4A) | Historical provenance only |
 | `MMS_BRANCH_FREEZE.md` | Separate MMS methods/limitation block |
+| **`PHASE_6_THESIS_INSERTION_PACK.md`** | **Phase 6 thesis insertion pack — pasteable prose, limitations, do-not-say** |
