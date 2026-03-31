@@ -1,0 +1,852 @@
+{
+  "generated": "2026-03-31T04:58:08.389658",
+  "run_name": "Phase 6 Route C FULL EXP",
+  "declared_slice": {
+    "years": [
+      2007,
+      2008,
+      2009,
+      2010
+    ],
+    "months": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "probes": [
+      "tha",
+      "thb",
+      "thc",
+      "thd",
+      "the"
+    ],
+    "sza_max": 30.0,
+    "description": "All THEMIS 2007-2010, Jul-Nov, all 5 probes, SZA<=30"
+  },
+  "searched_slice": {
+    "ym_probe_searched": 90,
+    "description": "Every (year,month,probe) STATE fetched via CDAWeb. No subsampling. FGM+MOM+OMNI fetched per qualifying day (6h windows)."
+  },
+  "scope_match": true,
+  "results": {
+    "qualifying_days": 2083,
+    "processed": 2083,
+    "unique_retained": 148,
+    "cone_counts": {
+      "quasi-radial": 4,
+      "low-cone": 16,
+      "intermediate": 44,
+      "perpendicular": 84,
+      "unknown": 0
+    }
+  },
+  "hard_stop": {
+    "quasi_radial": 4,
+    "low_cone": 16,
+    "outcome": "SUCCESS"
+  },
+  "search_log": [
+    {
+      "year": 2007,
+      "month": 7,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 25
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 24
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 28
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 27
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 29
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 17
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 11
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 15
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 20
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 22
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "probe": "tha",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "probe": "thb",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "probe": "thc",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "probe": "thd",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "probe": "the",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 23
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 21
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 20
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 13
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 17
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 22
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 2
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 6
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 22
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 23
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 7
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 18
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 20
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 14
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 14
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 22
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 29
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 10
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 15
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "probe": "thb",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 5
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "probe": "thc",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 7
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "probe": "tha",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "probe": "thb",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "probe": "thc",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "probe": "thd",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "probe": "the",
+      "searched": true,
+      "reason": "no_geometry",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 20
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "probe": "thb",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "probe": "thc",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 21
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 23
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "probe": "thb",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "probe": "thc",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "probe": "thb",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "probe": "thc",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 31
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "probe": "tha",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "probe": "thb",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "probe": "thc",
+      "searched": false,
+      "reason": "ARTEMIS_cutoff",
+      "n_windows": 0
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "probe": "thd",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "probe": "the",
+      "searched": true,
+      "reason": "ok",
+      "n_windows": 30
+    }
+  ]
+}

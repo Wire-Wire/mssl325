@@ -1,59 +1,50 @@
 > **USAGE:** This file records what changed in the most recent applied round. It is secondary to `docs/NEXT_QUESTION.md`. Do not use this file alone to infer the current project stage. If conflict exists, `docs/NEXT_QUESTION.md` wins.
 
-> **Current-state echo:** Writing-safe thesis return. Phase 6 science closed. Route C HARD NULL. See `docs/NEXT_QUESTION.md`.
+> **Current-state echo:** Phase 6 Route C FULL EXP complete. SUCCESS. 4 quasi-radial + 16 low-cone retained. Awaiting user decision. See `docs/NEXT_QUESTION.md`.
 
 # Worklog — Latest Round
 
 **Date:** 2026-03-31
-**Round:** Phase 6 Route C execution + deterministic closure
+**Round:** Phase 6 Route C FULL EXP (user-authorized full-archive experiment)
 
 ## What changed
 
-### Route C executed
+### FULL EXP executed
 
-One full predeclared scan of the Route C declared slice (2007 + 2010 + 2008-2009 non-Aug-Oct) under original Dn/EB semantics. Locally cached data only, no internet fetch.
+Full-archive scan of all THEMIS 2007-2010, Jul-Nov, all 5 probes via CDAWeb. Multi-threaded (8 workers). 90 (year, month, probe) combinations searched. 2083 near-subsolar qualifying days processed. Original Dn/EB semantics.
 
-**Scan results:**
-- 3 unique date+probe combinations found in the Route C slice
-- 2 had incomplete data (missing STATE, MOM, or OMNI)
-- 1 was data-complete (2010-10-23 THD) — already in the clean N=9 catalogue
-- No new evaluable low-cone or quasi-radial encounters
+### Result: SUCCESS
 
-**Hard stop evaluation:**
-- quasi-radial retained: 0 (threshold: >= 1) — NOT MET
-- low-cone retained: 1 (threshold: >= 5) — NOT MET
-- **OUTCOME: HARD NULL**
+- 148 unique retained encounters (Dn/EB computable)
+- 4 quasi-radial (cone < 30 deg): 2007-08-08 THA (25.2), 2007-08-12 THA (29.0), 2009-07-25 THB (22.2), 2009-08-10 THC (19.7)
+- 16 low-cone (30-45 deg): from THA/THB/THC/THD/THE across 2007-2009
+- 44 intermediate, 84 perpendicular
+- Both success conditions met
 
-### Deterministic closure activated
+### Key finding
 
-Per the predeclared Route C execution plan, HARD NULL triggers automatic writing-safe return:
-- Phase 6 science closed
-- Route B remains frozen sidecar
-- Route D not executed
-- Phase 6B not opened
-- Project returns to writing-safe thesis mode
+Quasi-radial and low-cone encounters come from THA/THB/THC at Dp 0.8-1.7 nPa — probes with larger orbital reach not previously searched. Cross-probe comparability with Phase 4B THD bank not yet validated.
 
-### Route B frozen as sidecar
+### All earlier Phase 6 layers frozen as historical context
 
-Route B bounded execution (completed in a prior round) is now a frozen sidecar. Its descriptors (Dn_near, D|B|_near) are documented but not continued or substituted for Dn/EB.
+Phase 6A tranches, Route A repair, Route B sidecar, prior local-only Route C — all preserved, not rewritten.
 
 ## Files created
 
-- `docs/PHASE_6_ROUTEC_EXECUTION_PLAN.md` — pre-registered plan
-- `docs/PHASE_6_ROUTEC_RESULT.md` — bounded null result memo
-- `reports/themis_conditioning/routeC/scope_manifest.json` — machine-readable scope manifest
-- `reports/themis_conditioning/routeC/selection_flow.md` — human-readable selection flow
-- `reports/themis_conditioning/routeC/encounter_catalogue_routeC.json` — full catalogue
-- `reports/themis_conditioning/routeC/encounter_catalogue_routeC.csv` — tabular catalogue
-- `reports/themis_conditioning/routeC/routeC_summary.json` — summary with hard stop
-- `scripts/phase6_routeC_scan.py` — scan script
+- `docs/PHASE_6_FULL_EXP_ACTIVATION.md`
+- `docs/PHASE_6_ROUTEC_FULL_EXP_PLAN.md`
+- `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md`
+- `reports/themis_conditioning/routeC_exp/` (scope_manifest, selection_flow, catalogue JSON/CSV, summary)
+- `scripts/phase6_routeC_full_exp.py`
+- `data_cache/routeC_exp_state/` (90 monthly STATE files)
+- `data_cache/routeC_exp_enc/` (1691+ encounter caches)
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — writing-safe thesis return
+- `docs/NEXT_QUESTION.md` — FULL EXP SUCCESS, three-option menu
 - `docs/WORKLOG_LATEST.md` — this file
-- `docs/LLM_HANDOFF.md` — Phase 6 closure block added
+- `docs/LLM_HANDOFF.md` — FULL EXP block added
 
 ## Frozen anchors unchanged
 
-Phase 4B, 5A/5B, MMS branch — all intact. No thresholds, labels, or detector semantics introduced.
+Phase 4B, 5A/5B, MMS — all intact. Route B frozen sidecar. No thresholds, labels, or detector semantics.

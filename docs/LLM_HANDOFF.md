@@ -5,7 +5,7 @@
 > Do not infer the current project stage from this file alone.
 
 > **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
-> Writing-safe thesis return. Phase 6 science closed. Route C HARD NULL (zero new low-cone/quasi-radial encounters in locally available data). Route B frozen sidecar. Phase 6B blocked. Project in frozen-writing-safe mode.
+> Phase 6 Route C FULL EXP complete. SUCCESS. 4 quasi-radial + 16 low-cone + 44 intermediate + 84 perpendicular retained from full 2007-2010 archive. Awaiting user decision: thesis packaging / further science / writing-safe return. Phase 6B blocked.
 
 ---
 
@@ -68,11 +68,18 @@ No thresholds, no labels, no detector semantics on either branch.
 - The broader upstream-conditioning question remains explicitly open, not answered negatively. Deferred to future work.
 - See `docs/PHASE_6_ROUTEC_RESULT.md`.
 
-**Phase 6 final summary.**
-- Phase 6 is documented as a methodological exercise: attempted upstream conditioning, discovered Dp-dependent barrier, explored Route B sidecar, confirmed local-data null via Route C.
-- The quasi-radial conditioning question is deferred, not closed negatively.
-- **Project is now in writing-safe thesis mode.**
-- Awaiting user route choice. Phase 6B remains blocked.
+**Phase 6 Route C FULL EXP (2026-03-31).**
+- User-authorized one-off full-archive experiment, overriding prior writing-safe closure.
+- Full CDAWeb acquisition: all THEMIS 2007-2010, Jul-Nov, all 5 probes, SZA <= 30 deg. 2083 qualifying days. Multi-threaded (8 workers).
+- **Result: SUCCESS.** 148 unique retained encounters.
+  - **4 quasi-radial** (cone < 30 deg): 2007-08-08 THA (25.2), 2007-08-12 THA (29.0), 2009-07-25 THB (22.2), 2009-08-10 THC (19.7)
+  - **16 low-cone** (30-45 deg): from THA/THB/THC/THD/THE across 2007-2009
+  - 44 intermediate, 84 perpendicular
+- Key: quasi-radial and low-cone encounters come from THA/THB/THC at Dp 0.8-1.7 nPa — probes not previously searched. Cross-probe comparability with Phase 4B THD bank NOT yet validated.
+- All earlier Phase 6 layers preserved as frozen historical context.
+- Route B remains frozen sidecar. Phase 6B remains blocked.
+- **Awaiting user decision:** thesis packaging / further science / writing-safe return.
+- See `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md`.
 - See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
 
 **For thesis writing (frozen layers only), start from:**
