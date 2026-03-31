@@ -3,41 +3,41 @@
 
 # Next Question
 
-**Stage:** Phase 6 Route C FULL EXP complete. SUCCESS. Both target cone bins populated. Awaiting user decision on next step.
+**Stage:** Phase 6 packaged. Science closed. Writing-safe thesis integration active.
 
-## FULL EXP result
+## Current status
 
-Full-archive scan of all THEMIS 2007-2010, Jul-Nov, all 5 probes, SZA <= 30 deg. No convenience subsampling. 2083 encounters processed. 148 retained (Dn/EB computable).
+| Component | Final status |
+|---|---|
+| Phase 4B | **Frozen claim-bearing anchor.** Unchanged. |
+| Phase 5A/5B | **Frozen editorial sidecars.** Unchanged. |
+| Phase 6 FULL EXP | **Packaged as bounded descriptive-methodological sidecar.** 757 retained encounters, all cone bins populated. Cross-probe comparability with Phase 4B NOT validated. |
+| Route B | **Frozen sidecar.** Not incorporated into Phase 6 package. |
+| Phase 6B | **Blocked. Never opened.** |
+| MMS branch | **Frozen.** Unchanged. |
+| Broader conditioning question | **Explicitly deferred to future work.** |
 
-| Cone bin | Retained | Target met? |
-|---|---|---|
-| quasi-radial (< 30 deg) | **4** | YES (>= 1) |
-| low-cone (30-45 deg) | **16** | YES (>= 5) |
-| intermediate (45-60 deg) | 44 | context |
-| perpendicular (> 60 deg) | 84 | context |
+## Active mode
 
-Key finding: quasi-radial and low-cone encounters come from THA/THB/THC at Dp 0.8-1.7 nPa — a regime not accessible to THD. Cross-probe comparability with the Phase 4B THD bank is not yet established.
+**Writing-safe thesis integration.** No active science question.
 
-## Active question
+Available for thesis writing:
+1. Phase 4B frozen bank (primary claim-bearing results)
+2. Phase 5A/5B caseset sidecars (editorial illustration)
+3. MMS branch freeze (methodological finding)
+4. Phase 6 FULL EXP (bounded descriptive-methodological sidecar)
 
-**Does the user want to:**
-
-| Option | What it does | Key caveat |
-|---|---|---|
-| **A** | Package FULL EXP into thesis-safe cone-angle-stratified descriptive comparison | Cross-probe comparability not yet validated |
-| **B** | Authorize further Phase 6 science (e.g., cross-probe QC, calibration check) | Scope expansion beyond current EXP |
-| **C** | Return to writing-safe mode with FULL EXP as documented finding | Safest; comparison deferred to future work |
-
-See `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md` for full details.
+Start writing from: `docs/THEMIS_THESIS_WRITING_PACK.md`
 
 ## Blocked
 
-- Phase 6B (occurrence / detector / thresholds / labels / classes)
-- Route B continuation (frozen sidecar)
-- Modification of frozen Phase 4B / 5A / 5B / MMS
+- Phase 6B
+- New science execution on any branch
+- Thresholds / labels / classes / detector semantics
+- Modification of any frozen claims
 
 ## Decision mode
 
-- `decision_mode`: red
-- `escalate_if`: any scope expansion, cross-probe validation, or phase closure
+- `decision_mode`: green/yellow within writing-safe envelope
+- `escalate_if`: any request to reopen science branches
 - `final_owner_if_escalated`: User

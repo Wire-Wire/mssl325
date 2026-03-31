@@ -24,6 +24,7 @@ It does NOT replace the frozen science documents. It routes to them.
 |---|---|---|---|
 | **Claim-bearing** | Defines what is supported and not supported | `THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md`, `PHASE_4B_RESULTS_FREEZE.md` | **Primary thesis citation source** |
 | **Editorial sidecar** | Illustrates / organizes, does not strengthen | `THEMIS_CASESET.md` (Phase 5A), `PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` | Cite for illustration/appendix only |
+| **Bounded descriptive sidecar** | Archive-level result, does not strengthen Phase 4B | `PHASE_6_FULL_EXP_FREEZE.md` | Thesis sidecar (bounded ceiling) |
 | **Navigation / data** | Figures, tables, machine-readable summaries | `reports/current_bank/figures/`, `reports/themis_caseset/`, `caseset_summary.json` | Reference for figures and tables |
 | **Historical provenance** | Process records, audit trail | Old phase docs (2B–4A), `RUN_REVIEW_PACKET.md`, `PHASE_5B_CASESET_DESCRIPTIVE_INVENTORY.md` | Methods provenance only |
 | **Control** | Workflow state | `NEXT_QUESTION.md`, `WORKLOG_LATEST.md`, `LLM_HANDOFF.md` | Do not cite in thesis |
@@ -76,6 +77,31 @@ Content:
 - Compact grouped table by clock-angle bin
 - Coverage/empty-bin note (<60° sparse)
 - Conservative takeaway: descriptive caseset bookkeeping only
+
+### Phase 6: Full-archive upstream-conditioning exploration (bounded descriptive-methodological sidecar)
+
+**Source:** `PHASE_6_FULL_EXP_FREEZE.md`
+
+Content:
+- Full-archive scan result: 757 encounters evaluable under original Dn/EB across all cone bins
+- Quasi-radial (28) and low-cone (89) bins now populated — previously empty in Phase 4B
+- Cross-probe comparability with frozen THD bank NOT validated
+- Mandatory caveats: different probes, different Dp regime, wider Dn/EB range of unresolved origin
+- Thesis-safe conclusion: the bins are fillable; direct cross-regime comparison deferred to future work
+
+**Ceiling:** Phase 6 does NOT strengthen frozen Phase 4B claims. It does NOT validate cone-angle-dependent descriptor behavior. It is a bounded descriptive-methodological result showing archive-level fillability. It should NOT be cited as a validated cone-angle physics comparison.
+
+**Wording patterns:**
+- "bounded full-archive descriptive result"
+- "the quasi-radial and low-cone bins are evaluable under the original measurement family"
+- "cross-probe comparability remains unvalidated"
+- "a direct physical comparison across cone-angle regimes is deferred to future work"
+
+**Do NOT say:**
+- "Phase 6 extends / validates / strengthens Phase 4B"
+- "low-cone encounters show / lack PDL signatures"
+- "cone angle controls / modulates depletion behavior"
+- "the full archive confirms cone-angle dependence"
 
 ### Traceability / appendix bridge
 

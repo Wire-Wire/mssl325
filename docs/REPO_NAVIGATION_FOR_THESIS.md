@@ -34,12 +34,26 @@
 | `docs/PHASE_5B_CASESET_DESCRIPTIVE_INVENTORY.md` | Older Phase 5B variant — **superseded** for thesis route. | Historical |
 | `reports/themis_caseset/` | Phase 5A cards, figures, caseset_summary.json, grouped_summary.json. | Sidecar data |
 
-### Phase 6 analysis records (not thesis-safe — check core control files for current live status)
+### Phase 6 full-archive result (bounded descriptive-methodological sidecar — does NOT strengthen Phase 4B)
 
 | Document | What it contains | Status |
 |---|---|---|
-| `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` | Phase 6A upstream conditioning record (audited, closed as apparatus-limited pilot) | Not thesis-safe |
-| `reports/themis_conditioning/` | Encounter catalogue, selection flow, conditioning summary, figures | Analysis record |
+| **`docs/PHASE_6_FULL_EXP_FREEZE.md`** | **Phase 6 freeze/package note.** Strongest statement, non-claims, caveats, thesis placement. | **Frozen, bounded sidecar** |
+| `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md` | FULL EXP execution result with encounter tables | Frozen, analysis record |
+| `docs/PHASE_6_ROUTEB_BOUNDED_EXECUTION.md` | Route B inner-sheath descriptor sidecar (modest yield, separate semantics) | Frozen sidecar |
+| `docs/THEMIS_ARCHIVE_DATA_GUIDE.md` | Local data cache layout, usage recipes, encounter counts | Engineering/data-use only |
+| `data_cache/themis_archive/` | 1135 STATE files, 6118 encounter JSONs, indexes | Engineering/reproducibility |
+| `reports/themis_conditioning/` | Phase 6 encounter catalogues, selection flows, summaries | Analysis records |
+
+### Phase 6 historical process records (not thesis-safe individually)
+
+| Document | What it contains | Status |
+|---|---|---|
+| `docs/PHASE_6A_THEMIS_UPSTREAM_CONDITIONING.md` | Phase 6A upstream conditioning (apparatus-limited pilot, audited) | Historical |
+| `docs/PHASE_6A_AUDIT_AND_RESET_NOTE.md` | Audit revealing synthetic contamination + scope mismatch | Historical |
+| `docs/PHASE_6_RESET_OPTIONS.md` | Route A/B/C/D decision space | Historical |
+| `docs/PHASE_6_ROUTEC_RESULT.md` | Prior local-only Route C (hard null, superseded by FULL EXP) | Historical |
+| `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md` | Post-Route-B decision space | Historical |
 
 ### Historical process records (cite for methods provenance only)
 
@@ -119,3 +133,5 @@
 | **Discussion: MMS limitation** | `MMS_BRANCH_FREEZE.md` §3–5, `MMS_BASIS_RESET.md` |
 | **Discussion: selection function** | `SELECTION_FUNCTION_AUDIT.md` |
 | **Discussion: confounders** | `PHASE_2C_CONFOUNDER_CLOSURE.md`, `PASS_INTERVAL_AUDIT.md` |
+| **Results/Discussion: upstream-conditioning exploration** | `PHASE_6_FULL_EXP_FREEZE.md` (bounded sidecar, not claim-bearing) |
+| **Future work: cross-regime comparison** | `PHASE_6_FULL_EXP_FREEZE.md` §7 |

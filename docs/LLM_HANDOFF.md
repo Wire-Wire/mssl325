@@ -5,7 +5,7 @@
 > Do not infer the current project stage from this file alone.
 
 > **LIVE CONTROL ECHO (mirrored from NEXT_QUESTION.md — may be stale; always check NEXT_QUESTION.md):**
-> Phase 6 Route C FULL EXP complete. SUCCESS. 4 quasi-radial + 16 low-cone + 44 intermediate + 84 perpendicular retained from full 2007-2010 archive. Awaiting user decision: thesis packaging / further science / writing-safe return. Phase 6B blocked.
+> Phase 6 packaged. Science closed. Writing-safe thesis integration active. Phase 4B remains claim-bearing anchor. Phase 6 is bounded descriptive-methodological sidecar (757 retained, all cone bins populated, cross-probe comparability NOT validated). Phase 6B blocked. Broader conditioning question deferred to future work.
 
 ---
 
@@ -78,15 +78,31 @@ No thresholds, no labels, no detector semantics on either branch.
 - Key: quasi-radial and low-cone encounters come from THA/THB/THC at Dp 0.8-1.7 nPa — probes not previously searched. Cross-probe comparability with Phase 4B THD bank NOT yet validated.
 - All earlier Phase 6 layers preserved as frozen historical context.
 - Route B remains frozen sidecar. Phase 6B remains blocked.
-- **Awaiting user decision:** thesis packaging / further science / writing-safe return.
 - See `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md`.
-- See `docs/PHASE_6_POST_ROUTEB_DECISION_MEMO.md`.
 
-**For thesis writing (frozen layers only), start from:**
-1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub)
+**Full-archive local cache expansion (2026-03-31).**
+- Extended archive cache from 2007-2010 to 2007-2025, all 5 probes, all 12 months.
+- 1135 STATE files, 6903 qualifying days, 757 unique retained encounters.
+- Cone counts: quasi-radial=28, low-cone=89, intermediate=199, perpendicular=441.
+- Cache layout: `data_cache/themis_archive/` with indexes. See `docs/THEMIS_ARCHIVE_DATA_GUIDE.md`.
+
+**Phase 6 packaged and frozen (2026-03-31).**
+- User chose thesis packaging (reconvergence).
+- Phase 6 frozen as bounded descriptive-methodological sidecar.
+- **Strongest statement:** The full 2007-2025 THEMIS archive yields 757 encounters evaluable under original Dn/EB, including 28 quasi-radial and 89 low-cone. The bins are fillable. Cross-probe comparability with the frozen THD Phase 4B bank is not yet established.
+- **Ceiling:** Phase 6 does NOT strengthen Phase 4B. Does NOT validate cone-angle-dependent descriptor behavior. Does NOT classify encounters.
+- Phase 4B remains the claim-bearing anchor. Route B remains frozen sidecar. Phase 6B blocked.
+- Broader upstream-conditioning question remains open, explicitly deferred to future work.
+- See `docs/PHASE_6_FULL_EXP_FREEZE.md`.
+
+**Project is now in writing-safe thesis mode.**
+
+**For thesis writing, start from:**
+1. `docs/THEMIS_THESIS_WRITING_PACK.md` (THEMIS thesis-entry hub — includes Phase 6 sidecar entry)
 2. `docs/THESIS_BLOCK_FROZEN_COMPARATOR_RECURRENCE.md` (claim-bearing results)
-3. `docs/MMS_BRANCH_FREEZE.md` (MMS methods/limitation)
-4. `docs/REPO_NAVIGATION_FOR_THESIS.md` (full repo map)
+3. `docs/PHASE_6_FULL_EXP_FREEZE.md` (Phase 6 bounded sidecar)
+4. `docs/MMS_BRANCH_FREEZE.md` (MMS methods/limitation)
+5. `docs/REPO_NAVIGATION_FOR_THESIS.md` (full repo map)
 
 ---
 

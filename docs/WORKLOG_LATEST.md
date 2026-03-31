@@ -1,50 +1,42 @@
 > **USAGE:** This file records what changed in the most recent applied round. It is secondary to `docs/NEXT_QUESTION.md`. Do not use this file alone to infer the current project stage. If conflict exists, `docs/NEXT_QUESTION.md` wins.
 
-> **Current-state echo:** Phase 6 Route C FULL EXP complete. SUCCESS. 4 quasi-radial + 16 low-cone retained. Awaiting user decision. See `docs/NEXT_QUESTION.md`.
+> **Current-state echo:** Phase 6 packaged. Science closed. Writing-safe thesis integration active. See `docs/NEXT_QUESTION.md`.
 
 # Worklog — Latest Round
 
 **Date:** 2026-03-31
-**Round:** Phase 6 Route C FULL EXP (user-authorized full-archive experiment)
+**Round:** Phase 6 reconvergence / packaging / freeze
 
 ## What changed
 
-### FULL EXP executed
+### Phase 6 reconvergence
 
-Full-archive scan of all THEMIS 2007-2010, Jul-Nov, all 5 probes via CDAWeb. Multi-threaded (8 workers). 90 (year, month, probe) combinations searched. 2083 near-subsolar qualifying days processed. Original Dn/EB semantics.
+Phase 6 FULL EXP (Route C full-archive scan, 2007-2025, all 5 probes) was packaged as a bounded descriptive-methodological result. No new science was executed.
 
-### Result: SUCCESS
+### Package level
 
-- 148 unique retained encounters (Dn/EB computable)
-- 4 quasi-radial (cone < 30 deg): 2007-08-08 THA (25.2), 2007-08-12 THA (29.0), 2009-07-25 THB (22.2), 2009-08-10 THC (19.7)
-- 16 low-cone (30-45 deg): from THA/THB/THC/THD/THE across 2007-2009
-- 44 intermediate, 84 perpendicular
-- Both success conditions met
+Phase 6 is a bounded full-archive descriptive result showing that the original Dn/EB measurement family can populate previously missing low-cone and quasi-radial bins (757 encounters, 28 quasi-radial, 89 low-cone). Cross-probe comparability with the frozen THD-dominated Phase 4B bank is not yet established. Phase 6 does not strengthen frozen Phase 4B claims.
 
-### Key finding
+### Thesis integration
 
-Quasi-radial and low-cone encounters come from THA/THB/THC at Dp 0.8-1.7 nPa — probes with larger orbital reach not previously searched. Cross-probe comparability with Phase 4B THD bank not yet validated.
+Phase 6 placed in the thesis path as a bounded descriptive-methodological sidecar, after Phase 4B. Thesis writing pack, repo navigation, and control files updated to reflect this.
 
-### All earlier Phase 6 layers frozen as historical context
+### Future work
 
-Phase 6A tranches, Route A repair, Route B sidecar, prior local-only Route C — all preserved, not rewritten.
+The broader upstream-conditioning question (whether near-MP descriptor behavior shifts across cone-angle regimes) is explicitly deferred. Phase 6 establishes that the required encounter population exists; answering the conditioning question requires cross-probe validation and Dp-controlled sub-stratification.
 
 ## Files created
 
-- `docs/PHASE_6_FULL_EXP_ACTIVATION.md`
-- `docs/PHASE_6_ROUTEC_FULL_EXP_PLAN.md`
-- `docs/PHASE_6_ROUTEC_FULL_EXP_RESULT.md`
-- `reports/themis_conditioning/routeC_exp/` (scope_manifest, selection_flow, catalogue JSON/CSV, summary)
-- `scripts/phase6_routeC_full_exp.py`
-- `data_cache/routeC_exp_state/` (90 monthly STATE files)
-- `data_cache/routeC_exp_enc/` (1691+ encounter caches)
+- `docs/PHASE_6_FULL_EXP_FREEZE.md` — Phase 6 freeze/package note with strongest statement, non-claims, caveats, thesis placement
 
 ## Files modified
 
-- `docs/NEXT_QUESTION.md` — FULL EXP SUCCESS, three-option menu
+- `docs/THEMIS_THESIS_WRITING_PACK.md` — Phase 6 entry added (bounded sidecar, source hierarchy updated)
+- `docs/REPO_NAVIGATION_FOR_THESIS.md` — Phase 6 added to navigation map with explicit role labels
+- `docs/NEXT_QUESTION.md` — closed to writing-safe mode
 - `docs/WORKLOG_LATEST.md` — this file
-- `docs/LLM_HANDOFF.md` — FULL EXP block added
+- `docs/LLM_HANDOFF.md` — Phase 6 package block added
 
-## Frozen anchors unchanged
+## No new science executed
 
-Phase 4B, 5A/5B, MMS — all intact. Route B frozen sidecar. No thresholds, labels, or detector semantics.
+No calculations, no data fetch, no Route B/C/D continuation, no Phase 6B. Frozen anchors unchanged.
