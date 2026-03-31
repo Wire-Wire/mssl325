@@ -147,8 +147,18 @@ Do NOT promote the full eight-card atlas into the main thesis text by default. T
 | `PHASE_4B_RESULTS_FREEZE.md` | Non-claims / ceiling | "No threshold is defined or implied" |
 | `THEMIS_CASESET.md` | Illustration | "Eight cases were screened; four were reviewed as clear" |
 | `PHASE_5B_CASESET_DESCRIPTIVE_PASS.md` | Grouped illustration | "Atlas-usable cases appear in the 60–120° and >120° bins" |
+| `PHASE_6_FULL_EXP_FREEZE.md` | Bounded descriptive-methodological sidecar | "The quasi-radial and low-cone bins are fillable under the original measurement family" |
+| `PHASE_6_THESIS_INSERTION_PACK.md` | Thesis insertion prose | Pasteable paragraphs, limitations, do-not-say for Phase 6 |
 
 ### Required wording patterns
+
+When citing Phase 6:
+- "bounded descriptive-methodological sidecar"
+- "under the original Dn/EB measurement family"
+- "cross-probe comparability remains unvalidated"
+- "does not strengthen, extend, or validate Phase 4B"
+- "direct physical comparison across cone-angle regimes is deferred to future work"
+- "no occurrence, threshold, class, detector, or mission-prior interpretation"
 
 When citing Phase 5A/5B:
 - "reviewed as clear / ambiguous / not convincing" (always attach "review status")

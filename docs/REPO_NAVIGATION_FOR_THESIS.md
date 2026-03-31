@@ -107,13 +107,16 @@
 
 6. **`docs/THEMIS_CASESET.md`** + **`docs/PHASE_5B_CASESET_DESCRIPTIVE_PASS.md`** — Phase 5A/5B editorial sidecars (illustration only, not claim-bearing).
 
+7. **`docs/PHASE_6_THESIS_INSERTION_PACK.md`** — Phase 6 bounded descriptive-methodological sidecar (pasteable prose, limitations, do-not-say). Does NOT strengthen Phase 4B.
+
 ---
 
 ## C. What is frozen vs historical vs live
 
 | Category | What it means | Examples |
 |---|---|---|
-| **Frozen** | Writing-safe. Citable as thesis results or methods. Will not change. | Thesis block, freeze docs, bank reports, MMS freeze |
+| **Frozen (claim-bearing)** | Writing-safe. Citable as thesis results or methods. Will not change. | Phase 4B thesis block, Phase 4B freeze, MMS freeze, bank reports |
+| **Frozen (bounded sidecar)** | Writing-safe but does NOT strengthen claim-bearing results. Citable only within its own bounded ceiling. | Phase 6 FULL EXP freeze, Phase 5A/5B caseset sidecars |
 | **Historical** | Documents the process that led to frozen results. Cite only for provenance/methods. | Phase docs, audit docs, shortlist records |
 | **Live (code/config)** | Still executable. For reproducibility, not direct citation. | `src/`, `configs/`, `tests/` |
 | **Control** | AI/human coordination. Do not cite. | `LLM_HANDOFF.md`, `NEXT_QUESTION.md`, `WORKLOG_LATEST.md` |
