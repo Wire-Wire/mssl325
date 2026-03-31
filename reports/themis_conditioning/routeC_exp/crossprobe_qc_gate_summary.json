@@ -1,0 +1,1107 @@
+{
+  "generated": "2026-03-31T16:59:03.640801",
+  "gate_type": "cross-probe QC comparability gate",
+  "primary_input": "FULL EXP 2007-2010 retained catalogue (148 encounters)",
+  "overlap_groups": [
+    {
+      "date": "2007-08-11",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 79.5,
+          "dp_nPa": 1.92,
+          "Dn": 1.2918,
+          "EB": 2.3147,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 81.4,
+          "dp_nPa": 1.99,
+          "Dn": 1.0813,
+          "EB": 1.1089,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 81.4,
+          "dp_nPa": 1.98,
+          "Dn": 1.0549,
+          "EB": 0.9192,
+          "qc_transition_cleanliness": "unclear",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 81.0,
+          "dp_nPa": 2.02,
+          "Dn": 1.127,
+          "EB": 1.4377,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 81.4,
+          "dp_nPa": 1.98,
+          "Dn": 1.0308,
+          "EB": 1.0363,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-12",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd"
+      ],
+      "n_probes": 4,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 29.0,
+          "dp_nPa": 1.42,
+          "Dn": 0.0318,
+          "EB": 3.1168,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 44.4,
+          "dp_nPa": 1.51,
+          "Dn": 0.8386,
+          "EB": 2.9969,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 38.2,
+          "dp_nPa": 1.5,
+          "Dn": 0.084,
+          "EB": 3.6001,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 37.4,
+          "dp_nPa": 1.5,
+          "Dn": 0.05,
+          "EB": 3.5835,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-13",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 49.8,
+          "dp_nPa": 1.11,
+          "Dn": 0.0309,
+          "EB": 4.318,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 39.1,
+          "dp_nPa": 1.05,
+          "Dn": 0.0231,
+          "EB": 3.5996,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 42.5,
+          "dp_nPa": 1.06,
+          "Dn": 0.0164,
+          "EB": 3.564,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 44.2,
+          "dp_nPa": 1.07,
+          "Dn": 0.0104,
+          "EB": 3.821,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 44.2,
+          "dp_nPa": 1.07,
+          "Dn": 0.0157,
+          "EB": 4.3296,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-15",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "thb",
+          "cone_deg": 85.7,
+          "dp_nPa": 2.49,
+          "Dn": 1.7427,
+          "EB": 0.726,
+          "qc_transition_cleanliness": "unclear",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "tha",
+          "cone_deg": 75.0,
+          "dp_nPa": 2.11,
+          "Dn": 0.0603,
+          "EB": 3.9784,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 86.3,
+          "dp_nPa": 2.42,
+          "Dn": 1.3532,
+          "EB": 1.4565,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 85.7,
+          "dp_nPa": 2.4,
+          "Dn": 1.5321,
+          "EB": 0.96,
+          "qc_transition_cleanliness": "unclear",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 85.7,
+          "dp_nPa": 2.4,
+          "Dn": 1.3836,
+          "EB": 1.376,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-16",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "thb",
+          "cone_deg": 57.2,
+          "dp_nPa": 2.56,
+          "Dn": 0.1229,
+          "EB": 2.6606,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "tha",
+          "cone_deg": 47.8,
+          "dp_nPa": 2.41,
+          "Dn": 0.0186,
+          "EB": 2.907,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 50.5,
+          "dp_nPa": 2.54,
+          "Dn": 0.0211,
+          "EB": 3.3383,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 52.1,
+          "dp_nPa": 2.54,
+          "Dn": 0.7591,
+          "EB": 1.9732,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 50.5,
+          "dp_nPa": 2.54,
+          "Dn": 0.0198,
+          "EB": 3.3098,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-17",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 85.2,
+          "dp_nPa": 1.56,
+          "Dn": 0.0306,
+          "EB": 2.9895,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 86.5,
+          "dp_nPa": 1.57,
+          "Dn": 0.0315,
+          "EB": 3.401,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 84.5,
+          "dp_nPa": 1.55,
+          "Dn": 0.0696,
+          "EB": 4.0548,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "tha",
+          "cone_deg": 85.9,
+          "dp_nPa": 1.65,
+          "Dn": 0.0444,
+          "EB": 2.7764,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 86.6,
+          "dp_nPa": 1.57,
+          "Dn": 0.0236,
+          "EB": 2.7984,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-19",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 43.7,
+          "dp_nPa": 1.67,
+          "Dn": 0.0327,
+          "EB": 2.3086,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 78.0,
+          "dp_nPa": 1.71,
+          "Dn": 0.0295,
+          "EB": 2.8178,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 83.5,
+          "dp_nPa": 1.72,
+          "Dn": 0.029,
+          "EB": 3.4366,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 76.5,
+          "dp_nPa": 1.69,
+          "Dn": 0.0295,
+          "EB": 2.8344,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 76.4,
+          "dp_nPa": 1.69,
+          "Dn": 0.031,
+          "EB": 2.9038,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-22",
+      "probes": [
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 4,
+      "encounters": [
+        {
+          "probe": "thb",
+          "cone_deg": 87.2,
+          "dp_nPa": 1.35,
+          "Dn": 1.0089,
+          "EB": 1.2597,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 87.2,
+          "dp_nPa": 1.35,
+          "Dn": 1.0207,
+          "EB": 1.4365,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 87.2,
+          "dp_nPa": 1.35,
+          "Dn": 1.0062,
+          "EB": 1.5485,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 87.2,
+          "dp_nPa": 1.35,
+          "Dn": 1.024,
+          "EB": 1.2912,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-25",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 45.7,
+          "dp_nPa": 3.29,
+          "Dn": 0.1313,
+          "EB": 7.3591,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 55.4,
+          "dp_nPa": 3.97,
+          "Dn": 0.0216,
+          "EB": 2.9114,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 54.2,
+          "dp_nPa": 3.85,
+          "Dn": 0.0254,
+          "EB": 2.8277,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 53.8,
+          "dp_nPa": 3.81,
+          "Dn": 0.0239,
+          "EB": 2.7766,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 53.4,
+          "dp_nPa": 3.8,
+          "Dn": 0.0223,
+          "EB": 2.7351,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2007-08-26",
+      "probes": [
+        "tha",
+        "thb",
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 5,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 60.3,
+          "dp_nPa": 3.65,
+          "Dn": 0.726,
+          "EB": 1.0376,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 60.3,
+          "dp_nPa": 3.65,
+          "Dn": 0.8968,
+          "EB": 1.3104,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 60.3,
+          "dp_nPa": 3.65,
+          "Dn": 0.676,
+          "EB": 1.627,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 60.3,
+          "dp_nPa": 3.65,
+          "Dn": 0.6787,
+          "EB": 1.7351,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 60.3,
+          "dp_nPa": 3.65,
+          "Dn": 0.7288,
+          "EB": 1.5901,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2008-08-18",
+      "probes": [
+        "thd",
+        "the"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "the",
+          "cone_deg": 48.8,
+          "dp_nPa": 3.87,
+          "Dn": 1.3809,
+          "EB": 1.7102,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 50.6,
+          "dp_nPa": 3.55,
+          "Dn": 0.7524,
+          "EB": 1.3402,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2008-08-28",
+      "probes": [
+        "thb",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 65.4,
+          "dp_nPa": 1.61,
+          "Dn": 0.0221,
+          "EB": 3.5582,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 65.4,
+          "dp_nPa": 1.61,
+          "Dn": 0.0864,
+          "EB": 12.4706,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-03",
+      "probes": [
+        "thc",
+        "the"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 55.6,
+          "dp_nPa": 1.42,
+          "Dn": 0.0208,
+          "EB": 5.4418,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 60.4,
+          "dp_nPa": 3.33,
+          "Dn": 2.3844,
+          "EB": 0.8841,
+          "qc_transition_cleanliness": "unclear",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-05",
+      "probes": [
+        "thb",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 52.3,
+          "dp_nPa": 1.44,
+          "Dn": 0.1948,
+          "EB": 3.4403,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 52.3,
+          "dp_nPa": 1.44,
+          "Dn": 0.8051,
+          "EB": 11.8841,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-09",
+      "probes": [
+        "thb",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 49.4,
+          "dp_nPa": 1.64,
+          "Dn": 0.2588,
+          "EB": 5.7949,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 49.4,
+          "dp_nPa": 1.64,
+          "Dn": 0.4893,
+          "EB": 17.3015,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-14",
+      "probes": [
+        "thc",
+        "thd",
+        "the"
+      ],
+      "n_probes": 3,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 54.4,
+          "dp_nPa": 6.74,
+          "Dn": 0.4201,
+          "EB": 9.7028,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 61.5,
+          "dp_nPa": 6.74,
+          "Dn": 4.5909,
+          "EB": 2.5982,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 52.4,
+          "dp_nPa": 6.81,
+          "Dn": 3.5874,
+          "EB": 2.0909,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-16",
+      "probes": [
+        "thb",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 66.3,
+          "dp_nPa": 1.06,
+          "Dn": 0.5002,
+          "EB": 5.3773,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 65.6,
+          "dp_nPa": 1.06,
+          "Dn": 0.5508,
+          "EB": 17.1507,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2008-09-20",
+      "probes": [
+        "thb",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thc",
+          "cone_deg": 44.4,
+          "dp_nPa": 1.5,
+          "Dn": 0.0684,
+          "EB": 4.3722,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thb",
+          "cone_deg": 43.0,
+          "dp_nPa": 1.5,
+          "Dn": 0.1366,
+          "EB": 15.0692,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2009-09-13",
+      "probes": [
+        "tha",
+        "thd",
+        "the"
+      ],
+      "n_probes": 3,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 70.0,
+          "dp_nPa": 2.09,
+          "Dn": 1.0488,
+          "EB": 1.8518,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 65.7,
+          "dp_nPa": 3.87,
+          "Dn": 0.8181,
+          "EB": 1.6512,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 62.7,
+          "dp_nPa": 4.03,
+          "Dn": 0.974,
+          "EB": 1.7736,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2009-09-26",
+      "probes": [
+        "thd",
+        "the"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "thd",
+          "cone_deg": 67.9,
+          "dp_nPa": 2.93,
+          "Dn": 0.7368,
+          "EB": 2.4284,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 58.6,
+          "dp_nPa": 3.07,
+          "Dn": 0.9713,
+          "EB": 1.3659,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2009-09-27",
+      "probes": [
+        "thd",
+        "the"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "the",
+          "cone_deg": 70.1,
+          "dp_nPa": 2.99,
+          "Dn": 0.9893,
+          "EB": 1.3572,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 64.2,
+          "dp_nPa": 2.99,
+          "Dn": 0.9162,
+          "EB": 1.8664,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2009-10-16",
+      "probes": [
+        "tha",
+        "thc"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 50.9,
+          "dp_nPa": 1.4,
+          "Dn": 1.164,
+          "EB": 1.7609,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        },
+        {
+          "probe": "thc",
+          "cone_deg": 60.1,
+          "dp_nPa": 0.81,
+          "Dn": 3.1331,
+          "EB": 5.8343,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "uncertain"
+        }
+      ]
+    },
+    {
+      "date": "2009-10-22",
+      "probes": [
+        "tha",
+        "thd"
+      ],
+      "n_probes": 2,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 81.1,
+          "dp_nPa": 3.25,
+          "Dn": 1.2353,
+          "EB": 1.5673,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 81.6,
+          "dp_nPa": 2.24,
+          "Dn": 3.6713,
+          "EB": 4.8268,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2010-10-11",
+      "probes": [
+        "tha",
+        "thd",
+        "the"
+      ],
+      "n_probes": 3,
+      "encounters": [
+        {
+          "probe": "thd",
+          "cone_deg": 67.9,
+          "dp_nPa": 3.82,
+          "Dn": 0.007,
+          "EB": 2.2085,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 67.5,
+          "dp_nPa": 4.04,
+          "Dn": 0.006,
+          "EB": 2.0575,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "tha",
+          "cone_deg": 67.4,
+          "dp_nPa": 4.05,
+          "Dn": 0.4931,
+          "EB": 1.9133,
+          "qc_transition_cleanliness": "clean",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2010-10-23",
+      "probes": [
+        "tha",
+        "thd",
+        "the"
+      ],
+      "n_probes": 3,
+      "encounters": [
+        {
+          "probe": "tha",
+          "cone_deg": 53.6,
+          "dp_nPa": 3.57,
+          "Dn": 1.3771,
+          "EB": 1.2582,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "thd",
+          "cone_deg": 57.3,
+          "dp_nPa": 3.71,
+          "Dn": 1.3667,
+          "EB": 1.2105,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 53.4,
+          "dp_nPa": 3.55,
+          "Dn": 1.3701,
+          "EB": 1.2534,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    },
+    {
+      "date": "2010-11-10",
+      "probes": [
+        "tha",
+        "thd",
+        "the"
+      ],
+      "n_probes": 3,
+      "encounters": [
+        {
+          "probe": "thd",
+          "cone_deg": 80.7,
+          "dp_nPa": 3.56,
+          "Dn": 1.4654,
+          "EB": 2.3535,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "the",
+          "cone_deg": 84.6,
+          "dp_nPa": 3.76,
+          "Dn": 1.962,
+          "EB": 2.046,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        },
+        {
+          "probe": "tha",
+          "cone_deg": 81.6,
+          "dp_nPa": 3.69,
+          "Dn": 1.5765,
+          "EB": 2.9298,
+          "qc_transition_cleanliness": "mixed",
+          "boundary_uncertainty_note": "plausible"
+        }
+      ]
+    }
+  ],
+  "pairwise_spreads": {
+    "total_pairs": 118,
+    "oom_disagreements": 13,
+    "groups_with_oom_dn": 6,
+    "lc_qr_groups_with_oom": 1
+  },
+  "probe_group_summaries": {
+    "thd": {
+      "n": 19,
+      "dn_median": 0.7524,
+      "eb_median": 2.3535,
+      "dp_median": 2.93
+    },
+    "non_thd": {
+      "n": 129,
+      "dn_median": 0.6577,
+      "eb_median": 3.3556,
+      "dp_median": 1.64
+    }
+  },
+  "qc_concentration_notes": {
+    "extreme_encounters": 71,
+    "oom_encounter_qc_profiles": {
+      "boundary=uncertain, transition=clean": 5,
+      "boundary=plausible, transition=unclear": 3,
+      "boundary=plausible, transition=clean": 8,
+      "boundary=plausible, transition=mixed": 2,
+      "boundary=uncertain, transition=mixed": 1
+    }
+  },
+  "regime_shift": {
+    "note": "Low-cone/QR encounters are systematically lower Dp and non-THD-dominated. Entanglement confirmed."
+  },
+  "verdict_inputs": {
+    "n_overlap_groups": 26,
+    "lc_qr_oom_groups": 1,
+    "consistent_groups": 20,
+    "inconsistent_groups": 6
+  },
+  "final_verdict": "PASS",
+  "verdict_reason": "Nontrivial overlap (26 groups). OOM disagreements in low-cone/QR groups: 1 (< 3). Inconsistent groups: 6/26.",
+  "packaging_recommendation": "Phase 6 may be packaged as a bounded descriptive comparison under original Dn/EB semantics, but not as a validated favorable-conditions result, not as a Phase 4B extension, and not as a Phase 6B bridge."
+}
